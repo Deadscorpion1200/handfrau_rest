@@ -1,19 +1,138 @@
+.navbar
+  padding-top: 23px
+  padding-bottom: 23px
 .navbar-wrap
   display: flex
   justify-content: space-between
+  position: relative
   align-items: center
 .navbar-logo
   margin-right: 62px
+  width: 125px
 .navbar-nav
   width: 100%
 .navbar-nav__list
-  padding: 0
+  display: flex
   list-style: none
-  display: flex
   justify-content: space-between
+  padding: 0
+.navbar-nav__mobile
+  display: none
+.navbar-mobile__contact-icon
+  width: 28px
+  height: 28px
+.navbar-nav__mobile_active
+  justify-content: center
+  z-index: 1
+  display: flex
+  background: rgba(255,255,255,0.8)
+.navbar-nav__link
+  color: $nav-color
+  text-decoration: none
+  font-family: 'Exo 2'
+  font-weight: 500
+  &:hover
+    color: $main-color
 .navbar-contact
-  display: flex
-  justify-content: space-between
-  align-items: center
   margin-left: 109px
-  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  &__phone
+    font-size: 16px
+    font-weight: 600
+    text-decoration: none
+    color: $main-color
+    width: 120px
+    margin-right: 30px
+.navbar-contact__button
+  font-size: 14px
+  font-family: 'Exo 2'
+  font-weight: 400
+.navbar-mobile__contact, .navbar-mobile__menu
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 40px
+  height: 40px
+  background-color: $nav-button
+  border-radius: 50%
+.navbar-mobile__contact
+  display: none
+.navbar-mobile__menu
+  display: none
+.navbar-mobile
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 40px
+.navbar-mobile__menu span
+  width: 16px
+  height: 2px
+  background-color: $nav-color
+  position: absolute
+  &::before
+    position: absolute
+    content: ''
+    width: 16px
+    height: 2px
+    background-color: $nav-color
+    transform: translateY(-5px)
+    transition: 0.5s
+  &::after
+    content: ''
+    width: 16px
+    height: 2px
+    background-color: $nav-color
+    position: absolute
+    transform: translateY(5px)
+    transition: 0.5s
+.navbar-mobile__menu_active span
+  height: 0
+  &::before
+    transform: rotate(45deg)
+  &::after
+    transform: rotate(-45deg)
+@media (max-width: 1200px)
+  .navbar-logo
+    margin-right: 25px
+  .navbar-contact
+    margin-left: 50px
+@media (max-width: 992px)
+  .navbar-nav
+    display: none
+  .navbar-nav__mobile
+    position: absolute
+    top: 103px
+    width: 100%
+  .navbar-nav__list_mobile
+    list-style: none
+    padding: 0
+    text-align: center
+  .navbar-mobile
+    margin-left: -85px
+  .navbar-mobile__menu
+    display: flex
+    justify-content: center
+    align-items: center
+  .navbar-nav__item_mobile
+    line-height: 36px
+    font-size: 26px
+    font-family: 'Exo 2'
+  .navbar-nav__link_mobile
+    color: $black
+    text-decoration: none
+@media (max-width: 768px)
+  .navbar
+    padding-bottom: 7px
+    padding-top: 7px
+  .navbar-logo
+    width: 100px
+  .navbar-nav__mobile
+    top: 70px
+  .navbar-contact
+    display: none
+  .navbar-mobile__contact
+    display: flex
+    margin-right: 10px
+    

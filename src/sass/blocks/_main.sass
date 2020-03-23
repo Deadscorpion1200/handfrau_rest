@@ -1,0 +1,81 @@
+.main
+  background: url(../img/main/main-bg.png) center no-repeat
+  background-size: cover
+  position: relative
+  &::before
+    content: ''
+    position: absolute 
+    width: 100%
+    height: 100%
+    background: linear-gradient(90deg, #FFFFFF 34.38%, rgba(255, 255, 255, 0) 100%)
+    z-index: 0
+.main-wrap
+  padding-top: 174px
+  padding-bottom: 174px
+  position: relative
+.main__utp
+  color: $black
+  font-size: 44px
+  line-height: 54px
+  max-width: 572px
+  margin-bottom: 50px
+  &_accent
+    color: $main-color
+.main__utp_subtitle
+  display: block
+  font-size: 24px
+  color: $subtitle-utp-color
+  font-family: 'Exo 2'
+  margin-bottom: 68px
+.main-button__order
+  margin-right: 30px
+.main__utp-mobile
+  display: none
+.main-button__immediate
+  display: none
+@media (max-width: 1200px)
+  .main-wrap
+    padding-top: 110px
+    padding-bottom: 125px
+@media (max-width: 992px)
+  .main__utp
+    font-size: 30px
+    max-width: 379px
+    line-height: 35px
+    margin-bottom: 35px
+  .main__utp_subtitle
+    font-size: 20px
+    margin-bottom: 50px
+@media (max-width: 768px)
+  .main__utp-desktop
+    display: none
+  .main__utp-mobile
+    display: block
+  .main-button__discover
+    display: none
+
+  .main-button__immediate
+    display: block
+@media (max-width: 576px)
+  .main-wrap
+    padding-top: 19px
+    padding-bottom: 30px
+  .main__utp
+    margin-bottom: 10px
+  .main__utp-mobile
+    font-size: 24px
+    max-width: 190px
+    line-height: 30px
+  .main__utp_accent-mobile
+    display: block
+  .main__utp_accent-second
+    display: block
+  .main__utp_accent-second_last
+    line-height: 24px
+  .main__utp_subtitle
+    margin-bottom: 20px
+  .main__utp_subtitle-second
+    display: block
+  .main-button__order
+    margin-right: 0
+    margin-bottom: 20px
