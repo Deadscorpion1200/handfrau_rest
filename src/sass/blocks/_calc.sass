@@ -1,0 +1,168 @@
+.calc
+  padding-top: 80px
+  padding-bottom: 80px
+.calc-wrap
+  display: flex
+  justify-content: space-between
+// types
+.calc__header
+  font-weight: 600
+  font-size: 48px
+  line-height: 56px
+  text-align: center
+  margin-bottom: 60px
+.calc-type__list
+  margin-bottom: 40px
+  list-style: none
+.calc-type__category
+  padding: 0
+.calc-type__list
+  display: flex
+  justify-content: center
+  max-width: 703px
+  border-bottom: 1px solid $grey
+  margin-left: auto
+  margin-right: auto
+.calc-type__category
+  margin-right: 50px
+  font-size: 20px
+  line-height: 28px
+  color: $grey
+  cursor: pointer
+  padding-bottom: 10px
+  &:last-child
+    margin-right: 0
+  &_active
+    margin-right: 50px
+    font-size: 20px
+    line-height: 28px
+    color: $grey
+    cursor: pointer
+    padding-bottom: 10px
+    border-bottom: 2px solid $main-color
+    color: $main-color
+    &:last-child
+      margin-right: 0
+.calc-type__description
+  font-size: 16px
+  line-height: 24px
+  text-align: center
+  color: $grey
+  margin-bottom: 50px
+// square
+.calc-calculator
+  width: 754px
+.calc-calculator-square__text
+  display: flex
+  justify-content: space-between
+  font-size: 24px
+  line-height: 32px
+.calc-calculator-square__header
+  display: block
+.calc-calaulator-square__square
+  display: block
+.calc-calculator-square-range__text
+  display: flex
+  justify-content: space-between
+.calc-calculator-square-range__text
+  font-size: 16px
+  line-height: 26px
+  color: $grey
+  margin-bottom: 52px
+// services
+.calc-calculator-services
+  display: flex
+  justify-content: space-between
+  margin-bottom: 30px
+.calc-calculator__service
+  position: relative
+  width: 166px
+  height: 166px
+  border: 1px solid $service-border
+  border-radius: 10px
+  cursor: pointer
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+.calc-calculator-service__question
+  display: flex
+  justify-content: space-around
+  align-items: center
+  position: absolute
+  background-color: rgba(209,219,227,.4)
+  width: 15px
+  height: 15px
+  font-size: 10px
+  border-radius: 50%
+  left: 10px
+  top: 10px
+.calc-calculator-service-question__symb
+  color: $subtitle-color
+  opacity: 1
+.calc-calculator-service__img
+  margin-bottom: 20px
+.clock-descr
+  padding-bottom: 25px
+.calc-calculator-service__header
+  text-align: center
+  color: $subtitle-color
+  font-size: 14px
+  line-height: 20px
+  max-width: 140px
+  margin-bottom: 5px
+.calc-calculator-service__subtitle
+  font-size: 10px
+  line-height: 12px
+  color: $subtitle-color
+  max-width: 140px
+  text-align: center
+.calc-calculator-service__parameters
+  font-size: 18px
+  font-weight: 800
+  font-family: 'Exo 2'
+  opacity: .5
+.calc-calculator-service__square
+  line-height: 36px
+.minus-img
+  vertical-align: middle
+  margin-right: 10px
+.plus-img
+  vertical-align: middle
+  margin-left: 10px
+.clock-calculator-services__showMore
+  text-align: center
+  color: $main-color
+  text-decoration: none
+  display: block
+// result
+.calc-result
+  display: flex
+  flex-direction: column
+  max-width: 362px
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2)
+  border-radius: 10px
+  padding: 20px 30px
+.calc-result__header
+  font-size: 14px
+  color: $grey
+  line-height: 20px
+  margin-bottom: 3px
+  &:last-child
+    margin-bottom: 0
+.calc-result-sum__sum
+  font-size: 32px
+  line-height: 40px
+  color: $black_2
+  font-weight: 800
+  margin-bottom: 20px
+.calc-result-personal
+  font-size: 24px
+  line-height: 32px
+  font-weight: 800
+  color: $black_2
+  max-width: 302px
+  margin-bottom: 40px
+.calc-result-buttons
+  display: flex
+  flex-direction: column

@@ -7,7 +7,7 @@
     position: absolute 
     width: 100%
     height: 100%
-    background: linear-gradient(90deg, #FFFFFF 34.38%, rgba(255, 255, 255, 0) 100%)
+    background: linear-gradient(90deg, #FFFFFF 20%, rgba(255, 255, 255, 0) 100%)
     z-index: 0
 .main-wrap
   padding-top: 174px
@@ -34,9 +34,34 @@
 .main-button__immediate
   display: none
 @media (max-width: 1200px)
+  .main
+    background-size: cover
   .main-wrap
     padding-top: 110px
     padding-bottom: 125px
+
+.main-button
+  width: 230px
+  height: 50px
+  font-family: 'Exo 2'
+  background-color: $main-color
+  border-radius: 5px
+  font-size: 16px
+  font-weight: 400
+  color: #ffffff
+  border: 0
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.2)
+.main-button-o
+  width: 230px
+  height: 50px
+  font-family: 'Exo 2'
+  background-color: #ffffff
+  border-radius: 5px
+  font-size: 16px
+  font-weight: 400
+  color: $main-color
+  border: 0
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.2)
 @media (max-width: 992px)
   .main__utp
     font-size: 30px
@@ -47,6 +72,10 @@
     font-size: 20px
     margin-bottom: 50px
 @media (max-width: 768px)
+  .main-button
+    width: 290px
+  .main-button-o
+    width: 290px
   .main__utp-desktop
     display: none
   .main__utp-mobile

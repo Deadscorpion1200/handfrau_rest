@@ -1,7 +1,13 @@
-$('.navbar-mobile__menu').on('click', function(e)
+let slider = $('.range');
+let fill = $('.bar .fill');
+let square;
+let value = $('.calc-calculator-square__square_count');
+console.log(value.html());
+function setBar()
 {
-  e.preventDefault();
-  $(this).toggleClass('navbar-mobile__menu_active');
-  $('.navbar-nav__mobile').toggleClass('navbar-nav__mobile_active');
+  fill.css('width', slider.val()+'%')
+  square = slider.val()
+}
 
-})
+slider.on('input', setBar);
+setBar();

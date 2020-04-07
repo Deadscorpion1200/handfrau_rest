@@ -3,6 +3,9 @@ body
   font-family: 'Exo 2'
   font-weight: 400
   margin: 0
+ol, ul
+  margin: 0
+  padding: 0
 .container
   width: 1170px
   margin-left: auto
@@ -19,28 +22,67 @@ button
   color: #ffffff
   border: 0
   box-shadow: 0px 10px 20px rgba(0,0,0,0.2)
-.main-button
-  width: 230px
+.block-button
+  width: 302px
   height: 50px
-  font-family: 'Exo 2'
-  background-color: $main-color
   border-radius: 5px
-  font-size: 16px
-  font-weight: 400
+  border: none
+.button-main
   color: #ffffff
-  border: 0
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.2)
-.main-button-o
-  width: 230px
-  height: 50px
-  font-family: 'Exo 2'
-  background-color: #ffffff
-  border-radius: 5px
+  background: $main-color
+  font-weight: 600
   font-size: 16px
-  font-weight: 400
-  color: $main-color
-  border: 0
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.2)
+  margin-bottom: 20px
+.button-add
+  background: $calc-button
+  color: $calc-button_text
+  font-weight: 600
+  font-size: 16px
+  margin-bottom: 10px
+input
+  outline: none
+.range-container
+  position: relative
+.range
+  position: relative
+  width: 100%
+  -webkit-appearance: none
+  border-radius: 5px
+  height: 5px
+  background: transparent
+  z-index: 2
+  margin-bottom: 11px
+.range::-webkit-slider-thumb
+  -webkit-appearance: none
+  width: 13px
+  height: 13px
+  background-color: $main-color
+  border-radius: 50%
+  cursor: pointer
+  outline: none
+  box-shadow: 0 0 0 0 lighten($main-color, 30)
+  transition: 0,3s ease-in-out
+  z-index: 3
+.range::-webkit-slider-thumb:hover
+  box-shadow: 0 0 0 10px transparentize(lighten($main-color, 30), 0.3)
+  transition: 0.3s ease-in-out
+.range:active::-webkit-slider-thumb:hover
+  box-shadow: 0 0 0 15px transparentize(lighten($main-color, 30), 0.3)
+  transition: 0.3s ease-in-out
+.bar
+  position: absolute
+  z-index: 1
+  left: 0
+  top: 11px
+  height: 5px
+  width: 100%
+  background-color: $range-bg
+  border-radius: 2px
+.fill
+  display: block
+  width: 0
+  height: 100%
+  background-color: $main-color
 @media (max-width: 1200px)
   .container
     width: 960px

@@ -1,0 +1,63 @@
+.form1
+  padding-top: 19px
+  padding-bottom: 16px
+  position: relative
+.form-note
+  position: relative
+  height: 32px
+.form1__note-month
+  position: absolute
+  color: $subtitle-utp-color
+  transform: translateX(-30px)
+.form1-form-wrap
+  max-width: 1264px
+  height: 80px
+  background-color: $main-color
+  margin-left: auto
+  margin-right: auto
+  display: flex
+  align-items: center
+  border-radius: 10px
+  margin-bottom: 25px
+.form1-form
+  display: flex
+  justify-content: space-between
+  align-items: center
+.form1-form-button-o
+  width: 300px
+  height: 50px
+  font-family: 'Exo 2'
+  background-color: #ffffff
+  border-radius: 5px
+  font-size: 16px
+  font-weight: 400
+  color: $main-color
+  border: 0
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.2)
+.form1-form-input
+  display: flex
+  align-items: center
+.form1-form__input
+  width: 300px
+  height: 33px
+  background-color: transparent
+  border: none
+  border-bottom: 2px solid #ffffff
+  font-size: 14px
+  color: #ffffff
+  &::placeholder
+    color: #ffffff
+.form1-form__icon
+  margin-right: 30px
+.form1__note-policy
+  display: block
+  text-align: center
+  color: $subtitle-color
+@media (max-width: 1200px)
+  .form1-form__input
+    width: 230px
+  .form1-form-button-o
+    width: 230px
+@media (max-width: 992px)
+  .form1
+    display: none
