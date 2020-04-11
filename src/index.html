@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Handfrau</title>
 </head>
@@ -111,6 +114,13 @@
         Узнайте стоимость своей уборки
       </h2>
       <div class="calc-type">
+        <select name="" id="" class="calc-type__list_mobile">
+          <option value="morning" class="calc-type__category_mobile">Утренняя</option>
+          <option value="evening" class="calc-type__category_mobile">Вечерняя</option>
+          <option value="everyday" class="calc-type__category_mobile">Ежедневная</option>
+          <option value="geeral" class="calc-type__category_mobile">Генеральная</option>
+          <option value="emergency" class="calc-type__category_mobile">После ЧП</option>
+        </select>
         <ul class="calc-type__list">
           <li class="calc-type__category tab1">Утренняя</li>
           <li class="calc-type__category tab2">Вечерняя</li>
@@ -118,7 +128,8 @@
           <li class="calc-type__category tab4">Генеральная</li>
           <li class="calc-type__category tab5">После ЧП</li>
         </ul>
-        <div class="calc-type__description">
+        <button class="calc-type__description-button">?</button>
+        <div class="calc-type__description calc-type__description_adaptive">
           Подразумевает не только поддерживающую уборку, но и работу со сложными загрязнениями, включая загрязнения в труднодоступных местах. Полное очищение помещения от пола до потолка, а также мытье внутренних поверхностей бытовой техники. Сухая и влажная уборка.
         </div>
       </div>
@@ -143,6 +154,10 @@
                 <span class="calc-calculator-square__range_count">2 000</span> м<sup >2</sup></span>
               </div>
             </div>
+          </div>
+          <span class="calc-result__header-personal_mobile">На объекте будут находиться:</span>
+          <div class="calc-result-personal_mobile">
+            <span class="calc-result-personal__man">4 человека</span> &nbsp; <span class="calc-result-personal__hour"> 5 часов</span>,&nbsp;<span class="calc-result-personal__graphic">график 5/2</span>
           </div>
           <div class="calc-calculator-services">
             <div class="calc-calculator__service">
@@ -172,7 +187,7 @@
               <!-- /.calc-calculator-service__header -->
             </div>
             <!-- /.calc-calculator__service -->
-            <div class="calc-calculator__service">
+            <div class="calc-calculator__service calc-calculator__service_adaptive-991">
               <div class="calc-calculator-service__question">
                 <span class="calc-calculator-service-question__symb">?</span>
               </div>
@@ -186,7 +201,7 @@
               <!-- /.calc-calculator-service__header -->
             </div>
             <!-- /.calc-calculator__service -->
-            <div class="calc-calculator__service">
+            <div class="calc-calculator__service calc-calculator__service_adaptive-1200">
               <div class="calc-calculator-service__question">
                 <span class="calc-calculator-service-question__symb">?</span>
               </div>
@@ -206,7 +221,8 @@
         <!-- /.calc-calculator -->
         <div class="calc-result">
           <div class="calc-result__sum">
-            <span class="calc-result__header">Итоговая стоимость</span>
+            <span class="calc-result__header_mobile">Итоговая стоимость:</span>
+            <span class="calc-result__header">Итоговая стоимость:</span>
             <div class="calc-result-sum__sum"><span class="calc-result-sum__count">89 000</span> рублей</div>
           </div>
           <div class="calc-result__personal">
@@ -219,7 +235,8 @@
             <div class="calc-result-buttons">
               <button class="block-button button-main">Заказть уборку</button>
               <button class="block-button button-add">Дистанционная оценка работ</button>
-              <span class="calc-result__header">На объекте будут находиться:</span>
+              <span class="calc-result__header">Точную стоимость уточняйте у оператора</span>
+              <span class="calc-result__header_mobile">Точную стоимость уточняйте у оператора</span>
             </div>
           </div>
         </div>
@@ -229,7 +246,178 @@
     </div>
     <!-- ./container -->
   </section>
+  <!-- ./calc -->
+  <section class="special">
+    <div class="container">
+      <h2 class="special__title">Специализированные услуги по уборке</h2>
+      <div class="special-gallery__wrap">
+      <div class="special-gallery swiper-container">
+        <div class="special-gallery__slider swiper-wrapper">
+          <div class="special-gallery__slide swiper-slide">
+            <img src="img/special-services/kitchen.png" alt="" class="special-gallery-slide__img">
+            <div class="special-gallery-slide__description">
+              <div class="special-gallery-slide__header">Кухня</div>
+              <!-- /.special-gallery-slide__description -->
+              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <!-- /.special-gallery-slide__button -->
+            </div>
+            <!-- /.special-gallery-slide__description -->
+          </div>
+          <div class="special-gallery__slide swiper-slide">
+            <img src="img/special-services/banket.png" alt="" class="special-gallery-slide__img">
+            <div class="special-gallery-slide__description">
+              <div class="special-gallery-slide__header">Банкетный зал</div>
+              <!-- /.special-gallery-slide__description -->
+              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <!-- /.special-gallery-slide__button -->
+            </div>
+            <!-- /.special-gallery-slide__description -->
+          </div>
+          <div class="special-gallery__slide swiper-slide">
+            <img src="img/special-services/bar.png" alt="" class="special-gallery-slide__img">
+            <div class="special-gallery-slide__description">
+              <div class="special-gallery-slide__header">Барная зона</div>
+              <!-- /.special-gallery-slide__description -->
+              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <!-- /.special-gallery-slide__button -->
+            </div>
+            <!-- /.special-gallery-slide__description -->
+          </div>
+          <div class="special-gallery__slide swiper-slide">
+            <img src="img/special-services/back-door.png" alt="" class="special-gallery-slide__img">
+            <div class="special-gallery-slide__description">
+              <div class="special-gallery-slide__header">Задний вход</div>
+              <!-- /.special-gallery-slide__description -->
+              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <!-- /.special-gallery-slide__button -->
+            </div>
+            <!-- /.special-gallery-slide__description -->
+          </div>
+          <div class="special-gallery__slide swiper-slide">
+            <img src="img/special-services/kitchen.png" alt="" class="special-gallery-slide__img">
+            <div class="special-gallery-slide__description">
+              <div class="special-gallery-slide__header">Кухня</div>
+              <!-- /.special-gallery-slide__description -->
+              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <!-- /.special-gallery-slide__button -->
+            </div>
+            <!-- /.special-gallery-slide__description -->
+          </div>
+          <div class="special-gallery__slide swiper-slide">
+            <img src="img/special-services/banket.png" alt="" class="special-gallery-slide__img">
+            <div class="special-gallery-slide__description">
+              <div class="special-gallery-slide__header">Банкетный зал</div>
+              <!-- /.special-gallery-slide__description -->
+              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <!-- /.special-gallery-slide__button -->
+            </div>
+            <!-- /.special-gallery-slide__description -->
+          </div>
+          <div class="special-gallery__slide swiper-slide">
+            <img src="img/special-services/bar.png" alt="" class="special-gallery-slide__img">
+            <div class="special-gallery-slide__description">
+              <div class="special-gallery-slide__header">Барная зона</div>
+              <!-- /.special-gallery-slide__description -->
+              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <!-- /.special-gallery-slide__button -->
+            </div>
+            <!-- /.special-gallery-slide__description -->
+          </div>
+          <div class="special-gallery__slide swiper-slide">
+            <img src="img/special-services/back-door.png" alt="" class="special-gallery-slide__img">
+            <div class="special-gallery-slide__description">
+              <div class="special-gallery-slide__header">Задний вход</div>
+              <!-- /.special-gallery-slide__description -->
+              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <!-- /.special-gallery-slide__button -->
+            </div>
+            <!-- /.special-gallery-slide__description -->
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="special-gallery__pagination swiper-pagination"></div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="slider-button-next swiper-button-next"></div>
+      <div class="slider-button-prev swiper-button-prev"></div>
+    </div>
+    </div>
+  </section>
+  <section class="cleanWarranty">
+    <div class="container">
+      <h2 class="cleanWarranty__header">Проверяем чистоту на деле</h2>
+      <span class="cleanWarranty__description">Если Вас не устроит результат сделаем повторную уборку бесплатно либо вернем деньги.</span>
+      <ul class="cleanWarranty__list">
+        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Проверяем уборку с помощью «белых носков»</li>
+        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Контроль всех этапов работы со стороны менеджеров</li>
+        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Убираем по Вашим правилам</li>
+        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Штрафные санкции для Нас уже прописаны</li>
+      </ul>
+      <div class="cleanWarranty-img">
+        <img src="img/clean-warranty/legs.png" alt="" class="cleanWarranty-img__picture">
+      </div>
+    </div>
+  </section>
+  <section class="dirt">
+    <div class="container">
+      <div class="dirt-wrap">
+        <div class="dirt-text">
+          <h2 class="dirt-text__header">Уборка любых загрязнений</h2>
+          <span class="dirt-text__description">Оказываем услуги профессиональной и качественной уборки в ресторанах любого типа. Клининг выполняется с предварительным согласованием времени, объема работ и стоимости комплекса услуг.</span>
+          <button class="dirt-text__button">Хочу такую же уборку</button>
+        </div>
+        <!-- /.dirt-text -->      
+        <div class="dirt-slider-wrap">
+          <div class="dirt-slider">
+            <div class="dirt-slide">
+              <img src="img/dirt/1.jpg" alt="" class="dirt-slide__img">
+            </div>
+            <div class="dirt-slide">
+              <img src="img/dirt/2.jpg" alt="" class="dirt-slide__img">
+            </div>
+            <div class="dirt-slide">
+              <img src="img/dirt/3.jpg" alt="" class="dirt-slide__img">
+            </div>
+            <div class="dirt-slide">
+              <img src="img/dirt/1.jpg" alt="" class="dirt-slide__img">
+            </div>
+            <div class="dirt-slide">
+              <img src="img/dirt/2.jpg" alt="" class="dirt-slide__img">
+            </div>
+            <div class="dirt-slide">
+              <img src="img/dirt/3.jpg" alt="" class="dirt-slide__img">
+            </div>
+            <!-- <div class="dirt-slide swiper-slide">Slide 4</div>
+            <div class="dirt-slide swiper-slide">Slide 5</div>
+            <div class="dirt-slide swiper-slide">Slide 6</div>
+            <div class="dirt-slide swiper-slide">Slide 7</div>
+            <div class="dirt-slide swiper-slide">Slide 8</div>
+            <div class="dirt-slide swiper-slide">Slide 9</div>
+            <div class="dirt-slide swiper-slide">Slide 10</div> -->
+          </div>
+          <!-- /.dirt-slider -->
+        </div>
+        <!-- /.dirt-slider-wrap -->
+      </div>
+      <!-- /.dirt-wrap -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.dirt -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="scripts/swiper.min.js"></script>
+  <script src="scripts/slick.min.js"></script>
   <script src="scripts/script.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.dirt-slider').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 1,
+        verticalSwiping: true,
+        vertical: true,
+      });
+    });
+  </script>
 </body>
 </html>
