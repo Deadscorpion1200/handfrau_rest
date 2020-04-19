@@ -1,0 +1,118 @@
+.reviews
+  padding-top: 80px
+  padding-bottom: 80px
+.reviews__header
+  font-weight: 600
+  font-size: 48px
+  line-height: 58px
+  text-align: center
+  margin-bottom: 60px
+.reviews-slider
+  position: relative
+.reviews-slider-container 
+  position: relative
+.reviews-slide
+  display: flex
+  justify-content: center
+  align-items: center
+.reviews-slide-img__name
+  display: block
+  font-weight: 900
+  font-size: 18px
+  line-height: 22px
+  margin-bottom: 6px
+.reviews-slide-img__work
+  display: block
+  font-weight: 300
+  font-size: 14px
+  line-height: 17px
+  color: $subtitle-color
+.reviews-slide-img__name_mobile
+  display: none
+.reviews-slide-img__work_mobile
+  display: none
+.reviews-slide-img
+  width: 160px
+  margin-right: 30px
+.reviews-slide-img__img
+  width: 100%
+.reviews-slide-text__review
+  width: 540px
+  font-size: 18px
+  line-height: 26px
+  color: $main-color
+  margin-bottom: 14px
+.reviews-pagination
+  display: none
+  position: relative
+  margin-top: 30px
+@media (max-width: 991px)
+  .reviews
+    background: $section-color
+  .reviews-slide
+    width: 580px !important
+    background-color: #fff
+    border-radius: 10px
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+    margin-right: 70px
+    margin-left: 70px
+    flex-direction: column-reverse
+    padding: 30px
+  .reviews-pagination
+    display: block
+  .reviews-button-prev
+    display: none
+  .reviews-button-next
+    display: none
+  .reviews-slide-img
+    width: 100%
+    text-align: center
+  .reviews-slide-img__elem
+    width: 160px
+    margin-left: auto
+    margin-right: auto
+  .reviews-slide-img__name_desktop
+    display: none
+  .reviews-slide-img__work_desktop
+    display: none
+  .reviews-slide-img__name_mobile
+    display: block
+  .reviews-slide-img__work_mobile
+    display: block
+  .reviews-slide-text__review
+    width: 100%
+    text-align: center
+    line-height: 24px
+    font-size: 16px
+    color: $subtitle-color
+  .reviews-slide-img
+    margin-right: 0
+@media (max-width: 768px)
+  .reviews
+    padding-top: 50px
+    padding-bottom: 50px
+  .reviews__header
+    font-size: 35px
+    line-height: 45px
+    margin-bottom: 35px
+  .reviews-slide
+    width: 500px !important
+    margin-right: 20px
+    margin-left: 20px
+  .reviews-slide-img__elem
+    width: 60px
+    margin-bottom: 10px
+@media (max-width: 576px)
+  .reviews
+    display: none
+  //   padding-top: 30px
+  //   padding-bottom: 30px
+  //   overflow: hidden
+  // .reviews-slide-img__name_mobile
+  //   margin-bottom: 5px
+  // .reviews-slide-img__elem
+  //   margin-bottom: 5px
+  // .reviews-slider-container 
+  //   overflow: visible
+  // .reviews-slide
+  //   width: 280px !important

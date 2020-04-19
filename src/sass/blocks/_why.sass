@@ -1,0 +1,133 @@
+.why
+  padding-top: 80px
+  padding-bottom: 80px
+  background: $section-color
+.why__header
+  font-weight: 600
+  font-size: 48px
+  line-height: 56px
+  text-align: center
+  margin-bottom: 60px
+.why-list
+  list-style: none
+  display: flex
+  flex-direction: column
+  margin-bottom: 50px
+.why__item
+  display: flex
+  margin-bottom: 17px
+.why__item:nth-child(odd)
+  text-align: right
+  align-items: center
+.why__item:nth-child(even)
+  justify-content: flex-end
+  text-align: left
+  align-items: center
+.why-item
+  width: 545px
+.why__item
+  position: relative
+.why__mark
+  width: 21px
+  height: 21px
+  background-color: $main-color
+  border-radius: 50px
+.why__mark_right
+  margin-right: 30px
+  display: block
+.why__mark_left
+  display: block
+  margin-left: 29px
+.why-item__title
+  color: $black_2
+  font-size: 22px
+  line-height: 30px
+  font-weight: 900
+.why-item__description
+  font-size: 16px
+  line-height: 24px
+  color: rgba(31, 45, 56, 0.6)
+.why__border
+  height: 50px
+  width: 1px
+  background-color: #000000
+  position: absolute
+  bottom: -33px
+  left: 49.9%
+.why__button
+  margin-left: auto
+  margin-right: auto
+  display: block
+  width: 270px
+  height: 50px
+  background: $main-color
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+  border-radius: 5px
+  font-weight: 600
+  font-size: 16px
+  line-height: 24px
+  color: #ffffff
+@media (max-width: 1200px)
+  .why-item
+    width: 440px
+  .why__item
+    &:first-child, &:nth-child(4), &:nth-child(7)
+      margin-bottom: 28px
+  .why__border 
+    height: 62px
+    bottom: -34px
+  .border-one, .border-two, .border-four, .border-five, .border-seven
+    bottom: -45px
+@media (max-width: 991px)
+  .why
+    padding-top: 50px
+    padding-bottom: 50px
+  .why__header
+    font-size: 35px
+    line-height: 45px
+    margin-bottom: 50px
+  .why-item
+    width: 320px
+  .border-one, .border-seven
+    height: 73px
+  .border-six
+    height: 73px
+    bottom: -45px
+@media (max-width: 768px)
+  .why__header
+    font-size: 28px
+    line-height: 36px
+  .why__item
+    width: 100%
+    justify-content: flex-start
+    text-align-last: left
+    align-items: flex-start !important
+  .why__item:nth-child(odd)
+    text-align: left
+  .why__border, .why__mark
+    display: none
+  .why__border_adaptive
+    width: 6px
+    height: 6px
+    background-color: $main-color
+    align-items: flex-start    
+    margin-top: 13px
+    margin-right: 10px
+  .why-item
+    width: 100%
+  .why__button
+    width: 290px
+@media (max-width: 576px)
+  .why
+    padding-top: 30px
+    padding-bottom: 30px
+  .why__header
+    margin-bottom: 20px
+  .why__border_adaptive
+    margin-top: 10px
+  .why-item__title
+    font-size: 18px
+    line-height: 24px
+    margin-bottom: 5px
+  .why__item, .why__item:nth-child(odd)
+    margin-bottom: 20px

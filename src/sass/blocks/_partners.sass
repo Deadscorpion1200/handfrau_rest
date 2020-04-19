@@ -1,0 +1,105 @@
+.partners
+  padding-top: 80px
+  padding-bottom: 80px
+.partners__header
+  font-weight: 600
+  font-size: 48px
+  line-height: 58px
+  text-align: center
+  margin-bottom: 60px
+.partners__header_accent
+  color: $main-color
+.partners-slider__wrap
+  position: relative
+  margin-left: auto
+  margin-right: auto
+.partners-slider-container
+  width: 1070px !important
+  height: 245px
+.partners-slider-wrapper
+  align-items: center
+.partners-slide
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25)
+  width: 245px !important
+  height: 225px
+  margin-right: 15px
+  margin-left: 8px
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 10px
+.partners-button-prev
+  width: 40px
+  height: 40px
+  background: #ffffff url('../img/special-services/arrow-left.png') center no-repeat
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 50%
+  outline: none
+  left: 0
+.partners-button-next
+  width: 40px
+  height: 40px
+  background: #ffffff url('../img/special-services/arrow-right.png') center no-repeat
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 50%
+  outline: none
+  right: 0
+  &::after
+    content: ''
+.partners-slide__img
+  width: 100%
+.partners-slider
+  position: relative
+.partners-pagination
+  display: none
+@media (max-width: 1200px)
+  .partners-slider-container
+    width: 960px !important
+    height: 287px
+  .partners-slide
+    width: 290px !important
+    height: 263px
+    margin-right: 15px
+    margin-left: 15px
+  .partners-button-next
+    right: -40px
+  .partners-button-prev
+    left: -40px
+
+@media (max-width: 991px)
+  .partners-slider-container
+    width: 100% !important
+  .partners-slide
+    margin-left: 22px
+@media (max-width: 768px)
+  .partners
+    padding-top: 50px
+    padding-bottom: 50px
+  .partners__header
+    font-size: 35px
+    line-height: 45px
+    margin-bottom: 35px
+  .partners-button-next
+    display: none
+  .partners-button-prev
+    display: none
+  .partners-slider-container
+    width: 320px !important
+    justify-content: center
+    height: 300px
+  .partners-slide
+    margin-left: 15px
+  .partners-slider-wrapper
+    align-items: flex-start
+  .partners-pagination
+    display: block
+    bottom: 0 !important
+@media (max-width: 576px)
+  .partners
+    display: none
+    padding-top: 30px
+    padding-bottom: 30px
+  .partners__header
+    font-size: 28px
+    line-height: 34px
+    margin-bottom: 27px

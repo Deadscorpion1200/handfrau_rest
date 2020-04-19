@@ -1,0 +1,131 @@
+.command
+  padding-top: 80px
+  padding-bottom: 80px
+  background: $section-color
+  position: relative
+.command__header
+  font-weight: 600
+  font-size: 48px
+  line-height: 56px
+  color: $black
+  text-align: center
+  margin-bottom: 30px
+.command__description
+  font-size: 18px
+  line-height: 26px
+  color: $subtitle-color
+  max-width: 870px
+  display: block
+  margin-left: auto
+  margin-right: auto
+  text-align: center
+  margin-bottom: 60px
+
+// .command-slider-container
+//   overflow: visible
+.command-slide
+  background: #FFFFFF
+
+  border-radius: 10px
+.command-slide__img
+  width: 100%
+.command-buttons
+  margin-top: 60px
+  display: flex
+  justify-content: center
+.command-button-prev 
+  width: 40px
+  height: 40px
+  background: #ffffff url(../img/special-services/arrow-left.png) center no-repeat
+  border-radius: 50%
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1)
+  cursor: pointer
+  margin-right: 30px
+  outline: none
+.command-button-next
+  width: 40px
+  height: 40px
+  background: #ffffff url(../img/special-services/arrow-right.png) center no-repeat
+  border-radius: 50%
+  cursor: pointer 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1)
+  outline: none
+.command-slide-description
+  padding: 20px 30px 30px 30px
+.command-slide-name
+  display: flex
+  justify-content: space-between
+  font-weight: 900
+  font-size: 18px
+  line-height: 26px
+  margin-bottom: 2px
+.command__rating-icon
+  margin-left: 4px
+.command-slide__rank
+  font-weight: 300
+  font-size: 14px
+  line-height: 20px
+  color: $main-color
+.command-slide__title
+  font-size: 16px
+  line-height: 24px
+  color: $grey
+  margin-right: 5px
+.command-slide__value
+  font-weight: 600
+  font-size: 16px
+  line-height: 24px
+  color: #485259
+.command-slide-exp
+  display: flex
+  justify-content: space-between
+.command-slide__more
+  display: inline-block
+  color: $main-color
+  font-size: 16px
+  line-height: 24px
+  cursor: pointer
+.command-button-slide
+  margin-top: 21px
+  width: 100%
+  border: none
+  background: $main-color
+  height: 50px
+  border-radius: 5px
+  cursor: pointer
+  color: #ffffff
+  font-weight: 600
+  font-size: 14px
+  line-height: 20px
+  // display: none
+.command-pagination
+  display: none
+@media (max-width: 991px)
+  .command
+    padding-top: 50px
+    padding-bottom: 50px
+  .command__header
+    font-size: 35px
+    line-height: 45px
+@media (max-width: 768px)
+  .command-pagination
+    display: flex
+    justify-content: center
+  .command-buttons
+    display: none
+  .swiper-pagination-bullet
+    &:last-child
+      margin-right: 0 !important
+@media (max-width: 576px)
+  .command
+    padding-top: 30px
+    padding-bottom: 30px
+  .command__header
+    font-size: 28px
+    line-height: 36px
+    margin-bottom: 10px
+  .command__description
+    font-size: 16px
+    line-height: 24px
+    margin-bottom: 20px
+  

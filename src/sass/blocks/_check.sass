@@ -1,0 +1,59 @@
+.check
+  margin-bottom: 80px
+.check-block
+  background-color: $section-color
+  padding: 40px
+.check-block-wrap
+  display: flex
+  justify-content: space-between
+.check-block__header
+  font-weight: 600
+  font-size: 28px
+  line-height: 36px
+  color: $black
+.check-block__button
+  background: $main-color
+  color: #ffffff
+  width: 322px
+  height: 50px
+  border-radius: 5px
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+  font-weight: 600
+  font-size: 16px
+  line-height: 24px
+.check-list
+  list-style: none
+.check-item
+  font-size: 16px
+  line-height: 24px
+  color: rgba(31, 45, 56, 0.6)
+  margin-bottom: 8px
+  &:last-child
+    margin-bottom: 0
+.check-adaptive
+  display: none
+.check-item__textи 
+@media (max-width: 991px)
+  .check
+    background-color: $section-color
+    margin-bottom: 0
+    padding-bottom: 30px
+    padding-top: 30px
+  .check-block
+    padding: 0
+  .check-block__header
+    margin-bottom: 20px
+    text-align: center
+  .check-block__button
+    display: none
+  .check-adaptive
+    display: block
+    width: 290px
+  .check-item
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 30px
+@media (max-width: 576px)
+  .check-adaptive
+    margin-left: auto
+    margin-right: auto

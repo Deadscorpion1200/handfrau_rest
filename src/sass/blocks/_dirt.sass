@@ -33,14 +33,40 @@
 //   height: 650px
 .dirt-slider
   width: 490px 
+  position: relative
+.dirt-arrow__up
+  position: absolute
+  top: 110px
+  right: 62px
+  width: 40px
+  height: 40px
+  background: #ffffff url(../img/dirt/arrow-up.png) center no-repeat
+  z-index: 5
+  border-radius: 50%
+  cursor: pointer
+.dirt-arrow__down
+  position: absolute
+  bottom: 150px
+  right: 62px
+  width: 40px
+  height: 40px
+  background: #ffffff url(../img/dirt/arrow-down.png) center no-repeat
+  z-index: 5
+  border-radius: 50%
+  cursor: pointer
+.dirt-slide
+  position: relative
+.dirt-slide__text
+  position: absolute
+  bottom: 10px
+  left: 30px
+  color: #ffffff
+  max-width: 175px
+  // slick-settings
 .slick-slide
   opacity: .5
   transform: scale(.9)
-  // margin-top: -20px
-  // margin-bottom: -20px
   z-index: 1
-  // margin-top: -20px
-  // margin-bottom: -20px
 .slick-active
   opacity: 1
   transform: scale(1)
@@ -49,3 +75,6 @@
   z-index: 3
 .slick-list
   padding: 150px 0 !important
+@media (max-width: 991px)
+  .dirt
+    display: none

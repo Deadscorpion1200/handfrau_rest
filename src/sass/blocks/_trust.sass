@@ -1,0 +1,112 @@
+.trust
+  padding-top: 80px
+  padding-bottom: 80px
+  background: $section-color
+.trust__header
+  text-align: center
+  font-weight: 600
+  font-size: 48px
+  line-height: 56px
+  margin-bottom: 30px
+.trust__subtitle
+  font-size: 18px
+  line-height: 26px
+  color: $subtitle-color
+  text-align: center
+  margin-bottom: 60px
+.trust-wrap
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  margin-bottom: 60px
+.trust-block
+  width: 264px
+  height: 264px
+  background: #ffffff
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin-right: 30px
+  border-radius: 10px
+  &:last-child
+    margin-right: 0
+.trust-block__img
+  margin-bottom: 20px
+.trust-block__title
+  text-align: center
+  font-weight: 900
+  font-size: 18px
+  line-height: 26px
+  max-width: 224px
+  margin-bottom: 10px
+.trust-block__link
+  color: $main-color
+  text-decoration: none
+.trust-block__subtitle
+  text-align: center
+  font-size: 14px
+  line-height: 20px
+  max-width: 224px
+.trust-button
+  display: block
+  margin-left: auto
+  margin-right: auto
+  background: #3A9FEC
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+  border-radius: 5px
+  width: 270px
+  height: 50px
+  font-weight: 600
+  font-size: 16px
+  color: #ffffff
+@media (max-width: 1200px)
+  .trust-block
+    margin-bottom: 20px
+    &:nth-child(3)
+      margin-right: 0
+    &:last-child
+      margin-bottom: 0
+@media (max-width: 991px)
+  .trust
+    padding-top: 50px
+    padding-bottom: 50px
+  .trust-wrap
+    margin-bottom: 30px
+  .trust-block
+    width: 290px
+    height: 290px
+    &:nth-child(2)
+      margin-right: 0
+    &:nth-child(3)
+      margin-right: 30px
+  .trust-block__title
+    font-size: 21px
+    line-height: 28px
+    max-width: 255px
+  .trust-block__subtitle
+    font-size: 15px
+    line-height: 24px
+@media (max-width: 768px)
+  .trust
+    padding-top: 30px
+    padding-bottom: 30px
+  .trust__header
+    font-size: 28px
+    line-height: 36px
+  .trust__subtitle
+    font-size: 16px
+    line-height: 24px
+  .trust-block
+    margin-right: 0px
+    &:nth-child(3)
+      margin-right: 0px
+@media (max-width: 576px)
+  .trust-block
+    margin-right: 0
+    &:nth-child(3)
+      margin-right: 0
+  .trust__header
+    margin-bottom: 10px
+  .trust__subtitle
+    margin-bottom: 15px

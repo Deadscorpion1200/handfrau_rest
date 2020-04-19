@@ -1,0 +1,132 @@
+.evaluation
+  padding-top: 80px
+  padding-bottom: 80px
+  background: #ffffff url(../img/evaluation/Bg.png) center no-repeat
+  background-size: cover
+.evaluation__header
+  text-align: center
+  font-weight: 600
+  font-size: 48px
+  line-height: 58px
+  color: $black
+  margin-bottom: 30px
+.evaluation__description
+  max-width: 730px
+  margin-left: auto
+  margin-right: auto
+  text-align: center
+  font-size: 18px
+  line-height: 26px
+  color: $subtitle-color
+  margin-bottom: 60px
+.evaluation-form
+  background-color: #fff
+  max-width: 754px
+  margin-left: auto
+  margin-right: auto
+  padding: 30px
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2)
+  border-radius: 10px
+.evaluation-form-container
+  display: flex
+
+.evaluation-form-name
+  display: flex
+  flex-direction: column
+  margin-right: 30px
+.evaluation-form__input
+  border: 1px solid #D1DBE3
+  box-sizing: border-box
+  border-radius: 5px
+  height: 60px
+  width: 332px
+  margin-bottom: 30px
+  padding-left: 20px
+  font-size: 16px
+  color: $calc-button_text
+.evaluation-form__button
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+  border-radius: 5px
+  width: 332px
+  height: 50px
+  background: $main-color
+  font-size: 16px
+  color: #ffffff
+  font-weight: 600
+.evaluation-form-files
+  width: 332px
+  height: 230px
+  border: 1px dashed #8CA2B3
+  box-sizing: border-box
+  border-radius: 5px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+.evaluation-form__file
+  display: none
+.evaluation-form__header_img
+  margin-right: 6px
+.evaluation-form__header
+  color: $grey
+  line-height: 24px
+  font-size: 16px
+  margin-bottom: 8px
+  display: flex
+  align-items: center
+.evaluation-form__subtitle
+  font-size: 14px
+  line-height: 20px
+  color: $grey
+.evaluation-form-files_adaptive
+  width: 100%
+  height: 150px
+  background: #ffffff
+  border: 1px dashed #8CA2B3
+  box-sizing: border-box
+  border-radius: 5px
+  display: none
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin-bottom: 30px
+@media (max-width: 991px)
+  .evaluation
+    padding-top: 50px
+    padding-bottom: 50px
+  .evaluation__header
+    font-size: 35px
+    line-height: 45px
+    margin-bottom: 35px
+  .evaluation__description
+    font-size: 16px
+    line-height: 24px
+    margin-bottom: 35px
+  .evaluation-form
+    width: 392px
+  .evaluation-form-files
+    display: none
+  .evaluation-form-files_adaptive
+    display: flex
+@media (max-width: 576px)
+  .evaluation
+    padding-top: 30px
+    padding-bottom: 30px
+  .evaluation__header
+    font-size: 28px
+    line-height: 36px
+    margin-bottom: 10px
+  .evaluation__description
+    margin-bottom: 10px
+  .evaluation-form
+    width: 290px
+    padding: 0
+    background: transparent
+    box-shadow: none
+  .evaluation-form__input
+    width: 290px
+  .evaluation-form-files_adaptive
+    width: 290px
+  .evaluation-form__button
+    width: 290px
+  
