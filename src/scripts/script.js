@@ -15,7 +15,7 @@ $('.navbar-mobile__menu').on('click', function(e)
   $(this).toggleClass('navbar-mobile__menu_active');
   $('.navbar-nav__mobile').toggleClass('navbar-nav__mobile_active');
 });
-
+// Окрашивание плиток
 let services = document.querySelector('.calc-calculator-services');
 services.addEventListener('click', (event) => {
   let target = event.target;
@@ -23,6 +23,85 @@ services.addEventListener('click', (event) => {
   if (target.matches('.calc-calculator__service')) {
     target.classList.toggle('calc-calculator__service--active');
   }
+});
+// бегунок
+let inputRange = document.querySelector('.range'),
+    area = document.querySelector('.calc-calculator-square__square_count'),
+    result = document.querySelector('.calc-result-sum__count'),
+    resultPersonal = document.querySelector('.calc-result-personal__man'),
+    resultHours = document.querySelector('.calc-result-personal__hour');
+    console.log('resultPersonal: ', resultPersonal.textContent);
+    console.log('resultHours: ', resultHours.textContent);
+
+inputRange.addEventListener('input', (event) => {
+  inputRange.value = event.target.value;
+  area.textContent = +inputRange.value;
+
+  // Количество людей и часов
+  if (+inputRange.value === 10) {
+    console.log(1);
+    resultPersonal.textContent = '1 человек';
+    resultHours.textContent = '2 часа';
+  } else if (+inputRange.value === 20) {
+    console.log(2);
+    resultPersonal.textContent = '1 человек';
+    resultHours.textContent = '4 часа';
+  } else if (+inputRange.value === 30) {
+    console.log(3);
+    resultPersonal.textContent = '1 человек';
+    resultHours.textContent = '6 часов';
+  } else if (+inputRange.value === 40) {
+    resultPersonal.textContent = '1 человек';
+    resultHours.textContent = '8 часов';
+  } else if (+inputRange.value === 50) {
+    resultPersonal.textContent = '2 человека';
+    resultHours.textContent = '5 часов';
+  } else if (+inputRange.value === 60) {
+    resultPersonal.textContent = '2 человека';
+    resultHours.textContent = '6 часов';
+  } else if (+inputRange.value === 70) {
+    resultPersonal.textContent = '2 человека';
+    resultHours.textContent = '7 часов';
+  } else if (+inputRange.value === 80) {
+    resultPersonal.textContent = '2 человека';
+    resultHours.textContent = '8 часов';
+  } else if (+inputRange.value === 90) {
+    resultPersonal.textContent = '3 человека';
+    resultHours.textContent = '6 часов';
+  } else if (+inputRange.value === 100) {
+    resultPersonal.textContent = '3 человека';
+    resultHours.textContent = '7 часов';
+  } else if (+inputRange.value === 110) {
+    resultPersonal.textContent = '3 человека';
+    resultHours.textContent = '8 часов';
+  } else if (+inputRange.value === 120) {
+    resultPersonal.textContent = '3 человека';
+    resultHours.textContent = '8 часов';
+  } else if (+inputRange.value === 130) {
+    resultPersonal.textContent = '4 человека';
+    resultHours.textContent = '7 часов';
+  } else if (+inputRange.value === 140) {
+    resultPersonal.textContent = '4 человека';
+    resultHours.textContent = '7 часов';
+  } else if (+inputRange.value === 150) {
+    resultPersonal.textContent = '4 человека';
+    resultHours.textContent = '8 часов';
+  } else if (+inputRange.value === 160) {
+    resultPersonal.textContent = '4 человека';
+    resultHours.textContent = '8 часов';
+  } else if (+inputRange.value === 170) {
+    resultPersonal.textContent = '5 человек';
+    resultHours.textContent = '7 часов';
+  } else if (+inputRange.value >= 180 && +inputRange.value <= 200) {
+    resultPersonal.textContent = '5 человек';
+    resultHours.textContent = '8 часов';
+  }
+
+  // Калькулятор
+  const calc = (price = 200) => {
+    result.textContent = price * inputRange.value;
+  };
+  calc();
 });
 
 let swiper1 = new Swiper('.special-gallery',{
