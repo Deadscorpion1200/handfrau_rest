@@ -25,7 +25,7 @@
 .tenders__add
   display: block
   color: #ffffff
-  font-weight: 600
+  font-weight: 500
   font-size: 22px
   line-height: 56px
   margin-bottom: 15px
@@ -41,3 +41,33 @@
   color: $main-color
   height: 50px
   width: 240px
+
+@media (max-width: 768px)
+  .tenders
+    padding: 65px 0 65px
+  .tenders-wrap
+    flex-direction: column
+  .tenders-icon
+    margin-bottom: 20px
+
+@media (max-width: 576px)
+  .tenders
+    padding: 35px 0 35px
+  .tenders__header
+    font-size: 26px
+    line-height: 36px
+  .tenders-icon
+    img
+      max-width: 100px
+  .tenders-items
+    margin-bottom: 20px
+  .tenders__item
+    margin-bottom: 0
+    font-size: 22px
+    line-height: 36px
+  .tenders__add
+    font-size: 18px
+    line-height: 36px
+  .tenders__button
+    width: 290px
+    height: 60px

@@ -2,8 +2,8 @@ let slider = $('.range');
 let fill = $('.bar .fill');
 function setBar()
 {
-  fill.css('width', slider.val()+'%')
-  square = slider.val()
+  fill.css('width', (slider.val() / 20)+'%');
+  square = slider.val();
 }
 
 slider.on('input', setBar);
@@ -13,8 +13,17 @@ $('.navbar-mobile__menu').on('click', function(e)
 {
   e.preventDefault();
   $(this).toggleClass('navbar-mobile__menu_active');
-  $('.navbar-nav__mobile').toggleClass('navbar-nav__mobile_active')
-})
+  $('.navbar-nav__mobile').toggleClass('navbar-nav__mobile_active');
+});
+
+let services = document.querySelector('.calc-calculator-services');
+services.addEventListener('click', (event) => {
+  let target = event.target;
+  target = target.closest('.calc-calculator__service');
+  if (target.matches('.calc-calculator__service')) {
+    target.classList.toggle('calc-calculator__service--active');
+  }
+});
 
 let swiper1 = new Swiper('.special-gallery',{
   slidesPerView: 2,
@@ -113,6 +122,7 @@ let swiper4 = new Swiper('.partners-slider-container',
     },
     320:
     {
+      centeredSlides: true,
       splidesPerView: 1,
       pagination: {
         clickable: true,
@@ -123,6 +133,7 @@ let swiper4 = new Swiper('.partners-slider-container',
 });
 let swiper5 = new Swiper('.reviews-slider-container',
 {
+  speed: 600,
   loop: true,
   navigation: {
     nextEl: '.reviews-button-next',
@@ -132,10 +143,7 @@ let swiper5 = new Swiper('.reviews-slider-container',
     clickable: true,
     el: '.reviews-pagination',
   },
-  breakpoints: {
-    320:
-    {
-      slidesPerView: 1
-    }
-  }
-})
+  slidesPerView: 1,
+  spaceBetween: 90,
+  centeredSlides: true,
+});

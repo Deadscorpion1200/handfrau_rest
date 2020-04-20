@@ -90,6 +90,31 @@
   flex-direction: column
   align-items: center
   margin-bottom: 30px
+  transition: background-color 0.3s
+  .services-check
+    position: absolute
+    top: 12px
+    right: 10px
+    width: 15px
+    height: 11px
+    background: url('../../img/calc/mark.svg') 50% 50% no-repeat
+    background-size: contain
+  &--active
+    background-color: $main-color
+    svg
+      path
+        transition: fill 0.3s
+        fill: #fff
+    .calc-calculator-service__header
+      color: #fff
+    .calc-calculator-service__subtitle
+      color: #fff
+    .calc-calculator-service__square
+      color: #fff
+    .calc-calculator-service__parameters
+      svg
+        path
+          fill: #fff !important
 .calc-calculator-service__question
   display: flex
   justify-content: space-around
@@ -157,7 +182,7 @@
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2)
   border-radius: 10px
   padding: 20px 30px
-  height: 355px
+  //height: 355px
 .calc-result__header
   font-size: 14px
   color: $grey

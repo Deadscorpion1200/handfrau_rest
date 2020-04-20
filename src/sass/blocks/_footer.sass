@@ -1,0 +1,106 @@
+.footer
+  padding: 70px 0 40px
+.footer-wrap
+  display: flex
+  justify-content: space-between
+.footer-text
+  max-width: 560px
+.footer-logo
+  &__text
+    margin: 20px 0 15px
+    display: block
+    font-weight: 600
+    font-size: 14px
+    text-transform: uppercase
+    color: #9DAFBD
+    letter-spacing: 0.03em
+.footer-description
+  margin: 0
+  font-size: 18px
+  line-height: 26px
+  letter-spacing: -0.5px
+  color: $nav-color
+  text-align: center
+.footer-text-documents
+  display: flex
+  justify-content: space-between
+  span
+    max-width: 265px
+    font-weight: 300
+    font-size: 14px
+    line-height: 20px
+    color: $subtitle-color
+  a
+    text-decoration: none
+    font-size: 14px
+    color: $main-color
+.footer-contacts
+  text-align: right
+  padding-top: 20px
+.footer-phone
+  font-family: 'Exo 2.0 Light'
+  text-decoration: none
+  font-size: 38px
+  font-weight: 300
+  line-height: 46px
+  color: $main-color
+.footer-email
+  margin: 25px 0 30px
+  display: block
+  font-family: 'Exo 2.0 Light'
+  text-decoration: none
+  font-size: 38px
+  font-weight: 300
+  line-height: 46px
+  color: $main-color
+.footer-address
+  margin-top: 0
+  margin-bottom: 25px
+  display: inline-block
+  max-width: 360px
+  font-size: 18px
+  line-height: 26px
+  letter-spacing: -0.5px
+  color: $subtitle-color
+.footer-contacts-links
+  a
+    text-decoration: none
+    font-size: 14px
+    color: $main-color
+  span
+    color: $subtitle-color
+
+@media (max-width: 768px)
+  .footer
+    padding: 40px 0 20px
+  .footer-wrap
+    flex-direction: column
+    align-items: center
+  .footer-logo
+    img
+      display: none
+    &__text
+      margin: 0px 0 15px
+      text-align: center
+  .footer-contacts
+    padding-top: 30px
+    text-align: center
+  .footer-email
+    margin: 20px 0 30px
+  .footer-text-documents
+    flex-direction: column-reverse
+    align-items: center
+    span
+      margin: 20px 0
+      text-align: center
+
+@media (max-width: 576px)
+  .footer-logo
+    &__text
+      font-size: 14px
+  .footer-phone
+    font-size: 34px
+  .footer-email
+    font-size: 34px
+  .footer-address
+    margin-bottom: 40px

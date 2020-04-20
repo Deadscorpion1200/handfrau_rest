@@ -3,6 +3,10 @@
   padding-bottom: 80px
   background: $section-color
   position: relative
+  // анимация появления кнопки "заказать уборку"
+  .swiper-slide-active
+    .command-slide-description
+      height: 217px
 .command__header
   font-weight: 600
   font-size: 48px
@@ -25,7 +29,6 @@
 //   overflow: visible
 .command-slide
   background: #FFFFFF
-
   border-radius: 10px
 .command-slide__img
   width: 100%
@@ -52,6 +55,10 @@
   outline: none
 .command-slide-description
   padding: 20px 30px 30px 30px
+  // анимация появления кнопки "заказать уборку"
+  height: 135px
+  transition: all 0.5s ease-in-out
+  overflow: hidden
 .command-slide-name
   display: flex
   justify-content: space-between
@@ -128,4 +135,3 @@
     font-size: 16px
     line-height: 24px
     margin-bottom: 20px
-  

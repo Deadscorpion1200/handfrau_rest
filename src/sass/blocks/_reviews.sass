@@ -46,16 +46,28 @@
   display: none
   position: relative
   margin-top: 30px
+.reviews__button
+  display: none
+  margin: 30px auto 0
+  width: 290px
+  height: 50px
+  background-color: $main-color
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+  border-radius: 5px
+  font-weight: 600
+  font-size: 16px
+  text-align: center
+  color: #fff
 @media (max-width: 991px)
   .reviews
     background: $section-color
   .reviews-slide
-    width: 580px !important
+    //width: 580px !important
     background-color: #fff
     border-radius: 10px
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
     margin-right: 70px
-    margin-left: 70px
+    //margin-left: 70px
     flex-direction: column-reverse
     padding: 30px
   .reviews-pagination
@@ -96,15 +108,18 @@
     line-height: 45px
     margin-bottom: 35px
   .reviews-slide
-    width: 500px !important
+    //width: 500px !important
     margin-right: 20px
-    margin-left: 20px
+    //margin-left: 20px
   .reviews-slide-img__elem
     width: 60px
     margin-bottom: 10px
+  .reviews__button
+    display: block
 @media (max-width: 576px)
   .reviews
-    display: none
+    padding: 30px 15px
+    //display: none
   //   padding-top: 30px
   //   padding-bottom: 30px
   //   overflow: hidden
@@ -116,3 +131,6 @@
   //   overflow: visible
   // .reviews-slide
   //   width: 280px !important
+  .reviews__header
+    font-size: 28px
+    line-height: 36px
