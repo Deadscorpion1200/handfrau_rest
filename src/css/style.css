@@ -3813,6 +3813,7 @@ input[type=checkbox]:checked + .modal-contact__label:before {
   height: 22px;
   background: url(../img/popup/close.png) center no-repeat;
   cursor: pointer;
+  z-index: 8;
 }
 
 .add-modal {
@@ -3934,6 +3935,8 @@ input[type=checkbox]:checked + .modal-contact__label:before {
   .add-modal-contact {
     overflow: auto;
     height: 585px;
+    max-width: 558px;
+    overflow-x: hidden;
   }
 }
 /*# sourceMappingURL=style.css.map */
