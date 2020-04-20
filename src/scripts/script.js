@@ -1,13 +1,23 @@
 let slider = $('.range');
 let fill = $('.bar .fill');
+let value = $('.calc-calculator-square__square_count');
+// value.textContent = '10';
+function rangeSquare()
+{
+  value.textContent = square
+  console.log(value);
+}
 function setBar()
 {
   fill.css('width', (slider.val() / 20)+'%');
   square = slider.val();
+  console.log(square);
+  rangeSquare();
 }
 
 slider.on('input', setBar);
 setBar();
+
 
 $('.navbar-mobile__menu').on('click', function(e)
 {
@@ -24,6 +34,14 @@ services.addEventListener('click', (event) => {
     target.classList.toggle('calc-calculator__service--active');
   }
 });
+let modal = document.querySelector('.modal')
+// popup'ы
+$('.modal-contact__close').on('click', function()
+{
+  modal.classList.remove('modal_active');
+})
+
+// слайдеры
 
 let swiper1 = new Swiper('.special-gallery',{
   slidesPerView: 2,

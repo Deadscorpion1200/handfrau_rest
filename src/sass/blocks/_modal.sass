@@ -1,0 +1,161 @@
+.modal
+  position: absolute
+  top: 0
+  left: 0
+  background-color: rgba($main-color, 0.5)
+  width: 100%
+  height: 100%
+  align-items: center
+  justify-content: center
+  display: none
+  position: fixed
+  &_active
+    display: flex
+.modal-contact
+  background: #fff  
+  max-width: 558px
+  padding: 30px
+  height: 554px
+  position: relative
+.modal-contact__header
+  font-weight: 600
+  font-size: 40px
+  line-height: 48px
+  color: $black
+  margin-bottom: 20px
+.modal-contact__subtitle
+  font-size: 18px
+  line-height: 26px
+  color: $subtitle-color
+  display: block
+  margin-bottom: 30px
+.modal-contact__input
+  display: block
+  color: $subtitle-color
+  padding-left: 30px
+  font-size: 16px
+  border: 1px solid #D1DBE3
+  box-sizing: border-box
+  border-radius: 5px
+  display: block
+  height: 60px
+  width: 100%
+  &:first-child
+    margin-bottom: 30px
+  &:nth-child(2)
+    margin-bottom: 35px
+.modal-contact__button
+  margin-top: 30px
+  width: 100%
+  height: 50px
+  color: #fff
+  display: block
+  background: $main-color
+  font-size: 18px
+  font-weight: 600
+  border-radius: 5px
+input[type="checkbox"]
+  display: none
+.modal-contact__label
+  &:before
+    content: ''
+    display: inline-block
+    width: 18px
+    height: 18px
+    backbgound: #fff
+    border: 1px solid $main-color
+    vertical-align: middle
+    margin-right: 10px
+    transition: .2s
+    cursor: pointer
+input[type=checkbox]:checked + .modal-contact__label:before
+  background: $main-color url(../img/popup/checkbox.png) center no-repeat
+.modal-contact__close
+  position: absolute
+  right: -40px
+  top: 0
+  width: 22px
+  height: 22px
+  background: url(../img/popup/close.png) center no-repeat
+  cursor: pointer
+.add-modal
+  position: fixed
+  top: 0
+  left: 0
+  background-color: rgba($main-color, 0.5)
+  width: 100%
+  height: 100%
+  align-items: center
+  justify-content: center
+  display: none
+  &_active
+    display: flex
+.add-modal-contact
+  background: #fff  
+  max-width: 558px
+  padding: 30px
+  height: 785px
+  position: relative
+.add-modal-contact__header
+  font-weight: 600
+  font-size: 40px
+  line-height: 48px
+  color: $black
+  margin-bottom: 20px
+.add-modal-contact__subtitle
+  max-width: 430px
+  font-size: 18px
+  line-height: 26px
+  margin-bottom: 20px
+  color: $subtitle-color
+  display: block
+.add-modal-contact__cost
+  font-size: 14px
+  line-height: 20px
+  color: $subtitle-color
+  display: block
+  margin-bottom: 3px
+.add-modal-contact__amount
+  font-weight: 900
+  font-size: 32px
+  line-height: 40px
+  color: $black_2
+  margin-bottom: 10px
+.add-modal-contact-add__title
+  font-size: 14px
+  line-height: 20px
+  color: $subtitle-color
+  margin-bottom: 30px
+  display: block
+.add-modal-contact-add__list
+  list-style: none
+.add-modal-contact-add__item
+  display: flex
+  justify-content: space-between
+  font-weight: 500
+  font-size: 16px
+  line-height: 24px
+  margin-bottom: 2px
+  &:last-child
+    margin-bottom: 5px
+.add-modal-contact-add__remove
+  margin-right: 10px
+  cursor: pointer
+.add-modal-contact-add__mark
+  display: inline-block
+  width: 4px
+  height: 4px
+  background: $main-color
+  border-radius: 50%
+  margin-right: 6px
+  vertical-align: middle
+.add-modal-contact-add__more
+  font-weight: 600
+  font-size: 16px
+  line-height: 24px
+  color: $main-color
+  margin-bottom: 20px
+@media (max-width: 1375px)
+  .add-modal-contact
+    overflow: auto
+    height: 585px
