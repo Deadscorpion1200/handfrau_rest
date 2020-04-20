@@ -15,6 +15,53 @@ $('.navbar-mobile__menu').on('click', function(e)
   $(this).toggleClass('navbar-mobile__menu_active');
   $('.navbar-nav__mobile').toggleClass('navbar-nav__mobile_active');
 });
+
+// Переключение вкладок
+let typeList = document.querySelector('.calc-type__list'),
+    typeListItems = typeList.querySelectorAll('.calc-type__category'),
+    typeListText = document.querySelectorAll('.calc-type__description_adaptive');
+
+const toggleTabContent = (index) => {
+  for (let i = 0; i < typeListText.length; i++) {
+    if (index === i) {
+      typeListItems[i].classList.add('calc-type__category_active');
+      typeListText[i].classList.remove('calc-type__description_adaptive--d-none');
+    } else {
+      typeListItems[i].classList.remove('calc-type__category_active');
+      typeListText[i].classList.add('calc-type__description_adaptive--d-none');
+    }
+  }
+};
+
+typeList.addEventListener('click', (event) => {
+  let target = event.target;
+  target = target.closest('.calc-type__category');
+
+  if (target) {
+    typeListItems.forEach((item, i) => {
+      if (item === target) {
+        toggleTabContent(i);
+      }
+    });
+  }
+});
+
+
+// Увеличение числа метров ковролина
+let amount = document.getElementById('amount'),
+    minus = document.querySelector('.minus-img'),
+    plus = document.querySelector('.plus-img');
+
+minus.addEventListener('click', () => {
+  if (+amount.textContent > 1) {
+    amount.textContent--;
+  }
+});
+
+plus.addEventListener('click', () => {
+  amount.textContent++;
+});
+
 // Окрашивание плиток
 let services = document.querySelector('.calc-calculator-services');
 services.addEventListener('click', (event) => {
@@ -24,19 +71,17 @@ services.addEventListener('click', (event) => {
     target.classList.toggle('calc-calculator__service--active');
   }
 });
+
 // бегунок
 let inputRange = document.querySelector('.range'),
     area = document.querySelector('.calc-calculator-square__square_count'),
     result = document.querySelector('.calc-result-sum__count'),
     resultPersonal = document.querySelectorAll('.calc-result-personal__man'),
     resultHours = document.querySelectorAll('.calc-result-personal__hour');
-    console.log('resultPersonal: ', resultPersonal);
-    console.log('resultHours: ', resultHours);
 
 inputRange.addEventListener('input', (event) => {
   inputRange.value = event.target.value;
   area.textContent = +inputRange.value;
-  console.log(typeof +inputRange.value);
 
   // Количество людей и часов
   for (let i = 0; i < resultPersonal.length && i < resultHours.length; i++) {
@@ -102,8 +147,129 @@ inputRange.addEventListener('input', (event) => {
     result.textContent = price * inputRange.value;
   };
   calc();
+
+  // Передаём в модалку данные из калькулятора
+  let modalCount = document.querySelector('.add-modal-contact__count');
+  modalCount.textContent = result.textContent;
 });
 
+// popup'ы
+let window1 = document.querySelector('.modal');
+let window2 = document.querySelector('.add-modal');
+
+$('.navbar-contact__button').on('click', function(){
+  window1.classList.add('modal_active');
+});
+$('.main-button__order').on('click', function(){
+  window1.classList.add('modal_active');
+});
+$('.main-button__discover').on('click', function(){
+  window1.classList.add('modal_active');
+})
+$('.main-button__immediate').on('click', function(){
+  window1.classList.add('modal_active');
+});
+$('.special-gallery-slide__button').on('click', function(){
+  window1.classList.add('modal_active');
+});
+$('.dirt-text__button').on('click', function(){
+  window1.classList.add('modal_active');
+});
+$('.command-button-slide').on('click', function(){
+  window1.classList.add('modal_active');
+})
+$('.trust-button').on('click', function(){
+  window1.classList.add('modal_active');
+});
+$('.why__button').on('click', function(){
+  window1.classList.add('modal_active');
+});
+$('.call__button').on('click', function(){
+  window1.classList.add('modal_active');
+});
+$('.tenders__button').on('click', function(){
+  window1.classList.add('modal_active');
+})
+$('.button-main').on('click', function(){
+  window2.classList.add('add-modal_active');
+  // Берём виды уборки из вкладки в модалку
+  let typeCleaning = document.getElementById('cleaning-type'),
+    typeListItemsActive = typeList.querySelector('.calc-type__category_active'),
+    cleaningTime = document.getElementById('cleaning-time'),
+    cleaningTimeValue = cleaningTime.options[cleaningTime.selectedIndex].value,
+    special = document.getElementById('special');
+  if (typeListItemsActive.textContent === 'Утренняя') {
+    typeCleaning.textContent = 'утреннюю';
+    special.textContent = '';
+  } else if (typeListItemsActive.textContent === 'Вечерняя') {
+    typeCleaning.textContent = 'вечернюю';
+    special.textContent = '';
+  } else if (typeListItemsActive.textContent === 'Ежедневная') {
+    typeCleaning.textContent = 'ежедневную';
+    special.textContent = '';
+  } else if (typeListItemsActive.textContent === 'Генеральная') {
+    typeCleaning.textContent = 'генеральную';
+    special.textContent = '';
+  } else if (typeListItemsActive.textContent === 'После ЧП') {
+    typeCleaning.textContent = '';
+    special.textContent = 'после ЧП';
+  }
+
+  if (document.documentElement.clientWidth < 769) {
+    if (cleaningTimeValue === 'morning') {
+      typeCleaning.textContent = 'утреннюю';
+      special.textContent = '';
+    } else if (cleaningTimeValue === 'evening') {
+      typeCleaning.textContent = 'вечернюю';
+      special.textContent = '';
+    } else if (cleaningTimeValue === 'everyday') {
+      typeCleaning.textContent = 'ежедневную';
+      special.textContent = '';
+    } else if (cleaningTimeValue === 'general') {
+      typeCleaning.textContent = 'генеральную';
+      special.textContent = '';
+    } else if (cleaningTimeValue === 'emergency') {
+      typeCleaning.textContent = '';
+      special.textContent = 'после ЧП';
+    }
+  }
+
+  $('#order-calc').on('shown.bs.modal', function () {
+    var services = '';
+    $('.add-serv-label').hide();
+
+    $('.additional-service-list li.active').each(function (e) {
+      var title = $(this).find('.title').text();
+      var params = $(this).find('.params').html() || '';
+      var value = $(this).find('.count').val() || '';
+      var serviceId = $(this).data('service-id');
+
+      services += '<li data-service-id="' + serviceId + '"><span class="title">' + title + '</span><span class="params">' + value + ' ' + params + '</span><span class="close"></span></li>';
+    });
+
+    $('.service-list').html(services);
+
+    if (services) {
+      $('.add-serv-label').show();
+    }
+
+  });
+
+  $('body').on('click', '.service-list .close', function () {
+    var id = $(this).parent('li').data('service-id');
+
+    $(this).parent('li').remove();
+    $('.additional-service-list li[data-service-id=' + id + ']').removeClass('active');
+
+    $('.select-type-clean').change();
+  });
+});
+$('.modal-contact__close').on('click', function(){
+  window1.classList.remove('modal_active')
+  window2.classList.remove('add-modal_active')
+});
+
+// слайдеры
 let swiper1 = new Swiper('.special-gallery',{
   slidesPerView: 2,
   spaceBetween: 30,
