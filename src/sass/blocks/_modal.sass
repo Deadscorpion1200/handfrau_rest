@@ -9,9 +9,9 @@
   justify-content: center
   display: none
   position: fixed
-  z-index: 12
   &_active
     display: flex
+    z-index: 11
 .modal-contact
   background: #fff  
   max-width: 558px
@@ -90,15 +90,13 @@ input[type=checkbox]:checked + .modal-contact__label:before
   align-items: center
   justify-content: center
   display: none
-  z-index: 10
-  overflow-y: visible
   &_active
     display: flex
+    z-index: 11
 .add-modal-contact
   background: #fff  
   max-width: 558px
   padding: 30px
-  height: 785px
   position: relative
 .add-modal-contact__header
   font-weight: 600
@@ -129,7 +127,7 @@ input[type=checkbox]:checked + .modal-contact__label:before
   font-size: 14px
   line-height: 20px
   color: $subtitle-color
-  margin-bottom: 3px
+  margin-bottom: 30px
   display: block
 .add-modal-contact-add__list
   list-style: none
@@ -159,23 +157,9 @@ input[type=checkbox]:checked + .modal-contact__label:before
   line-height: 24px
   color: $main-color
   margin-bottom: 20px
-.add-modal-contact__close
-  position: absolute
-  right: 10px
-  top: 10px
-  width: 22px
-  height: 22px
-  background: url(../img/popup/exit.svg) center no-repeat
-  cursor: pointer
-  z-index: 10
-  font-size: 22px
 @media (max-width: 1375px)
   .add-modal-contact
     overflow: auto
     height: 585px
     max-width: 558px
     overflow-x: hidden
-    overflow-y: visible
-    z-index: 10
-  .modal-contact__close 
-    background-color: darken(#ffffff, 10)

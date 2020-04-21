@@ -40,7 +40,6 @@
     margin-right: 50px
     font-size: 20px
     line-height: 28px
-    color: $grey
     cursor: pointer
     padding-bottom: 10px
     border-bottom: 2px solid $main-color
@@ -210,6 +209,10 @@
 .calc-result-buttons
   display: flex
   flex-direction: column
+
+.calc-type__description_adaptive
+  &--d-none
+    display: none
 @media (max-width: 1200px)
   .calc
     padding-top: 50px
@@ -310,6 +313,9 @@
     margin-bottom: 0
   .calc-calculator-service__square
     line-height: 15px
+  input.amount
+    border: none
+    pointer-events: none
   .calc-calculator-services
     justify-content: space-around
   .calc-result__header-personal_mobile

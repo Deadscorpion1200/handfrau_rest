@@ -802,7 +802,6 @@ input {
   margin-right: 50px;
   font-size: 20px;
   line-height: 28px;
-  color: #9DAFBD;
   cursor: pointer;
   padding-bottom: 10px;
   border-bottom: 2px solid #3a9fec;
@@ -1086,6 +1085,10 @@ input {
           flex-direction: column;
 }
 
+.calc-type__description_adaptive--d-none {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .calc {
     padding-top: 50px;
@@ -1243,6 +1246,10 @@ input {
   }
   .calc-calculator-service__square {
     line-height: 15px;
+  }
+  input.amount {
+    border: none;
+    pointer-events: none;
   }
   .calc-calculator-services {
     -ms-flex-pack: distribute;
@@ -1546,7 +1553,7 @@ input {
 
 .dirt-arrow__up {
   position: absolute;
-  top: 110px;
+  top: 185px;
   right: 62px;
   width: 40px;
   height: 40px;
@@ -1558,7 +1565,7 @@ input {
 
 .dirt-arrow__down {
   position: absolute;
-  bottom: 150px;
+  bottom: 35px;
   right: 62px;
   width: 40px;
   height: 40px;
@@ -1601,8 +1608,81 @@ input {
 }
 
 @media (max-width: 991px) {
-  .dirt {
+  .dirt-arrow__up, .dirt-arrow__down {
+    display: none !important;
+  }
+  .dirt-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dirt-wrap .dirt-text__button {
+    width: 290px;
+    margin-bottom: 30px;
+  }
+  .dirt-text {
+    padding: 80px 0 0;
+  }
+  .dirt-text .dirt-text__button {
     display: none;
+  }
+  .dirt-text__header {
+    margin-bottom: 20px;
+    max-width: inherit;
+    text-align: center;
+  }
+  .dirt-text__description {
+    margin-bottom: 15px;
+    max-width: inherit;
+    text-align: center;
+  }
+  .dirt-slider-wrap .slick-list {
+    padding: 30px 0 !important;
+  }
+  .dirt-slider-wrap .slick-dots {
+    bottom: 18px;
+  }
+  .dirt-slider-wrap .slick-dots li {
+    margin: 0 10px;
+  }
+  .dirt-slider-wrap .slick-dots li button:before {
+    font-size: 40px;
+    width: 8px;
+    height: 8px;
+  }
+  .dirt-slider-wrap .slick-dots li.slick-active button:before {
+    color: #3a9fec;
+    opacity: 1;
+  }
+  .dirt-slider-wrap .slick-dotted.slick-slider {
+    margin-bottom: 8px;
+  }
+  .dirt-slide__text {
+    max-width: inherit;
+  }
+  .dirt-slide img {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dirt-text {
+    padding-top: 30px;
+  }
+  .dirt-text__header {
+    font-size: 28px;
+  }
+  .dirt-text__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .dirt-slide__text {
+    font-size: 14px;
+  }
+  .dirt-slide img {
+    margin: 0 auto;
+    max-width: 300px;
   }
 }
 
@@ -3717,13 +3797,13 @@ input {
           justify-content: center;
   display: none;
   position: fixed;
-  z-index: 12;
 }
 
 .modal_active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 11;
 }
 
 .modal-contact {
@@ -3831,21 +3911,19 @@ input[type=checkbox]:checked + .modal-contact__label:before {
       -ms-flex-pack: center;
           justify-content: center;
   display: none;
-  z-index: 10;
-  overflow-y: visible;
 }
 
 .add-modal_active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 11;
 }
 
 .add-modal-contact {
   background: #fff;
   max-width: 558px;
   padding: 30px;
-  height: 785px;
   position: relative;
 }
 
@@ -3886,7 +3964,7 @@ input[type=checkbox]:checked + .modal-contact__label:before {
   font-size: 14px;
   line-height: 20px;
   color: #8CA2B3;
-  margin-bottom: 3px;
+  margin-bottom: 30px;
   display: block;
 }
 
@@ -3934,29 +4012,12 @@ input[type=checkbox]:checked + .modal-contact__label:before {
   margin-bottom: 20px;
 }
 
-.add-modal-contact__close {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 22px;
-  height: 22px;
-  background: url(../img/popup/exit.svg) center no-repeat;
-  cursor: pointer;
-  z-index: 10;
-  font-size: 22px;
-}
-
 @media (max-width: 1375px) {
   .add-modal-contact {
     overflow: auto;
     height: 585px;
     max-width: 558px;
     overflow-x: hidden;
-    overflow-y: visible;
-    z-index: 10;
-  }
-  .modal-contact__close {
-    background-color: #e6e6e6;
   }
 }
 /*# sourceMappingURL=style.css.map */

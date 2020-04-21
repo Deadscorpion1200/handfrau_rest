@@ -36,7 +36,7 @@
   position: relative
 .dirt-arrow__up
   position: absolute
-  top: 110px
+  top: 185px
   right: 62px
   width: 40px
   height: 40px
@@ -46,7 +46,7 @@
   cursor: pointer
 .dirt-arrow__down
   position: absolute
-  bottom: 150px
+  bottom: 35px
   right: 62px
   width: 40px
   height: 40px
@@ -76,5 +76,60 @@
 .slick-list
   padding: 150px 0 !important
 @media (max-width: 991px)
-  .dirt
-    display: none
+  .dirt-arrow__up, .dirt-arrow__down
+    display: none !important
+  .dirt-wrap
+    flex-direction: column
+    .dirt-text__button
+      width: 290px
+      margin-bottom: 30px
+  .dirt-text
+    padding: 80px 0 0
+    .dirt-text__button
+      display: none
+    &__header
+      margin-bottom: 20px
+      max-width: inherit
+      text-align: center
+    &__description
+      margin-bottom: 15px
+      max-width: inherit
+      text-align: center
+  .dirt-slider-wrap
+    .slick-list
+      padding: 30px 0 !important
+    .slick-dots
+      bottom: 18px
+      li
+        margin: 0 10px
+        button
+          &:before
+            font-size: 40px
+            width: 8px
+            height: 8px
+      li.slick-active
+        button
+          &:before
+            color: $main-color
+            opacity: 1
+    .slick-dotted.slick-slider
+      margin-bottom: 8px
+  .dirt-slide__text
+    max-width: inherit
+  .dirt-slide
+    img
+      border-radius: 8px
+@media (max-width: 576px)
+  .dirt-text
+    padding-top: 30px
+    &__header
+      font-size: 28px
+    &__description
+      font-size: 16px
+      line-height: 24px
+  .dirt-slide
+    &__text
+      font-size: 14px
+    img
+      margin: 0 auto
+      max-width: 300px

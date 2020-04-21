@@ -114,15 +114,15 @@
         Узнайте стоимость своей уборки
       </h2>
       <div class="calc-type">
-        <select name="" id="" class="calc-type__list_mobile">
+        <select name="" id="cleaning-time" class="calc-type__list_mobile">
           <option value="morning" class="calc-type__category_mobile">Утренняя</option>
           <option value="evening" class="calc-type__category_mobile">Вечерняя</option>
           <option value="everyday" class="calc-type__category_mobile">Ежедневная</option>
-          <option value="geeral" class="calc-type__category_mobile">Генеральная</option>
+          <option value="general" class="calc-type__category_mobile">Генеральная</option>
           <option value="emergency" class="calc-type__category_mobile">После ЧП</option>
         </select>
         <ul class="calc-type__list">
-          <li class="calc-type__category tab1">Утренняя</li>
+          <li class="calc-type__category calc-type__category_active tab1">Утренняя</li>
           <li class="calc-type__category tab2">Вечерняя</li>
           <li class="calc-type__category tab3">Ежедневная</li>
           <li class="calc-type__category tab4">Генеральная</li>
@@ -131,6 +131,26 @@
         <button class="calc-type__description-button">?</button>
         <div class="calc-type__description calc-type__description_adaptive">
           Подразумевает не только поддерживающую уборку, но и работу со сложными загрязнениями, включая загрязнения в труднодоступных местах. Полное очищение помещения от пола до потолка, а также мытье внутренних поверхностей бытовой техники. Сухая и влажная уборка.
+        </div>
+        <div class="calc-type__description calc-type__description_adaptive calc-type__description_adaptive--d-none">
+          2)Подразумевает не только поддерживающую уборку, но и работу со сложными загрязнениями, включая загрязнения в
+          труднодоступных местах. Полное очищение помещения от пола до потолка, а также мытье внутренних поверхностей бытовой
+          техники. Сухая и влажная уборка.
+        </div>
+        <div class="calc-type__description calc-type__description_adaptive calc-type__description_adaptive--d-none">
+          3)Подразумевает не только поддерживающую уборку, но и работу со сложными загрязнениями, включая загрязнения в
+          труднодоступных местах. Полное очищение помещения от пола до потолка, а также мытье внутренних поверхностей бытовой
+          техники. Сухая и влажная уборка.
+        </div>
+        <div class="calc-type__description calc-type__description_adaptive calc-type__description_adaptive--d-none">
+          4)Подразумевает не только поддерживающую уборку, но и работу со сложными загрязнениями, включая загрязнения в
+          труднодоступных местах. Полное очищение помещения от пола до потолка, а также мытье внутренних поверхностей бытовой
+          техники. Сухая и влажная уборка.
+        </div>
+        <div class="calc-type__description calc-type__description_adaptive calc-type__description_adaptive--d-none">
+          5)Подразумевает не только поддерживающую уборку, но и работу со сложными загрязнениями, включая загрязнения в
+          труднодоступных местах. Полное очищение помещения от пола до потолка, а также мытье внутренних поверхностей бытовой
+          техники. Сухая и влажная уборка.
         </div>
       </div>
       <!-- ./calc-type  -->
@@ -159,8 +179,8 @@
           <div class="calc-result-personal_mobile">
             <span class="calc-result-personal__man">4 человека</span> &nbsp; <span class="calc-result-personal__hour"> 5 часов</span>,&nbsp;<span class="calc-result-personal__graphic">график 5/2</span>
           </div>
-          <ul class="calc-calculator-services">
-            <li class="calc-calculator__service" data-service-id="1">
+          <div class="calc-calculator-services">
+            <div class="calc-calculator__service">
               <svg class="services-check" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2071 0.801178C14.5976 1.20275 14.5976 1.85383 14.2071 2.2554L6.4822 10.1988C6.09168 10.6004 5.45851 10.6004 5.06799 10.1988L0.792893 5.80279C0.402369 5.40122 0.402369 4.75015 0.792893 4.34857C1.18342 3.947 1.81658 3.947 2.20711 4.34857L5.77509 8.01749L12.7929 0.801178C13.1834 0.399607 13.8166 0.399607 14.2071 0.801178Z" fill="white"/>
               </svg>
@@ -193,9 +213,9 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header">Антиаллергенная химия</div>
               <!-- /.calc-calculator-service__header -->
-            </li>
+            </div>
             <!-- /.calc-calculator__service -->
-            <li class="calc-calculator__service" data-service-id="2">
+            <div class="calc-calculator__service">
               <svg class="services-check" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2071 0.801178C14.5976 1.20275 14.5976 1.85383 14.2071 2.2554L6.4822 10.1988C6.09168 10.6004 5.45851 10.6004 5.06799 10.1988L0.792893 5.80279C0.402369 5.40122 0.402369 4.75015 0.792893 4.34857C1.18342 3.947 1.81658 3.947 2.20711 4.34857L5.77509 8.01749L12.7929 0.801178C13.1834 0.399607 13.8166 0.399607 14.2071 0.801178Z" fill="white"/>
               </svg>
@@ -223,9 +243,9 @@
               <div class="calc-calculator-service__header">Помыть окна</div>
               <div class="calc-calculator-service__subtitle">Рассчитывается индивидуально</div>
               <!-- /.calc-calculator-service__header -->
-            </li>
+            </div>
             <!-- /.calc-calculator__service -->
-            <li class="calc-calculator__service calc-calculator__service_adaptive-991" data-service-id="3">
+            <div class="calc-calculator__service calc-calculator__service_adaptive-991">
               <svg class="services-check" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2071 0.801178C14.5976 1.20275 14.5976 1.85383 14.2071 2.2554L6.4822 10.1988C6.09168 10.6004 5.45851 10.6004 5.06799 10.1988L0.792893 5.80279C0.402369 5.40122 0.402369 4.75015 0.792893 4.34857C1.18342 3.947 1.81658 3.947 2.20711 4.34857L5.77509 8.01749L12.7929 0.801178C13.1834 0.399607 13.8166 0.399607 14.2071 0.801178Z" fill="white"/>
               </svg>
@@ -268,15 +288,15 @@
                 <svg class="minus-img" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10 3.25V0.75H0V3.25H10Z" fill="#1F2D38" />
                 </svg>
-                <span class="calc-calculator-service__square"> <span class="calc-calculator-service__square_count">1</span> м<sup>2</sup></span> 
+                <span class="calc-calculator-service__square"><span class="amount">1</span> <span class="params">м<sup>2</sup></span> 
                 <svg class="plus-img" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z" fill="#1F2D38" />
                 </svg>
               </div>
               <!-- /.calc-calculator-service__header -->
-            </li>
+            </div>
             <!-- /.calc-calculator__service -->
-            <li class="calc-calculator__service calc-calculator__service_adaptive-1200" data-service-id="4">
+            <div class="calc-calculator__service calc-calculator__service_adaptive-1200">
               <svg class="services-check" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2071 0.801178C14.5976 1.20275 14.5976 1.85383 14.2071 2.2554L6.4822 10.1988C6.09168 10.6004 5.45851 10.6004 5.06799 10.1988L0.792893 5.80279C0.402369 5.40122 0.402369 4.75015 0.792893 4.34857C1.18342 3.947 1.81658 3.947 2.20711 4.34857L5.77509 8.01749L12.7929 0.801178C13.1834 0.399607 13.8166 0.399607 14.2071 0.801178Z" fill="white"/>
               </svg>
@@ -322,9 +342,9 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header clock-descr">Срочная уборка</div>
               <!-- /.calc-calculator-service__header -->
-            </li>
+            </div>
             <!-- /.calc-calculator__service -->
-          </ul>
+          </div>
           <!-- /.calc-calculator-services -->
           <a href="#" class="clock-calculator-services__showMore">Добавить дополнительные услуги</a>
         </div>
@@ -343,7 +363,7 @@
               <span class="calc-result-personal__graphic">график 5/2</span>
             </div>
             <div class="calc-result-buttons">
-              <button class="block-button button-main" data-target="#order-calc">Заказать уборку</button>
+              <button class="block-button button-main">Заказать уборку</button>
               <button class="block-button button-add">Дистанционная оценка работ</button>
               <span class="calc-result__header">Точную стоимость уточняйте у оператора</span>
               <span class="calc-result__header_mobile">Точную стоимость уточняйте у оператора</span>
@@ -509,6 +529,7 @@
           <!-- /.dirt-slider -->
         </div>
         <!-- /.dirt-slider-wrap -->
+        <button class="dirt-text__button">Хочу такую же уборку</button>
       </div>
       <!-- /.dirt-wrap -->
     </div>
@@ -1268,12 +1289,9 @@
   <!-- /.modal -->
   <div class="add-modal">
     <div class="add-modal-contact">
-      <div class="add-modal-contact__close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22 1L1 22M22 22L1 1" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        </div>
+      <div class="modal-contact__close"></div>
       <!-- /.modal-contact__close -->
-      <h2 class="add-modal-contact__header">Закажите утреннюю уборку офиса</h2>
+      <h2 class="add-modal-contact__header">Закажите <span id="cleaning-type">утреннюю</span> уборку офиса <span id="special"></span></h2>
       <!-- /.add-modal-contact__header -->
       <span class="add-modal-contact__subtitle">Оставьте свои имя и номер телефона, и наш менеджер перезвонит Вам в течении 15 минут</span>
       <!-- /.add-modal-contact__subtitle -->
@@ -1356,6 +1374,16 @@
         vertical: true,
         prevArrow: '<div class="dirt-arrow__up">',
         nextArrow: '<div class="dirt-arrow__down">',
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              verticalSwiping: false,
+              vertical: false,
+              dots: true
+            }
+          },
+        ]
       });
     });
   </script>

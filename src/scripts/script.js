@@ -15,6 +15,53 @@ $('.navbar-mobile__menu').on('click', function(e)
   $(this).toggleClass('navbar-mobile__menu_active');
   $('.navbar-nav__mobile').toggleClass('navbar-nav__mobile_active');
 });
+
+// Переключение вкладок
+let typeList = document.querySelector('.calc-type__list'),
+    typeListItems = typeList.querySelectorAll('.calc-type__category'),
+    typeListText = document.querySelectorAll('.calc-type__description_adaptive');
+
+const toggleTabContent = (index) => {
+  for (let i = 0; i < typeListText.length; i++) {
+    if (index === i) {
+      typeListItems[i].classList.add('calc-type__category_active');
+      typeListText[i].classList.remove('calc-type__description_adaptive--d-none');
+    } else {
+      typeListItems[i].classList.remove('calc-type__category_active');
+      typeListText[i].classList.add('calc-type__description_adaptive--d-none');
+    }
+  }
+};
+
+typeList.addEventListener('click', (event) => {
+  let target = event.target;
+  target = target.closest('.calc-type__category');
+
+  if (target) {
+    typeListItems.forEach((item, i) => {
+      if (item === target) {
+        toggleTabContent(i);
+      }
+    });
+  }
+});
+
+
+// Увеличение числа метров ковролина
+let amount = document.getElementById('amount'),
+    minus = document.querySelector('.minus-img'),
+    plus = document.querySelector('.plus-img');
+
+minus.addEventListener('click', () => {
+  if (+amount.textContent > 1) {
+    amount.textContent--;
+  }
+});
+
+plus.addEventListener('click', () => {
+  amount.textContent++;
+});
+
 // Окрашивание плиток
 let services = document.querySelector('.calc-calculator-services');
 services.addEventListener('click', (event) => {
@@ -22,80 +69,77 @@ services.addEventListener('click', (event) => {
   target = target.closest('.calc-calculator__service');
   if (target.matches('.calc-calculator__service')) {
     target.classList.toggle('calc-calculator__service--active');
-    
   }
 });
+
 // бегунок
 let inputRange = document.querySelector('.range'),
     area = document.querySelector('.calc-calculator-square__square_count'),
     result = document.querySelector('.calc-result-sum__count'),
-    resultPersonal = document.querySelector('.calc-result-personal__man'),
-    resultHours = document.querySelector('.calc-result-personal__hour');
-    console.log('resultPersonal: ', resultPersonal.textContent);
-    console.log('resultHours: ', resultHours.textContent);
+    resultPersonal = document.querySelectorAll('.calc-result-personal__man'),
+    resultHours = document.querySelectorAll('.calc-result-personal__hour');
 
 inputRange.addEventListener('input', (event) => {
   inputRange.value = event.target.value;
   area.textContent = +inputRange.value;
 
   // Количество людей и часов
-  if (+inputRange.value === 10) {
-    console.log(1);
-    resultPersonal.textContent = '1 человек';
-    resultHours.textContent = '2 часа';
-  } else if (+inputRange.value === 20) {
-    console.log(2);
-    resultPersonal.textContent = '1 человек';
-    resultHours.textContent = '4 часа';
-  } else if (+inputRange.value === 30) {
-    console.log(3);
-    resultPersonal.textContent = '1 человек';
-    resultHours.textContent = '6 часов';
-  } else if (+inputRange.value === 40) {
-    resultPersonal.textContent = '1 человек';
-    resultHours.textContent = '8 часов';
-  } else if (+inputRange.value === 50) {
-    resultPersonal.textContent = '2 человека';
-    resultHours.textContent = '5 часов';
-  } else if (+inputRange.value === 60) {
-    resultPersonal.textContent = '2 человека';
-    resultHours.textContent = '6 часов';
-  } else if (+inputRange.value === 70) {
-    resultPersonal.textContent = '2 человека';
-    resultHours.textContent = '7 часов';
-  } else if (+inputRange.value === 80) {
-    resultPersonal.textContent = '2 человека';
-    resultHours.textContent = '8 часов';
-  } else if (+inputRange.value === 90) {
-    resultPersonal.textContent = '3 человека';
-    resultHours.textContent = '6 часов';
-  } else if (+inputRange.value === 100) {
-    resultPersonal.textContent = '3 человека';
-    resultHours.textContent = '7 часов';
-  } else if (+inputRange.value === 110) {
-    resultPersonal.textContent = '3 человека';
-    resultHours.textContent = '8 часов';
-  } else if (+inputRange.value === 120) {
-    resultPersonal.textContent = '3 человека';
-    resultHours.textContent = '8 часов';
-  } else if (+inputRange.value === 130) {
-    resultPersonal.textContent = '4 человека';
-    resultHours.textContent = '7 часов';
-  } else if (+inputRange.value === 140) {
-    resultPersonal.textContent = '4 человека';
-    resultHours.textContent = '7 часов';
-  } else if (+inputRange.value === 150) {
-    resultPersonal.textContent = '4 человека';
-    resultHours.textContent = '8 часов';
-  } else if (+inputRange.value === 160) {
-    resultPersonal.textContent = '4 человека';
-    resultHours.textContent = '8 часов';
-  } else if (+inputRange.value === 170) {
-    resultPersonal.textContent = '5 человек';
-    resultHours.textContent = '7 часов';
-  } else if (+inputRange.value >= 180 && +inputRange.value <= 200) {
-    resultPersonal.textContent = '5 человек';
-    resultHours.textContent = '8 часов';
+  for (let i = 0; i < resultPersonal.length && i < resultHours.length; i++) {
+    if (+inputRange.value === 10) {
+      resultPersonal[i].textContent = '1 человек';
+      resultHours[i].textContent = '2 часа';
+    } else if (+inputRange.value === 20) {
+      resultPersonal[i].textContent = '1 человек';
+      resultHours[i].textContent = '4 часа';
+    } else if (+inputRange.value === 30) {
+      resultPersonal[i].textContent = '1 человек';
+      resultHours[i].textContent = '6 часов';
+    } else if (+inputRange.value === 40) {
+      resultPersonal[i].textContent = '1 человек';
+      resultHours[i].textContent = '8 часов';
+    } else if (+inputRange.value === 50) {
+      resultPersonal[i].textContent = '2 человека';
+      resultHours[i].textContent = '5 часов';
+    } else if (+inputRange.value === 60) {
+      resultPersonal[i].textContent = '2 человека';
+      resultHours[i].textContent = '6 часов';
+    } else if (+inputRange.value === 70) {
+      resultPersonal[i].textContent = '2 человека';
+      resultHours[i].textContent = '7 часов';
+    } else if (+inputRange.value === 80) {
+      resultPersonal[i].textContent = '2 человека';
+      resultHours[i].textContent = '8 часов';
+    } else if (+inputRange.value === 90) {
+      resultPersonal[i].textContent = '3 человека';
+      resultHours[i].textContent = '6 часов';
+    } else if (+inputRange.value === 100) {
+      resultPersonal[i].textContent = '3 человека';
+      resultHours[i].textContent = '7 часов';
+    } else if (+inputRange.value === 110) {
+      resultPersonal[i].textContent = '3 человека';
+      resultHours[i].textContent = '8 часов';
+    } else if (+inputRange.value === 120) {
+      resultPersonal[i].textContent = '3 человека';
+      resultHours[i].textContent = '8 часов';
+    } else if (+inputRange.value === 130) {
+      resultPersonal[i].textContent = '4 человека';
+      resultHours[i].textContent = '7 часов';
+    } else if (+inputRange.value === 140) {
+      resultPersonal[i].textContent = '4 человека';
+      resultHours[i].textContent = '7 часов';
+    } else if (+inputRange.value === 150) {
+      resultPersonal[i].textContent = '4 человека';
+      resultHours[i].textContent = '8 часов';
+    } else if (+inputRange.value === 160) {
+      resultPersonal[i].textContent = '4 человека';
+      resultHours[i].textContent = '8 часов';
+    } else if (+inputRange.value === 170) {
+      resultPersonal[i].textContent = '5 человек';
+      resultHours[i].textContent = '7 часов';
+    } else if (+inputRange.value >= 180 && +inputRange.value <= 200) {
+      resultPersonal[i].textContent = '5 человек';
+      resultHours[i].textContent = '8 часов';
+    }
   }
 
   // Калькулятор
@@ -103,6 +147,10 @@ inputRange.addEventListener('input', (event) => {
     result.textContent = price * inputRange.value;
   };
   calc();
+
+  // Передаём в модалку данные из калькулятора
+  let modalCount = document.querySelector('.add-modal-contact__count');
+  modalCount.textContent = result.textContent;
 });
 
 // popup'ы
@@ -144,13 +192,82 @@ $('.tenders__button').on('click', function(){
 })
 $('.button-main').on('click', function(){
   window2.classList.add('add-modal_active');
+  // Берём виды уборки из вкладки в модалку
+  let typeCleaning = document.getElementById('cleaning-type'),
+    typeListItemsActive = typeList.querySelector('.calc-type__category_active'),
+    cleaningTime = document.getElementById('cleaning-time'),
+    cleaningTimeValue = cleaningTime.options[cleaningTime.selectedIndex].value,
+    special = document.getElementById('special');
+  if (typeListItemsActive.textContent === 'Утренняя') {
+    typeCleaning.textContent = 'утреннюю';
+    special.textContent = '';
+  } else if (typeListItemsActive.textContent === 'Вечерняя') {
+    typeCleaning.textContent = 'вечернюю';
+    special.textContent = '';
+  } else if (typeListItemsActive.textContent === 'Ежедневная') {
+    typeCleaning.textContent = 'ежедневную';
+    special.textContent = '';
+  } else if (typeListItemsActive.textContent === 'Генеральная') {
+    typeCleaning.textContent = 'генеральную';
+    special.textContent = '';
+  } else if (typeListItemsActive.textContent === 'После ЧП') {
+    typeCleaning.textContent = '';
+    special.textContent = 'после ЧП';
+  }
+
+  if (document.documentElement.clientWidth < 769) {
+    if (cleaningTimeValue === 'morning') {
+      typeCleaning.textContent = 'утреннюю';
+      special.textContent = '';
+    } else if (cleaningTimeValue === 'evening') {
+      typeCleaning.textContent = 'вечернюю';
+      special.textContent = '';
+    } else if (cleaningTimeValue === 'everyday') {
+      typeCleaning.textContent = 'ежедневную';
+      special.textContent = '';
+    } else if (cleaningTimeValue === 'general') {
+      typeCleaning.textContent = 'генеральную';
+      special.textContent = '';
+    } else if (cleaningTimeValue === 'emergency') {
+      typeCleaning.textContent = '';
+      special.textContent = 'после ЧП';
+    }
+  }
+
+  $('#order-calc').on('shown.bs.modal', function () {
+    var services = '';
+    $('.add-serv-label').hide();
+
+    $('.additional-service-list li.active').each(function (e) {
+      var title = $(this).find('.title').text();
+      var params = $(this).find('.params').html() || '';
+      var value = $(this).find('.count').val() || '';
+      var serviceId = $(this).data('service-id');
+
+      services += '<li data-service-id="' + serviceId + '"><span class="title">' + title + '</span><span class="params">' + value + ' ' + params + '</span><span class="close"></span></li>';
+    });
+
+    $('.service-list').html(services);
+
+    if (services) {
+      $('.add-serv-label').show();
+    }
+
+  });
+
+  $('body').on('click', '.service-list .close', function () {
+    var id = $(this).parent('li').data('service-id');
+
+    $(this).parent('li').remove();
+    $('.additional-service-list li[data-service-id=' + id + ']').removeClass('active');
+
+    $('.select-type-clean').change();
+  });
 });
 $('.modal-contact__close').on('click', function(){
   window1.classList.remove('modal_active')
-});
-$('.add-modal-contact__close').on('click', function(){
   window2.classList.remove('add-modal_active')
-})
+});
 
 // слайдеры
 let swiper1 = new Swiper('.special-gallery',{
@@ -275,3 +392,4 @@ let swiper5 = new Swiper('.reviews-slider-container',
   spaceBetween: 90,
   centeredSlides: true,
 });
+
