@@ -529,6 +529,7 @@
           <!-- /.dirt-slider -->
         </div>
         <!-- /.dirt-slider-wrap -->
+        <button class="dirt-text__button">Хочу такую же уборку</button>
       </div>
       <!-- /.dirt-wrap -->
     </div>
@@ -1373,6 +1374,16 @@
         vertical: true,
         prevArrow: '<div class="dirt-arrow__up">',
         nextArrow: '<div class="dirt-arrow__down">',
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              verticalSwiping: false,
+              vertical: false,
+              dots: true
+            }
+          },
+        ]
       });
     });
   </script>
