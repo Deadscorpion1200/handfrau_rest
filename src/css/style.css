@@ -3717,6 +3717,7 @@ input {
           justify-content: center;
   display: none;
   position: fixed;
+  z-index: 12;
 }
 
 .modal_active {
@@ -3830,6 +3831,8 @@ input[type=checkbox]:checked + .modal-contact__label:before {
       -ms-flex-pack: center;
           justify-content: center;
   display: none;
+  z-index: 10;
+  overflow-y: visible;
 }
 
 .add-modal_active {
@@ -3883,7 +3886,7 @@ input[type=checkbox]:checked + .modal-contact__label:before {
   font-size: 14px;
   line-height: 20px;
   color: #8CA2B3;
-  margin-bottom: 30px;
+  margin-bottom: 3px;
   display: block;
 }
 
@@ -3937,6 +3940,11 @@ input[type=checkbox]:checked + .modal-contact__label:before {
     height: 585px;
     max-width: 558px;
     overflow-x: hidden;
+    overflow-y: visible;
+  }
+  .modal-contact__close {
+    right: 0;
+    background-color: #e6e6e6;
   }
 }
 /*# sourceMappingURL=style.css.map */

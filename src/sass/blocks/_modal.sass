@@ -9,6 +9,7 @@
   justify-content: center
   display: none
   position: fixed
+  z-index: 12
   &_active
     display: flex
 .modal-contact
@@ -89,6 +90,8 @@ input[type=checkbox]:checked + .modal-contact__label:before
   align-items: center
   justify-content: center
   display: none
+  z-index: 10
+  overflow-y: visible
   &_active
     display: flex
 .add-modal-contact
@@ -126,7 +129,7 @@ input[type=checkbox]:checked + .modal-contact__label:before
   font-size: 14px
   line-height: 20px
   color: $subtitle-color
-  margin-bottom: 30px
+  margin-bottom: 3px
   display: block
 .add-modal-contact-add__list
   list-style: none
@@ -162,3 +165,7 @@ input[type=checkbox]:checked + .modal-contact__label:before
     height: 585px
     max-width: 558px
     overflow-x: hidden
+    overflow-y: visible
+  .modal-contact__close 
+    right: 0
+    background-color: darken(#ffffff, 10)
