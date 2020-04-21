@@ -1511,6 +1511,10 @@ input {
           align-items: center;
 }
 
+.dirt-wrap .dirt-text__button {
+  display: none;
+}
+
 .dirt-text {
   padding-top: 160px;
   padding-bottom: 160px;
@@ -1618,6 +1622,7 @@ input {
             flex-direction: column;
   }
   .dirt-wrap .dirt-text__button {
+    display: block;
     width: 290px;
     margin-bottom: 30px;
   }
