@@ -22,6 +22,7 @@ services.addEventListener('click', (event) => {
   target = target.closest('.calc-calculator__service');
   if (target.matches('.calc-calculator__service')) {
     target.classList.toggle('calc-calculator__service--active');
+    
   }
 });
 // бегунок
@@ -146,8 +147,10 @@ $('.button-main').on('click', function(){
 });
 $('.modal-contact__close').on('click', function(){
   window1.classList.remove('modal_active')
-  window2.classList.remove('add-modal_active')
 });
+$('.add-modal-contact__close').on('click', function(){
+  window2.classList.remove('add-modal_active')
+})
 
 // слайдеры
 let swiper1 = new Swiper('.special-gallery',{
