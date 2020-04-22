@@ -439,7 +439,18 @@ $(document).ready(function(){
       $('.select-type-clean').change();
   });
 
-
+  $('.clock-calculator-services__showMore').click(function(e){
+    e.preventDefault();
+    $('.calc-service-add').removeClass('calc-service_hidden');
+    $('.clock-calculator-services__showMore').css('display', 'none');
+    $('.clock-calculator-services__hideMore').css('display', 'block');
+  })
+  $('.clock-calculator-services__hideMore').click(function(e){
+    e.preventDefault();
+    $('.calc-service-add').addClass('calc-service_hidden');
+    $('.clock-calculator-services__hideMore').css('display', 'none');
+    $('.clock-calculator-services__showMore').css('display', 'block');
+  })
 
   $('.dirt-slider').slick({
     centerMode: true,

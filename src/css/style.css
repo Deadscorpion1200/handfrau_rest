@@ -1720,6 +1720,9 @@ input {
     margin: 0 auto;
     max-width: 300px;
   }
+  .dirt-slider {
+    max-width: 320px;
+  }
 }
 
 .command {
@@ -3121,6 +3124,7 @@ input {
     display: none;
   }
   .partners-slider-container {
+    margin-left: -15px;
     width: 320px !important;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
