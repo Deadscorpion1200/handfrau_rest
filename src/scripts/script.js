@@ -48,20 +48,150 @@ typeList.addEventListener('click', (event) => {
 
 
 // Увеличение числа метров ковролина
-let amount = document.querySelector('.amount'),
-    minus = document.querySelector('.minus-img'),
-    plus = document.querySelector('.plus-img');
+let amount = document.querySelector('.amount');
+let amount1 = document.querySelector('.amount-1');
+let amount2 = document.querySelector('.amount-2');
+let amount3 = document.querySelector('.amount-3');
+let amount4 = document.querySelector('.amount-4');
+let amount5 = document.querySelector('.amount-5');
+let amount6 = document.querySelector('.amount-6');
+let amount7 = document.querySelector('.amount-7');
+let amount8 = document.querySelector('.amount-8');
+let amount9 = document.querySelector('.amount-9');
+let minus = document.querySelector('.minus-img');
+let minus1 = document.querySelector('.minus-img-1');
+let minus2 = document.querySelector('.minus-img-2');
+let minus3 = document.querySelector('.minus-img-3');
+let minus4 = document.querySelector('.minus-img-4');
+let minus5 = document.querySelector('.minus-img-5');
+let minus6 = document.querySelector('.minus-img-6');
+let minus7 = document.querySelector('.minus-img-7');
+let minus8 = document.querySelector('.minus-img-8');
+let minus9 = document.querySelector('.minus-img-9');
+let plus = document.querySelector('.plus-img');
+let plus1 = document.querySelector('.plus-img-1');
+let plus2 = document.querySelector('.plus-img-2');
+let plus3 = document.querySelector('.plus-img-3');
+let plus4 = document.querySelector('.plus-img-4');
+let plus5 = document.querySelector('.plus-img-5');
+let plus6 = document.querySelector('.plus-img-6');
+let plus7 = document.querySelector('.plus-img-7');
+let plus8 = document.querySelector('.plus-img-8');
+let plus9 = document.querySelector('.plus-img-9');
 
+
+
+// minus
 minus.addEventListener('click', () => {
   if (+amount.textContent > 1) {
     amount.textContent--;
+    console.log(`уменьшение первого \n` , amount);
+  }
+});
+minus1.addEventListener('click', () => {
+  if(+amount1.textContent > 1) {
+    amount1.textContent--;
+    console.log(`уменьшение второго \n` ,amount1);
+  }
+});
+minus2.addEventListener('click', () => {
+  if(+amount2.textContent > 1)
+  {
+    amount2.textContent--;
+    console.log(`уменьшение третьего \n` ,amount2);
+  }
+});
+minus3.addEventListener('click', () => {
+  if(+amount3.textContent > 1)
+  {
+    amount3.textContent--;
+    console.log(`уменьшение четвертого \n` ,amount3);
+  }
+});
+minus4.addEventListener('click', () => {
+  if(+amount4.textContent > 1)
+  {
+    amount4.textContent--;
+    console.log(`уменьшение пятого \n` ,amount4);
+  }
+});
+minus3.addEventListener('click', () => {
+  if(+amount5.textContent > 1)
+  {
+    amount5.textContent--;
+    console.log(`уменьшение шестого \n` ,amount5);
+  }
+});
+minus3.addEventListener('click', () => {
+  if(+amount6.textContent > 1)
+  {
+    amount6.textContent--;
+    console.log(`уменьшение седьмого \n` ,amount6);
+  }
+});
+minus7.addEventListener('click', () => {
+  if(+amount7.textContent > 1)
+  {
+    amount7.textContent--;
+    console.log(`уменьшение восьмого \n` ,amount7);
+  }
+});
+minus8.addEventListener('click', () => {
+  if(+amount8.textContent > 1)
+  {
+    amount8.textContent--;
+    console.log(`уменьшение девятого \n` ,amount8);
+  }
+});
+minus9.addEventListener('click', () => {
+  if(+amount9.textContent > 1)
+  {
+    amount9.textContent--;
+    console.log(`уменьшение десятого \n` ,amount9);
   }
 });
 
-plus.addEventListener('click', () => {
+// plus
+plus.addEventListener('click', function() {
   amount.textContent++;
+  console.log(`увеличение первого \n`, amount);
 });
-
+plus1.addEventListener('click', function() {
+  amount1.textContent++;
+  console.log(`увеличение второго \n`, amount1);
+})
+plus2.addEventListener('click', function() {
+  console.log(`увеличение третьего \n`, amount2);
+  amount2.textContent++;
+});
+plus3.addEventListener('click', function() {
+  console.log(`увеличение четвёртого\n`, amount3);
+  amount3.textContent++;
+});
+plus4.addEventListener('click', function() {
+  console.log(`увеличение пятого\n`, amount4);
+  amount4.textContent++;
+});
+plus5.addEventListener('click', function() {
+  console.log(`увеличение шестого\n`, amount5);
+  amount5.textContent++;
+});
+plus6.addEventListener('click', function() {
+  console.log(`увеличение седьмого\n`, amount6);
+  amount6.textContent++;
+});
+plus7.addEventListener('click', function() {
+  console.log(`увеличение восьмого\n`, amount7);
+  amount7.textContent++;
+});
+plus8.addEventListener('click', function() {
+  console.log(`увеличение девятого\n`, amount8);
+  amount8.textContent++;
+});
+plus9.addEventListener('click', function() {
+  console.log(`увеличение десятого\n`, amount9);
+  amount9.textContent++;
+});
 // Окрашивание плиток
 let services = document.querySelector('.calc-calculator-services');
 services.addEventListener('click', (event) => {
@@ -70,10 +200,10 @@ services.addEventListener('click', (event) => {
   if (target.matches('.calc-calculator__service')) {
     target.classList.toggle('calc-calculator__service--active');
   }
-  if(target.matches('.minus-img') || target.mathces('.plus-img'))
-  {
+  // if(target.matches('.minus-img') || target.mathces('.plus-img'))
+  // {
 
-  }
+  // }
 });
 
 
@@ -431,12 +561,13 @@ $(document).ready(function(){
   });
 
   $('body').on('click', '.add-modal-contact-add__remove', function () {
-      var id = $(this).parent('li').data('service-id');
+    console.log($(this).parent('div').parent('li').data('serviceId'));
+    var id = $(this).parent('div').parent('li').data('serviceId');
 
-      $(this).parent('li').remove();
-      $('.add-modal-contact-add__list li[data-service-id=' + id + ']').removeClass('active');
+      $(this).parent('div').parent('li').remove();
+      $('.calc-calculator__service[data-service-id=' + id + ']').removeClass('calc-calculator__service--active');
 
-      $('.select-type-clean').change();
+      // $('.select-type-clean').change();
   });
 
   $('.clock-calculator-services__showMore').click(function(e){
