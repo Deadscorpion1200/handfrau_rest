@@ -48,7 +48,7 @@ typeList.addEventListener('click', (event) => {
 
 
 // Увеличение числа метров ковролина
-let amount = document.getElementById('amount'),
+let amount = document.querySelector('.amount'),
     minus = document.querySelector('.minus-img'),
     plus = document.querySelector('.plus-img');
 
@@ -70,7 +70,13 @@ services.addEventListener('click', (event) => {
   if (target.matches('.calc-calculator__service')) {
     target.classList.toggle('calc-calculator__service--active');
   }
+  if(target.matches('.minus-img') || target.mathces('.plus-img'))
+  {
+
+  }
 });
+
+
 
 // бегунок
 let inputRange = document.querySelector('.range'),
@@ -393,3 +399,65 @@ let swiper5 = new Swiper('.reviews-slider-container',
   centeredSlides: true,
 });
 
+
+
+$(document).ready(function(){
+  $('#order-calc').click( function () {
+    // alert('1');
+      var services = '';
+      $('.add-modal-contact-add__title').hide();
+
+      $('.calc-calculator__service--active').each(function (e) {
+          var title = $(this).find('.calc-calculator-service__header').text();
+          var params = $(this).find('.params').html() || '';
+          var value = $(this).find('.amount').text() || '';
+          var serviceId = $(this).data('service-id');
+          console.log(title, params, value, serviceId)
+          services += '<li class="add-modal-contact-add__item" data-service-id="' +
+           serviceId + '"><div class="add-modal-contact-add__info">'+
+           '<span class="add-modal-contact-add__mark"></span><span class="add-modal-contact-add__name">' +
+            title + '</span></div><div class="add-modal-contact-add__details">'+
+            '<span class="add-modal-contact-add__items">' +
+            value + '</span> ' + params + '<img src="img/popup/x.png" alt="" class="add-modal-contact-add__remove"></div></li>';
+      });
+
+
+      $('.add-modal-contact-add__list').html(services);
+
+      if (services) {
+          $('.add-modal-contact-add__title').show();
+      }
+
+  });
+
+  $('body').on('click', '.add-modal-contact-add__remove', function () {
+      var id = $(this).parent('li').data('service-id');
+
+      $(this).parent('li').remove();
+      $('.add-modal-contact-add__list li[data-service-id=' + id + ']').removeClass('active');
+
+      $('.select-type-clean').change();
+  });
+
+
+
+  $('.dirt-slider').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 1,
+    verticalSwiping: true,
+    vertical: true,
+    prevArrow: '<div class="dirt-arrow__up">',
+    nextArrow: '<div class="dirt-arrow__down">',
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          verticalSwiping: false,
+          vertical: false,
+          dots: true
+        }
+      },
+    ]
+  });
+});

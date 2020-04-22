@@ -111,9 +111,12 @@
     .calc-calculator-service__square
       color: #fff
     .calc-calculator-service__parameters
+      opacity: 1
       svg
         path
           fill: #fff !important
+    .calc-calculator-service-question__symb
+      color: #fff 
 .calc-calculator-service__question
   display: flex
   justify-content: space-around
@@ -173,6 +176,11 @@
   color: $main-color
   text-decoration: none
   display: block
+.clock-calculator-services__hideMore
+  text-align: center
+  color: $main-color
+  text-decoration: none
+  display: none
 // result
 .calc-result
   display: flex
@@ -181,6 +189,7 @@
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2)
   border-radius: 10px
   padding: 20px 30px
+  height: 400px
   //height: 355px
 .calc-result__header
   font-size: 14px
@@ -209,10 +218,17 @@
 .calc-result-buttons
   display: flex
   flex-direction: column
-
+.button-plus
+  padding: 0
+  background: transparent
+.button-minus
+  padding: 0
+  background: transparent
 .calc-type__description_adaptive
   &--d-none
     display: none
+.calc-service_hidden
+  display: none
 @media (max-width: 1200px)
   .calc
     padding-top: 50px
@@ -307,6 +323,8 @@
   .calc-calculator__service
     width: 135px
     height: 135px
+    margin-right: 20px
+    margin-left: 20px
     &_active
       background: $main-color
   .calc-calculator-service__img
@@ -318,6 +336,7 @@
     pointer-events: none
   .calc-calculator-services
     justify-content: space-around
+
   .calc-result__header-personal_mobile
     display: flex
     font-size: 14px
@@ -339,6 +358,10 @@
     margin-bottom: 32px
   .calc-calculator-square-range__text
     margin-bottom: 11px
+  
 @media (max-width: 478px)
   .calc-calculator-services
     justify-content: space-between
+  .calc-calculator__service
+    margin-left: 0
+    margin-right: 0
