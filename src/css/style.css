@@ -3277,6 +3277,7 @@ input {
 
 .evaluation-form__file {
   display: block;
+  z-index: -1;
 }
 
 .evaluation-form__header_img {
@@ -3322,6 +3323,7 @@ input {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 @media (max-width: 991px) {

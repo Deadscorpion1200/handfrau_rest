@@ -477,6 +477,15 @@ let swiper5 = new Swiper('.reviews-slider-container',
 
 
 $(document).ready(function(){
+
+  // Переменная куда будут располагаться данные файлов
+  var files;
+  
+  // Вешаем функцию на событие
+  // Получим данные файлов и добавим их в переменную
+  $('input[type=file]').change(function(){
+      files = this.files;
+  });
   
   $('.phone').mask("+7 (999) 999-99-99");
   $('.modal-contact-form').each(function(){
@@ -549,41 +558,90 @@ $(document).ready(function(){
         }
     })
   });
-  $('.evaluation-form').each(function(){
-    $(this).validate({
-      rules:
-      {
-        evaName:
-        {
-          required: true
+  // $('.evaluation-form').each(function(){
+  //   $(this).validate({
+  //     rules:
+  //     {
+  //       evaName:
+  //       {
+  //         required: true
+  //       },
+  //       evaTel:
+  //       {
+  //         required: true
+  //       }
+  //     },
+  //     errorClass: "invalid",
+  //     errorElement: "label",
+  //     errorPlacement: function(invalid, label){},
+  //     submitHandler: function(form){
+  //         // e.preventDefault();
+  //       $.ajax({
+  //         url: "smart2.php",
+  //         type: "POST",
+  //         data: $(form).serialize(),
+  //         success: function () {
+  //           $('.modal').addClass('modal_active');
+  //           $('.modal-contact-body').hide();
+  //           $('.add-modal-contact').hide();
+  //           $('#modal-success').hide();
+  //           $('#modal-photo').show();
+  //           $('form').trigger('reset');
+  //         }
+  //       })
+  //     }
+  //   })
+  // });
+
+  $('.evaluation-form__button').click(function( event ){
+    event.stopPropagation(); // Остановка происходящего
+    event.preventDefault();  // Полная остановка происходящего
+ 
+    // Создадим данные формы и добавим в них данные файлов из files
+ 
+    var data = new FormData();
+    $.each( files, function( key, value ){
+        data.append( key, value );
+    });
+ 
+    // Отправляем запрос
+ 
+    $.ajax({
+        url: 'smart2.php?uploadfiles',
+        type: 'POST',
+        data: data,
+        cache: false,
+        dataType: 'json',
+        processData: false, // Не обрабатываем файлы (Don't process the files)
+        contentType: false, // Так jQuery скажет серверу что это строковой запрос
+        success: function( respond, textStatus, jqXHR ){
+            // Если все ОК
+            if( typeof respond.error === 'undefined' ){
+                // Файлы успешно загружены, делаем что нибудь здесь
+                // выведем пути к загруженным файлам в блок '.ajax-respond'
+                var files_path = respond.files;
+                var html = '';
+                $.each( files_path, function( key, val ){ html += val +'<br>'; } )
+                console.log( html );
+                $('.modal').addClass('modal_active');
+                $('.modal-contact-body').hide();
+                $('.add-modal-contact').hide();
+                $('#modal-success').hide();
+                $('#modal-photo').show();
+                $('form').trigger('reset');
+            }
+            else{
+                console.log('ОШИБКИ ОТВЕТА сервера: ' + respond.error );
+            }
         },
-        evaTel:
-        {
-          required: true
+        error: function( jqXHR, textStatus, errorThrown ){
+            console.log('ОШИБКИ AJAX запроса: ' + textStatus );
         }
-      },
-      errorClass: "invalid",
-      errorElement: "label",
-      errorPlacement: function(invalid, label){},
-      submitHandler: function(form){
-          // e.preventDefault();
-        $.ajax({
-          url: "smart2.php",
-          type: "POST",
-          data: $(form).serialize(),
-          success: function () {
-            $('.modal').addClass('modal_active');
-            $('.modal-contact-body').hide();
-            $('.add-modal-contact').hide();
-            $('#modal-success').hide();
-            $('#modal-photo').show();
-            $('form').trigger('reset');
-          }
-        })
-      }
-    })
+    });
   });
   
+
+
   let modal = $('.modal');
   $('.button-modal').on('click', function(){
     event.preventDefault();
@@ -592,9 +650,10 @@ $(document).ready(function(){
     $('.modal-contact_hidden').hide();
     $('#'+target).show();
   });
-var massive = [];
-modalServices = document.querySelector('.modal-contact__input-services');
-modalServices.value = massive
+
+  var massive = [];
+  modalServices = document.querySelector('.modal-contact__input-services');
+  modalServices.value = massive
 
   $('#order-calc').click( function () {
       var services = '';
