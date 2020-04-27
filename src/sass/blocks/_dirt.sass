@@ -75,12 +75,17 @@
   z-index: 3
 .slick-list
   padding: 150px 0 !important
+.dirt-text__button_adaptive
+  display: none
 @media (max-width: 991px)
+  .dirt-text__button_adaptive
+    display: block
+    margin-bottom: 50px
   .dirt-arrow__up, .dirt-arrow__down
     display: none !important
   .dirt-wrap
     flex-direction: column
-    .dirt-text__button
+    .dirt-text__button_mobile
       width: 290px
       margin-bottom: 30px
   .dirt-text
@@ -120,6 +125,8 @@
     img
       border-radius: 8px
 @media (max-width: 576px)
+  .dirt-text__button_adaptive
+    margin-bottom: 30px
   .dirt-text
     padding-top: 30px
     &__header

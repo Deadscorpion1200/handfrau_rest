@@ -15,7 +15,13 @@ $('.navbar-mobile__menu').on('click', function(e)
   $(this).toggleClass('navbar-mobile__menu_active');
   $('.navbar-nav__mobile').toggleClass('navbar-nav__mobile_active');
 });
-
+// $('.modal-contact__checkbox').addEventListener('click', function(){
+//   if(!($(this).checked))
+//   {
+//     console.log('1');
+//     $('.modal-contact__label:before').css('border', 'red');
+//   }
+// })
 // Переключение вкладок
 let typeList = document.querySelector('.calc-type__list'),
     typeListItems = typeList.querySelectorAll('.calc-type__category'),
@@ -289,121 +295,61 @@ inputRange.addEventListener('input', (event) => {
   modalCount.textContent = result.textContent;
 });
 
+
+
 // popup'ы
 let window1 = document.querySelector('.modal');
 let window2 = document.querySelector('.add-modal');
 
-$('.navbar-contact__button').on('click', function(){
-  window1.classList.add('modal_active');
-});
-$('.main-button__order').on('click', function(){
-  window1.classList.add('modal_active');
-});
-$('.main-button__discover').on('click', function(){
-  window1.classList.add('modal_active');
-})
-$('.main-button__immediate').on('click', function(){
-  window1.classList.add('modal_active');
-});
-$('.special-gallery-slide__button').on('click', function(){
-  window1.classList.add('modal_active');
-});
-$('.dirt-text__button').on('click', function(){
-  window1.classList.add('modal_active');
-});
-$('.command-button-slide').on('click', function(){
-  window1.classList.add('modal_active');
-})
-$('.trust-button').on('click', function(){
-  window1.classList.add('modal_active');
-});
-$('.why__button').on('click', function(){
-  window1.classList.add('modal_active');
-});
-$('.call__button').on('click', function(){
-  window1.classList.add('modal_active');
-});
-$('.tenders__button').on('click', function(){
-  window1.classList.add('modal_active');
-})
-$('.button-main').on('click', function(){
-  window2.classList.add('add-modal_active');
+// $('.navbar-contact__button').on('click', function(){
+//   window1.classList.add('modal_active');
+// });
+// $('.main-button__order').on('click', function(){
+//   window1.classList.add('modal_active');
+// });
+// $('.main-button__discover').on('click', function(){
+//   window1.classList.add('modal_active');
+// })
+// $('.main-button__immediate').on('click', function(){
+//   window1.classList.add('modal_active');
+// });
+// $('.special-gallery-slide__button').on('click', function(){
+//   window1.classList.add('modal_active');
+// });
+// $('.dirt-text__button').on('click', function(){
+//   window1.classList.add('modal_active');
+// });
+// $('.command-button-slide').on('click', function(){
+//   window1.classList.add('modal_active');
+// })
+// $('.trust-button').on('click', function(){
+//   window1.classList.add('modal_active');
+// });
+// $('.why__button').on('click', function(){
+//   window1.classList.add('modal_active');
+// });
+// $('.call__button').on('click', function(){
+//   window1.classList.add('modal_active');
+// });
+// $('.tenders__button').on('click', function(){
+//   window1.classList.add('modal_active');
+// })
+// $('.button-main').on('click', function(){
+//   window2.classList.add('add-modal_active');
   // Берём виды уборки из вкладки в модалку
-  let typeCleaning = document.getElementById('cleaning-type'),
-    typeListItemsActive = typeList.querySelector('.calc-type__category_active'),
-    cleaningTime = document.getElementById('cleaning-time'),
-    cleaningTimeValue = cleaningTime.options[cleaningTime.selectedIndex].value,
-    special = document.getElementById('special');
-  if (typeListItemsActive.textContent === 'Утренняя') {
-    typeCleaning.textContent = 'утреннюю';
-    special.textContent = '';
-  } else if (typeListItemsActive.textContent === 'Вечерняя') {
-    typeCleaning.textContent = 'вечернюю';
-    special.textContent = '';
-  } else if (typeListItemsActive.textContent === 'Ежедневная') {
-    typeCleaning.textContent = 'ежедневную';
-    special.textContent = '';
-  } else if (typeListItemsActive.textContent === 'Генеральная') {
-    typeCleaning.textContent = 'генеральную';
-    special.textContent = '';
-  } else if (typeListItemsActive.textContent === 'После ЧП') {
-    typeCleaning.textContent = '';
-    special.textContent = 'после ЧП';
-  }
+  
 
-  if (document.documentElement.clientWidth < 769) {
-    if (cleaningTimeValue === 'morning') {
-      typeCleaning.textContent = 'утреннюю';
-      special.textContent = '';
-    } else if (cleaningTimeValue === 'evening') {
-      typeCleaning.textContent = 'вечернюю';
-      special.textContent = '';
-    } else if (cleaningTimeValue === 'everyday') {
-      typeCleaning.textContent = 'ежедневную';
-      special.textContent = '';
-    } else if (cleaningTimeValue === 'general') {
-      typeCleaning.textContent = 'генеральную';
-      special.textContent = '';
-    } else if (cleaningTimeValue === 'emergency') {
-      typeCleaning.textContent = '';
-      special.textContent = 'после ЧП';
-    }
-  }
-
-  $('#order-calc').on('shown.bs.modal', function () {
-    var services = '';
-    $('.add-serv-label').hide();
-
-    $('.additional-service-list li.active').each(function (e) {
-      var title = $(this).find('.title').text();
-      var params = $(this).find('.params').html() || '';
-      var value = $(this).find('.count').val() || '';
-      var serviceId = $(this).data('service-id');
-
-      services += '<li data-service-id="' + serviceId + '"><span class="title">' + title + '</span><span class="params">' + value + ' ' + params + '</span><span class="close"></span></li>';
-    });
-
-    $('.service-list').html(services);
-
-    if (services) {
-      $('.add-serv-label').show();
-    }
-
-  });
-
-  $('body').on('click', '.service-list .close', function () {
-    var id = $(this).parent('li').data('service-id');
-
-    $(this).parent('li').remove();
-    $('.additional-service-list li[data-service-id=' + id + ']').removeClass('active');
-
-    $('.select-type-clean').change();
-  });
-});
 $('.modal-contact__close').on('click', function(){
   window1.classList.remove('modal_active')
-  window2.classList.remove('add-modal_active')
+  // window2.classList.remove('add-modal_active')
 });
+$('.modal-contact-close').on('click', function(){
+  window1.classList.remove('modal_active');
+});
+$('.modal-mobile__close').on('click', function(e){
+  e.preventDefault();
+  window1.classList.remove('modal_active');
+})
 
 // слайдеры
 let swiper1 = new Swiper('.special-gallery',{
@@ -530,18 +476,140 @@ let swiper5 = new Swiper('.reviews-slider-container',
 });
 
 
-
 $(document).ready(function(){
+  
+  $('.phone').mask("+7 (999) 999-99-99");
+  $('.modal-contact-form').each(function(){
+    $(this).validate({
+        rules:
+        {
+          name:
+          {
+            required: true
+          },
+          tel:
+          {
+            required: true
+          },
+          check:
+          {
+            required: true
+          }
+        },
+        errorClass: "invalid",
+        errorElement: "label",
+        errorPlacement: function(invalid, label){},
+        submitHandler: function(form){
+            // e.preventDefault();
+          $.ajax({
+            url: "smart.php",
+            type: "POST",
+            data: $(form).serialize(),
+            success: function () {
+              $('#modal-main').hide();
+              $('#modal-success').show();
+              $('form').trigger('reset');
+            }
+          })
+        }
+    })
+  });
+  $('.add-modal-contact__form').each(function(){
+    $(this).validate({
+        rules:
+        {
+          orderName:
+          {
+            required: true
+          },
+          orderTel:
+          {
+            required: true
+          },
+          orderCheck:
+          {
+            required: true
+          }
+        },
+        errorClass: "invalid",
+        errorElement: "label",
+        errorPlacement: function(invalid, label){},
+        submitHandler: function(form){
+            // e.preventDefault();
+          $.ajax({
+            url: "smart1.php",
+            type: "POST",
+            data: $(form).serialize(),
+            success: function () {
+              $('#modal-order').hide();
+              $('#modal-success').show();
+              $('form').trigger('reset');
+            }
+          })
+        }
+    })
+  });
+  $('.evaluation-form').each(function(){
+    $(this).validate({
+      rules:
+      {
+        evaName:
+        {
+          required: true
+        },
+        evaTel:
+        {
+          required: true
+        }
+      },
+      errorClass: "invalid",
+      errorElement: "label",
+      errorPlacement: function(invalid, label){},
+      submitHandler: function(form){
+          // e.preventDefault();
+        $.ajax({
+          url: "smart2.php",
+          type: "POST",
+          data: $(form).serialize(),
+          success: function () {
+            $('.modal').addClass('modal_active');
+            $('.modal-contact-body').hide();
+            $('.add-modal-contact').hide();
+            $('#modal-success').hide();
+            $('#modal-photo').show();
+            $('form').trigger('reset');
+          }
+        })
+      }
+    })
+  });
+  
+  let modal = $('.modal');
+  $('.button-modal').on('click', function(){
+    event.preventDefault();
+    modal.addClass('modal_active');
+    let target = $(this).attr('data-target');
+    $('.modal-contact_hidden').hide();
+    $('#'+target).show();
+  });
+var massive = [];
+modalServices = document.querySelector('.modal-contact__input-services');
+modalServices.value = massive
+
   $('#order-calc').click( function () {
-    // alert('1');
       var services = '';
       $('.add-modal-contact-add__title').hide();
+      var modalAmount = document.querySelector('.add-modal-contact__amount');
+      var modalCount = document.querySelector('.modal-contact__input-count');
+      var modalType = document.querySelector('.modal-contact__input-type');
+      modalCount.value = modalAmount.textContent;
 
       $('.calc-calculator__service--active').each(function (e) {
           var title = $(this).find('.calc-calculator-service__header').text();
           var params = $(this).find('.params').html() || '';
           var value = $(this).find('.amount').text() || '';
           var serviceId = $(this).data('service-id');
+          massive.push(title + ' ' + value + ' ' + params);
           console.log(title, params, value, serviceId)
           services += '<li class="add-modal-contact-add__item" data-service-id="' +
            serviceId + '"><div class="add-modal-contact-add__info">'+
@@ -549,6 +617,9 @@ $(document).ready(function(){
             title + '</span></div><div class="add-modal-contact-add__details">'+
             '<span class="add-modal-contact-add__items">' +
             value + '</span> ' + params + '<img src="img/popup/x.png" alt="" class="add-modal-contact-add__remove"></div></li>';
+            console.log(massive);
+        modalServices.value = massive;
+
       });
 
 
@@ -557,17 +628,63 @@ $(document).ready(function(){
       if (services) {
           $('.add-modal-contact-add__title').show();
       }
+      let typeCleaning = document.getElementById('cleaning-type'),
+        typeListItemsActive = typeList.querySelector('.calc-type__category_active'),
+        cleaningTime = document.getElementById('cleaning-time'),
+        cleaningTimeValue = cleaningTime.options[cleaningTime.selectedIndex].value,
+        special = document.getElementById('special');
+      if (typeListItemsActive.textContent === 'Утренняя') {
+        typeCleaning.textContent = 'утреннюю';
+        modalType.value = typeListItemsActive.textContent;
+        special.textContent = '';
+      } else if (typeListItemsActive.textContent === 'Вечерняя') {
+        typeCleaning.textContent = 'вечернюю';
+        modalType.value = typeListItemsActive.textContent;
+        special.textContent = '';
+      } else if (typeListItemsActive.textContent === 'Ежедневная') {
+        typeCleaning.typeListItemsActive = 'ежедневную';
+        modalType.value = typeListItemsActive.textContent;
+        special.textContent = '';
+      } else if (typeListItemsActive.textContent === 'Генеральная') {
+        typeCleaning.textContent = 'генеральную';
+        modalType.value = typeListItemsActive.textContent;
+        special.textContent = '';
+      } else if (typeListItemsActive.textContent === 'После ЧП') {
+        typeCleaning.textContent = '';
+        special.textContent = 'после ЧП';
+        modalType.value = typeListItemsActive.textContent;
+      }
 
+      if (document.documentElement.clientWidth < 769) {
+        if (cleaningTimeValue === 'morning') {
+          typeCleaning.textContent = 'утреннюю';
+          special.textContent = '';
+        } else if (cleaningTimeValue === 'evening') {
+          typeCleaning.textContent = 'вечернюю';
+          special.textContent = '';
+        } else if (cleaningTimeValue === 'everyday') {
+          typeCleaning.textContent = 'ежедневную';
+          special.textContent = '';
+        } else if (cleaningTimeValue === 'general') {
+          typeCleaning.textContent = 'генеральную';
+          special.textContent = '';
+        } else if (cleaningTimeValue === 'emergency') {
+          typeCleaning.textContent = '';
+          special.textContent = 'после ЧП';
+        }
+      }
   });
 
   $('body').on('click', '.add-modal-contact-add__remove', function () {
     console.log($(this).parent('div').parent('li').data('serviceId'));
     var id = $(this).parent('div').parent('li').data('serviceId');
-
-      $(this).parent('div').parent('li').remove();
-      $('.calc-calculator__service[data-service-id=' + id + ']').removeClass('calc-calculator__service--active');
-
-      // $('.select-type-clean').change();
+    
+    $(this).parent('div').parent('li').remove();
+    $('.calc-calculator__service[data-service-id=' + id + ']').removeClass('calc-calculator__service--active');
+    // $('.select-type-clean').change();
+    massive.splice(id-1, 1)
+    console.log(massive);
+    
   });
 
   $('.clock-calculator-services__showMore').click(function(e){

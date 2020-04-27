@@ -28,7 +28,7 @@
         
         <div class="navbar-contact">
           <a href="callto:+74951234567" class="navbar-contact__phone">+7 495 123 45 67</a>
-          <button class="button navbar-contact__button">Заказать уборку</button>
+          <button class="button button-modal navbar-contact__button" data-target="modal-main">Заказать уборку</button>
         </div>
         <div class="navbar-mobile">
           <a href="#" class="navbar-mobile__contact">
@@ -75,9 +75,9 @@
           Вы — отдыхаете. <span class="main__utp_subtitle-second">Мы — работаем</span> 
         </span>
         <div class="main-buttons">
-          <button class="main-button main-button__order">Заказать сейчас</button>
-          <button class="main-button-o main-button__discover">Узнать стоимость</button>
-          <button class="main-button-o main-button__immediate">Оформить срочный заказ</button>
+          <button class="button-modal main-button main-button__order" data-target="modal-main">Заказать сейчас</button>
+          <button class="button-modal main-button-o main-button__discover" data-target="modal-main">Узнать стоимость</button>
+          <button class="button-modal main-button-o main-button__immediate" data-target="modal-main">Оформить срочный заказ</button>
         </div>
       </div>
     </div>
@@ -96,7 +96,7 @@
             <img src="img/form1/name.png" alt="" class="form1-form__icon"><input type="text" class="form1-form__input" placeholder="Ваше имя">
           </div>
           <div class="form1-form-input">
-            <img src="img/form1/phone.png" alt="" class="form1-form__icon"> <div class="form1-form__input-cover"> <input type="tel" class="form1-form__input" placeholder="Телефон"></div>
+            <img src="img/form1/phone.png" alt="" class="form1-form__icon"> <div class="form1-form__input-cover"> <input type="tel" class="phone form1-form__input" placeholder="Телефон"></div>
           </div>
             <button class="form1-form-button-o">Отправить</button>
           </div>
@@ -285,17 +285,17 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header">Чистка ковролина</div>
               <div class="calc-calculator-service__parameters">
-                <button class="button-minus">
+                <span class="button-minus">
                   <svg class="minus-img" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.25V0.75H0V3.25H10Z" fill="#1F2D38" />
                   </svg>
-                </button>
+                </span>
                 <span class="calc-calculator-service__square"><span class="amount">1</span> <span class="params">м<sup>2</sup></span>
-                <button class="button-plus">
+                <span class="button-plus">
                   <svg class="plus-img" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z" fill="#1F2D38" />
                   </svg>
-                </button> 
+                </span> 
               </div>
               <!-- /.calc-calculator-service__header -->
             </div>
@@ -380,17 +380,17 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header">Обеспылить люстры</div>
               <div class="calc-calculator-service__parameters">
-                <button class="button-minus">
+                <span class="button-minus">
                   <svg class="minus-img minus-img-1" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.25V0.75H0V3.25H10Z" fill="#1F2D38" />
                   </svg>
-                </button>
+                </span>
                 <span class="calc-calculator-service__square"><span class="amount amount-1">1</span> <span class="params">шт</span>
-                <button class="button-plus">
+                <span class="button-plus">
                   <svg class="plus-img plus-img-1" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z" fill="#1F2D38" />
                   </svg>
-                </button> 
+                </span> 
               </div>
               <!-- /.calc-calculator-service__header -->
             </div>
@@ -414,17 +414,17 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header">Светильники</div>
               <div class="calc-calculator-service__parameters">
-                <button class="button-minus">
+                <span class="button-minus">
                   <svg class="minus-img minus-img-2" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.25V0.75H0V3.25H10Z" fill="#1F2D38" />
                   </svg>
-                </button>
+                </span>
                 <span class="calc-calculator-service__square"><span class="amount amount-2">1</span> <span class="params">шт</span>
-                <button class="button-plus">
+                <span class="button-plus">
                   <svg class="plus-img plus-img-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z" fill="#1F2D38" />
                   </svg>
-                </button> 
+                </span> 
               </div>
               <!-- /.calc-calculator-service__header -->
             </div>
@@ -465,17 +465,17 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header">Люстры + химия</div>
               <div class="calc-calculator-service__parameters">
-                <button class="button-minus">
+                <span class="button-minus">
                   <svg class="minus-img minus-img-3" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.25V0.75H0V3.25H10Z" fill="#1F2D38" />
                   </svg>
-                </button>
+                </span>
                 <span class="calc-calculator-service__square"><span class="amount amount-3">1</span> <span class="params">шт</span>
-                <button class="button-plus">
+                <span class="button-plus">
                   <svg class="plus-img plus-img-3" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z" fill="#1F2D38" />
                   </svg>
-                </button> 
+                </span> 
               </div>
               <!-- /.calc-calculator-service__header -->
             </div>
@@ -523,17 +523,17 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header">Полировка</div>
               <div class="calc-calculator-service__parameters">
-                <button class="button-minus">
+                <span class="button-minus">
                   <svg class="minus-img minus-img-4" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.25V0.75H0V3.25H10Z" fill="#1F2D38" />
                   </svg>
-                </button>
+                </span>
                 <span class="calc-calculator-service__square"><span class="amount amount-4">1</span> <span class="params">м<sup>2</sup></span>
-                <button class="button-plus">
+                <span class="button-plus">
                   <svg class="plus-img plus-img-4" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z" fill="#1F2D38" />
                   </svg>
-                </button> 
+                </span> 
               </div>
               <!-- /.calc-calculator-service__header -->
             </div>
@@ -563,17 +563,17 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header">Кухонные шкафы</div>
               <div class="calc-calculator-service__parameters">
-                <button class="button-minus">
+                <span class="button-minus">
                   <svg class="minus-img minus-img-5" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.25V0.75H0V3.25H10Z" fill="#1F2D38" />
                   </svg>
-                </button>
+                </span>
                 <span class="calc-calculator-service__square"><span class="amount amount-5">1</span> <span class="params">шт</span>
-                <button class="button-plus">
+                <span class="button-plus">
                   <svg class="plus-img plus-img-5" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z" fill="#1F2D38" />
                   </svg>
-                </button> 
+                </span> 
               </div>
               <!-- /.calc-calculator-service__header -->
             </div>
@@ -603,17 +603,17 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header">Химчистка диванов</div>
               <div class="calc-calculator-service__parameters">
-                <button class="button-minus">
+                <span class="button-minus">
                   <svg class="minus-img minus-img-6" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.25V0.75H0V3.25H10Z" fill="#1F2D38" />
                   </svg>
-                </button>
+                </span>
                 <span class="calc-calculator-service__square"><span class="amount amount-6">1</span> <span class="params">мест</span>
-                <button class="button-plus">
+                <span class="button-plus">
                   <svg class="plus-img plus-img-6" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z" fill="#1F2D38" />
                   </svg>
-                </button> 
+                </span> 
               </div>
               <!-- /.calc-calculator-service__header -->
             </div>
@@ -656,17 +656,17 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header">Обеспылить декор</div>
               <div class="calc-calculator-service__parameters">
-                <button class="button-minus">
+                <span class="button-minus">
                   <svg class="minus-img minus-img-7" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.25V0.75H0V3.25H10Z" fill="#1F2D38" />
                   </svg>
-                </button>
+                </span>
                 <span class="calc-calculator-service__square"><span class="amount amount-7">1</span> <span class="params">шт</span>
-                <button class="button-plus">
+                <span class="button-plus">
                   <svg class="plus-img plus-img-7" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z" fill="#1F2D38" />
                   </svg>
-                </button> 
+                </span> 
               </div>
               <!-- /.calc-calculator-service__header -->
             </div>
@@ -729,17 +729,17 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header">Полировка кресел</div>
               <div class="calc-calculator-service__parameters">
-                <button class="button-minus">
+                <span class="button-minus">
                   <svg class="minus-img minus-img-8" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.25V0.75H0V3.25H10Z" fill="#1F2D38" />
                   </svg>
-                </button>
+                </span>
                 <span class="calc-calculator-service__square"><span class="amount amount-8">1</span> <span class="params">шт</span>
-                <button class="button-plus">
+                <span class="button-plus">
                   <svg class="plus-img plus-img-8" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z" fill="#1F2D38" />
                   </svg>
-                </button> 
+                </span> 
               </div>
               <!-- /.calc-calculator-service__header -->
             </div>
@@ -993,17 +993,17 @@
               <!-- /.calc-calculator-service__img -->
               <div class="calc-calculator-service__header">Вынос мусора</div>
               <div class="calc-calculator-service__parameters">
-                <button class="button-minus">
+                <span class="button-minus">
                   <svg class="minus-img minus-img-9" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.25V0.75H0V3.25H10Z" fill="#1F2D38" />
                   </svg>
-                </button>
+                </span>
                 <span class="calc-calculator-service__square"><span class="amount amount-9">1</span> <span class="params">л</span>
-                <button class="button-plus">
+                <span class="button-plus">
                   <svg class="plus-img plus-img-9" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 3.75H10V6.25H6.25V10H3.75V6.25H0V3.75H3.75V0H6.25V3.75Z" fill="#1F2D38" />
                   </svg>
-                </button> 
+                </span> 
               </div>
               <!-- /.calc-calculator-service__header -->
             </div>
@@ -1028,7 +1028,7 @@
               <span class="calc-result-personal__graphic">график 5/2</span>
             </div>
             <div class="calc-result-buttons">
-              <button class="block-button button-main" id="order-calc">Заказать уборку</button>
+              <button class="button-modal block-button button-main" id="order-calc" data-target="modal-order">Заказать уборку</button>
               <button class="block-button button-add">Дистанционная оценка работ</button>
               <span class="calc-result__header">Точную стоимость уточняйте у оператора</span>
               <span class="calc-result__header_mobile">Точную стоимость уточняйте у оператора</span>
@@ -1053,7 +1053,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Кухня</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -1063,7 +1063,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Банкетный зал</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -1073,7 +1073,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Барная зона</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -1083,7 +1083,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Задний вход</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -1093,7 +1093,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Кухня</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -1103,7 +1103,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Банкетный зал</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -1113,7 +1113,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Барная зона</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -1123,7 +1123,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Задний вход</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="special-gallery-slide__button">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -1159,7 +1159,7 @@
         <div class="dirt-text">
           <h2 class="dirt-text__header">Уборка любых загрязнений</h2>
           <span class="dirt-text__description">Оказываем услуги профессиональной и качественной уборки в ресторанах любого типа. Клининг выполняется с предварительным согласованием времени, объема работ и стоимости комплекса услуг.</span>
-          <button class="dirt-text__button">Хочу такую же уборку</button>
+          <button class="button-modal dirt-text__button" data-target="modal-main">Хочу такую же уборку</button>
         </div>
         <!-- /.dirt-text -->      
         <div class="dirt-slider-wrap">
@@ -1194,7 +1194,7 @@
           <!-- /.dirt-slider -->
         </div>
         <!-- /.dirt-slider-wrap -->
-        <button class="dirt-text__button">Хочу такую же уборку</button>
+        <button class="button-modal dirt-text__button dirt-text__button_adaptive" data-target="modal-main">Хочу такую же уборку</button>
       </div>
       <!-- /.dirt-wrap -->
     </div>
@@ -1232,7 +1232,7 @@
                     </div>
                     <div class="command-slide__more">Подробнее</div>
                   </div>
-                  <button class="command-button-slide">Заказать уборку</button>
+                  <button class="button-modal command-button-slide" data-target="modal-main">Заказать уборку</button>
                 </div>
               </div>
               <div class="command-slide swiper-slide">
@@ -1254,7 +1254,7 @@
                     </div>
                     <div class="command-slide__more">Подробнее</div>
                   </div>
-                  <button class="command-button-slide">Заказать уборку</button>
+                  <button class="button-modal command-button-slide" data-target="modal-main">Заказать уборку</button>
                 </div>
               </div>
               <div class="command-slide swiper-slide">
@@ -1276,7 +1276,7 @@
                     </div>
                     <div class="command-slide__more">Подробнее</div>
                   </div>
-                  <button class="command-button-slide">Заказать уборку</button>
+                  <button class="button-modal command-button-slide" data-target="modal-main">Заказать уборку</button>
                 </div>
               </div>
           </div>
@@ -1378,7 +1378,7 @@
         <!-- /.trust-block -->
       </div>
       <!-- /.trust-wrap -->
-      <button class="trust-button">Заказать уборку</button>
+      <button class="button-modal trust-button" data-target="modal-main">Заказать уборку</button>
     </div>
     <!-- /.container -->
   </section>
@@ -1435,7 +1435,7 @@
           <li class="check-item"><span class="cleanWarranty__mark"></span> В ресторане отсутствуют синтетические запахи моющих средств.</li>
           <li class="check-item"><span class="cleanWarranty__mark"></span> Вы чувствуете свежесть, свободу пространства и хотите возвращаться в ресторан снова и снова. </li>
         </ul>
-        <button class="check-block__button check-adaptive">Заказать проверку</button>
+        <button class="button-modal check-block__button check-adaptive" data-target="modal-main">Заказать проверку</button>
       </div>
       <!-- /.check-block -->
     </div>
@@ -1657,7 +1657,7 @@
         <!-- /.why__item -->
       </ul>
       <!-- /.ul why-list -->
-      <button class="why__button">Заказать уборку</button>
+      <button class="button-modal why__button" data-target="modal-main">Заказать уборку</button>
       <!-- /.why__button -->
     </div>
     <!-- /.container -->
@@ -1668,7 +1668,7 @@
       <div class="call-wrap">
         <div class="call__text">Закажите звонок до конца дня, и мы забронируем за Вами скидку 8%</div>
         <!-- /.call__text -->
-        <button class="call__button">Заказать звонок</button>
+        <button class="button-modal call__button" data-target="modal-main">Заказать звонок</button>
         <!-- /.call__button -->
       </div>
       <!-- /.call-wrap -->
@@ -1719,12 +1719,29 @@
       <h2 class="evaluation__header">Дистанционная оценка работ</h2>
       <!-- /.evaluation__header -->
       <div class="evaluation__description">Прикрепите фотографии своего офиса. Мы сделаем их анализ и позвоним Вам, чтобы сообщить цену и объём работ</div>
-      <form action="" class="evaluation-form">
+      <form class="evaluation-form" method="POST" enctype="multipart/form-data">
         <div class="evaluation-form-container">
           <div class="evaluation-form-name">
-            <input type="text" class="evaluation-form__input" placeholder="Ваше имя">
-            <input type="tel" class="evaluation-form__input" placeholder="Ваш телефон">
-            <div class="evaluation-form-files_adaptive">
+            <input type="text" name="evaName" class="evaluation-form__input" placeholder="Ваше имя">
+            <input type="tel" name="evaTel" class="phone evaluation-form__input" placeholder="Ваш телефон">
+            <!-- <input type="email" name="evaContact" class=" evaluation-form__input" placeholder="Ваш email"> -->
+            <label for="file" class="evaluation-form__file-button">
+              <div class="evaluation-form-files_adaptive">
+                <span class="evaluation-form__header">
+                  <img src="img/evaluation/clip.svg" alt="" class="evaluation-form__header_img">
+                  <span class="evaluation-form__title">Выберите фотографии</span>
+                </span>
+                <span class="evaluation-form__subtitle">
+                  <span class="evaluation-form__subtitle">или перетащите фото объекта сюда</span>
+                </span>
+                <input type="file" class="evaluation-form__file">
+              </div>
+            </label>
+            <button type="submit" name="evaSubmit" class="evaluation-form__button">Оценить уборку ресторана</button>
+          </div>
+          <!-- /.evaluation-form-name -->
+          <label for="file" class="evaluation-form__file-button">
+            <div class="evaluation-form-files">
               <span class="evaluation-form__header">
                 <img src="img/evaluation/clip.svg" alt="" class="evaluation-form__header_img">
                 <span class="evaluation-form__title">Выберите фотографии</span>
@@ -1732,21 +1749,9 @@
               <span class="evaluation-form__subtitle">
                 <span class="evaluation-form__subtitle">или перетащите фото объекта сюда</span>
               </span>
-              <input type="file" class="evaluation-form__file">
+              <input type="file" name="file" id="file" class="evaluation-form__file">
             </div>
-            <button type="submit" class="evaluation-form__button">Оценить уборку ресторана</button>
-          </div>
-          <!-- /.evaluation-form-name -->
-          <div class="evaluation-form-files">
-            <span class="evaluation-form__header">
-              <img src="img/evaluation/clip.svg" alt="" class="evaluation-form__header_img">
-              <span class="evaluation-form__title">Выберите фотографии</span>
-            </span>
-            <span class="evaluation-form__subtitle">
-              <span class="evaluation-form__subtitle">или перетащите фото объекта сюда</span>
-            </span>
-            <input type="file" class="evaluation-form__file">
-          </div>
+          </label>
           <!-- /.evaluation-form-files -->
         </div>
         <!-- /.evaluation-form-container -->
@@ -1859,7 +1864,7 @@
         </div>
         <div class="partners-button-prev swiper-button-prev reviews-button-prev"></div>
         <div class="partners-button-next swiper-button-next reviews-button-next"></div>
-        <button class="reviews__button">Заказать генеральную уборку</button>
+        <button class="button-modal reviews__button" data-target="modal-main">Заказать генеральную уборку</button>
       </div>
     </div>
     <!-- /.container -->
@@ -1888,7 +1893,7 @@
           </div>
           <!-- /.tenders-items -->
           <span class="tenders__add">Можете отправить Ваши условия нам на почту или оставить контакты для связи:</span>
-          <button class="tenders__button">Заказать звонок</button>
+          <button class="button-modal tenders__button" data-target="modal-main">Заказать звонок</button>
         </div>
         <!-- /.tenders-text -->
       </div>
@@ -1940,94 +1945,120 @@
   <div class="modal">
     <div class="modal-contact">
       <div class="modal-contact__close"></div>
-      <h2 class="modal-contact__header">Оставьте заявку на уборку</h2>
-      <span class="modal-contact__subtitle">Оставьте свои имя и номер телефона, и наш менеджер перезвонит Вам в течении 15 минут</span>
-      <form action="" class="modal-contact-form">
-        <input type="text" class="modal-contact__input" placeholder="Ваше имя">
-        <input type="tel" class="modal-contact__input" placeholder="Ваш телефон">
-        <input type="checkbox" class="modal-contact__checkbox" id="check"><label for="check" class="modal-contact__label">Согласие на обработку <a href="#" class="modal-contact__link">персональных данных</a></label>
-        <button type="submit" class="modal-contact__button">Заказать уборку</button>
-      </form>
+      <div class="modal-contact__header_mobile">
+        <div class="modal-mobile-logo">
+          <img src="img/navbar/Logo.png" alt="HandeFrau" class="modal-logo__picture">
+        </div>
+        <a href="#" class="modal-mobile__close">
+          <img src="img/popup/close_mobile.png" alt="" class="navbar-menu__img">
+        </a>
+      </div>
+      <div class="modal-contact-body modal-contact_hidden" id="modal-main">
+        <h2 class="modal-contact__header">Оставьте заявку на уборку</h2>
+        <span class="modal-contact__subtitle">Оставьте свои имя и номер телефона, и наш менеджер перезвонит Вам в течении 15 минут</span>
+        <form class="modal-contact-form">
+          <input type="text" name="name" class="modal-contact__input" placeholder="Ваше имя">
+          <input type="tel" name="tel" class="phone modal-contact__input" placeholder="Ваш телефон">
+          <input type="checkbox" name="check" required class="modal-contact__checkbox" id="check"><label for="check" class="modal-contact__label">Согласие на обработку <a href="#" class="modal-contact__link">персональных данных</a></label>
+          <button type="submit" class="modal-contact__button">Заказать уборку</button>
+        </form>
+      </div>
+        <form class="add-modal-contact__form">
+          <div class="add-modal-contact modal-contact_hidden" id="modal-order">
+          <h2 class="add-modal-contact__header">Закажите <span id="cleaning-type" name="kind">утреннюю</span> уборку офиса <span id="special"></span></h2>
+          <!-- /.add-modal-contact__header -->
+          <span class="add-modal-contact__subtitle">Оставьте свои имя и номер телефона, и наш менеджер перезвонит Вам в течении 15 минут</span>
+          <!-- /.add-modal-contact__subtitle -->
+          <div class="add-modal-contact__cost">Итоговая стоимость уборки:</div>
+          <!-- /.add-modal-contact__cost -->
+          <div class="add-modal-contact__amount"> <span class="add-modal-contact__count" name="orderCount">89 000</span> рублей</div>
+          <!-- /.add-modal-contact__count -->
+          <div class="add-modal-contact__add">
+            <span class="add-modal-contact-add__title">Дополнительные услуги:</span>
+            <!-- /.add-modal-contact-add__title -->
+            <ul class="add-modal-contact-add__list">
+              <li class="add-modal-contact-add__item">
+                <div class="add-modal-contact-add__info">
+                  <span class="add-modal-contact-add__mark"></span>
+                  <span class="add-modal-contact-add__name">Помыть окна</span>
+                </div>
+                <!-- /.add-modal-contact-add__info -->
+                <div class="add-modal-contact-add__details">
+                  <span class="add-modal-contact-add__items"></span>
+                  <img src="img/popup/x.png" alt="" class="add-modal-contact-add__remove">
+                </div>
+                <!-- /.add-modal-contact-add__details -->
+              </li>
+              <!-- /.add-modal-contact-add__item -->
+              <li class="add-modal-contact-add__item">
+                <div class="add-modal-contact-add__info">
+                  <span class="add-modal-contact-add__mark"></span>
+                  <span class="add-modal-contact-add__name">Чистка ковролина</span>
+                </div>
+                <!-- /.add-modal-contact-add__info -->
+                <div class="add-modal-contact-add__details">
+                  <span class="add-modal-contact-add__items">1</span> м<sup>2</sup>
+                  <img src="img/popup/x.png" alt="" class="add-modal-contact-add__remove">
+                </div>
+                <!-- /.add-modal-contact-add__details -->
+              </li>
+              <!-- /.add-modal-contact-add__item -->
+              <li class="add-modal-contact-add__item">
+                <div class="add-modal-contact-add__info">
+                  <span class="add-modal-contact-add__mark"></span>
+                  <span class="add-modal-contact-add__name">Срочная уборка</span>
+                </div>
+                <!-- /.add-modal-contact-add__info -->
+                <div class="add-modal-contact-add__details">
+                  <span class="add-modal-contact-add__items"></span>
+                  <img src="img/popup/x.png" alt="" class="add-modal-contact-add__remove">
+                </div>
+                <!-- /.add-modal-contact-add__details -->
+              </li>
+              <!-- /.add-modal-contact-add__item -->
+            </ul>
+            <div class="add-modal-contact-add__more">Подробнее</div>
+            <!-- /.add-modal-contact-add__list -->
+          </div>
+          <!-- /.add-modal-contact__add -->
+          <div class="add-modal-contact-form">
+            <input type="text" class="modal-contact__input" placeholder="Ваше имя" name="orderName">
+            <input type="tel" class="phone modal-contact__input" placeholder="Ваш телефон" name="orderTel">
+            <input type="text" class="modal-contact__input modal-contact__input-count" name="orderCount">
+            <input type="text" class="modal-contact__input modal-contact__input-type" name="orderType">
+            <input type="text" class="modal-contact__input modal-contact__input-services" name="orderServices">
+            <input type="checkbox" name="orderCheck" class="modal-contact__checkbox" id="check1"><label for="check1" class="modal-contact__label">Согласие на обработку <a href="#" class="modal-contact__link">персональных данных</a></label>
+            <button type="submit" class="modal-contact__button">Заказать уборку</button>
+          </div>
+        </form>
+        <!-- /.add-modal-contact__form -->
+      </div>
+      <div class="success-contact modal-contact_hidden" id="modal-success">
+        <img src="img/popup/OK.png" alt="ok" class="success-contact__img">
+        <h3 class="success-contact__header">Супер! Заявка уже у нас</h3>
+        <span class="success-contact__info">Менеджер сейчас радуется этому событию, но в течении 15 минут Вам перезвонит для уточнения деталей</span>
+        <button type="submit" class="modal-contact__button modal-contact-close" >Отлично!</button>
+      </div>
+      <div class="success-contact modal-contact_hidden" id="modal-photo">
+        <img src="img/popup/OK.png" alt="ok" class="success-contact__img">
+        <h3 class="success-contact__header">Фотографии отправлены</h3>
+        <span class="success-contact__info">Специалист уже начал оценивать стоимость работ и в ближайшее время свяжется с Вами</span>
+        <button type="submit" class="modal-contact__button modal-contact-close" >Отправить ещё фото</button>
+      </div>
     </div>
     <!-- /.modal-contact -->
   </div>
   <!-- /.modal -->
-  <div class="add-modal">
-    <div class="add-modal-contact">
-      <div class="modal-contact__close"></div>
-      <!-- /.modal-contact__close -->
-      <h2 class="add-modal-contact__header">Закажите <span id="cleaning-type">утреннюю</span> уборку офиса <span id="special"></span></h2>
-      <!-- /.add-modal-contact__header -->
-      <span class="add-modal-contact__subtitle">Оставьте свои имя и номер телефона, и наш менеджер перезвонит Вам в течении 15 минут</span>
-      <!-- /.add-modal-contact__subtitle -->
-      <form action="" class="add-modal-contact__form">
-        <div class="add-modal-contact__cost">Итоговая стоимость уборки:</div>
-        <!-- /.add-modal-contact__cost -->
-        <div class="add-modal-contact__amount"> <span class="add-modal-contact__count">89 000</span> рублей</div>
-        <!-- /.add-modal-contact__count -->
-        <div class="add-modal-contact__add">
-          <span class="add-modal-contact-add__title">Дополнительные услуги:</span>
-          <!-- /.add-modal-contact-add__title -->
-          <ul class="add-modal-contact-add__list">
-            <li class="add-modal-contact-add__item">
-              <div class="add-modal-contact-add__info">
-                <span class="add-modal-contact-add__mark"></span>
-                <span class="add-modal-contact-add__name">Помыть окна</span>
-              </div>
-              <!-- /.add-modal-contact-add__info -->
-              <div class="add-modal-contact-add__details">
-                <span class="add-modal-contact-add__items"></span>
-                <img src="img/popup/x.png" alt="" class="add-modal-contact-add__remove">
-              </div>
-              <!-- /.add-modal-contact-add__details -->
-            </li>
-            <!-- /.add-modal-contact-add__item -->
-            <li class="add-modal-contact-add__item">
-              <div class="add-modal-contact-add__info">
-                <span class="add-modal-contact-add__mark"></span>
-                <span class="add-modal-contact-add__name">Чистка ковролина</span>
-              </div>
-              <!-- /.add-modal-contact-add__info -->
-              <div class="add-modal-contact-add__details">
-                <span class="add-modal-contact-add__items">1</span> м<sup>2</sup>
-                <img src="img/popup/x.png" alt="" class="add-modal-contact-add__remove">
-              </div>
-              <!-- /.add-modal-contact-add__details -->
-            </li>
-            <!-- /.add-modal-contact-add__item -->
-            <li class="add-modal-contact-add__item">
-              <div class="add-modal-contact-add__info">
-                <span class="add-modal-contact-add__mark"></span>
-                <span class="add-modal-contact-add__name">Срочная уборка</span>
-              </div>
-              <!-- /.add-modal-contact-add__info -->
-              <div class="add-modal-contact-add__details">
-                <span class="add-modal-contact-add__items"></span>
-                <img src="img/popup/x.png" alt="" class="add-modal-contact-add__remove">
-              </div>
-              <!-- /.add-modal-contact-add__details -->
-            </li>
-            <!-- /.add-modal-contact-add__item -->
-          </ul>
-          <div class="add-modal-contact-add__more">Подробнее</div>
-          <!-- /.add-modal-contact-add__list -->
-        </div>
-        <!-- /.add-modal-contact__add -->
-        <div class="add-modal-contact-form">
-          <input type="text" class="modal-contact__input" placeholder="Ваше имя">
-          <input type="tel" class="modal-contact__input" placeholder="Ваш телефон">
-          <input type="checkbox" class="modal-contact__checkbox" id="check"><label for="check" class="modal-contact__label">Согласие на обработку <a href="#" class="modal-contact__link">персональных данных</a></label>
-          <button type="submit" class="modal-contact__button">Заказать уборку</button>
-        </div>
-      </form>
-      <!-- /.add-modal-contact__form -->
-    </div>
+  <!-- <div class="add-modal"> -->
+    
     <!-- /.add-modal-contact -->
-  </div>
+  <!-- </div> -->
   <!-- /.add-modal -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="scripts/swiper.min.js"></script>
   <script src="scripts/slick.min.js"></script>
+  <script src="scripts/jquery.maskedinput.min.js"></script>
+  <script src="scripts/jquery.validate.min.js"></script>
   <script src="scripts/script.js"></script>
 </body>
 </html>
