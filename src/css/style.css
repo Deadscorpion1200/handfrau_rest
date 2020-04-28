@@ -3273,6 +3273,20 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
+}
+
+.evaluation-form-files:hover {
+  border: 1px dashed #3a9fec;
+  cursor: pointer;
+}
+
+.evaluation-form-files:hover .evaluation-form__title {
+  color: #3a9fec;
+}
+
+.evaluation-form-files:hover .evaluation-form__icon svg path {
+  fill: #3a9fec;
 }
 
 .evaluation-form__file {
@@ -3280,7 +3294,7 @@ input {
   z-index: -1;
 }
 
-.evaluation-form__header_img {
+.evaluation-form__icon {
   margin-right: 6px;
 }
 
@@ -3324,6 +3338,10 @@ input {
           flex-direction: column;
   margin-bottom: 30px;
   cursor: pointer;
+}
+
+.evaluation-form__icon-file path {
+  fill: #ff00000;
 }
 
 @media (max-width: 991px) {

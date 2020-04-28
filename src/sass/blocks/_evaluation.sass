@@ -63,10 +63,18 @@
   justify-content: center
   align-items: center
   flex-direction: column
+  text-align: center
+  &:hover
+    border: 1px dashed $main-color
+    cursor: pointer
+    .evaluation-form__title
+      color: $main-color
+    .evaluation-form__icon svg path
+      fill: $main-color
 .evaluation-form__file
   display: block
   z-index: -1
-.evaluation-form__header_img
+.evaluation-form__icon
   margin-right: 6px
 .evaluation-form__header
   color: $grey
@@ -92,6 +100,8 @@
   flex-direction: column
   margin-bottom: 30px
   cursor: pointer
+.evaluation-form__icon-file path
+  fill: #ff00000
 @media (max-width: 991px)
   .evaluation
     padding-top: 50px

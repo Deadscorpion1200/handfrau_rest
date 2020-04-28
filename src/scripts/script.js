@@ -475,7 +475,21 @@ let swiper5 = new Swiper('.reviews-slider-container',
   centeredSlides: true,
 });
 
-
+$("input[type=file]").change(function(){
+  var filename = $(this).val().replace(/.*\\/, "");
+  if($(this).val() == '')
+  {
+    return
+  }
+  else
+  {
+    $('.evaluation-form__header').css('color', '#3a9fec');
+    $('.evaluation-form__subtitle').css('max-width', '180px');
+    $('.evaluation-form__subtitle').css('text-align', 'center');
+    $('.evaluation-form__subtitle').text('для замены перетащите другие фото объекта сюда');
+    $(".evaluation-form__title").text(filename);
+  }
+});
 $(document).ready(function(){
 
   // Переменная куда будут располагаться данные файлов
@@ -605,7 +619,7 @@ $(document).ready(function(){
     });
  
     // Отправляем запрос
- 
+    
     $.ajax({
         url: 'smart2.php?uploadfiles',
         type: 'POST',
@@ -629,6 +643,10 @@ $(document).ready(function(){
                 $('#modal-success').hide();
                 $('#modal-photo').show();
                 $('form').trigger('reset');
+                $('.evaluation-form__header').css('color', '#9DAFBD');
+                $('.evaluation-form__title').text('Выберите фотографии');
+                $('.evaluation-form__subtitle').css('max-width', '100%');
+                $('.evaluation-form__subtitle').text('или перетащите фото объекта сюда')   
             }
             else{
                 console.log('ОШИБКИ ОТВЕТА сервера: ' + respond.error );
@@ -640,7 +658,7 @@ $(document).ready(function(){
     });
   });
   
-
+  
 
   let modal = $('.modal');
   $('.button-modal').on('click', function(){

@@ -3,6 +3,8 @@
 // Здесь нужно сделать все проверки передаваемых файлов и вывести ошибки если нужно
  
 // Переменная ответа
+$name  = $_POST['evaName'];
+$phone = $_POST['evaTel'];
 $path = $_SERVER['HTTP_REFERER'];
 $data = array();
 
@@ -21,12 +23,10 @@ if( isset( $_GET['uploadfiles'] ) ){
       $error = true;
     }
   }
-  $data = $error ? array('error' => 'Ошибка загрузки файлов.') : array('files' => $files );
+  $data = $error ? array('error' => 'Ошибка загрузки файлов.') : array( 'evaName' => $name, 'evaTel' => $phone, 'files' => $files );
   
   echo json_encode( $data );
   
-  $name  = $_POST['evaName'];
-  $phone = $_POST['evaTel'];
 
   require 'phpmailer/PHPMailerAutoload.php';
   
