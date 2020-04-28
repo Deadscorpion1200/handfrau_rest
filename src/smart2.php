@@ -8,7 +8,7 @@ $phone = $_POST['evaTel'];
 $path = $_SERVER['HTTP_REFERER'];
 $data = array();
 
-if( isset( $_GET['uploadfiles'] ) ){
+if( isset( $_FILES[0] ) ){
   $error = false;
   $files = array();
   $uploaddir = 'uploads/'; // . - текущая папка где находится submit.php
