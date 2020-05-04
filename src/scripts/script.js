@@ -774,4 +774,31 @@ $(document).ready(function () {
             }
         ]
     });
+
+    var dropZone = document.querySelector('.evaluation-form-files');
+    var startUpload = function(files)
+    {
+        console.log(files)
+        // $('input[type=file]').change(function () {
+        //     this.files = files;
+        // });
+    };
+
+    // drop functionality
+    dropZone.ondragover = function()
+    {
+        this.className = 'evaluation-form-files dragover' ;
+        return false;
+    };
+    dropZone.ondragleave = function()
+    {
+        this.className = 'evaluation-form-files';
+    };
+
+    dropZone.ondrop = function(e)
+    {
+        e.preventDefault();
+        this.className = 'evaluation-form-files';
+        startUpload(e.dataTransfer.files);
+    }
 });

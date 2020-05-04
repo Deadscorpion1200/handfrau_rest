@@ -11,7 +11,7 @@ $data = array();
 if( isset( $_FILES[0] ) ){
   $error = false;
   $files = array();
-  $uploaddir = 'uploads/'; // . - текущая папка где находится submit.php
+  $uploaddir = '.uploads/'; // . - текущая папка где находится submit.php
   // Создадим папку если её нет
   if( ! is_dir( $uploaddir ) ) mkdir( $uploaddir, 0777 );
   // переместим файлы из временной директории в указанную
