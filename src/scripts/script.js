@@ -432,6 +432,11 @@ $("input[type=file]").change(function () {
         $(".evaluation-form__title").text(filename);
     }
 });
+
+
+
+
+
 $(document).ready(function () {
 
     // Переменная куда будут располагаться данные файлов
@@ -506,122 +511,116 @@ $(document).ready(function () {
         })
     });
 
-    $('.evaluation-form').submit(function (event) {
+    $('.evaluation-form').validate({
 
-        // event.stopPropagation();  Остановка происходящего
+        rules: {
 
-        event.preventDefault(); // Полная остановка происходящего
+            evaName: {
 
-        // Отправляем запрос
-
-        $(this).validate({
-
-            rules: {
-
-                evaName: {
-
-                    required: true
-
-                },
-
-                evaTel: {
-
-                    required: true
-
-                }
+                required: true
 
             },
 
-            errorClass: "invalid",
+            evaTel: {
 
-            errorElement: "label",
+                required: true
 
-            errorPlacement: function (invalid, label) {},
+            }
 
-            submitHandler: function (form) {
+        },
 
-                var fd = new FormData;
+        errorClass: "invalid",
 
-                $.each(files, function (key, value) {
+        errorElement: "label",
 
-                    fd.append(key, value);
+        errorPlacement: function (invalid, label) {},
 
-                });
+        submitHandler: function (form, event) {
 
-                fd.append('evaTel', $('#evaTel').val());
+            event.stopPropagation(); // Остановка происходящего
 
-                fd.append('evaName', $('#evaName').val());
+            event.preventDefault(); // Полная остановка происходящего
 
-                $.ajax({
+            var fd = new FormData;
 
-                    url: 'smart2.php',
+            $.each(files, function (key, value) {
 
-                    method: "POST",
+                fd.append(key, value);
 
-                    processData: false,
+            });
 
-                    contentType: false,
+            fd.append('evaTel', $('#evaTel').val());
 
-                    data: fd,
+            fd.append('evaName', $('#evaName').val());
 
-                    success: function (respond, textStatus, jqXHR) {
+            $.ajax({
 
-                        // Если все ОК
+                url: 'smart2.php',
 
-                        if (typeof respond.error === 'undefined') {
+                method: "POST",
 
-                            // Файлы успешно загружены, делаем что нибудь здесь выведем пути к загруженным
-                            // файлам в блок '.ajax-respond'
+                processData: false,
 
-                            var files_path = respond.files;
+                contentType: false,
 
-                            var html = '';
+                data: fd,
 
-                            $.each(files_path, function (key, val) {
-                                html += val + '<br>';
-                            })
+                success: function (respond, textStatus, jqXHR) {
 
-                            console.log(html);
+                    // Если все ОК
 
-                            $('.modal').addClass('modal_active');
+                    if (typeof respond.error === 'undefined') {
 
-                            $('.modal-contact-body').hide();
+                        // Файлы успешно загружены, делаем что нибудь здесь выведем пути к загруженным
+                        // файлам в блок '.ajax-respond'
 
-                            $('.add-modal-contact').hide();
+                        var files_path = respond.files;
 
-                            $('#modal-success').hide();
+                        var html = '';
 
-                            $('#modal-photo').show();
+                        $.each(files_path, function (key, val) {
+                            html += val + '<br>';
+                        })
 
-                            $('form').trigger('reset');
+                        console.log(html);
 
-                            $('.evaluation-form__header').css('color', '#9DAFBD');
+                        $('.modal').addClass('modal_active');
 
-                            $('.evaluation-form__title').text('Выберите фотографии');
+                        $('.modal-contact-body').hide();
 
-                            $('.evaluation-form__subtitle').css('max-width', '100%');
+                        $('.add-modal-contact').hide();
 
-                            $('.evaluation-form__subtitle').text('или перетащите фото объекта сюда')
+                        $('#modal-success').hide();
 
-                        } else {
+                        $('#modal-photo').show();
 
-                            console.log('ОШИБКИ ОТВЕТА сервера: ' + respond.error);
+                        $('form').trigger('reset');
 
-                        }
+                        $('.evaluation-form__header').css('color', '#9DAFBD');
 
-                    },
+                        $('.evaluation-form__title').text('Выберите фотографии');
 
-                    error: function (jqXHR, textStatus, errorThrown) {
+                        $('.evaluation-form__subtitle').css('max-width', '100%');
 
-                        console.log('ОШИБКИ AJAX запроса: ' + textStatus);
+                        $('.evaluation-form__subtitle').text('или перетащите фото объекта сюда')
+
+                    } else {
+
+                        console.log('ОШИБКИ ОТВЕТА сервера: ' + respond.error);
 
                     }
 
-                });
+                },
 
-            }
-        });
+                error: function (jqXHR, textStatus, errorThrown) {
 
+                    console.log('ОШИБКИ AJAX запроса: ' + textStatus);
+
+                }
+
+            });
+
+        }
     });
 
     let modal = $('.modal');
