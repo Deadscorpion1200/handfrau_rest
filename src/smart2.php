@@ -63,7 +63,7 @@ if( isset( $_FILES[0] ) ){
   Клиент оставил свои контактные данные<br>
   Имя клиента : <strong> ' . $name . ' </strong><br>
   Его телефон: <strong> ' . $phone . ' </strong><br>
-  Прикрепленные файлы: <strong> ' . $path . $uploaddir . $file['name'] . ' </strong><br>';
+  Прикрепленные файлы: <strong> ' . $files. ' </strong><br>';
   $mail->AltBody = 'Это альтернативный текст';
   
   if(!$mail->send()) {
