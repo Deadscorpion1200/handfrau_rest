@@ -8,12 +8,6 @@ $phone = $_POST['evaTel'];
 $path = $_SERVER['HTTP_REFERER'];
 $data = array();
 
-echo "<pre>";
-
-print_r($_FILES);
-
-die;
-
 if( isset( $_FILES[0] ) ){
   $error = false;
   $files = array();
@@ -60,6 +54,19 @@ if( isset( $_FILES[0] ) ){
   // $mail->addReplyTo(EMAIL);
   // print_r($_FILES['file']); exit;
   // $mail->addAttachment($_FILES['file']['tmp_name'], $_FILES['file']['name']);
+
+  $msg = '';
+
+  // Прикрепление файлов
+  for ($ct = 0; $ct < count($_FILES[‘userfile’][‘tmp_name’]); $ct++) {
+    $uploadfile = tempnam(sys_get_temp_dir(), sha1($_FILES[‘userfile’][‘name’][$ct]));
+    $filename = $_FILES[‘userfile’][‘name’][$ct];
+    if (move_uploaded_file($_FILES[‘userfile’][‘tmp_name’][$ct], $uploadfile)) {
+      $mail->addAttachment($uploadfile, $filename);
+    } else {
+      $msg .= ‘Failed to move file to ‘ . $uploadfile;
+    }
+  }
   
   
   $mail->isHTML(true);                                  // Set email format to HTML
@@ -69,11 +76,10 @@ if( isset( $_FILES[0] ) ){
   Клиент оставил свои контактные данные<br>
   Имя клиента : <strong> ' . $name . ' </strong><br>
   Его телефон: <strong> ' . $phone . ' </strong><br>
-  Прикрепленные файлы: <strong> ' . $path . $uploaddir . $file['name'] . ' </strong><br>';
+  Прикрепленные файлы: <strong> ' . $path . $uploaddir . $file['name'] . ' </strong><br>' . $msg;  
   $mail->AltBody = 'Это альтернативный текст';
   
   if(!$mail->send()) {
-  
     return false;
   }
   else {
