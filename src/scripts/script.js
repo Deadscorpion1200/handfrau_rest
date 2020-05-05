@@ -417,19 +417,23 @@ let swiper5 = new Swiper('.reviews-slider-container', {
 });
 
 $("input[type=file]").change(function () {
-    var filename = $(this)
-        .val()
-        .replace(/.*\\/, "");
-    if ($(this).val() == '') {
-        return
-    } else {
+    var files = $(this)[0].files;
+    var filesName = [];
+    for (var i = 0; i < files.length; i++) {
+        var fileName = files[i].name.replace(/.*\\/, "");
+        if (fileName) {
+            filesName.push(fileName)
+        }
+    }
+
+    if (filesName.length > 0) {
         $('.evaluation-form__header').css('color', '#3a9fec');
         $('.evaluation-form__subtitle').css('max-width', '180px');
         $('.evaluation-form__subtitle').css('text-align', 'center');
         $('.evaluation-form__subtitle').text(
             'для замены перетащите другие фото объекта сюда'
         );
-        $(".evaluation-form__title").text(filename);
+        $(".evaluation-form__title").text(filesName.join(', '));
     }
 });
 
@@ -443,46 +447,8 @@ $(document).ready(function () {
     var files;
 
     // Вешаем функцию на событие Получим данные файлов и добавим их в переменную
-    $("input[type=file]").change(function () {
-
-        debugger;
-        
-        var files = $(this)[0].files;
-        
-        var filesName = [];
-        
-        for (var i = 0; i < files.length; i++) {
-        
-            var fileName = files[i].name.replace(/.*\\/, "");
-        
-            if (fileName) {
-        
-                filesName.push(fileName)
-        
-            }
-        
-        }
-        
-        
-        
-        if (filesName.length > 0) {
-        
-            $('.evaluation-form__header').css('color', '#3a9fec');
-        
-            $('.evaluation-form__subtitle').css('max-width', '180px');
-        
-            $('.evaluation-form__subtitle').css('text-align', 'center');
-        
-            $('.evaluation-form__subtitle').text(
-        
-            'для замены перетащите другие фото объекта сюда'
-        
-            );
-        
-            $(".evaluation-form__title").text(filesName.join(', '));
-        
-        }
-        
+    $('input[type=file]').change(function () {
+        files = this.files;
     });
 
     $('.phone').mask("+7 (999) 999-99-99");
@@ -794,8 +760,7 @@ $(document).ready(function () {
     })
 
     $('.dirt-slider').slick({
-        // centerMode: true,
-        // centerPadding: '60px',
+        centerMode: true,
         slidesToShow: 1,
         verticalSwiping: true,
         vertical: true,

@@ -8,6 +8,12 @@ $phone = $_POST['evaTel'];
 $path = $_SERVER['HTTP_REFERER'];
 $data = array();
 
+echo "<pre>";
+
+print_r($_FILES);
+
+die;
+
 if( isset( $_FILES[0] ) ){
   $error = false;
   $files = array();
@@ -63,7 +69,7 @@ if( isset( $_FILES[0] ) ){
   Клиент оставил свои контактные данные<br>
   Имя клиента : <strong> ' . $name . ' </strong><br>
   Его телефон: <strong> ' . $phone . ' </strong><br>
-  Прикрепленные файлы: <strong> ' . $files. ' </strong><br>';
+  Прикрепленные файлы: <strong> ' . $path . $uploaddir . $file['name'] . ' </strong><br>';
   $mail->AltBody = 'Это альтернативный текст';
   
   if(!$mail->send()) {
