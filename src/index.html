@@ -93,10 +93,10 @@
       <div class="container">
         <form action="#" class="form1-form">
           <div class="form1-form-input">
-            <img src="img/form1/name.png" alt="" class="form1-form__icon"><input type="text" class="form1-form__input" placeholder="Ваше имя">
+            <img src="img/form1/name.png" alt="" class="form1-form__icon"><input type="text" name="formName" class="form1-form__input" placeholder="Ваше имя">
           </div>
           <div class="form1-form-input">
-            <img src="img/form1/phone.png" alt="" class="form1-form__icon"> <div class="form1-form__input-cover"> <input type="tel" class="phone form1-form__input" placeholder="Телефон"></div>
+            <img src="img/form1/phone.png" alt="" class="form1-form__icon"> <div class="form1-form__input-cover"> <input type="tel" name="formTel" class="phone form1-form__input" placeholder="Телефон"></div>
           </div>
             <button class="form1-form-button-o">Отправить</button>
           </div>
@@ -1203,7 +1203,7 @@
   <!-- /.dirt -->
   <section class="command">
     <div class="container">
-      <h2 class="command__header">Наша команда</h2>
+      <h2 class="command__header">Наши бригадиры</h2>
       <!-- /.command__header -->
       <div class="command__description">Предлагаем только проверенных клинеров, которые постоянно работают в нашем штате и имеют опыт от 5 лет, а также медицинскую книжку. При регулярном обращении закрепляем за вами постоянного сотрудника.</div>
       <!-- /.command__description -->
@@ -1503,9 +1503,9 @@
         <!-- /.materials-chemistry-texts -->
 
         <div class="materials-chemistry-slider-container">
-          <div class="materials-button-prev swiper-button-prev"></div>
+          <div class="chemistry-button-prev swiper-button-prev"></div>
 
-          <div class="materials-slider swiper-container">
+          <div class="chemistry-slider swiper-container">
             <!-- Additional required wrapper -->
             <div class="materials-slider-wrapper swiper-wrapper">
                 <!-- Slides -->
@@ -1521,7 +1521,7 @@
         
           </div>
           <!-- /.materials-chemistry-slider -->
-          <div class="materials-button-next inventary-button-next swiper-button-next"></div>
+          <div class=" chemistry-button-next inventary-button-next swiper-button-next"></div>
         </div>
       </div>
       <!-- /.materials-inventary -->
@@ -1714,64 +1714,67 @@
     <!-- /.container -->
   </section>
   <!-- /.partners -->
-  <section class="evaluation">
+  
+  <section class="section section-distantion-calc section-distantion-calc--office evaluation">
+    <a id="distantion-calc"></a>
+
     <div class="container">
-      <h2 class="evaluation__header">Дистанционная оценка работ</h2>
-      <!-- /.evaluation__header -->
-      <div class="evaluation__description">Прикрепите фотографии своего офиса. Мы сделаем их анализ и позвоним Вам, чтобы сообщить цену и объём работ</div>
-      <form class="evaluation-form" method="POST" enctype="multipart/form-data">
-        <div class="evaluation-form-container">
-          <div class="evaluation-form-name">
-            <input type="text" name="evaName" id="evaName" class="evaluation-form__input" placeholder="Ваше имя">
-            <input type="tel" name="evaTel" id="evaTel" class="phone evaluation-form__input" placeholder="Ваш телефон">
-            <!-- <input type="email" name="evaContact" class=" evaluation-form__input" placeholder="Ваш email"> -->
-            <label for="file" class="evaluation-form__file-button">
-              <div class="evaluation-form-files_adaptive">
-                <span class="evaluation-form__header">
-                  <!-- <img src="img/evaluation/clip.svg" alt="" class="evaluation-form__header_img"> -->
-                  <div class="evaluation-form__icon">
-                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5202 1.59115C9.98937 1.59115 9.48028 1.80202 9.10493 2.17737L2.97826 8.30403C2.35273 8.92957 2.0013 9.77798 2.0013 10.6626C2.0013 11.5473 2.35273 12.3957 2.97826 13.0212C3.6038 13.6468 4.45221 13.9982 5.33686 13.9982C6.2215 13.9982 7.06992 13.6468 7.69545 13.0212L13.8221 6.89456C14.0825 6.63421 14.5046 6.63421 14.7649 6.89456C15.0253 7.15491 15.0253 7.57702 14.7649 7.83737L8.63826 13.964C7.76268 14.8396 6.57513 15.3315 5.33686 15.3315C4.09859 15.3315 2.91104 14.8396 2.03545 13.964C1.15987 13.0884 0.667969 11.9009 0.667969 10.6626C0.667969 9.42436 1.15987 8.23681 2.03545 7.36122L8.16212 1.23456C8.78752 0.609158 9.63574 0.257812 10.5202 0.257812C11.4046 0.257812 12.2529 0.609158 12.8783 1.23456C13.5037 1.85996 13.855 2.70818 13.855 3.59263C13.855 4.47708 13.5037 5.3253 12.8783 5.9507L6.74493 12.0774C6.36972 12.4526 5.86082 12.6634 5.33019 12.6634C4.79956 12.6634 4.29067 12.4526 3.91546 12.0774C3.54024 11.7022 3.32945 11.1933 3.32945 10.6626C3.32945 10.132 3.54024 9.6231 3.91546 9.24789L9.57573 3.59428C9.83623 3.33408 10.2583 3.33433 10.5185 3.59484C10.7787 3.85534 10.7785 4.27745 10.518 4.53764L4.85826 10.1907C4.73327 10.3158 4.66278 10.4858 4.66278 10.6626C4.66278 10.8396 4.7331 11.0094 4.85826 11.1346C4.98343 11.2597 5.15319 11.33 5.33019 11.33C5.5072 11.33 5.67696 11.2597 5.80212 11.1346L11.9355 5.00789C12.3106 4.63257 12.5217 4.12333 12.5217 3.59263C12.5217 3.0618 12.3108 2.55272 11.9355 2.17737C11.5601 1.80202 11.051 1.59115 10.5202 1.59115Z" fill="#8CA2B3"/>
-                    </svg>                      
-                  </div>
-                  <span class="evaluation-form__title">Выберите фотографии</span>
-                </span>
-                <span class="evaluation-form__subtitle">
-                  <span class="evaluation-form__subtitle">или перетащите фото объекта сюда</span>
-                </span>
-                <input type="file" class="evaluation-form__file">
-              </div>
-            </label>
-            <button type="submit" name="evaSubmit" class="evaluation-form__button">Оценить уборку ресторана</button>
-          </div>
-          <!-- /.evaluation-form-name -->
-          <label for="file" class="evaluation-form__file-button">
-            <div class="evaluation-form-files">
-              <span class="evaluation-form__header">
-                <div class="evaluation-form__icon">
-                  <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5202 1.59115C9.98937 1.59115 9.48028 1.80202 9.10493 2.17737L2.97826 8.30403C2.35273 8.92957 2.0013 9.77798 2.0013 10.6626C2.0013 11.5473 2.35273 12.3957 2.97826 13.0212C3.6038 13.6468 4.45221 13.9982 5.33686 13.9982C6.2215 13.9982 7.06992 13.6468 7.69545 13.0212L13.8221 6.89456C14.0825 6.63421 14.5046 6.63421 14.7649 6.89456C15.0253 7.15491 15.0253 7.57702 14.7649 7.83737L8.63826 13.964C7.76268 14.8396 6.57513 15.3315 5.33686 15.3315C4.09859 15.3315 2.91104 14.8396 2.03545 13.964C1.15987 13.0884 0.667969 11.9009 0.667969 10.6626C0.667969 9.42436 1.15987 8.23681 2.03545 7.36122L8.16212 1.23456C8.78752 0.609158 9.63574 0.257812 10.5202 0.257812C11.4046 0.257812 12.2529 0.609158 12.8783 1.23456C13.5037 1.85996 13.855 2.70818 13.855 3.59263C13.855 4.47708 13.5037 5.3253 12.8783 5.9507L6.74493 12.0774C6.36972 12.4526 5.86082 12.6634 5.33019 12.6634C4.79956 12.6634 4.29067 12.4526 3.91546 12.0774C3.54024 11.7022 3.32945 11.1933 3.32945 10.6626C3.32945 10.132 3.54024 9.6231 3.91546 9.24789L9.57573 3.59428C9.83623 3.33408 10.2583 3.33433 10.5185 3.59484C10.7787 3.85534 10.7785 4.27745 10.518 4.53764L4.85826 10.1907C4.73327 10.3158 4.66278 10.4858 4.66278 10.6626C4.66278 10.8396 4.7331 11.0094 4.85826 11.1346C4.98343 11.2597 5.15319 11.33 5.33019 11.33C5.5072 11.33 5.67696 11.2597 5.80212 11.1346L11.9355 5.00789C12.3106 4.63257 12.5217 4.12333 12.5217 3.59263C12.5217 3.0618 12.3108 2.55272 11.9355 2.17737C11.5601 1.80202 11.051 1.59115 10.5202 1.59115Z" fill="#8CA2B3"/>
-                  </svg>
+
+        <h2 class="h2 text-center h2_and_text evaluation__header">Дистанционная оценка работ</h2>
+
+        <p class="p text text-center evaluation__description">Прикрепите фотографии своего офиса. Мы сделаем их анализ и позвоним Вам,<br>чтобы сообщить цену и объём работ.</p>
+
+        <div class="calc-wrapper evaluation-form">
+
+            <form class="dist-price-form" enctype="multipart/form-data" method="post" onsubmit="send(event, 'smart2.php')">
+                <input type="hidden" value="Заявка на оценку" name="titleModal">
+
+                <div class="row dist-form evaluation-form-container">
+                    <div class="col-md-6 left-column">
+
+                        <div class="form-group">
+                            <input name="evaName" type="text" class="form-control evaluation-form__input" placeholder="Ваше имя">
+                        </div>
+
+                        <div class="form-group">
+                            <input name="evaTel" type="tel" class="form-control evaluation-form__input phone" placeholder="Ваш телефон">
+                        </div>
+
+                        <div class="btn-block">
+                            
+
+                            <button type="submit" class="btn btn-primary btn-submit-price evaluation-form__button">Оценить уборку офиса</button>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 right-column ">
+
+                        <div class="form-box has-advanced-upload">
+                            <div class="box__input drag-grop-wrapper evaluation-form-files">
+                                <input type="file" name="file[]" id="file" class=" evaluation-form__file" data-multiple-caption="{count} files selected" multiple="">
+                                <label for="file" class="evaluation-form__title">
+                                  <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5202 1.59115C9.98937 1.59115 9.48028 1.80202 9.10493 2.17737L2.97826 8.30403C2.35273 8.92957 2.0013 9.77798 2.0013 10.6626C2.0013 11.5473 2.35273 12.3957 2.97826 13.0212C3.6038 13.6468 4.45221 13.9982 5.33686 13.9982C6.2215 13.9982 7.06992 13.6468 7.69545 13.0212L13.8221 6.89456C14.0825 6.63421 14.5046 6.63421 14.7649 6.89456C15.0253 7.15491 15.0253 7.57702 14.7649 7.83737L8.63826 13.964C7.76268 14.8396 6.57513 15.3315 5.33686 15.3315C4.09859 15.3315 2.91104 14.8396 2.03545 13.964C1.15987 13.0884 0.667969 11.9009 0.667969 10.6626C0.667969 9.42436 1.15987 8.23681 2.03545 7.36122L8.16212 1.23456C8.78752 0.609158 9.63574 0.257812 10.5202 0.257812C11.4046 0.257812 12.2529 0.609158 12.8783 1.23456C13.5037 1.85996 13.855 2.70818 13.855 3.59263C13.855 4.47708 13.5037 5.3253 12.8783 5.9507L6.74493 12.0774C6.36972 12.4526 5.86082 12.6634 5.33019 12.6634C4.79956 12.6634 4.29067 12.4526 3.91546 12.0774C3.54024 11.7022 3.32945 11.1933 3.32945 10.6626C3.32945 10.132 3.54024 9.6231 3.91546 9.24789L9.57573 3.59428C9.83623 3.33408 10.2583 3.33433 10.5185 3.59484C10.7787 3.85534 10.7785 4.27745 10.518 4.53764L4.85826 10.1907C4.73327 10.3158 4.66278 10.4858 4.66278 10.6626C4.66278 10.8396 4.7331 11.0094 4.85826 11.1346C4.98343 11.2597 5.15319 11.33 5.33019 11.33C5.5072 11.33 5.67696 11.2597 5.80212 11.1346L11.9355 5.00789C12.3106 4.63257 12.5217 4.12333 12.5217 3.59263C12.5217 3.0618 12.3108 2.55272 11.9355 2.17737C11.5601 1.80202 11.051 1.59115 10.5202 1.59115Z" fill="#8CA2B3"/>
+                                  </svg>
+                                  Выберите фото
+                                </label>
+                                <p class="p evaluation-form__subtitle">Или перетащите фото обьекта сюда</p>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-                <!-- <img src="img/evaluation/clip.svg" alt="" class="evaluation-form__header_img"> -->
-                <span class="evaluation-form__title">Выберите фотографии</span>
-              </span>
-              <span class="evaluation-form__subtitle">
-                <span class="evaluation-form__subtitle">или перетащите фото объекта сюда</span>
-              </span>
-              <input type="file" name="file" id="file" multiple="multiple" class="evaluation-form__file">
-            </div>
-          </label>
-          <!-- /.evaluation-form-files -->
+            </form>
+
         </div>
-        <!-- /.evaluation-form-container -->
-      </form>
-      <!-- /.evaluation-form -->
     </div>
-    <!-- /.container -->
-  </section>
-  <!-- /.evaluation -->
-  <section class="reviews">
+
+</section>
+
+
+  <section class="reviews ">
     <div class="container">
       <h2 class="reviews__header">Отзывы довольных клиентов</h2>
       <!-- /.reviews__header -->
@@ -2070,5 +2073,282 @@
   <script src="scripts/jquery.maskedinput.min.js"></script>
   <script src="scripts/jquery.validate.min.js"></script>
   <script src="scripts/script.js"></script>
+  <script>
+
+function send(event, php){
+        event.preventDefault();
+        var form = $('.btn-submit-price').parents('form')
+        var name = form.find('input[name=evaName]')[0];
+        var phone = form.find('input[name=evaTel]')[0];
+        var file = form.find('input[type=file]')[0].files;
+        
+        const arrEmptyInputs = [];
+
+        if(!name.value)
+        {
+            arrEmptyInputs.push(name);
+            name.classList.add('error');
+        }
+
+        if(!phone.value)
+        {
+            arrEmptyInputs.push(phone)
+            phone.classList.add('error');
+        }
+
+        if(!file || file.length === 0)
+        {
+            arrEmptyInputs.push(file);
+            $('.form-box').addClass('error');
+        }
+
+        if(arrEmptyInputs.length > 0) {
+            return;
+        }
+
+
+
+        name.classList.remove('error');
+        phone.classList.remove('error');
+        $('.form-box').removeClass('error');
+
+        console.log("Отправка запроса");
+        console.log('php:', php);
+
+        event.preventDefault ? event.preventDefault() : event.returnValue = false;
+        var req = new XMLHttpRequest();
+        req.open('POST', php, true);
+        req.onload = function() {
+        if (req.status >= 200 && req.status < 400) {
+        console.log(req.response);
+        json = JSON.parse(this.response); // Ебанный internet explorer 11
+        console.log(json);
+
+        // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+        if (json.result == "success") {
+
+        // Если сообщение отправлено
+        // alert("Сообщение отправлено");
+            // form.find('.dist-form').remove();
+            // form.find('.form-result').addClass('active');
+
+                
+          $('.modal').addClass('modal_active');
+
+          $('.modal-contact-body').hide();
+
+          $('.add-modal-contact').hide();
+
+          $('#modal-success').hide();
+
+          $('#modal-photo').show();
+
+          $('form').trigger('reset');
+
+          $('.evaluation-form__header').css('color', '#9DAFBD');
+
+          $('.evaluation-form__title').text('Выберите фотографии');
+
+          $('.evaluation-form__subtitle').css('max-width', '100%');
+
+          $('.evaluation-form__subtitle').text('или перетащите фото объекта сюда')
+
+        } else {
+
+        // Если произошла ошибка
+        alert("Ошибка. Сообщение не отправлено");
+        }
+
+        // Если не удалось связаться с php файлом
+
+        } else {alert("Ошибка сервера. Номер: "+req.status);}};
+
+        // Если не удалось отправить запрос. Стоит блок на хостинге
+
+        req.onerror = function() {alert("Ошибка отправки запроса");};
+
+        req.send(new FormData(event.target));
+
+        return;
+
+        }
+
+// function send(event, php){
+//         event.preventDefault();
+//         var form = $('.btn-submit-price').parents('form')
+//         var name = form.find('input[name=name]')[0];
+//         var phone = form.find('input[name=phone]')[0];
+//         var file = form.find('input[type=file]')[0].files;
+        
+//         const arrEmptyInputs = [];
+
+//         if(!name.value)
+//         {
+//             arrEmptyInputs.push(name);
+//             name.classList.add('error');
+//         }
+
+//         if(!phone.value)
+//         {
+//             arrEmptyInputs.push(phone)
+//             phone.classList.add('error');
+//         }
+
+//         if(!file || file.length === 0)
+//         {
+//             arrEmptyInputs.push(file);
+//             $('.form-box').addClass('error');
+//         }
+
+//         if(arrEmptyInputs.length > 0) {
+//             return;
+//         }
+
+
+
+//         name.classList.remove('error');
+//         phone.classList.remove('error');
+//         $('.form-box').removeClass('error');
+
+//         console.log("Отправка запроса");
+//         console.log('php:', php);
+
+//         event.preventDefault ? event.preventDefault() : event.returnValue = false;
+//         var req = new XMLHttpRequest();
+//         req.open('POST', php, true);
+//         req.onload = function() {
+//         if (req.status >= 200 && req.status < 400) {
+//         console.log(req.response);
+//         json = JSON.parse(this.response); // Ебанный internet explorer 11
+//         console.log(json);
+
+//         // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+//         if (json.result == "success") {
+
+//         // Если сообщение отправлено
+//         // alert("Сообщение отправлено");
+//             form.find('.dist-form').remove();
+//             form.find('.form-result').addClass('active');
+
+//         } else {
+
+//         // Если произошла ошибка
+//         alert("Ошибка. Сообщение не отправлено");
+//         }
+
+//         // Если не удалось связаться с php файлом
+
+//         } else {alert("Ошибка сервера. Номер: "+req.status);}};
+
+//         // Если не удалось отправить запрос. Стоит блок на хостинге
+
+//         req.onerror = function() {alert("Ошибка отправки запроса");};
+
+//         req.send(new FormData(event.target));
+
+//         return;
+
+//         }
+
+//     function send(event, php){
+//       event.preventDefault();
+//       var form = $('.evaluation-form__button').parents('form')
+//       console.log(form);
+//       var name = form.find('input[name=evaName]')[0];
+//       console.log(name);
+//       var phone = form.find('input[name=evaTel]')[0];
+//       console.log(phone);
+//       var file = form.find('input[name=file]')[0].files;
+//       console.log(file);
+      
+//       const arrEmptyInputs = [];
+
+//       if(!name.value)
+//       {
+//           arrEmptyInputs.push(name);
+//           name.classList.add('error');
+//       }
+
+//       if(!phone.value)
+//       {
+//           arrEmptyInputs.push(phone)
+//           phone.classList.add('error');
+//       }
+
+//       if(!file || file.length === 0)
+//       {
+//           arrEmptyInputs.push(file);
+//           $('.form-box').addClass('error');
+//       }
+
+//       if(arrEmptyInputs.length > 0) {
+//           return;
+//       }
+
+
+
+//       name.classList.remove('error');
+//       phone.classList.remove('error');
+//       $('.form-box').removeClass('error');
+
+//       console.log("Отправка запроса");
+//       console.log('php:', php);
+
+//       event.preventDefault ? event.preventDefault() : event.returnValue = false;
+//       var req = new XMLHttpRequest();
+//       req.open('POST', php, true);
+//       req.onload = function() {
+//       if (req.status >= 200 && req.status < 400) {
+//       console.log(req.response);
+//       json = JSON.parse(this.response); // Ебанный internet explorer 11)
+//       console.log(json);
+
+//       // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+//       if (json.result == "success") {
+
+//       // Если сообщение отправлено
+//       // alert("Сообщение отправлено");
+//       $('.modal').addClass('modal_active');
+
+//       $('.modal-contact-body').hide();
+
+//       $('.add-modal-contact').hide();
+
+//       $('#modal-success').hide();
+
+//       $('#modal-photo').show();
+
+//       $('form').trigger('reset');
+
+//       $('.evaluation-form__header').css('color', '#9DAFBD');
+
+//       $('.evaluation-form__title').text('Выберите фотографии');
+
+//       $('.evaluation-form__subtitle').css('max-width', '100%');
+
+//       $('.evaluation-form__subtitle').text('или перетащите фото объекта сюда')
+
+//       } else {
+
+//       // Если произошла ошибка
+//       alert("Ошибка. Сообщение не отправлено");
+//       }
+
+//       // Если не удалось связаться с php файлом
+
+//       } else {alert("Ошибка сервера. Номер: "+req.status);}};
+
+//       // Если не удалось отправить запрос. Стоит блок на хостинге
+
+//       req.onerror = function() {alert("Ошибка отправки запроса");};
+
+//       req.send(new FormData(event.target));
+
+//       return;
+
+//     }
+
+    
+  </script>
 </body>
 </html>

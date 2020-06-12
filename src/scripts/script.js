@@ -373,6 +373,21 @@ let swiper3 = new Swiper('.materials-slider', {
     }
 
 });
+
+let swiper6 = new Swiper('.chemistry-slider', {
+    loop: true,
+    slidesPerView: 2,
+    navigation: {
+        nextEl: '.chemistry-button-next',
+        prevEl: '.chemistry-button-prev'
+    },
+    pagination: {
+        clickable: true,
+        el: '.materials-slider-pagination'
+    }
+
+});
+
 let swiper4 = new Swiper('.partners-slider-container', {
     loop: true,
     navigation: {
@@ -417,19 +432,23 @@ let swiper5 = new Swiper('.reviews-slider-container', {
 });
 
 $("input[type=file]").change(function () {
-    var filename = $(this)
-        .val()
-        .replace(/.*\\/, "");
-    if ($(this).val() == '') {
-        return
-    } else {
+    var files = $(this)[0].files;
+    var filesName = [];
+    for (var i = 0; i < files.length; i++) {
+        var fileName = files[i].name.replace(/.*\\/, "");
+        if (fileName) {
+            filesName.push(fileName)
+        }
+    }
+
+    if (filesName.length > 0) {
         $('.evaluation-form__header').css('color', '#3a9fec');
         $('.evaluation-form__subtitle').css('max-width', '180px');
         $('.evaluation-form__subtitle').css('text-align', 'center');
         $('.evaluation-form__subtitle').text(
             'для замены перетащите другие фото объекта сюда'
         );
-        $(".evaluation-form__title").text(filename);
+        $(".evaluation-form__title").text(filesName.join(', '));
     }
 });
 
@@ -443,49 +462,41 @@ $(document).ready(function () {
     var files;
 
     // Вешаем функцию на событие Получим данные файлов и добавим их в переменную
-    $("input[type=file]").change(function () {
-
-        debugger;
-        
-        var files = $(this)[0].files;
-        
-        var filesName = [];
-        
-        for (var i = 0; i < files.length; i++) {
-        
-            var fileName = files[i].name.replace(/.*\\/, "");
-        
-            if (fileName) {
-        
-                filesName.push(fileName)
-        
-            }
-        
-        }
-        
-        
-        
-        if (filesName.length > 0) {
-        
-            $('.evaluation-form__header').css('color', '#3a9fec');
-        
-            $('.evaluation-form__subtitle').css('max-width', '180px');
-        
-            $('.evaluation-form__subtitle').css('text-align', 'center');
-        
-            $('.evaluation-form__subtitle').text(
-        
-            'для замены перетащите другие фото объекта сюда'
-        
-            );
-        
-            $(".evaluation-form__title").text(filesName.join(', '));
-        
-        }
-        
+    $('input[type=file]').change(function () {
+        files = this.files;
     });
 
     $('.phone').mask("+7 (999) 999-99-99");
+    $('.form1-form').each(function () {
+        $(this).validate({
+            rules: {
+                formName: {
+                    required: true
+                },
+                formTel: {
+                    required: true
+                }
+            },
+            errorClass: "error",
+            errorElement: "label",
+            errorPlacement: function (invalid, label) {},
+            submitHandler: function (form) {
+                $.ajax({
+                    url: "smart3.php",
+                    type: "POST",
+                    data: $(form).serialize(),
+                    success: function () {
+                        $('.modal').addClass('modal_active')
+                        $('#modal-main').hide();
+                        $('#modal-order').hide();
+                        $('#modal-photo').hide();
+                        $('#modal-success').show();
+                        $('form').trigger('reset');
+                    }
+                })
+            }
+        })
+    });
     $('.modal-contact-form').each(function () {
         $(this).validate({
             rules: {
@@ -549,117 +560,117 @@ $(document).ready(function () {
         })
     });
 
-    $('.evaluation-form').validate({
+    // $('.evaluation-form').validate({
 
-        rules: {
+    //     rules: {
 
-            evaName: {
+    //         evaName: {
 
-                required: true
+    //             required: true
 
-            },
+    //         },
 
-            evaTel: {
+    //         evaTel: {
 
-                required: true
+    //             required: true
 
-            }
+    //         }
 
-        },
+    //     },
 
-        errorClass: "invalid",
+    //     errorClass: "invalid",
 
-        errorElement: "label",
+    //     errorElement: "label",
 
-        errorPlacement: function (invalid, label) {},
+    //     errorPlacement: function (invalid, label) {},
 
-        submitHandler: function (form, event) {
+    //     submitHandler: function (form, event) {
 
-            event.stopPropagation(); // Остановка происходящего
+    //         event.stopPropagation(); // Остановка происходящего
 
-            event.preventDefault(); // Полная остановка происходящего
+    //         event.preventDefault(); // Полная остановка происходящего
 
-            var fd = new FormData;
+    //         var fd = new FormData;
 
-            $.each(files, function (key, value) {
+    //         $.each(files, function (key, value) {
 
-                fd.append(key, value);
+    //             fd.append(key, value);
 
-            });
+    //         });
 
-            fd.append('evaTel', $('#evaTel').val());
+    //         fd.append('evaTel', $('#evaTel').val());
 
-            fd.append('evaName', $('#evaName').val());
+    //         fd.append('evaName', $('#evaName').val());
 
-            $.ajax({
+    //         $.ajax({
 
-                url: 'smart2.php',
+    //             url: 'smart2.php',
 
-                method: "POST",
+    //             method: "POST",
 
-                processData: false,
+    //             processData: false,
 
-                contentType: false,
+    //             contentType: false,
 
-                data: fd,
+    //             data: fd,
 
-                success: function (respond, textStatus, jqXHR) {
+    //             success: function (respond, textStatus, jqXHR) {
 
-                    // Если все ОК
+    //                 // Если все ОК
 
-                    if (typeof respond.error === 'undefined') {
+    //                 if (typeof respond.error === 'undefined') {
 
-                        // Файлы успешно загружены, делаем что нибудь здесь выведем пути к загруженным
-                        // файлам в блок '.ajax-respond'
+    //                     // Файлы успешно загружены, делаем что нибудь здесь выведем пути к загруженным
+    //                     // файлам в блок '.ajax-respond'
 
-                        var files_path = respond.files;
+    //                     var files_path = respond.files;
 
-                        var html = '';
+    //                     var html = '';
 
-                        $.each(files_path, function (key, val) {
-                            html += val + '<br>';
-                        })
+    //                     $.each(files_path, function (key, val) {
+    //                         html += val + '<br>';
+    //                     })
 
-                        console.log(html);
+    //                     console.log(html);
 
-                        $('.modal').addClass('modal_active');
+    //                     $('.modal').addClass('modal_active');
 
-                        $('.modal-contact-body').hide();
+    //                     $('.modal-contact-body').hide();
 
-                        $('.add-modal-contact').hide();
+    //                     $('.add-modal-contact').hide();
 
-                        $('#modal-success').hide();
+    //                     $('#modal-success').hide();
 
-                        $('#modal-photo').show();
+    //                     $('#modal-photo').show();
 
-                        $('form').trigger('reset');
+    //                     $('form').trigger('reset');
 
-                        $('.evaluation-form__header').css('color', '#9DAFBD');
+    //                     $('.evaluation-form__header').css('color', '#9DAFBD');
 
-                        $('.evaluation-form__title').text('Выберите фотографии');
+    //                     $('.evaluation-form__title').text('Выберите фотографии');
 
-                        $('.evaluation-form__subtitle').css('max-width', '100%');
+    //                     $('.evaluation-form__subtitle').css('max-width', '100%');
 
-                        $('.evaluation-form__subtitle').text('или перетащите фото объекта сюда')
+    //                     $('.evaluation-form__subtitle').text('или перетащите фото объекта сюда')
 
-                    } else {
+    //                 } else {
 
-                        console.log('ОШИБКИ ОТВЕТА сервера: ' + respond.error);
+    //                     console.log('ОШИБКИ ОТВЕТА сервера: ' + respond.error);
 
-                    }
+    //                 }
 
-                },
+    //             },
 
-                error: function (jqXHR, textStatus, errorThrown) {
+    //             error: function (jqXHR, textStatus, errorThrown) {
 
-                    console.log('ОШИБКИ AJAX запроса: ' + textStatus);
+    //                 console.log('ОШИБКИ AJAX запроса: ' + textStatus);
 
-                }
+    //             }
 
-            });
+    //         });
 
-        }
-    });
+    //     }
+    // });
 
     let modal = $('.modal');
     $('.button-modal').on('click', function () {
@@ -794,8 +805,7 @@ $(document).ready(function () {
     })
 
     $('.dirt-slider').slick({
-        // centerMode: true,
-        // centerPadding: '60px',
+        centerMode: true,
         slidesToShow: 1,
         verticalSwiping: true,
         vertical: true,

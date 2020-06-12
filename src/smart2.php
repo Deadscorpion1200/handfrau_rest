@@ -1,80 +1,74 @@
-<?php 
 
-// Здесь нужно сделать все проверки передаваемых файлов и вывести ошибки если нужно
- 
-// Переменная ответа
-$name  = $_POST['evaName'];
+<?php
+ini_set('error_reporting', E_ALL);
+// Файлы phpmailer
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
+
+// Переменные, которые отправляет пользователь
+$name = $_POST['evaName'];
 $phone = $_POST['evaTel'];
-$path = $_SERVER['HTTP_REFERER'];
-$data = array();
+$file = $_FILES['file'];
 
-if( isset( $_FILES[0] ) ){
-  $error = false;
-  $files = array();
-  $uploaddir = '.uploads/'; // . - текущая папка где находится submit.php
-  // Создадим папку если её нет
-  if( ! is_dir( $uploaddir ) ) mkdir( $uploaddir, 0777 );
-  // переместим файлы из временной директории в указанную
-  foreach( $_FILES as $file ){
-    if( move_uploaded_file( $file['tmp_name'], $uploaddir . basename($file['name']) ) ){
-      $files[] = realpath( $uploaddir . $file['name'] );
-    }
-    else{
-      $error = true;
-    }
-  }
-  $data = $error ? array('error' => 'Ошибка загрузки файлов.') : array( 'evaName' => $name, 'evaTel' => $phone, 'files' => $files );
-  
-  echo json_encode( $data );
-  
+// Формирование самого письма
+$title = "Заявка на оценку уборки";
+$body = "
+<h2>Новая заяввка на оценку уборки</h2>
+<b>Имя:</b> $name<br>
+<b>Телефон:</b> $phone<br><br>
+";
 
-  require 'phpmailer/PHPMailerAutoload.php';
-  
-  $mail = new PHPMailer;
-  
-  // $mail->SMTPDebug = 4;                               // Enable verbose debug output
-  
-  $mail->CharSet = 'utf-8';
-  
-  //$mail->SMTPDebug = 3;                               // Enable verbose debug output
-  
-  $mail->isSMTP();                                      // Set mailer to use SMTP
-  $mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
-  $mail->SMTPAuth = true;                               // Enable SMTP authentication
-  $mail->Username = 'alex00796@mail.ru';                // Наш логин                 
-  $mail->Password = 'Cgb652hfA';                           // Наш пароль от ящика
-                            
-  $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-  $mail->Port = 465;      
-  
-  $mail->setFrom('alex00796@mail.ru', 'Заявка с сайта ');   // От кого письмо 
-  $mail->addAddress('kurp96@yandex.ru');     // Add a recipient
-  
-  
-  // $mail->addReplyTo(EMAIL);
-  // print_r($_FILES['file']); exit;
-  // $mail->addAttachment($_FILES['file']['tmp_name'], $_FILES['file']['name']);
-  
-  
-  $mail->isHTML(true);                                  // Set email format to HTML
-  
-  $mail->Subject = 'Заявка с сайта';
-  $mail->Body    = '
-  Клиент оставил свои контактные данные<br>
-  Имя клиента : <strong> ' . $name . ' </strong><br>
-  Его телефон: <strong> ' . $phone . ' </strong><br>
-  Прикрепленные файлы: <strong> ' . $files. ' </strong><br>';
-  $mail->AltBody = 'Это альтернативный текст';
-  
-  if(!$mail->send()) {
-  
-    return false;
-  }
-  else {
-    
-  }
+// Настройки PHPMailer
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+
+try {
+    $mail -> SMTPDebug = 2;
+    $mail->isSMTP();   
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPAuth   = true;
+    $mail->SMTPDebug = 2;
+    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
+
+    // Настройки вашей почты
+    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'handfraucompany'; // Логин на почте
+    $mail->Password   = 'nhbwthfnjgc75'; // Пароль на почте
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port       = 465;
+    $mail->setFrom('handfraucompany@yandex.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
+
+    // Получатель письма
+    // $mail->addAddress('fraukompania@gmail.com');
+    $mail->addAddress('fraukompania@gmail.com');
+    // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
+
+    // Прикрипление файлов к письму
+if (!empty($file['name'][0])) {
+    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
+        $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
+        $filename = $file['name'][$ct];
+        if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
+            $mail->addAttachment($uploadfile, $filename);
+            $rfile[] = "Файл $filename прикреплён";
+        } else {
+            $rfile[] = "Не удалось прикрепить файл $filename";
+        }
+    }   
+}
+// Отправка сообщения
+$mail->isHTML(true);
+$mail->Subject = $title;
+$mail->Body = $body;    
+
+// Проверяем отравленность сообщения
+if ($mail->send()) {$result = "success";} 
+else {$result = "error";}
+
+} catch (Exception $e) {
+    $result = "error";
+    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
-		// if(isset($_POST['evaSubmit'])) {
-		// }
-?>
+// Отображение результата
+echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);

@@ -29,7 +29,7 @@
   border-radius: 10px
 .evaluation-form-container
   display: flex
-
+  justify-content: space-between
 .evaluation-form-name
   display: flex
   flex-direction: column
@@ -120,10 +120,12 @@
     margin-bottom: 35px
   .evaluation-form
     width: 392px
+  .evaluation-form-container
+    flex-direction: column-reverse
   .evaluation-form-files
-    display: none
-  .evaluation-form-files_adaptive
     display: flex
+    margin-bottom: 30px
+    height: 150px
 @media (max-width: 576px)
   .evaluation
     padding-top: 30px

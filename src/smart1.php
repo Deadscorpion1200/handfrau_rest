@@ -14,16 +14,17 @@ $mail->CharSet = 'utf-8';
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'alex00796@mail.ru';                // Наш логин                 
-$mail->Password = 'Cgb652hfA';                           // Наш пароль от ящика
+$mail->Username = 'handfraucompany@yandex.ru';                // Наш логин                 
+$mail->Password = 'nhbwthfnjgc75';                           // Наш пароль от ящика
                            
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('alex00796@mail.ru', 'Заявка с сайта ');   // От кого письмо 
-$mail->addAddress('kurp96@yandex.ru');     // Add a recipient
+$mail->setFrom('handfraucompany@yandex.ru', 'Заявка с сайта ');   // От кого письмо 
+// $mail->addAddress('fraukompania@gmail.com');     // Add a recipient
+$mail->addAddress('fraukompania@gmail.com');     // Add a recipient
 // $mail->addAddress('gorasdo.ru@yandex.ru');  
 // $mail->addAddress('iordanov.d.g@yandex.ru');              // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
