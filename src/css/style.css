@@ -1365,11 +1365,105 @@ input {
   width: 558px;
   background: #ffffff;
   border-radius: 10px;
+
 }
+
 
 .special-gallery-slide__img {
   width: 100%;
   border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+.special-gallery-slide-point{
+  background-color: #3A9FEC;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.tooltip:before{
+  content: attr(data-title);
+  position: absolute;
+  width: 200px;
+
+background: #FFFFFF;
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+border-radius: 5px;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+color: #9DAFBD;
+padding: 10px;
+bottom: 150%;
+z-index: 100;
+visibility: hidden;
+opacity: 0;
+}
+.tooltip:hover:before {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.special-gallery-slide-point-kitchen-1{
+  top: 79px;
+  left: 26%;
+}
+
+.special-gallery-slide-point-kitchen-2{
+  top: 112px;
+  left: 48%;
+}
+.special-gallery-slide-point-kitchen-3{
+  top: 159px;
+  left: 70%;
+}
+.special-gallery-slide-point-kitchen-4{
+  top: 224px;
+  left: 20%;
+}
+.special-gallery-slide-point-kitchen-5{
+  top: 236px;
+  left: 36%;
+}
+.special-gallery-slide-point-kitchen-6{
+  top: 301px;
+  left: 51%;
+}
+.special-gallery-slide-point-kitchen-7{
+  top: 207px;
+  left: 60%;
+}
+
+.special-gallery-slide-point-banket-1{
+  top: 66px;
+  left: 13%;
+}
+
+.special-gallery-slide-point-banket-2{
+  top: 171px;
+  left: 10%;
+}
+.special-gallery-slide-point-banket-3{
+  top: 228px;
+  left: 20%;
+}
+.special-gallery-slide-point-banket-4{
+  top: 217px;
+  left: 41%;
+}
+.special-gallery-slide-point-banket-5{
+  top: 113px;
+  left: 72%;
+}
+.special-gallery-slide-point-banket-6{
+  top: 300px;
+  left: 75%;
 }
 
 .special-gallery-slide__description {
@@ -1440,6 +1534,47 @@ input {
   height: 40px;
   outline: none;
 }
+@media (max-width: 1200px) {
+.special-gallery-slide-point-banket-1{
+  top: 55px;
+}
+.special-gallery-slide-point-banket-2{
+  top: 142px;
+}
+.special-gallery-slide-point-banket-3{
+  top: 190px;
+}
+.special-gallery-slide-point-banket-4{
+  top: 181px;
+}
+.special-gallery-slide-point-banket-5{
+  top: 94px;
+}
+.special-gallery-slide-point-banket-6{
+  top: 250px;
+}
+.special-gallery-slide-point-kitchen-1{
+  top: 14%;
+}
+.special-gallery-slide-point-kitchen-2{
+  top: 20%;
+}
+.special-gallery-slide-point-kitchen-3{
+  top: 28%;
+}
+.special-gallery-slide-point-kitchen-4{
+  top: 40%;
+}
+.special-gallery-slide-point-kitchen-5{
+  top: 42%;
+}
+.special-gallery-slide-point-kitchen-6{
+  top: 54%;
+}
+.special-gallery-slide-point-kitchen-7{
+  top: 37%;
+}
+}
 
 @media (max-width: 991px) {
   .special {
@@ -1460,7 +1595,93 @@ input {
     font-size: 14px;
     line-height: 18px;
   }
+
+  .special-gallery-slide-point-banket-1{
+    top: 41px;
+  }
+  .special-gallery-slide-point-banket-2{
+    top: 106px;
+  }
+  .special-gallery-slide-point-banket-3{
+    top: 141px;
+  }
+  .special-gallery-slide-point-banket-4{
+    top: 135px;
+  }
+  .special-gallery-slide-point-banket-5{
+    top: 56px;
+  }
+  .special-gallery-slide-point-banket-6{
+    top: 185px;
+  }
+
+  .special-gallery-slide-point-kitchen-1{
+    top: 49px;
+  }
+  .special-gallery-slide-point-kitchen-2{
+    top: 69px;
+  }
+  .special-gallery-slide-point-kitchen-3{
+    top: 98px;
+  }
+  .special-gallery-slide-point-kitchen-4{
+    top: 138px;
+  }
+  .special-gallery-slide-point-kitchen-5{
+    top: 146px;
+  }
+  .special-gallery-slide-point-kitchen-6{
+    top: 186px;
+  }
+  .special-gallery-slide-point-kitchen-7{
+    top: 128px;
+  }
 }
+
+@media (max-width: 769px) {
+.special-gallery-slide-point-banket-1{
+  top: 30px;
+}
+.special-gallery-slide-point-banket-2{
+  top: 63px;
+}
+.special-gallery-slide-point-banket-3{
+  top: 105px;
+}
+.special-gallery-slide-point-banket-4{
+  top: 100px;
+}
+.special-gallery-slide-point-banket-5{
+  top: 41px;
+}
+.special-gallery-slide-point-banket-6{
+  top: 136px;
+}
+
+.special-gallery-slide-point-kitchen-1{
+  top: 36px;
+}
+.special-gallery-slide-point-kitchen-2{
+  top: 51px;
+}
+.special-gallery-slide-point-kitchen-3{
+  top: 72px;
+}
+.special-gallery-slide-point-kitchen-4{
+  top: 102px;
+}
+.special-gallery-slide-point-kitchen-5{
+  top: 108px;
+}
+.special-gallery-slide-point-kitchen-6{
+  top: 137px;
+}
+.special-gallery-slide-point-kitchen-7{
+  top: 94px;
+}
+}
+
+
 
 @media (max-width: 576px) {
   .special {
@@ -1478,7 +1699,135 @@ input {
   .slider-button-prev {
     left: -10px;
   }
+
+  .special-gallery-slide-point-banket-1{
+    top: 12%;
+  }
+  .special-gallery-slide-point-banket-2{
+    top: 31%
+  }
+  .special-gallery-slide-point-banket-3{
+    top: 41%;
+  }
+  .special-gallery-slide-point-banket-4{
+    top: 39%;
+  }
+  .special-gallery-slide-point-banket-5{
+    top: 21%;
+  }
+  .special-gallery-slide-point-banket-6{
+    top: 53%;
+  }
+
+  .special-gallery-slide-point-kitchen-1{
+    top: 14%;
+  }
+  .special-gallery-slide-point-kitchen-2{
+    top: 20%;
+  }
+  .special-gallery-slide-point-kitchen-3{
+    top: 29%;
+  }
+  .special-gallery-slide-point-kitchen-4{
+    top: 40%;
+  }
+  .special-gallery-slide-point-kitchen-5{
+    top: 42%;
+  }
+  .special-gallery-slide-point-kitchen-6{
+    top: 54%;
+  }
+  .special-gallery-slide-point-kitchen-7{
+    top: 37%;
+  }
 }
+
+@media (max-width: 450px) {
+  .special-gallery-slide-point-banket-1{
+    top: 11%;
+  }
+  .special-gallery-slide-point-banket-2{
+    top: 28%;
+  }
+  .special-gallery-slide-point-banket-3{
+    top: 37%;
+  }
+  .special-gallery-slide-point-banket-4{
+    top: 35%;
+  }
+  .special-gallery-slide-point-banket-5{
+    top: 18%;
+  }
+  .special-gallery-slide-point-banket-6{
+    top: 46%;
+  }
+
+  .special-gallery-slide-point-kitchen-1{
+    top: 13%;
+  }
+  .special-gallery-slide-point-kitchen-2{
+    top: 18%;
+  }
+  .special-gallery-slide-point-kitchen-3{
+    top: 26%;
+  }
+  .special-gallery-slide-point-kitchen-4{
+    top: 36%;
+  }
+  .special-gallery-slide-point-kitchen-5{
+    top: 38%;
+  }
+  .special-gallery-slide-point-kitchen-6{
+    top: 49%;
+  }
+  .special-gallery-slide-point-kitchen-7{
+    top: 34%;
+  }
+}
+@media (max-width: 400px) {
+.special-gallery-slide-point-kitchen-1{
+  top: 12%;
+}
+.special-gallery-slide-point-kitchen-2{
+  top: 17%;
+}
+.special-gallery-slide-point-kitchen-3{
+  top: 25%;
+}
+.special-gallery-slide-point-kitchen-4{
+  top: 35%;
+}
+.special-gallery-slide-point-kitchen-5{
+  top: 36%;
+}
+.special-gallery-slide-point-kitchen-6{
+  top: 46%;
+}
+.special-gallery-slide-point-kitchen-7{
+  top: 32%;
+}}
+
+@media (max-width: 340px) {
+  .special-gallery-slide-point-banket-1{
+    top: 35px;
+  }
+  .special-gallery-slide-point-banket-2{
+    top: 75px;
+  }
+  .special-gallery-slide-point-banket-3{
+    top: 124px;
+  }
+  .special-gallery-slide-point-banket-4{
+    top: 118px;
+  }
+  .special-gallery-slide-point-banket-5{
+    top: 49px;
+  }
+  .special-gallery-slide-point-banket-6{
+    top: 162px;
+  }
+}
+
 
 .cleanWarranty {
   padding-top: 80px;
