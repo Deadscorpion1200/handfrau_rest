@@ -30,11 +30,30 @@
         </div>
 
         <div class="navbar-contact">
-          <a href="callto:+74951234567" class="navbar-contact__phone">+7 495 123 45 67</a>
+          <div class="navbar-contact-links-wrap">
+
+            <div class="navbar-contact-links">
+  
+              <a href="callto:+74951234567" class="navbar-contact__phone">+7 495 123 45 67</a>
+              
+            </div>
+              <div class="contacts-social">
+                <a href="whatsapp://send/?phone=+79250308099" class="social__link">
+                    <img src="img/navbar/whatsapp.png" alt="Whatsapp" class="social__icon">
+                </a>
+                <a href="https://viber.click/79250308099" class="social__link">
+                    <img src="img/navbar/viber.png" alt="viber" class="social__icon">
+                </a>
+                <a href="tg://resolve?domain=bazilski" class="social__link">
+                    <img src="img/navbar/telegram.png" alt="telegram" class="social__icon">
+                </a>
+              </div>
+          </div>
+          
           <button class="button button-modal navbar-contact__button" data-target="modal-main">Заказать уборку</button>
         </div>
         <div class="navbar-mobile">
-          <a href="#" class="navbar-mobile__contact">
+          <a href="#" class="navbar-mobile__contact button-modal" data-target="modal-tel">
             <img src="img/navbar/contact.png" alt="contact-us" class="navbar-mobile__contact-icon">
           </a>
           <a href="#" class="navbar-mobile__menu">
@@ -111,6 +130,22 @@
       <span class="form1__note-policy">Нажимая “Отправить” даю согласие на обработку персональных данных</span>
     </div>
   </section>
+  <section class="cleanWarranty">
+    <div class="container">
+      <h2 class="cleanWarranty__header">Проверяем чистоту на деле</h2>
+      <span class="cleanWarranty__description">Если Вас не устроит результат сделаем повторную уборку бесплатно либо вернем деньги.</span>
+      <ul class="cleanWarranty__list">
+        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Проверяем уборку с помощью «белых носков»</li>
+        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Контроль всех этапов работы со стороны менеджеров</li>
+        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Убираем по Вашим правилам</li>
+        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Штрафные санкции для Нас уже прописаны</li>
+      </ul>
+      <div class="cleanWarranty-img">
+        <img src="img/clean-warranty/legs.png" alt="" class="cleanWarranty-img__picture">
+      </div>
+    </div>
+  </section>
+  
   <section class="calc">
     <div class="container">
       <h2 class="calc__header">
@@ -183,7 +218,7 @@
             <span class="calc-result-personal__man">4 человека</span> &nbsp; <span class="calc-result-personal__hour"> 5 часов</span>,&nbsp;<span class="calc-result-personal__graphic">график 5/2</span>
           </div>
           <div class="calc-calculator-services">
-            <div class="calc-calculator__service" data-service-id="1">
+            <div class="calc-calculator__service" data-service-id="1" data-price="500">
               <svg class="services-check" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2071 0.801178C14.5976 1.20275 14.5976 1.85383 14.2071 2.2554L6.4822 10.1988C6.09168 10.6004 5.45851 10.6004 5.06799 10.1988L0.792893 5.80279C0.402369 5.40122 0.402369 4.75015 0.792893 4.34857C1.18342 3.947 1.81658 3.947 2.20711 4.34857L5.77509 8.01749L12.7929 0.801178C13.1834 0.399607 13.8166 0.399607 14.2071 0.801178Z" fill="white"/>
               </svg>
@@ -1297,21 +1332,7 @@
     </div>
     </div>
   </section>
-  <section class="cleanWarranty">
-    <div class="container">
-      <h2 class="cleanWarranty__header">Проверяем чистоту на деле</h2>
-      <span class="cleanWarranty__description">Если Вас не устроит результат сделаем повторную уборку бесплатно либо вернем деньги.</span>
-      <ul class="cleanWarranty__list">
-        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Проверяем уборку с помощью «белых носков»</li>
-        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Контроль всех этапов работы со стороны менеджеров</li>
-        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Убираем по Вашим правилам</li>
-        <li class="cleanWarranty__item"> <span class="cleanWarranty__mark"></span> Штрафные санкции для Нас уже прописаны</li>
-      </ul>
-      <div class="cleanWarranty-img">
-        <img src="img/clean-warranty/legs.png" alt="" class="cleanWarranty-img__picture">
-      </div>
-    </div>
-  </section>
+  
   <section class="dirt">
     <div class="container">
       <div class="dirt-wrap">
@@ -2119,11 +2140,26 @@
       <div class="modal-contact__close"></div>
       <div class="modal-contact__header_mobile">
         <div class="modal-mobile-logo">
-          <img src="img/navbar/Logo.png" alt="HandeFrau" class="modal-logo__picture">
+          <img src="img/navbar/Logo1.png" alt="HandeFrau" class="modal-logo__picture">
         </div>
         <a href="#" class="modal-mobile__close">
           <img src="img/popup/close_mobile.png" alt="" class="navbar-menu__img">
         </a>
+      </div>
+      <div class="modal-contact-tel modal-contact_hidden" id="modal-tel">
+        <div class="calc-result__header_mobile modal-tel-header">Мы всегда на связи</div>
+        <div class="calc__header modal-tel-number"><a href="tel:+79858309885" class="modal-tel-number__link">+7 985 830 98 65</a></div>
+        <div class="contacts-social">
+          <a href="whatsapp://send/?phone=+79250308099" class="social__link">
+              <img src="img/navbar/whatsapp.png" alt="Whatsapp" class="social__icon">
+          </a>
+          <a href="https://viber.click/79250308099" class="social__link">
+              <img src="img/navbar/viber.png" alt="viber" class="social__icon">
+          </a>
+          <a href="tg://resolve?domain=bazilski" class="social__link">
+              <img src="img/navbar/telegram.png" alt="telegram" class="social__icon">
+          </a>
+        </div>
       </div>
       <div class="modal-contact-body modal-contact_hidden" id="modal-main">
         <h2 class="modal-contact__header">Оставьте заявку на уборку</h2>

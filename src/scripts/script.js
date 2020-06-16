@@ -17,6 +17,14 @@ $('.navbar-mobile__menu').on('click', function (e) {
 // if(!($(this).checked))   {     console.log('1');
 // $('.modal-contact__label:before').css('border', 'red');   } }) Переключение
 // вкладок
+
+let serv = document.querySelector('.calc-calculator__service');
+
+serv.addEventListener('click', function(){
+    var a = $(this).attr('data-price');
+    console.log(typeof(+a));
+    result += a;
+})
 let typeList = document.querySelector('.calc-type__list'),
     typeListItems = typeList.querySelectorAll('.calc-type__category'),
     typeListText = document.querySelectorAll('.calc-type__description_adaptive');
@@ -90,103 +98,83 @@ let plus9 = document.querySelector('.plus-img-9');
 minus.addEventListener('click', () => {
     if (+amount.textContent > 1) {
         amount.textContent--;
-        console.log(`уменьшение первого \n`, amount);
     }
 });
 minus1.addEventListener('click', () => {
     if (+amount1.textContent > 1) {
         amount1.textContent--;
-        console.log(`уменьшение второго \n`, amount1);
     }
 });
 minus2.addEventListener('click', () => {
     if (+amount2.textContent > 1) {
         amount2.textContent--;
-        console.log(`уменьшение третьего \n`, amount2);
     }
 });
 minus3.addEventListener('click', () => {
     if (+amount3.textContent > 1) {
         amount3.textContent--;
-        console.log(`уменьшение четвертого \n`, amount3);
     }
 });
 minus4.addEventListener('click', () => {
     if (+amount4.textContent > 1) {
         amount4.textContent--;
-        console.log(`уменьшение пятого \n`, amount4);
     }
 });
 minus3.addEventListener('click', () => {
     if (+amount5.textContent > 1) {
         amount5.textContent--;
-        console.log(`уменьшение шестого \n`, amount5);
     }
 });
 minus3.addEventListener('click', () => {
     if (+amount6.textContent > 1) {
         amount6.textContent--;
-        console.log(`уменьшение седьмого \n`, amount6);
     }
 });
 minus7.addEventListener('click', () => {
     if (+amount7.textContent > 1) {
         amount7.textContent--;
-        console.log(`уменьшение восьмого \n`, amount7);
     }
 });
 minus8.addEventListener('click', () => {
     if (+amount8.textContent > 1) {
         amount8.textContent--;
-        console.log(`уменьшение девятого \n`, amount8);
     }
 });
 minus9.addEventListener('click', () => {
     if (+amount9.textContent > 1) {
         amount9.textContent--;
-        console.log(`уменьшение десятого \n`, amount9);
     }
 });
 
 // plus
 plus.addEventListener('click', function () {
     amount.textContent++;
-    console.log(`увеличение первого \n`, amount);
 });
 plus1.addEventListener('click', function () {
     amount1.textContent++;
-    console.log(`увеличение второго \n`, amount1);
 })
 plus2.addEventListener('click', function () {
-    console.log(`увеличение третьего \n`, amount2);
     amount2.textContent++;
 });
 plus3.addEventListener('click', function () {
-    console.log(`увеличение четвёртого\n`, amount3);
     amount3.textContent++;
 });
 plus4.addEventListener('click', function () {
-    console.log(`увеличение пятого\n`, amount4);
     amount4.textContent++;
 });
 plus5.addEventListener('click', function () {
-    console.log(`увеличение шестого\n`, amount5);
     amount5.textContent++;
 });
 plus6.addEventListener('click', function () {
-    console.log(`увеличение седьмого\n`, amount6);
     amount6.textContent++;
 });
 plus7.addEventListener('click', function () {
-    console.log(`увеличение восьмого\n`, amount7);
     amount7.textContent++;
 });
 plus8.addEventListener('click', function () {
-    console.log(`увеличение девятого\n`, amount8);
     amount8.textContent++;
 });
 plus9.addEventListener('click', function () {
-    console.log(`увеличение десятого\n`, amount9);
     amount9.textContent++;
 });
 // Окрашивание плиток
@@ -320,10 +308,11 @@ let swiper1 = new Swiper('.special-gallery', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 1
+            slidesPerView: 1,
         },
         576: {
             slidesPerView: 2
+
         }
     }
 });
@@ -705,7 +694,8 @@ $(document).ready(function () {
                 .text() || '';
             var serviceId = $(this).data('service-id');
             massive.push(title + ' ' + value + ' ' + params);
-            console.log(title, params, value, serviceId)
+            // console.log(title, params, value, serviceId)
+            
             services += '<li class="add-modal-contact-add__item" data-service-id="' + serviceId + '"><d' +
                     'iv class="add-modal-contact-add__info"><span class="add-modal-contact-add__mar' +
                     'k"></span><span class="add-modal-contact-add__name">' + title + '</span></div>' +
@@ -772,6 +762,7 @@ $(document).ready(function () {
     });
 
     $('body').on('click', '.add-modal-contact-add__remove', function () {
+        // $('.calc-calculator-services').find('calc-calculator__service--active').each(function(e){
         console.log($(this).parent('div').parent('li').data('serviceId'));
         var id = $(this)
             .parent('div')
