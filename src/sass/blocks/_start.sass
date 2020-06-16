@@ -1,0 +1,54 @@
+.start
+  padding-top: 80px
+  padding-bottom: 25px
+.start__header
+  font-size: 48px
+  line-height: 58px
+  font-weight: 600
+  text-align: center
+  margin-bottom: 60px
+.start-wrap
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+.start-card
+  max-width: 270px
+  margin-bottom: 65px
+  position: relative
+  &:nth-child(4)
+    &:after
+      content: ''
+      width: 1px
+      height: 270px
+      background-color: #fff
+.start-card__img
+  margin-bottom: 15px
+.start-card__step
+  width: 50px
+  height: 50px
+  background-color: $main-color
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  margin-bottom: 20px
+  font-size: 30px
+  color: #ffffff
+  border-radius: 50%
+  &::after
+    content: ''
+    width: 233px
+    height: 1px
+    background-color: #000
+    position: absolute
+    left: 50px
+.start-card__title
+  font-size: 16px
+  font-weight: 600
+  line-height: 19px
+  max-width: 255px
+  margin-bottom: 5px
+.start-card__description
+  font-size: 14px
+  line-height: 17px
+  color: rgba(31, 45, 56, 0.6)
