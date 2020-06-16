@@ -1801,12 +1801,15 @@ input {
   .start-wrap-img, .start-wrap-img-2 {
     display: none;
   }
+  .start-card__step-ar::after {
+    display: none;
+  }
   .start-card__step-ln::after {
-    content: '';
-    width: 233px;
-    height: 5px;
-    background-image: url(../img/start/arrow.png);
-}
+    display: none;
+  }
+  .start-card__step-ar3::after {
+    display: none;
+  }
   .start-wrap {
     justify-content: space-between;
 }
