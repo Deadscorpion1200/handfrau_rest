@@ -69,14 +69,14 @@ services.addEventListener('click', (event) => {
 
     if(target.closest('.button-minus')){
         spanAmountSel = spanAmountSel.querySelector('span.amount');
-        if( +spanAmountSel.textContent > 1) { 
-            spanAmountSel.textContent--; 
+        if( +spanAmountSel.textContent > 1) {
+            spanAmountSel.textContent--;
             // addSum -= +serviceTarget.dataset.price;
         }
     }
     else if(target.closest('.button-plus')){
         spanAmountSel = spanAmountSel.querySelector('span.amount');
-        spanAmountSel.textContent++; 
+        spanAmountSel.textContent++;
         // addSum += +serviceTarget.dataset.price;
     }
     else if (serviceTarget.matches('.calc-calculator__service')) {
@@ -611,7 +611,7 @@ $(document).ready(function () {
             var serviceId = $(this).data('service-id');
             massive.push(title + ' ' + value + ' ' + params);
             // console.log(title, params, value, serviceId)
-            
+
             services += '<li class="add-modal-contact-add__item" data-service-id="' + serviceId + '"><d' +
                     'iv class="add-modal-contact-add__info"><span class="add-modal-contact-add__mar' +
                     'k"></span><span class="add-modal-contact-add__name">' + title + '</span></div>' +
@@ -757,3 +757,7 @@ $(document).ready(function () {
         startUpload(e.dataTransfer.files);
     }
 });
+
+$('.list__showMore').click(function() {
+  $('.check-lis-show').toggleClass('check-lis-show-none');
+})
