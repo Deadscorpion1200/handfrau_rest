@@ -3058,3 +3058,107 @@ select.form-control:not([size]):not([multiple]) {
   color: #9dafbd;
   max-width: 330px;
 }
+.cleanWarranty {
+  padding-top: 80px;
+  padding-bottom: 119px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 251, 254, 0.8)), to(rgba(247, 251, 254, 0))), url(../img/Bg.png) center no-repeat;
+  background: linear-gradient(180deg, rgba(247, 251, 254, 0.8) 0%, rgba(247, 251, 254, 0) 100%), url(../img/Bg.png) center no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-x: none;
+}
+
+.cleanWarranty-img {
+  position: absolute;
+  right: 0px;
+  top: 0;
+}
+
+.cleanWarranty__header {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 30px;
+}
+
+.cleanWarranty__description {
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  color: #8CA2B3;
+  max-width: 460px;
+  margin-bottom: 30px;
+}
+
+.cleanWarranty__list {
+  list-style: none;
+}
+
+.cleanWarranty__mark {
+  width: 6px;
+  height: 6px;
+  background: #3a9fec;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.cleanWarranty__item {
+  font-size: 20px;
+  line-height: 28px;
+  color: #4C5760;
+  margin-bottom: 16px;
+}
+
+.cleanWarranty__item:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .cleanWarranty {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .cleanWarranty-img {
+    z-index: 0;
+    display: none;
+  }
+  .cleanWarranty__header {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cleanwarranty {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  .cleanWarranty__header {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cleanWarranty {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .cleanWarranty__header {
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .cleanWarranty__description {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  .cleanWarranty__item {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
