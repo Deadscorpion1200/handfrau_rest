@@ -1,54 +1,191 @@
-.start
+.start 
   padding-top: 80px
   padding-bottom: 25px
-.start__header
+
+.start__header 
   font-size: 48px
   line-height: 58px
   font-weight: 600
   text-align: center
   margin-bottom: 60px
-.start-wrap
+
+
+.start-wrap 
   display: flex
   flex-wrap: wrap
   justify-content: space-between
-.start-card
+  position: relative
+
+.start-wrap-img 
+  position: absolute
+  left: 23px
+  top: 23px
+
+.start-wrap-img  img 
+    width: calc(100% + 36px)
+
+.start-wrap-img-2 
+  position: absolute
+  left: 23px
+  top: 23px
+  display: none
+
+.start-wrap-img-2 img 
+  width: calc(100% + 36px)
+
+.start-card 
   max-width: 270px
   margin-bottom: 65px
   position: relative
-  &:nth-child(4)
-    &:after
-      content: ''
-      width: 1px
-      height: 270px
-      background-color: #fff
-.start-card__img
+
+.start-card-ln::before 
+  content: ''
+  height: 217px
+  width: 1px
+  background-color: #1F2D38
+  position: absolute
+  top: 45px
+  left: calc(100% + 10px)
+
+.start-card:nth-child(4):after 
+  content: ''
+  width: 1px
+  height: 270px
+  background-color: #fff
+
+
+.start-card__img 
   margin-bottom: 15px
-.start-card__step
+
+
+.start-card__step 
   width: 50px
   height: 50px
-  background-color: $main-color
+  background-color: #3a9fec
   display: flex
-  justify-content: center
+  justify-content: center  
   align-items: center
   position: relative
   margin-bottom: 20px
   font-size: 30px
   color: #ffffff
   border-radius: 50%
-  &::after
-    content: ''
-    width: 233px
-    height: 1px
-    background-color: #000
-    position: absolute
-    left: 50px
-.start-card__title
+  z-index: 1
+
+
+.start-card__step-ar::after 
+  content: ''
+  width: 233px
+  height: 5px
+  background-image: url(../img/start/arrow.png)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  position: absolute
+  left: 50px
+  z-index: -1
+
+.start-card__step-ar3::after 
+  content: ''
+  width: 217px
+  height: 5px
+  background-image: url(../img/start/arrow.png)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  position: absolute
+  left: 50px
+  z-index: -1
+
+.start-card__step-ln::after 
+  content: ''
+  width: 233px
+  height: 5px
+  background-image: url(../img/start/line.png)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  position: absolute
+  left: 50px
+  z-index: -1
+
+
+.start-card__title 
   font-size: 16px
   font-weight: 600
   line-height: 19px
   max-width: 255px
   margin-bottom: 5px
-.start-card__description
+
+
+.start-card__description 
   font-size: 14px
   line-height: 17px
   color: rgba(31, 45, 56, 0.6)
+
+.start-card-ln:nth-child(6)::before 
+  display: none
+
+@media (max-width: 1200px) 
+  .start-wrap 
+    justify-content: flex-start
+  
+  .start-card 
+    margin-left: 50px
+  
+  .start-card-ln:nth-child(5)::before 
+    display: none
+  
+  .start-card-ln:nth-child(8)::before 
+    display: none
+  
+  .start-wrap-img 
+    position: absolute
+    left: 70px
+    top: 42px
+  
+  .start-wrap-img img 
+    width: calc(100% + 2px)
+  
+  .start-wrap-img-2 
+    position: absolute
+    left: 70px
+    top: 406px
+    display: block
+
+  .start-wrap-img-2 img 
+    width: calc(100% + 2px)
+
+@media (max-width: 991px)
+  .start__header
+    font-size: 35px
+    line-height: 45px 
+  .start-wrap-img, .start-wrap-img-2 
+    display: none
+  
+  .start-card__step-ar::after 
+    display: none
+  
+  .start-card__step-ln::after 
+    display: none
+  
+  .start-card__step-ar3::after 
+    display: none
+  
+  .start-wrap 
+    justify-content: space-between
+
+  .start-card 
+      margin-left: 0px
+
+  .start-card-ln::before  
+    display: none
+@media (max-width: 576px)
+  .start__header
+    font-size: 28px
+    line-height: 36px
+  .start-wrap
+    justify-content: center
+    text-align: center
+  .start-card__step
+    translate: transformY(50px)

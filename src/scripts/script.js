@@ -1,5 +1,8 @@
 let slider = $('.range');
 let fill = $('.bar .fill');
+let baseSum = 0;
+let totalSum = 0;
+let addSum = 0;
 function setBar() {
     fill.css('width', (slider.val() / 20) + '%');
     square = slider.val();
@@ -18,13 +21,7 @@ $('.navbar-mobile__menu').on('click', function (e) {
 // $('.modal-contact__label:before').css('border', 'red');   } }) Переключение
 // вкладок
 
-let serv = document.querySelector('.calc-calculator__service');
 
-serv.addEventListener('click', function(){
-    var a = $(this).attr('data-price');
-    console.log(typeof(+a));
-    result += a;
-})
 let typeList = document.querySelector('.calc-type__list'),
     typeListItems = typeList.querySelectorAll('.calc-type__category'),
     typeListText = document.querySelectorAll('.calc-type__description_adaptive');
@@ -62,132 +59,37 @@ typeList.addEventListener('click', (event) => {
     }
 });
 
-// Увеличение числа метров ковролина
-let amount = document.querySelector('.amount');
-let amount1 = document.querySelector('.amount-1');
-let amount2 = document.querySelector('.amount-2');
-let amount3 = document.querySelector('.amount-3');
-let amount4 = document.querySelector('.amount-4');
-let amount5 = document.querySelector('.amount-5');
-let amount6 = document.querySelector('.amount-6');
-let amount7 = document.querySelector('.amount-7');
-let amount8 = document.querySelector('.amount-8');
-let amount9 = document.querySelector('.amount-9');
-let minus = document.querySelector('.minus-img');
-let minus1 = document.querySelector('.minus-img-1');
-let minus2 = document.querySelector('.minus-img-2');
-let minus3 = document.querySelector('.minus-img-3');
-let minus4 = document.querySelector('.minus-img-4');
-let minus5 = document.querySelector('.minus-img-5');
-let minus6 = document.querySelector('.minus-img-6');
-let minus7 = document.querySelector('.minus-img-7');
-let minus8 = document.querySelector('.minus-img-8');
-let minus9 = document.querySelector('.minus-img-9');
-let plus = document.querySelector('.plus-img');
-let plus1 = document.querySelector('.plus-img-1');
-let plus2 = document.querySelector('.plus-img-2');
-let plus3 = document.querySelector('.plus-img-3');
-let plus4 = document.querySelector('.plus-img-4');
-let plus5 = document.querySelector('.plus-img-5');
-let plus6 = document.querySelector('.plus-img-6');
-let plus7 = document.querySelector('.plus-img-7');
-let plus8 = document.querySelector('.plus-img-8');
-let plus9 = document.querySelector('.plus-img-9');
-
-// minus
-minus.addEventListener('click', () => {
-    if (+amount.textContent > 1) {
-        amount.textContent--;
-    }
-});
-minus1.addEventListener('click', () => {
-    if (+amount1.textContent > 1) {
-        amount1.textContent--;
-    }
-});
-minus2.addEventListener('click', () => {
-    if (+amount2.textContent > 1) {
-        amount2.textContent--;
-    }
-});
-minus3.addEventListener('click', () => {
-    if (+amount3.textContent > 1) {
-        amount3.textContent--;
-    }
-});
-minus4.addEventListener('click', () => {
-    if (+amount4.textContent > 1) {
-        amount4.textContent--;
-    }
-});
-minus3.addEventListener('click', () => {
-    if (+amount5.textContent > 1) {
-        amount5.textContent--;
-    }
-});
-minus3.addEventListener('click', () => {
-    if (+amount6.textContent > 1) {
-        amount6.textContent--;
-    }
-});
-minus7.addEventListener('click', () => {
-    if (+amount7.textContent > 1) {
-        amount7.textContent--;
-    }
-});
-minus8.addEventListener('click', () => {
-    if (+amount8.textContent > 1) {
-        amount8.textContent--;
-    }
-});
-minus9.addEventListener('click', () => {
-    if (+amount9.textContent > 1) {
-        amount9.textContent--;
-    }
-});
-
-// plus
-plus.addEventListener('click', function () {
-    amount.textContent++;
-});
-plus1.addEventListener('click', function () {
-    amount1.textContent++;
-})
-plus2.addEventListener('click', function () {
-    amount2.textContent++;
-});
-plus3.addEventListener('click', function () {
-    amount3.textContent++;
-});
-plus4.addEventListener('click', function () {
-    amount4.textContent++;
-});
-plus5.addEventListener('click', function () {
-    amount5.textContent++;
-});
-plus6.addEventListener('click', function () {
-    amount6.textContent++;
-});
-plus7.addEventListener('click', function () {
-    amount7.textContent++;
-});
-plus8.addEventListener('click', function () {
-    amount8.textContent++;
-});
-plus9.addEventListener('click', function () {
-    amount9.textContent++;
-});
 // Окрашивание плиток
 let services = document.querySelector('.calc-calculator-services');
 services.addEventListener('click', (event) => {
     let target = event.target;
-    target = target.closest('.calc-calculator__service');
-    if (target.matches('.calc-calculator__service')) {
-        target
+    let serviceTarget = target.closest('.calc-calculator__service');
+    let tr;
+    let spanAmountSel = target.closest('.calc-calculator-service__parameters');
+
+    if(target.closest('.button-minus')){
+        spanAmountSel = spanAmountSel.querySelector('span.amount');
+        if( +spanAmountSel.textContent > 1) { 
+            spanAmountSel.textContent--; 
+            // addSum -= +serviceTarget.dataset.price;
+        }
+    }
+    else if(target.closest('.button-plus')){
+        spanAmountSel = spanAmountSel.querySelector('span.amount');
+        spanAmountSel.textContent++; 
+        // addSum += +serviceTarget.dataset.price;
+    }
+    else if (serviceTarget.matches('.calc-calculator__service')) {
+        serviceTarget
             .classList
             .toggle('calc-calculator__service--active');
+
+        let addPrice = +serviceTarget.dataset.price;
+        if( !serviceTarget.classList.contains('calc-calculator__service--active')) addPrice = -addPrice;
+        // addSum += addPrice;
     }
-    // if(target.matches('.minus-img') || target.mathces('.plus-img')) { }
+
+    calc();
 });
 
 // бегунок
@@ -260,10 +162,6 @@ inputRange.addEventListener('input', (event) => {
         }
     }
 
-    // Калькулятор
-    const calc = (price = 200) => {
-        result.textContent = price * inputRange.value;
-    };
     calc();
 
     // Передаём в модалку данные из калькулятора
@@ -271,6 +169,24 @@ inputRange.addEventListener('input', (event) => {
     modalCount.textContent = result.textContent;
 });
 
+// Калькулятор
+const calc = (price = 200) => {
+    addSum = 0;
+    let services  = document.querySelectorAll('.calc-calculator__service');
+    let serviceAmount = 1;
+    services.forEach( srv => {
+        if( srv.classList.contains('calc-calculator__service--active')) {
+            let spanAmountSel = srv.querySelector('span.amount');
+
+            if(spanAmountSel) serviceAmount = +spanAmountSel.textContent;
+            addSum += serviceAmount * +srv.dataset.price;
+            }
+        });
+
+    baseSum = price * inputRange.value;
+    result.textContent = (baseSum+addSum).toLocaleString();
+};
+calc();
 // popup'ы
 let window1 = document.querySelector('.modal');
 let window2 = document.querySelector('.add-modal');
