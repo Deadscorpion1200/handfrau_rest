@@ -8,10 +8,10 @@ class Email {
     const TYPE_TO_ADMIN = 0;
     const TYPE_TO_USER = 1;
 
-    private $mail_post = 'kurp96@ya.ru';
+    private $mail_post = 'fraukompania@gmail.com';
     private $sitename_short = 'HandFrau';
-    private $mail_sender = 'kur96@ya.ru'; // noreply
-    private $mail_developer = 'kurp96@ya.ru';
+    private $mail_sender = 'fraukompania@gmail.com'; // noreply
+    private $mail_developer = 'fraukompania@gmail.com';
 
     private $_subject;
     private $subject;
