@@ -22,9 +22,7 @@ $('.navbar-mobile__menu').on('click', function (e) {
 // вкладок
 
 
-let typeList = document.querySelector('.calc-type__list'),
-    typeListItems = typeList.querySelectorAll('.calc-type__category'),
-    typeListText = document.querySelectorAll('.calc-type__description_adaptive');
+
 
 const toggleTabContent = (index) => {
     for (let i = 0; i < typeListText.length; i++) {
@@ -46,19 +44,8 @@ const toggleTabContent = (index) => {
     }
 };
 
-typeList.addEventListener('click', (event) => {
-    let target = event.target;
-    target = target.closest('.calc-type__category');
 
-    if (target) {
-        typeListItems.forEach((item, i) => {
-            if (item === target) {
-                toggleTabContent(i);
-            }
-        });
-    }
-});
-
+/*
 // Окрашивание плиток
 let services = document.querySelector('.calc-calculator-services');
 services.addEventListener('click', (event) => {
@@ -186,7 +173,7 @@ const calc = (price = 200) => {
     baseSum = price * inputRange.value;
     result.textContent = (baseSum+addSum).toLocaleString();
 };
-calc();
+calc();*/
 // popup'ы
 let window1 = document.querySelector('.modal');
 let window2 = document.querySelector('.add-modal');
