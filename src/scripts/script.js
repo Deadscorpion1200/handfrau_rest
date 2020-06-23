@@ -340,7 +340,7 @@ $("input[type=file]").change(function () {
         $('.evaluation-form__subtitle').text(
             'для замены перетащите другие фото объекта сюда'
         );
-        $(".evaluation-form__title").text(filesName.join(', '));
+        $(".form-box-label").text(filesName.join(', '));
     }
 });
 
@@ -717,32 +717,32 @@ $(document).ready(function () {
         ]
     });
 
-    var dropZone = document.querySelector('.evaluation-form-files');
-    var startUpload = function(files)
-    {
-        console.log(files)
-        // $('input[type=file]').change(function () {
-        //     this.files = files;
-        // });
-    };
+    // var dropZone = document.querySelector('.box__input');
+    // var startUpload = function(files)
+    // {
+    //     console.log(files)
+    //     // $('input[type=file]').change(function () {
+    //     //     this.files = files;
+    //     // });
+    // };
 
-    // drop functionality
-    dropZone.ondragover = function()
-    {
-        this.className = 'evaluation-form-files dragover' ;
-        return false;
-    };
-    dropZone.ondragleave = function()
-    {
-        this.className = 'evaluation-form-files';
-    };
+    // // drop functionality
+    // dropZone.ondragover = function()
+    // {
+    //     this.className = 'box__input dragover' ;
+    //     return false;
+    // };
+    // dropZone.ondragleave = function()
+    // {
+    //     this.className = 'box__input';
+    // };
 
-    dropZone.ondrop = function(e)
-    {
-        e.preventDefault();
-        this.className = 'evaluation-form-files';
-        startUpload(e.dataTransfer.files);
-    }
+    // dropZone.ondrop = function(e)
+    // {
+    //     e.preventDefault();
+    //     this.className = 'box__input';
+    //     startUpload(e.dataTransfer.files);
+    // }
 });
 
 $('.list__showMore').click(function() {

@@ -3,7 +3,7 @@
 
     $subjectEmail = "Новое сообщение";
     $messageEmail = "Сообщение с сайта";
-    $email = "fraukompania@gmail.com";
+    $email = "kurp96@ya.ru";
     $pathToImg = 'https://handfrau.ru/mail/';
 
     $title = $_POST['titleModal'];

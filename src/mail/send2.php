@@ -41,6 +41,7 @@ try {
     // Получатель письма
     // $mail->addAddress('fraukompania@gmail.com');
     $mail->addAddress('fraukompania@gmail.com');
+    // $mail->addAddress('kurp96@ya.ru');
     // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
     // Прикрипление файлов к письму
