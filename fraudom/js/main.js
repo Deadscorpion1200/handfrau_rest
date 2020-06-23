@@ -79,8 +79,8 @@ $( function() {
     var square = $("#slide-square").ionRangeSlider({
         min: minSquare,
         max: maxSquare,
-        from: fromSquare,
-        step: 10,
+        from: 50,
+        step: 100,
         onChange: saveSquare,
         onLoad: saveSquare,
         onFinish: saveSquare,
@@ -217,66 +217,303 @@ $( function() {
             x = x + additionPricePerWorkers;
         }
 
-        if (id_clean == 'morning') {
-            if (squareNumber <= 50) {
-                x = 11000;
+        if (id_clean == 'oneday') {
+            if (squareNumber <= 30) {
+                x = 3500;
             }
-            if (squareNumber > 50 && squareNumber <= 100) {
-                x = 18000;
+            if (squareNumber > 30 && squareNumber <= 40) {
+                x = 3500;
             }
-            if (squareNumber > 100 && squareNumber <= 150) {
-                x = 25000;
+            if (squareNumber > 40 && squareNumber <= 50) {
+                x = 4000;
             }
-            if (squareNumber > 150 && squareNumber <= 200) {
-                x = 35500;
+            if (squareNumber > 50 && squareNumber <= 60) {
+                x = 4000;
             }
-            if (squareNumber > 200 && squareNumber <= 250) {
-                x = 45000;
+            if (squareNumber > 60 && squareNumber <= 70) {
+                x = 5000;
             }
-            if (squareNumber > 250 && squareNumber <= 300) {
-                x = 56000;
+            if (squareNumber > 70 && squareNumber <= 80) {
+                x = 5500;
             }
-            if (squareNumber > 300 && squareNumber <= 350) {
-                x = 64500;
+            if (squareNumber > 80 && squareNumber <= 90) {
+                x = 5500;
             }
-            if (squareNumber > 350 && squareNumber <= 400) {
-                x = 72000;
+            if (squareNumber > 90 && squareNumber <= 100) {
+                x = 6000;
             }
-            if (squareNumber > 400 && squareNumber <= 450) {
-                x = 82000;
+            if (squareNumber > 100 && squareNumber <= 110) {
+                x = 7500;
             }
-            if (squareNumber > 450 && squareNumber <= 500) {
-                x = 89000;
+            if (squareNumber > 110 && squareNumber <= 120) {
+                x = 7500;
             }
-            if (squareNumber > 500 && squareNumber <= 600) {
-                x = 98000;
+            if (squareNumber > 120 && squareNumber <= 130) {
+                x = 7500;
             }
-            if (squareNumber > 600 && squareNumber <= 700) {
-                x = 110000;
+            if (squareNumber > 130 && squareNumber <= 140) {
+                x = 8000;
             }
-            if (squareNumber > 700 && squareNumber <= 800) {
-                x = 125000;
+            if (squareNumber > 140 && squareNumber <= 150) {
+                x = 8000;
             }
-            if (squareNumber > 800 && squareNumber <= 900) {
-                x = 130000;
+            if (squareNumber > 150 && squareNumber <= 160) {
+                x = 8000;
             }
-            if (squareNumber > 900 && squareNumber <= 1000) {
-                x = 135000;
+            if (squareNumber > 160 && squareNumber <= 170) {
+                x = 10000;
             }
-            if (squareNumber > 1000 && squareNumber <= 1400) {
-                x = 145000;
+            if (squareNumber > 170 && squareNumber <= 180) {
+                x = 10000;
             }
-            if (squareNumber > 1400 && squareNumber <= 1600) {
-                x = 155000;
+            if (squareNumber > 180 && squareNumber <= 190) {
+                x = 10000;
             }
-            if (squareNumber > 1600 && squareNumber <= 1800) {
-                x = 160000;
+            if (squareNumber > 190 && squareNumber <= 200) {
+                x = 12000;
             }
             if (squareNumber > 1800 && squareNumber <= 2000) {
                 x = 165000;
             }
         }
 
+
+        if (id_clean == 'extraclean') {
+            if (squareNumber <= 30) {
+                x = 5000;
+            }
+            if (squareNumber > 30 && squareNumber <= 40) {
+                x = 5500;
+            }
+            if (squareNumber > 40 && squareNumber <= 50) {
+                x = 6500;
+            }
+            if (squareNumber > 50 && squareNumber <= 60) {
+                x = 8000;
+            }
+            if (squareNumber > 60 && squareNumber <= 70) {
+                x = 8500;
+            }
+            if (squareNumber > 70 && squareNumber <= 80) {
+                x = 9500;
+            }
+            if (squareNumber > 80 && squareNumber <= 90) {
+                x = 11500;
+            }
+            if (squareNumber > 90 && squareNumber <= 100) {
+                x = 12000;
+            }
+            if (squareNumber > 100 && squareNumber <= 110) {
+                x = 12000;
+            }
+            if (squareNumber > 110 && squareNumber <= 120) {
+                x = 13500;
+            }
+            if (squareNumber > 120 && squareNumber <= 130) {
+                x = 14000;
+            }
+            if (squareNumber > 130 && squareNumber <= 140) {
+                x = 15500;
+            }
+            if (squareNumber > 140 && squareNumber <= 150) {
+                x = 16000;
+            }
+            if (squareNumber > 150 && squareNumber <= 160) {
+                x = 16500;
+            }
+            if (squareNumber > 160 && squareNumber <= 170) {
+                x = 17000;
+            }
+            if (squareNumber > 170 && squareNumber <= 180) {
+                x = 18500;
+            }
+            if (squareNumber > 180 && squareNumber <= 190) {
+                x = 19500;
+            }
+            if (squareNumber > 190 && squareNumber <= 200) {
+                x = 20000;
+            }
+            if (squareNumber > 1800 && squareNumber <= 2000) {
+                x = 165000;
+            }
+        }
+        if (id_clean == 'everyclean') {
+            if (squareNumber <= 30) {
+                x = 9000;
+            }
+            if (squareNumber > 30 && squareNumber <= 40) {
+                x = 12000;
+            }
+            if (squareNumber > 40 && squareNumber <= 50) {
+                x = 14000;
+            }
+            if (squareNumber > 50 && squareNumber <= 60) {
+                x = 15000;
+            }
+            if (squareNumber > 60 && squareNumber <= 70) {
+                x = 22500;
+            }
+            if (squareNumber > 70 && squareNumber <= 80) {
+                x = 22500;
+            }
+            if (squareNumber > 80 && squareNumber <= 90) {
+                x = 26000;
+            }
+            if (squareNumber > 90 && squareNumber <= 100) {
+                x = 27000;
+            }
+            if (squareNumber > 100 && squareNumber <= 110) {
+                x = 28000;
+            }
+            if (squareNumber > 110 && squareNumber <= 120) {
+                x = 30000;
+            }
+            if (squareNumber > 120 && squareNumber <= 130) {
+                x = 32000;
+            }
+            if (squareNumber > 130 && squareNumber <= 140) {
+                x = 35000;
+            }
+            if (squareNumber > 140 && squareNumber <= 150) {
+                x = 37500;
+            }
+            if (squareNumber > 150 && squareNumber <= 160) {
+                x = 39000;
+            }
+            if (squareNumber > 160 && squareNumber <= 170) {
+                x = 39500;
+            }
+            if (squareNumber > 170 && squareNumber <= 180) {
+                x = 40000;
+            }
+            if (squareNumber > 180 && squareNumber <= 190) {
+                x = 41000;
+            }
+            if (squareNumber > 190 && squareNumber <= 200) {
+                x = 42000;
+            }
+            if (squareNumber > 1800 && squareNumber <= 2000) {
+                x = 165000;
+            }
+        }
+        if (id_clean == 'everyday') {
+            if (squareNumber <= 30) {
+                x = 9000;
+            }
+            if (squareNumber > 30 && squareNumber <= 40) {
+                x = 9000;
+            }
+            if (squareNumber > 40 && squareNumber <= 50) {
+                x = 9000;
+            }
+            if (squareNumber > 50 && squareNumber <= 60) {
+                x = 10000;
+            }
+            if (squareNumber > 60 && squareNumber <= 70) {
+                x = 10000;
+            }
+            if (squareNumber > 70 && squareNumber <= 80) {
+                x = 12000;
+            }
+            if (squareNumber > 80 && squareNumber <= 90) {
+                x = 14000;
+            }
+            if (squareNumber > 90 && squareNumber <= 100) {
+                x = 14000;
+            }
+            if (squareNumber > 100 && squareNumber <= 110) {
+                x = 16000;
+            }
+            if (squareNumber > 110 && squareNumber <= 120) {
+                x = 16000;
+            }
+            if (squareNumber > 120 && squareNumber <= 130) {
+                x = 18000;
+            }
+            if (squareNumber > 130 && squareNumber <= 140) {
+                x = 18000;
+            }
+            if (squareNumber > 140 && squareNumber <= 150) {
+                x = 20000;
+            }
+            if (squareNumber > 150 && squareNumber <= 160) {
+                x = 20000;
+            }
+            if (squareNumber > 160 && squareNumber <= 170) {
+                x = 22000;
+            }
+            if (squareNumber > 170 && squareNumber <= 180) {
+                x = 22000;
+            }
+            if (squareNumber > 180 && squareNumber <= 190) {
+                x = 24000;
+            }
+            if (squareNumber > 190 && squareNumber <= 200) {
+                x = 24000;
+            }
+            if (squareNumber > 1800 && squareNumber <= 2000) {
+                x = 165000;
+            }
+        }
+        if (id_clean == 'newstart') {
+            if (squareNumber <= 30) {
+                x = 8000;
+            }
+            if (squareNumber > 30 && squareNumber <= 40) {
+                x = 8500;
+            }
+            if (squareNumber > 40 && squareNumber <= 50) {
+                x = 8500;
+            }
+            if (squareNumber > 50 && squareNumber <= 60) {
+                x = 9300;
+            }
+            if (squareNumber > 60 && squareNumber <= 70) {
+                x = 12000;
+            }
+            if (squareNumber > 70 && squareNumber <= 80) {
+                x = 12500;
+            }
+            if (squareNumber > 80 && squareNumber <= 90) {
+                x = 15000;
+            }
+            if (squareNumber > 90 && squareNumber <= 100) {
+                x = 16000;
+            }
+            if (squareNumber > 100 && squareNumber <= 110) {
+                x = 16500;
+            }
+            if (squareNumber > 110 && squareNumber <= 120) {
+                x = 17000;
+            }
+            if (squareNumber > 120 && squareNumber <= 130) {
+                x = 17500;
+            }
+            if (squareNumber > 130 && squareNumber <= 140) {
+                x = 18000;
+            }
+            if (squareNumber > 140 && squareNumber <= 150) {
+                x = 21500;
+            }
+            if (squareNumber > 150 && squareNumber <= 160) {
+                x = 22000;
+            }
+            if (squareNumber > 160 && squareNumber <= 170) {
+                x = 23500;
+            }
+            if (squareNumber > 170 && squareNumber <= 180) {
+                x = 25000;
+            }
+            if (squareNumber > 180 && squareNumber <= 190) {
+                x = 25500;
+            }
+            if (squareNumber > 190 && squareNumber <= 200) {
+                x = 28000;
+            }
+            if (squareNumber > 1800 && squareNumber <= 2000) {
+                x = 165000;
+            }
+        }
         /*if (id_clean == 'evening') {
             if (totalTime < 50) {
                 x = parseInt(totalTime * 600) + parseInt(additionalCost);

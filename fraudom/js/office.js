@@ -13,8 +13,8 @@ $( function() {
     var placeName;
 
     var minSquare = 50;
-    var maxSquare = 2000;
-    var fromSquare = 500;
+    var maxSquare = 500;
+    var fromSquare = 50;
     var minWorkers = 1;
     var maxWorkers = 30;
     var stepSquare = 50;
@@ -50,12 +50,13 @@ $( function() {
     var square = $("#slide-square").ionRangeSlider({
         min: minSquare,
         max: maxSquare,
-        from: fromSquare,
+        from: 50,
+        to: 500,
         hide_from_to: true,
-        step: 10,
+        step: 1000,
         onChange: saveSquare,
         onLoad: saveSquare,
-        onFinish: saveSquare,
+        onFinish: 500,
         onStart: saveSquare,
         onUpdate: saveSquare
     }).data("ionRangeSlider");
@@ -93,43 +94,43 @@ $( function() {
 
         if (id_clean == 'morning') {
             if (squareNumber <= 50) {
-                x = 11000;
+                x = 5980;
                 description = "1 человек 2 часа";
             }
             if (squareNumber > 50 && squareNumber <= 100) {
-                x = 18000;
+                x = 7130;
                 description = "1 человек 2 часа";
             }
             if (squareNumber > 100 && squareNumber <= 150) {
-                x = 25000;
+                x = 8000;
                 description = "1 человек 3 часа";
             }
             if (squareNumber > 150 && squareNumber <= 200) {
-                x = 35500;
+                x = 9400;
                 description = "1 человек 4 часа";
             }
             if (squareNumber > 200 && squareNumber <= 250) {
-                x = 45000;
+                x = 10800;
                 description = "1 человек 4 часа";
             }
             if (squareNumber > 250 && squareNumber <= 300) {
-                x = 56000;
+                x = 12000;
                 description = "2 человека 3 часа";
             }
             if (squareNumber > 300 && squareNumber <= 350) {
-                x = 64500;
+                x = 13500;
                 description = "2 человека 4 часа";
             }
             if (squareNumber > 350 && squareNumber <= 400) {
-                x = 72000;
+                x = 15500;
                 description = "3 человека 3 часа";
             }
             if (squareNumber > 400 && squareNumber <= 450) {
-                x = 82000;
+                x = 16000;
                 description = "3 человека 4 часа";
             }
             if (squareNumber > 450 && squareNumber <= 500) {
-                x = 89000;
+                x = 16500;
                 description = "3 человека 5 часов";
             }
             if (squareNumber > 500 && squareNumber <= 600) {
@@ -255,43 +256,43 @@ $( function() {
 
         if (id_clean == 'everyday') {
             if (squareNumber <= 50) {
-                x = 20000;
+                x = 9400;
                 description = "1 человек 8 часов";
             }
             if (squareNumber > 50 && squareNumber <= 100) {
-                x = 25000;
+                x = 12900;
                 description = "1 человек 8 часов";
             }
             if (squareNumber > 100 && squareNumber <= 150) {
-                x = 30000;
+                x = 14800;
                 description = "1 человек 8 часов";
             }
             if (squareNumber > 150 && squareNumber <= 200) {
-                x = 35000;
+                x = 16500;
                 description = "1 человек 8 часов";
             }
             if (squareNumber > 200 && squareNumber <= 250) {
-                x = 38000;
+                x = 18800;
                 description = "1 человек 8 часов";
             }
             if (squareNumber > 250 && squareNumber <= 300) {
-                x = 40000;
+                x = 19320;
                 description = "1 человек 8 часов";
             }
             if (squareNumber > 300 && squareNumber <= 350) {
-                x = 45000;
+                x = 19520;
                 description = "1 человек 8 часов";
             }
             if (squareNumber > 350 && squareNumber <= 400) {
-                x = 50000;
+                x = 20000;
                 description = "1 человек 8 часов";
             }
-            if (squareNumber > 400 && squareNumber <= 500) {
-                x = 55000;
+            if (squareNumber > 400 && squareNumber <= 450) {
+                x = 21500;
                 description = "1 человек 8 часов";
             }
-            if (squareNumber > 500 && squareNumber <= 600) {
-                x = 60000;
+            if (squareNumber > 450 && squareNumber <= 500) {
+                x = 22500;
                 description = "1 человек 8 часов";
             }
             if (squareNumber > 600 && squareNumber <= 700) {
@@ -408,27 +409,27 @@ $( function() {
 
         if (id_clean == 'general') {
             if (squareNumber <= 50) {
-                x = 7500;
+                x = 8700;
                 description = "1 человек 8 часов";
             }
             if (squareNumber > 50 && squareNumber <= 100) {
-                x = 14000;
+                x = 16400;
                 description = "2 человека 8 часов";
             }
             if (squareNumber > 100 && squareNumber <= 150) {
-                x = 21000;
+                x = 24000;
                 description = "3 человека 8 часов";
             }
             if (squareNumber > 150 && squareNumber <= 200) {
-                x = 27000;
+                x = 30000;
                 description = "4 человека 8 часов";
             }
             if (squareNumber > 200 && squareNumber <= 250) {
-                x = 33000;
+                x = 36250;
                 description = "4 человека 10 часов";
             }
             if (squareNumber > 250 && squareNumber <= 300) {
-                x = 39000;
+                x = 41400;
                 description = "5 человек 10 часов";
             }
             if (squareNumber > 300 && squareNumber <= 350) {
@@ -440,11 +441,11 @@ $( function() {
                 description = "7 человек 10 часов";
             }
             if (squareNumber > 400 && squareNumber <= 450) {
-                x = 58000;
+                x = 54000;
                 description = "7 человек 12 часов";
             }
             if (squareNumber > 450 && squareNumber <= 500) {
-                x = 65000;
+                x = 57500;
                 description = "8 человек 12 часов";
             }
             if (squareNumber > 500 && squareNumber <= 600) {
@@ -632,3 +633,73 @@ $( function() {
 
 
 } );
+
+$('.gen').click(function() {
+  $('.clean2').addClass('active');
+})
+$('.chp').click(function() {
+  $('.clean2').removeClass('active');
+})
+$('.sup').click(function() {
+  $('.clean2').removeClass('active');
+})
+$('.two-week').click(function() {
+  $('.visible').addClass('hidden');
+  $('.visible').removeClass('flex');
+})
+$('.one-week').click(function() {
+  $('.visible').removeClass('hidden');
+  $('.visible').addClass('flex');
+})
+$('.two-m').click(function() {
+  $('.visible').removeClass('hidden');
+  $('.visible').addClass('flex');
+})
+$('.two-week').click(function() {
+  $('.personal-prise').removeClass('hidden');
+})
+$('.one-week').click(function() {
+  $('.personal-prise').addClass('hidden');
+})
+$('.two-m').click(function() {
+  $('.personal-prise').addClass('hidden');
+})
+$('.chp').click(function() {
+  $('.personal-prise').addClass('hidden');
+})
+$('.gen').click(function() {
+  $('.personal-prise').addClass('hidden');
+})
+$('.gen').click(function() {
+  $('.visible').addClass('hidden');
+  $('.visible').removeClass('flex');
+})
+$('.sup').click(function() {
+  $('.visible').removeClass('hidden');
+  $('.visible').addClass('flex');
+})
+$('.chp').click(function() {
+  $('.visible').removeClass('hidden');
+  $('.visible').addClass('flex');
+})
+$('.left-link-open').click(function() {
+  $('.left-text').toggleClass('hidden');
+  $('.left-box').toggleClass('active');
+  $('.left-box').toggleClass('hidden');
+  $('.left-link-open').toggleClass('hidden');
+  $('.left-link-hide').toggleClass('hidden');
+  $('.section-info-calc').toggleClass('before-none');
+})
+$('.left-link-hide').click(function() {
+  $('.left-text').toggleClass('hidden');
+  $('.left-box').toggleClass('active');
+  $('.left-box').toggleClass('hidden');
+  $('.left-link-open').toggleClass('hidden');
+  $('.left-link-hide').toggleClass('hidden');
+  $('.section-info-calc').toggleClass('before-none');
+})
+
+$(".category").change(function(e) {
+  e.preventDefault();
+  $(this.value).toggleClass('mob-hidden');
+});

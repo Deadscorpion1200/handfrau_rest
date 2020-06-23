@@ -12,6 +12,7 @@ $( function() {
      * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
      * @returns {}
      */
+     
     var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
 
     var hamburgers = document.querySelectorAll(".hamburger");
@@ -88,7 +89,7 @@ $( function() {
     });
 
     // $('.btn-submit-price').click(function (e) {
-        
+
         // e.preventDefault();
 
         // var form = $(this).parents('form');
@@ -146,7 +147,7 @@ $( function() {
     // });
 
     // Отправка данных на сервер
-   
+
 
     $('.submit-form-order').click(function (e) {
 
@@ -155,7 +156,7 @@ $( function() {
         var form = $(this).parents('.modal').find('form');
 
         var fd = new FormData();
-    
+
         var name = form.find('input[name=name]');
         if (!name.val()) {
             name.addClass('error');
@@ -312,7 +313,7 @@ $( function() {
         slidesToShow: 2,
         slidesToScroll: 2,
         dots: true,
-        arrows: false,
+        arrows: true,
         responsive: [
             {
                 breakpoint: 992,
