@@ -191,7 +191,7 @@ $( function() {
                 $('#order').modal('hide');
                 $('#order-call').modal('hide');
                 $('#done').modal('show');
-                console.log('fd');
+                console.log(fd);
             },
             error: function (data) {
                 console.log('error', data);
