@@ -37,7 +37,7 @@
         </div>
         <div class="navbar-nav">
           <ul class="navbar-nav__list">
-            <li class="navbar-nav__item"><a href="#calcal" class="navbar-nav__link">Калькулятор</a></li>
+            <li class="navbar-nav__item"><a href="#calcal" class="navbar-nav__link">Оценка</a></li>
             <li class="navbar-nav__item"><a href="#special" class="navbar-nav__link">Услуги</a></li>
             <li class="navbar-nav__item"><a href="#command" class="navbar-nav__link">Персонал</a></li>
             <li class="navbar-nav__item"><a href="#warranty2" class="navbar-nav__link">Гарантии</a></li>
@@ -66,7 +66,7 @@
               </div>
           </div>
 
-          <button class="button button-modal navbar-contact__button" data-target="modal-main">Заказать уборку</button>
+          <button class="button button-modal navbar-contact__button" data-target="modal-main"  >Заказать уборку</button>
         </div>
         <div class="navbar-mobile">
           <a href="#" class="navbar-mobile__contact button-modal" data-target="modal-tel">
@@ -84,7 +84,7 @@
     <!-- /.container -->
     <div class="navbar-nav__mobile">
       <ul class="navbar-nav__list_mobile">
-        <li class="navbar-nav__item_mobile"><a href="#calcal" class="navbar-nav__link_mobile">Калькулятор</a></li>
+        <li class="navbar-nav__item_mobile"><a href="#calcal" class="navbar-nav__link_mobile">Оценка</a></li>
         <li class="navbar-nav__item_mobile"><a href="#special" class="navbar-nav__link_mobile">Услуги</a></li>
         <li class="navbar-nav__item_mobile"><a href="#command" class="navbar-nav__link_mobile">Персонал</a></li>
         <li class="navbar-nav__item_mobile"><a href="#warranty2" class="navbar-nav__link_mobile">Гарантии</a></li>
@@ -176,7 +176,7 @@
               </div>
           </div>
           <div class="text-center">
-              <button class="btn btn-primary" data-toggle="modal" data-target="#order">Заказать уборку</button>
+              <button class="btn btn-primary button-modal" data-toggle="modal" data-target="modal-main"  >Заказать уборку</button>
           </div>
       </div>
   </section>
@@ -199,12 +199,14 @@
           <a id="distantion-calc"></a>
 
           <div class="container">
+            <div class="gen-calc-sec-wrap">
+              <div class="calc-wraper-left section-info-calc-left">
+              <h2 class="h2 text-center h2_and_text left-title">Дистанционная оценка работ</h2>
 
-              <h2 class="h2 text-center h2_and_text">Дистанционная оценка работ</h2>
-
-              <p class="p text text-center">Прикрепите фотографии своего ресторана. Мы сделаем их анализ и позвоним Вам,<br>чтобы&nbsp;сообщить цену и объём работ.</p>
-
-              <div class="calc-wrapper">
+              <p class="p text text-center left-text">Прикрепите фотографии своего ресторана. Мы сделаем их анализ и позвоним Вам, чтобы&nbsp;сообщить цену и объём работ.</p>
+              <p class="p text text-center left-link left-link-open">Подробнее</p>
+              <p class="p text text-center left-link left-link-hide hidden">Скрыть</p>
+              <div class="calc-wrapper calc-wrapper-left hidden left-box">
 
                   <form class="dist-price-form" enctype="multipart/form-data" method="post" onsubmit="send(event, 'mail/send2.php')">
                       <input type="hidden" value="Заявка на оценку" name="titleModal">
@@ -250,6 +252,15 @@
                       </div>
                   </form>
 
+              </div>
+              </div>
+              <div class="section-info-calc">
+                <div class="col-md-4 section-info  right-wrap ">
+
+                    <p class="text left-title left-title">Выезд и оценка за наш счёт в течении 2-х часов</p>
+                    <button class="btn btn-primary button-modal"data-target="modal-main"  ="">Заказать уборку</button>
+                </div>
+              </div>
               </div>
           </div>
 
@@ -441,7 +452,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Кухня</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main"  >Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -469,7 +480,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Банкетный зал</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main"  >Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -500,7 +511,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Барная зона</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main"  >Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -522,7 +533,7 @@
             <div class="special-gallery-slide__description">
               <div class="special-gallery-slide__header">Задний вход</div>
               <!-- /.special-gallery-slide__description -->
-              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main"  >Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -550,7 +561,7 @@
             <div class="special-gallery-slide__description">
               <!-- /.special-gallery-slide__description -->
               <div class="special-gallery-slide__header">Послестрой</div>
-              <button class="button-modal special-gallery-slide__button" data-target="modal-main">Заказать уборку</button>
+              <button class="button-modal special-gallery-slide__button" data-target="modal-main"  >Заказать уборку</button>
               <!-- /.special-gallery-slide__button -->
             </div>
             <!-- /.special-gallery-slide__description -->
@@ -580,27 +591,27 @@
           <div class="dirt-slider">
             <div class="dirt-slide">
               <img src="img/dirt/1.jpg" alt="" class="dirt-slide__img">
-              <span class="dirt-slide__text"></span>
+              <span class="dirt-slide__text">Уборка банкетных залов</span>
             </div>
             <div class="dirt-slide">
               <img src="img/dirt/2.jpg" alt="" class="dirt-slide__img">
-              <span class="dirt-slide__text"></span>
+              <span class="dirt-slide__text">Уборка летних веранд и террас </span>
             </div>
             <div class="dirt-slide">
               <img src="img/dirt/3.jpg" alt="" class="dirt-slide__img">
-              <span class="dirt-slide__text"></span>
+              <span class="dirt-slide__text">Уборка летних кафе</span>
             </div>
             <div class="dirt-slide">
               <img src="img/dirt/1.jpg" alt="" class="dirt-slide__img">
-              <span class="dirt-slide__text"></span>
+              <span class="dirt-slide__text">Уборка банкетных залов</span>
             </div>
             <div class="dirt-slide">
               <img src="img/dirt/2.jpg" alt="" class="dirt-slide__img">
-              <span class="dirt-slide__text">Мойка пола и чистка коврового покрытия</span>
+              <span class="dirt-slide__text">Уборка летних веранд и террас</span>
             </div>
             <div class="dirt-slide">
               <img src="img/dirt/3.jpg" alt="" class="dirt-slide__img">
-              <span class="dirt-slide__text">Мойка пола и чистка коврового покрытия</span>
+              <span class="dirt-slide__text">Уборка летних кафе</span>
             </div>
             <!-- <div class="dirt-arrow__up"></div>
             <div class="dirt-arrow__down"></div> -->
@@ -646,7 +657,7 @@
                     </div>
                     <!-- <div class="command-slide__more">Подробнее</div> -->
                   </div>
-                  <button class="button-modal command-button-slide" data-target="modal-main">Заказать уборку</button>
+                  <button class="button-modal command-button-slide" data-target="modal-main"  >Заказать уборку</button>
                 </div>
               </div>
               <div class="command-slide swiper-slide">
@@ -668,7 +679,7 @@
                     </div>
                     <!-- <div class="command-slide__more">Подробнее</div> -->
                   </div>
-                  <button class="button-modal command-button-slide" data-target="modal-main">Заказать уборку</button>
+                  <button class="button-modal command-button-slide" data-target="modal-main"  >Заказать уборку</button>
                 </div>
               </div>
               <div class="command-slide swiper-slide">
@@ -690,9 +701,76 @@
                     </div>
                     <!-- <div class="command-slide__more">Подробнее</div> -->
                   </div>
-                  <button class="button-modal command-button-slide" data-target="modal-main">Заказать уборку</button>
+                  <button class="button-modal command-button-slide" data-target="modal-main"  >Заказать уборку</button>
                 </div>
               </div>
+              <div class="command-slide swiper-slide">
+                <img src="img/personal/Anastasiy.png" alt="" class="command-slide__img">
+                <div class="command-slide-description">
+                  <div class="command-slide-name">
+                    <div class="command-slide__name">Анастасия</div>
+                    <div class="command-slide__rating">4.9<img src="img/personal/Star.svg" alt="" class="command__rating-icon"></div>
+                  </div>
+                  <div class="command-slide__rank">&nbsp;&nbsp;&nbsp;</div>
+                  <div class="command-slide-age">
+                    <span class="command-slide__title">Возраст</span>
+                    <span class="command-slide__value">33 года</span>
+                  </div>
+                  <div class="command-slide-exp">
+                    <div class="command-slide__params">
+                      <span class="command-slide__title">Стаж</span>
+                      <span class="command-slide__value">7 лет</span>
+                    </div>
+                    <!-- <div class="command-slide__more">Подробнее</div> -->
+                  </div>
+                  <button class="button-modal command-button-slide" data-target="modal-main"  >Заказать уборку</button>
+                </div>
+              </div>
+              <div class="command-slide swiper-slide">
+                <img src="img/personal/vladimir.png" alt="" class="command-slide__img">
+                <div class="command-slide-description">
+                  <div class="command-slide-name">
+                    <div class="command-slide__name">Владимир</div>
+                    <div class="command-slide__rating">5.0<img src="img/personal/Star.svg" alt="" class="command__rating-icon"></div>
+                  </div>
+                  <div class="command-slide__rank">&nbsp;&nbsp;&nbsp;</div>
+                  <div class="command-slide-age">
+                    <span class="command-slide__title">Возраст</span>
+                    <span class="command-slide__value">43 года</span>
+                  </div>
+                  <div class="command-slide-exp">
+                    <div class="command-slide__params">
+                      <span class="command-slide__title">Стаж</span>
+                      <span class="command-slide__value">8 лет</span>
+                    </div>
+                    <!-- <div class="command-slide__more">Подробнее</div> -->
+                  </div>
+                  <button class="button-modal command-button-slide" data-target="modal-main"  >Заказать уборку</button>
+                </div>
+              </div>
+              <div class="command-slide swiper-slide">
+                <img src="img/personal/Anna.png" alt="" class="command-slide__img">
+                <div class="command-slide-description">
+                  <div class="command-slide-name">
+                    <div class="command-slide__name">Анна</div>
+                    <div class="command-slide__rating">5.0<img src="img/personal/Star.svg" alt="" class="command__rating-icon"></div>
+                  </div>
+                  <div class="command-slide__rank">&nbsp;&nbsp;&nbsp;</div>
+                  <div class="command-slide-age">
+                    <span class="command-slide__title">Возраст</span>
+                    <span class="command-slide__value">35 года</span>
+                  </div>
+                  <div class="command-slide-exp">
+                    <div class="command-slide__params">
+                      <span class="command-slide__title">Стаж</span>
+                      <span class="command-slide__value">9 лет</span>
+                    </div>
+                    <!-- <div class="command-slide__more">Подробнее</div> -->
+                  </div>
+                  <button class="button-modal command-button-slide" data-target="modal-main"  >Заказать уборку</button>
+                </div>
+              </div>
+
           </div>
           <!-- If we need pagination -->
           <div class="special-gallery__pagination swiper-pagination command-pagination"></div>
@@ -792,7 +870,7 @@
         <!-- /.trust-block -->
       </div>
       <!-- /.trust-wrap -->
-      <button class="button-modal trust-button" data-target="modal-main">Заказать уборку</button>
+      <button class="button-modal trust-button" data-target="modal-main"  >Заказать уборку</button>
     </div>
     <!-- /.container -->
   </section>
@@ -840,7 +918,7 @@
         <div class="check-block-wrap">
           <div class="check-block__header">Как проверить результат</div>
           <!-- /.check-block__header -->
-          <button class="check-block__button">Скачать полный чек-лист проверки</button>
+          <button class="check-block__button button-modal" data-target="modal-main-check">Скачать полный чек-лист проверки</button>
           <!-- /.check-block__button -->
         </div>
         <!-- /.check-block-wrap -->
@@ -1077,7 +1155,7 @@
         <!-- /.why__item -->
       </ul>
       <!-- /.ul why-list -->
-      <button class="button-modal why__button" data-target="modal-main">Заказать уборку</button>
+      <button class="button-modal why__button" data-target="modal-main"  >Заказать уборку</button>
       <!-- /.why__button -->
     </div>
     <!-- /.container -->
@@ -1086,7 +1164,7 @@
   <section class="call">
     <div class="container">
       <div class="call-wrap">
-        <div class="call__text">Закажите звонок до конца дня, и мы забронируем за Вами скидку 8%</div>
+        <div class="call__text">Закажите звонок до конца дня, и мы забронируем за Вами скидку 25%</div>
         <!-- /.call__text -->
         <button class="button-modal call__button" data-target="modal-main">Заказать звонок</button>
         <!-- /.call__button -->
@@ -1271,7 +1349,7 @@
           <span>
             2020 © Сайт клининговой компании Hände Frau. Все права защищены <br> Не является публичной офертой
           </span>
-          <a href="#">Политика конфиденциальности</a>
+          <a href="../privacy.pdf">Политика конфиденциальности</a>
         </div>
         <!-- /.footer-text-documents -->
         <div class="footer-contacts-links">
@@ -1316,7 +1394,7 @@
           <input type="text" name="name" class="modal-contact__input" placeholder="Ваше имя">
           <input type="tel" name="tel" class="phone modal-contact__input" placeholder="Ваш телефон">
           <input type="checkbox" name="check" required class="modal-contact__checkbox" id="check"><label for="check" class="modal-contact__label">Согласие на обработку <a href="#" class="modal-contact__link">персональных данных</a></label>
-          <button type="submit" class="modal-contact__button">Заказать уборку</button>
+          <button type="submit" class="modal-contact__button"  >Заказать уборку</button>
         </form>
       </div>
         <form class="add-modal-contact__form">
@@ -1384,7 +1462,7 @@
             <input type="text" class="modal-contact__input modal-contact__input-type" name="orderType">
             <input type="text" class="modal-contact__input modal-contact__input-services" name="orderServices">
             <input type="checkbox" name="orderCheck" class="modal-contact__checkbox" id="check1"><label for="check1" class="modal-contact__label">Согласие на обработку <a href="#" class="modal-contact__link">персональных данных</a></label>
-            <button type="submit" class="modal-contact__button">Заказать уборку</button>
+            <button type="submit" class="modal-contact__button"  >Заказать уборку</button>
           </div>
         </form>
         <!-- /.add-modal-contact__form -->
@@ -1400,6 +1478,17 @@
         <h3 class="success-contact__header">Фотографии отправлены</h3>
         <span class="success-contact__info">Специалист уже начал оценивать стоимость работ и в ближайшее время свяжется с Вами</span>
         <button type="submit" class="modal-contact__button modal-contact-close" >Отправить ещё фото</button>
+      </div>
+      <div class="modal-contact-body modal-contact_hidden" id="modal-main-check">
+        <h2 class="modal-contact__header">Оставьте заявку <br>на чек-лист проверки</h2>
+        <span class="modal-contact__subtitle">Оставьте свои имя, Email и номер телефона, и мы отправим Вам чек-лист проверки втечении 15 минут</span>
+        <form class="modal-contact-form">
+          <input type="text" name="name" class="modal-contact__input" placeholder="Ваше имя">
+          <input type="tel" name="tel" class="phone modal-contact__input" placeholder="Ваш телефон">
+          <input type="mail" name="mail" class="email modal-contact__input" placeholder="Ваш Email">
+          <input type="checkbox" name="check" required class="modal-contact__checkbox" id="check5"><label for="check5" class="modal-contact__label">Согласие на обработку <a href="#" class="modal-contact__link">персональных данных</a></label>
+          <button type="submit" class="modal-contact__button"  >Заказать уборку</button>
+        </form>
       </div>
     </div>
     <!-- /.modal-contact -->
