@@ -24,7 +24,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 
 try {
     $mail -> SMTPDebug = 2;
-    $mail->isSMTP();   
+    $mail->isSMTP();
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
     $mail->SMTPDebug = 2;
@@ -40,7 +40,7 @@ try {
 
     // Получатель письма
     // $mail->addAddress('fraukompania@gmail.com');
-    $mail->addAddress('fraukompania@gmail.com');
+    $mail->addAddress('kurp96@ya.ru');
     // $mail->addAddress('fraukompania@gmail.com');
     // $mail->addAddress('kurp96@ya.ru');
 
@@ -58,15 +58,15 @@ if (!empty($file['name'][0])) {
         } else {
             $rfile[] = "Не удалось прикрепить файл $filename";
         }
-    }   
+    }
 }
 // Отправка сообщения
 $mail->isHTML(true);
 $mail->Subject = $title;
-$mail->Body = $body;    
+$mail->Body = $body;
 
 // Проверяем отравленность сообщения
-if ($mail->send()) {$result = "success";} 
+if ($mail->send()) {$result = "success";}
 else {$result = "error";}
 
 } catch (Exception $e) {
