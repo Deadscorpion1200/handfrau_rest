@@ -748,3 +748,20 @@ $(document).ready(function () {
 $('.list__showMore').click(function() {
   $('.check-lis-show').toggleClass('check-lis-show-none');
 })
+
+$('.left-link-open').click(function() {
+  $('.left-text').toggleClass('hidden');
+  $('.left-box').toggleClass('active');
+  $('.left-box').toggleClass('hidden');
+  $('.left-link-open').toggleClass('hidden');
+  $('.left-link-hide').toggleClass('hidden');
+  $('.section-info-calc').toggleClass('before-none');
+})
+$('.left-link-hide').click(function() {
+  $('.left-text').toggleClass('hidden');
+  $('.left-box').toggleClass('active');
+  $('.left-box').toggleClass('hidden');
+  $('.left-link-open').toggleClass('hidden');
+  $('.left-link-hide').toggleClass('hidden');
+  $('.section-info-calc').toggleClass('before-none');
+})
