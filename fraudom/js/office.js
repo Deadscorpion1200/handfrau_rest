@@ -703,3 +703,16 @@ $(".category").change(function(e) {
   e.preventDefault();
   $(this.value).toggleClass('mob-hidden');
 });
+
+
+
+$('.modal-close').click(function() {
+  $('.contacts-mobile-container').toggleClass('is-active');
+})
+
+
+$("#control-select").change(function(e) {
+  e.preventDefault();
+  $('div').removeClass('U-active');
+  $(this.value).addClass('U-active');
+});

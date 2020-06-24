@@ -12,7 +12,7 @@ $( function() {
      * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
      * @returns {}
      */
-     
+
     var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
 
     var hamburgers = document.querySelectorAll(".hamburger");
@@ -32,10 +32,12 @@ $( function() {
 
     $('.contacts-mobile').click(function (e) {
         $(this).toggleClass("is-active");
-
         $('.contacts-mobile-container').toggleClass("is-active");
     });
 
+    $('.modal-close').click(function() {
+      $('.contacts-mobile-container').toggleClass('is-active');
+    })
 
     $('.showmore').click(function (e) {
         e.preventDefault();
@@ -189,7 +191,7 @@ $( function() {
                 $('#order').modal('hide');
                 $('#order-call').modal('hide');
                 $('#done').modal('show');
-                console.log(fd);
+                console.log('fd');
             },
             error: function (data) {
                 console.log('error', data);
