@@ -161,6 +161,7 @@ a:hover {
   .section-menu .logo-wrapper .logo .icon {
     width: 100px;
     height: 40px;
+    margin: 10px;
   }
 }
 @media (max-width: 991px) {
