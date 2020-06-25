@@ -5516,6 +5516,21 @@ padding-left: 15px;
     margin-bottom: 50px !important;
 }
 }
+@media (max-width: 991px) {
+
+    .command-buttons{
+      display: none !important;
+    }
+    .slick-arrow {
+      display: none !important;
+    }
+    .swiper-button-next{
+      display: none !important;
+    }
+    .swiper-button-prev{
+      display: none !important;
+    }
+  }
 @media (max-width: 374px) {
   .dirt-arrow__up{
     display: none;
