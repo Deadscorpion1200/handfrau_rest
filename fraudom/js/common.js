@@ -202,6 +202,7 @@ $( function() {
                 $('#order-check').modal('hide');
                 $('#done').modal('show');
                 console.log(fd);
+                ym(49259191,'reachGoal','skachat_chek_list');
             },
             error: function(data){
                 console.log('error', data);
@@ -251,6 +252,7 @@ $( function() {
                 $('#order-call').modal('hide');
                 $('#done').modal('show');
                 console.log(fd);
+                ym(49259191,'reachGoal','zakazat_uborku');
             },
             error: function (data) {
                 console.log('error', data);
