@@ -415,6 +415,7 @@ $(document).ready(function () {
                         $('#modal-main').hide();
                         $('#modal-success').show();
                         $('form').trigger('reset');
+                        ym(49259191,'reachGoal','zakazat_uborku');
                     }
                 })
             }
@@ -445,6 +446,7 @@ $(document).ready(function () {
                     $('#modal-main-check').hide();
                     $('#modal-success').show();
                     $('form').trigger('reset');
+                    ym(49259191,'reachGoal','skachat_chek_list');
                 }
             })
         }
