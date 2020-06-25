@@ -706,9 +706,7 @@ $(".category").change(function(e) {
 
 
 
-$('.modal-close').click(function() {
-  $('.contacts-mobile-container').toggleClass('is-active');
-})
+
 
 
 $("#control-select").change(function(e) {
