@@ -1186,7 +1186,7 @@
                     <h2 class="h2 h2_and_text">Уборка любой сложности</h2>
                     <p class="p text">Оказываем услуги профессиональной уборки в квартирах любого типа. Клининг выполняется с предварительным согласованием времени, объема работ и стоимости комплекса услуг. </p>
 
-                    <button class="btn btn-primary">Хочу такую же уборку</button>
+                    <button class="btn btn-primary"data-toggle="modal" data-target="#order"   >Хочу такую же уборку</button>
                 </div>
 
                 <div class="col-md-6">
@@ -1730,9 +1730,7 @@
                 <div class="col-xl-2 col-lg-1 col-md-1">
                 </div>
                 <div class="col-xl-4 col-lg-5 col-md-5">
-                    <div class="development">
-                        <a href="#">Дизайн</a> и <a href="#">Программирование</a>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -1933,7 +1931,7 @@
                 <p class="p text">
                     Оставьте свои имя, Email и номер телефона, и мы отправим Вам чек-лист проверки втечении 15 минут
                 </p>
-                <form class="form-order" onsubmit=" ; return true;">
+                <form class="form-order">
                     <div class="wrapper-form">
                         <input type="hidden" value="Заявка на чек-лист проверки" name="titleModal">
                         <div class="form-group">
@@ -1949,7 +1947,7 @@
                             <input type="checkbox" id="agreement-5" name="agreement-1" required>
                             <label class="radio label" for="agreement-5">Согласие на обработку <a href="#">персональных данных</a></label>
                         </div>
-                        <button type="button" class="btn btn-primary btn-sm submit-form-order">Оставить заявку</button>
+                        <button type="button" class="btn btn-primary btn-sm submit-form-check">Оставить заявку</button>
                         <button class="hidden done" data-toggle="modal" data-target="#done"></button>
                     </div>
                 </form>
@@ -2110,6 +2108,7 @@
 
 <script>
     console.log(1);
+
     function send(event, php){
         event.preventDefault();
         var form = $('.btn-submit-price').parents('form')
