@@ -1255,9 +1255,6 @@ a:hover {
   .section-services .room {
     height: 450px;
   }
-  .section-services .room .btn-secondary {
-    display: none;
-  }
 }
 @media (max-width: 767px) {
   .section-services .room {
@@ -1309,7 +1306,7 @@ a:hover {
   left: 500px;
 }
 .section-services .room1 .b4 {
-  top: 360px;
+  top: 379px;
   left: 800px;
 }
 .section-services .room1 .b5 {
@@ -1374,12 +1371,12 @@ a:hover {
   left: 800px;
 }
 .section-services .room2 .b5 {
-  top: 540px;
-  left: 810px;
+    top: 540px;
+    left: 847px;
 }
 .section-services .room2 .b6 {
   top: 60px;
-  left: 450px;
+  left: 465px;
 }
 .section-services .room2 .b7 {
   top: 210px;
@@ -1548,7 +1545,7 @@ a:hover {
 }
 .section-services .room4 .b6 {
   top: 220px;
-  left: 980px;
+  left: 1000px;
 }
 .section-services .room4 .b7 {
   top: 320px;
@@ -1560,7 +1557,7 @@ a:hover {
 }
 .section-services .room4 .b9 {
   top: 360px;
-  left: 820px;
+  left: 833px;
 }
 @media (max-width: 1199px) {
   .section-services .room4 .b1 {
@@ -1606,19 +1603,7 @@ a:hover {
 .section-services .services-rooms--office .room {
   height: 360px;
 }
-@media (max-width: 991px) {
-  .section-services .services-rooms--office .room {
-    height: 330px;
-  }
-  .section-services .services-rooms--office .room .btn-secondary {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .section-services .services-rooms--office .room {
-    height: 190px;
-  }
-}
+
 .section-services .room-office-1 {
   background-image: url('../img/rooms/office/14.jpg');
 }
@@ -1635,8 +1620,8 @@ a:hover {
   left: 220px;
 }
 .section-services .room-office-1 .b4 {
-  top: 152px;
-left: 361px;
+  top: 315px;
+left: 313px;
 }
 .section-services .room-office-1 .b5 {
   top: 100px;
@@ -1816,7 +1801,7 @@ left: 361px;
   left: 50px;
 }
 .section-services .room-office-8 .b2 {
-  top: 210px;
+  top: 173px;
   left: 100px;
 }
 .section-services .room-office-8 .b3 {
@@ -1834,6 +1819,96 @@ left: 361px;
 .section-services .nav-pills {
   border-radius: 5px;
   margin-bottom: 30px;
+}
+@media (max-width: 1200px) {
+  .section-services .room-office-8 .b2 {
+    top: 173px;
+    left: 52px;
+}
+.section-services .room-office-8 .b3 {
+    top: 230px;
+    left: 211px;
+}
+.section-services .room-office-8 .b5 {
+    top: 90px;
+    left: 364px;
+}
+.section-services .room-office-1 .b2 {
+    top: 220px;
+    left: 62px;
+}
+.section-services .room-office-1 .b1 {
+    top: 80px;
+    left: 85px;
+}
+.section-services .room-office-1 .b3 {
+    top: 260px;
+    left: 168px;
+}
+.section-services .room-office-1 .b4 {
+    top: 315px;
+    left: 253px;
+}
+.section-services .room-office-1 .b5 {
+    top: 113px;
+    left: 238px;
+}
+.section-services .room-office-2 .b3 {
+    top: 210px;
+    left: 176px;
+}
+.section-services .room-office-2 .b4 {
+    top: 230px;
+    left: 24px;
+}
+.section-services .room-office-3 .b2 {
+    top: 205px;
+    left: 161px;
+}
+.section-services .room-office-4 .b3 {
+    top: 90px;
+    left: 203px;
+}
+.section-services .room-office-4 .b6 {
+    top: 170px;
+    left: 352px;
+}
+.section-services .room-office-5 .b1 {
+    top: 140px;
+    left: 6px;
+}
+.section-services .room-office-5 .b8 {
+    top: 160px;
+    left: 66px;
+}
+.section-services .room-office-6 .b2 {
+    top: 241px;
+    left: 71px;
+}
+.section-services .room-office-6 .b6 {
+    top: 215px;
+    left: 134px;
+}
+.section-services .room-office-6 .b1 {
+    top: 168px;
+    left: 218px;
+}
+.section-services .room-office-7 .b5 {
+    top: 163px;
+    left: 1px;
+}
+.section-services .room-office-7 .b6 {
+    top: 325px;
+    left: 36px;
+}
+.section-services .room-office-7 .b7 {
+    top: 196px;
+    left: 180px;
+}
+.section-services .room-office-7 .b2 {
+    top: 80px;
+    left: 294px;
+}
 }
 @media (max-width: 767px) {
   .section-services .nav-pills {
@@ -3665,7 +3740,1191 @@ top:70% !important;
 .dirt-slider-wrap .slick-dots{
   bottom: -85px;
 }
-)
-input .email {
-  margin-bottom: 10px;
+}
+@media (max-width: 991px) {
+  .section-services .services-rooms--office .room {
+    height: 330px;
+  }
+  .section-services .room-office-8 .b2 {
+    top: 173px;
+    left: 91px;
+}
+.section-services .room-office-8 .b7 {
+    top: 60px;
+    left: 287px;
+}
+.section-services .room-office-1 .b2 {
+    top: 220px;
+    left: 135px;
+}
+.section-services .room-office-1 .b3 {
+    top: 260px;
+    left: 242px;
+}
+.section-services .room-office-1 .b1 {
+    top: 80px;
+    left: 168px;
+}
+.section-services .room-office-1 .b4 {
+    top: 288px;
+    left: 334px;
+}
+.section-services .room-office-1 .b5 {
+    top: 113px;
+    left: 312px;
+}
+.section-services .room-office-2 .b4 {
+    top: 230px;
+    left: 83px;
+}
+.section-services .room-office-2 .b2 {
+    top: 292px;
+    left: 465px;
+}
+.section-services .room-office-3 .b2 {
+    top: 196px;
+    left: 226px;
+}
+.section-services .room-office-3 .b4 {
+    top: 305px;
+    left: 495px;
+}
+.section-services .room-office-4 .b6 {
+    top: 154px;
+    left: 513px;
+}
+.section-services .room-office-4 .b3 {
+    top: 90px;
+    left: 321px;
+}
+.section-services .room-office-4 .b4 {
+    display: none;
+}
+.section-services .room-office-4 .b2 {
+    top: 134px;
+    left: 69px;
+}
+.section-services .room-office-5 .b1 {
+    top: 118px;
+    left: 44px;
+}
+.section-services .room-office-5 .b8 {
+    top: 141px;
+    left: 136px;
+}
+.section-services .room-office-5 .b3 {
+    top: 207px;
+    left: 443px;
+}
+.section-services .room-office-5 .b2 {
+    top: 126px;
+    left: 543px;
+}
+.section-services .room-office-6 .b2 {
+    top: 260px;
+    left: 98px;
+}
+.section-services .room-office-6 .b6 {
+    top: 215px;
+    left: 226px;
+}
+.section-services .room-office-6 .b5 {
+    top: 210px;
+    left: 472px;
+}
+.section-services .room-office-7 .b5 {
+    top: 163px;
+    left: 34px;
+}
+.section-services .room-office-7 .b6 {
+    top: 284px;
+    left: 65px;
+}
+.section-services .room-office-7 .b8 {
+    top: 163px;
+    left: 166px;
+}
+.section-services .room-office-7 .b1 {
+    top: 15px;
+    left: 519px;
+}
+.section-services .room-office-7 .b3 {
+    top: 260px;
+    left: 493px;
+}
+.section-services .room-office-2 .b3 {
+    top: 205px;
+    left: 209px;
+}
+.section-services .room-office-1 .b1 {
+    top: 55px;
+    left: 168px;
+}
+
+
+
+}
+
+@media (max-width: 991px) {
+  .section-services .room-office-8 .b5 {
+    top: 90px;
+    left: 435px;
+}
+
+}
+@media (max-width: 767px) {
+  .section-services .services-rooms--office .room {
+    height: 190px;
+  }
+  .section-services .room-office-8 .b1 {
+      top: 42px;
+      left: 50px;
+  }
+  .section-services .room-office-8 .b2 {
+      top: 86px;
+      left: 108px;
+  }
+  .section-services .room-office-8 .b7 {
+    top: 26px;
+    left: 210px;
+}
+.section-services .room-office-1 .b1 {
+    top: 43px;
+    left: 122px;
+}
+.section-services .room-office-1 .b5 {
+    top: 36px;
+    left: 241px;
+}
+.section-services .room-office-1 .b4 {
+    top: 166px;
+    left: 241px;
+}
+.section-services .room-office-1 .b3 {
+    top: 149px;
+    left: 189px;
+}
+.section-services .room-office-2 .b4 {
+    top: 130px;
+    left: 83px;
+}
+.section-services .room-office-2 .b3 {
+    top: 119px;
+    left: 219px;
+}
+.section-services .room-office-2 .b2 {
+    top: 163px;
+    left: 409px;
+}
+.section-services .room-office-3 .b1 {
+    top: 46px;
+    left: 160px;
+}
+.section-services .room-office-3 .b2 {
+    top: 115px;
+    left: 195px;
+}
+.section-services .room-office-3 .b3 {
+    top: 95px;
+    left: 330px;
+}
+.section-services .room-office-3 .b4 {
+    top: 160px;
+    left: 432px;
+}
+.section-services .room-office-3 .b4 {
+  display: none;
+}
+.section-services .room-office-4 .b2 {
+    top: 74px;
+    left: 69px;
+}
+.section-services .room-office-4 .b3 {
+    top: 62px;
+    left: 234px;
+}
+.section-services .room-office-4 .b5 {
+    top: 156px;
+    left: 350px;
+}
+.section-services .room-office-4 .b6 {
+    top: 87px;
+    left: 374px;
+}
+.section-services .room-office-5 .b1 {
+    top: 58px;
+    left: 44px;
+}
+.section-services .room-office-5 .b8 {
+    top: 76px;
+    left: 105px;
+}
+.section-services .room-office-5 .b6 {
+    top: 164px;
+    left: 80px;
+}
+.section-services .room-office-5 .b3 {
+    top: 147px;
+    left: 369px;
+}
+.section-services .room-office-5 .b2 {
+    top: 62px;
+    left: 410px;
+}
+.section-services .room-office-6 .b1 {
+    top: 92px;
+    left: 218px;
+}
+.section-services .room-office-6 .b2 {
+    top: 160px;
+    left: 98px;
+}
+.section-services .room-office-6 .b3 {
+    top: 120px;
+    left: 339px;
+}
+.section-services .room-office-6 .b6 {
+    top: 125px;
+    left: 164px;
+}
+.section-services .room-office-7 .b5 {
+    top: 95px;
+    left: 34px;
+}
+.section-services .room-office-7 .b8 {
+    top: 91px;
+    left: 139px;
+}
+.section-services .room-office-7 .b2 {
+    top: 16px;
+    left: 294px;
+}
+.section-services .room-office-7 .b3 {
+  top: 36px;
+  left: 313px;
+}
+.section-services .room-office-7 .b4 {
+    top: 149px;
+    left: 241px;
+}
+
+}
+@media (max-width: 510px) {
+
+  .section-services .room-office-1 .b5 {
+    top: 52px;
+    left: 199px;
+}
+  .section-services .room-office-8 .b5 {
+    top: 90px;
+    left: 302px;
+}
+.section-services .room-office-8 .b2 {
+    top: 86px;
+    left: 97px;
+}
+
+}
+
+@media (max-width: 440px) {
+  .section-services .room-office-8 .b2 {
+    top: 86px;
+    left: 72px;
+}
+.section-services .room-office-8 .b7 {
+    top: 26px;
+    left: 161px;
+}
+.section-services .room-office-8 .b5 {
+    top: 70px;
+    left: 225px;
+}
+
+}
+@media (max-width: 390x) {
+  .section-services .room-office-8 .b5 {
+      top: 53px;
+      left: 224px;
+  }
+
+}
+@media (max-width: 367px) {
+  .section-services .room-office-8 .b2 {
+      top: 86px;
+      left: 51px;
+  }
+  .section-services .room-office-8 .b7 {
+    top: 26px;
+    left: 126px;
+}
+.section-services .room-office-8 .b5 {
+    top: 53px;
+    left: 202px;
+}
+.section-services .room-office-8 .b1 {
+    top: 42px;
+    left: 13px;
+}
+}
+@media (max-width: 510px) {
+  .section-services .room-office-1 .b1 {
+    top: 43px;
+    left: 102px;
+}
+.section-services .room-office-1 .b3 {
+    top: 149px;
+    left: 147px;
+}
+.section-services .room-office-1 .b4 {
+    top: 166px;
+    left: 207px;
+}
+.section-services .room-office-1 .b5 {
+    top: 36px;
+    left: 191px;
+}
+}
+@media (max-width: 440px) {
+  .section-services .room-office-1 .b1 {
+    top: 43px;
+    left: 87px;
+}
+.section-services .room-office-1 .b3 {
+    top: 149px;
+    left: 124px;
+}
+.section-services .room-office-1 .b4 {
+    top: 166px;
+    left: 170px;
+}
+.section-services .room-office-1 .b5 {
+    top: 46px;
+    left: 167px;
+}
+}
+@media (max-width: 380px) {
+  .section-services .room-office-1 .b1 {
+      top: 43px;
+      left: 70px;
+  }
+  .section-services .room-office-1 .b3 {
+    top: 133px;
+    left: 99px;
+}
+.section-services .room-office-1 .b4 {
+    top: 166px;
+    left: 172px;
+}
+.section-services .room-office-1 .b5 {
+    top: 65px;
+    left: 135px;
+}
+}
+@media (max-width: 340px) {
+  .section-services .room-office-1 .b1 {
+    top: 43px;
+    left: 56px;
+}
+}
+@media (max-width: 510px) {
+  .section-services .room-office-2 .b3 {
+    top: 119px;
+    left: 144px;
+}
+.section-services .room-office-2 .b2 {
+    top: 163px;
+    left: 344px;
+}
+}
+@media (max-width: 440px) {
+  .section-services .room-office-2 .b4 {
+    top: 130px;
+    left: 35px;
+}
+.section-services .room-office-2 .b3 {
+    top: 103px;
+    left: 112px;
+}
+.section-services .room-office-2 .b2 {
+    top: 163px;
+    left: 238px;
+}
+.section-services .room-office-2 .b6 {
+    top: 60px;
+    left: 72px;
+}
+}
+@media (max-width: 510px) {
+  .section-services .room-office-3 .b2 {
+      top: 115px;
+      left: 125px;
+  }
+  .section-services .room-office-3 .b3 {
+    top: 95px;
+    left: 294px;
+}
+}
+@media (max-width: 430px) {
+  .section-services .room-office-3 .b3 {
+    top: 95px;
+    left: 230px;
+}
+
+}
+@media (max-width: 370px) {
+  .section-services .room-office-3 .b2 {
+      top: 105px;
+      left: 100px;
+  }
+  .section-services .room-office-3 .b3 {
+    top: 95px;
+    left: 198px;
+}
+}
+@media (max-width: 535px) {
+  .section-services .room-office-4 .b3 {
+      top: 12px;
+      left: 198px;
+  }
+  .section-services .room-office-4 .b6 {
+      top: 87px;
+      left: 336px;
+  }
+}
+@media (max-width: 470px) {
+  .section-services .room-office-4 .b3 {
+    top: 24px;
+    left: 164px;
+}
+.section-services .room-office-4 .b6 {
+    top: 87px;
+    left: 298px;
+}
+}
+@media (max-width: 420px) {
+  .section-services .room-office-4 .b3 {
+      top: 32px;
+      left: 144px;
+  }
+  .section-services .room-office-4 .b6 {
+      top: 87px;
+      left: 243px;
+  }
+  .section-services .room-office-4 .b5 {
+    top: 156px;
+    left: 184px;
+}
+.section-services .room-office-4 .b2 {
+    top: 74px;
+    left: 21px;
+}
+}
+@media (max-width: 370px) {
+  .section-services .room-office-4 .b3 {
+    top: 42px;
+    left: 122px;
+}
+.section-services .room-office-4 .b6 {
+    top: 87px;
+    left: 224px;
+}
+}
+@media (max-width: 330px) {
+  .section-services .room-office-4 .b3 {
+    top: 49px;
+    left: 103px;
+}
+.section-services .room-office-4 .b3 {
+    top: 49px;
+    left: 103px;
+}
+}
+@media (max-width: 510px) {
+  .section-services .room-office-5 .b2 {
+    top: 62px;
+    left: 363px;
+}
+.section-services .room-office-5 .b3 {
+    top: 122px;
+    left: 284px;
+}
+.section-services .room-office-5 .b6 {
+    top: 164px;
+    left: 19px;
+}
+.section-services .room-office-5 .b1 {
+    top: 58px;
+    left: 14px;
+}
+.section-services .room-office-5 .b8 {
+    top: 76px;
+    left: 80px;
+}
+}
+@media (max-width: 460px) {
+  .section-services .room-office-5 .b2 {
+    top: 62px;
+    left: 319px;
+}
+}
+@media (max-width: 420px) {
+  .section-services .room-office-5 .b2 {
+      top: 62px;
+      left: 280px;
+  }
+  .section-services .room-office-5 .b3 {
+    top: 122px;
+    left: 222px;
+}
+.section-services .room-office-5 .b8 {
+    top: 76px;
+    left: 62px;
+}
+}
+@media (max-width: 370px) {
+  .section-services .room-office-5 .b2 {
+    top: 62px;
+    left: 252px;
+}}
+  @media (max-width: 330px) {
+    .section-services .room-office-5 .b2 {
+      top: 62px;
+      left: 220px;
+  }
+  .section-services .room-office-5 .b8 {
+      top: 76px;
+      left: 44px;
+  }
+}
+@media (max-width: 510px) {
+  .section-services .room-office-6 .b3 {
+    top: 120px;
+    left: 314px;
+}
+.section-services .room-office-6 .b2 {
+    top: 149px;
+    left: 79px;
+}
+.section-services .room-office-6 .b6 {
+    top: 125px;
+    left: 150px;
+}
+}
+@media (max-width: 470px) {
+  .section-services .room-office-6 .b3 {
+      top: 120px;
+      left: 281px;
+  }
+  .section-services .room-office-6 .b6 {
+    top: 125px;
+    left: 136px;
+}
+}
+@media (max-width: 440px) {
+  .section-services .room-office-6 .b6 {
+      top: 125px;
+      left: 136px;
+  }
+  .section-services .room-office-6 .b2 {
+    top: 144px;
+    left: 64px;
+}
+.section-services .room-office-6 .b1 {
+    top: 92px;
+    left: 99px;
+}
+
+}
+@media (max-width: 410px) {
+
+
+.section-services .room-office-6 .b1 {
+    top: 72px;
+    left: 96px;
+}
+.section-services .room-office-6 .b3 {
+    top: 120px;
+    left: 214px;
+}
+.section-services .room-office-6 .b2 {
+    top: 131px;
+    left: 53px;
+}
+.section-services .room-office-6 .b6 {
+    top: 110px;
+    left: 100px;
+}
+}
+@media (max-width: 330px) {
+  .section-services .room-office-6 .b3 {
+    top: 120px;
+    left: 182px;
+}
+.section-services .room-office-6 .b6 {
+    top: 110px;
+    left: 79px;
+}
+.section-services .room-office-6 .b2 {
+    top: 131px;
+    left: 36px;
+}
+}
+@media (max-width: 476px) {
+  .section-services .room-office-7 .b3 {
+    top: 158px;
+    left: 297px;
+}
+.section-services .room-office-7 .b4 {
+    top: 149px;
+    left: 191px;
+}
+.section-services .room-office-7 .b5 {
+    top: 95px;
+    left: 19px;
+}
+}
+@media (max-width: 380px) {
+  .section-services .room-office-7 .b3 {
+    top: 136px;
+    left: 280px;
+}
+.section-services .room-office-7 .b8 {
+    top: 91px;
+    left: 87px;
+}
+.section-services .room-office-7 .b2 {
+    top: 16px;
+    left: 247px;
+}
+
+}
+@media (max-width: 1199px) {
+  .section-services .room1 .b3 {
+    top: 380px;
+    left: 552px;
+}
+.section-services .room1 .b6 {
+    top: 163px;
+    left: 171px;
+}
+.section-services .room1 .b1 {
+    top: 264px;
+    left: 135px;
+}
+}
+@media (max-width: 767px) {
+  .section-services .room1 .b6 {
+      top: 81px;
+      left: 118px;
+  }
+  .section-services .room1 .b1 {
+    top: 179px;
+    left: 135px;
+}
+.section-services .room1 .b7 {
+    top: 116px;
+    left: 286px;
+}
+.section-services .room1 .b3 {
+    top: 242px;
+    left: 413px;
+}
+}
+@media (max-width: 480px) {
+  .section-services .room1 .b3 {
+      top: 242px;
+      left: 350px;
+  }
+  .section-services .room1 .b7 {
+    top: 116px;
+    left: 217px;
+}
+.section-services .room1 .b1 {
+    top: 179px;
+    left: 50px;
+}
+.section-services .room1 .b6 {
+    top: 81px;
+    left: 63px;
+}
+}
+@media (max-width: 400px) {
+  .section-services .room1 .b3 {
+    top: 242px;
+    left: 303px;
+}
+}
+@media (max-width: 350px) {
+  .section-services .room1 .b3 {
+      top: 242px;
+      left: 274px;
+  }
+}
+@media (max-width: 991px) {
+.section-services .room2 .b6 {
+    top: 60px;
+    left: 275px;
+}
+.section-services .room2 .b7 {
+    top: 169px;
+    left: 145px;
+}
+.section-services .room2 .b1 {
+    top: 293px;
+    left: 26px;
+}
+.section-services .room2 .b2 {
+    top: 346px;
+    left: 138px;
+}
+.section-services .room2 .b3 {
+    top: 210px;
+    left: 334px;
+}
+.section-services .room2 .b4 {
+    top: 285px;
+    left: 556px;
+}
+.section-services .room2 .b5 {
+    top: 387px;
+    left: 550px;
+}
+.section-services .room2 .b8 {
+    top: 90px;
+    left: 530px;
+}
+
+}
+@media (max-width: 767px) {
+  .section-services .room2 .b6 {
+      top: 60px;
+      left: 200px;
+  }
+  .section-services .room2 .b7 {
+      top: 97px;
+      left: 107px;
+  }
+  .section-services .room2 .b3 {
+    top: 80px;
+    left: 256px;
+}
+.section-services .room2 .b4 {
+    top: 185px;
+    left: 392px;
+}
+.section-services .room2 .b1 {
+    top: 103px;
+    left: 26px;
+}
+.section-services .room2 .b2 {
+    top: 203px;
+    left: 138px;
+}
+.section-services .room2 .b5 {
+    top: 260px;
+    left: 386px;
+}
+}
+@media (max-width: 560px) {
+  .section-services .room2 .b6 {
+      top: 16px;
+      left: 217px;
+  }
+.section-services .room2 .b7 {
+    top: 97px;
+    left: 143px;
+}
+.section-services .room2 .b8 {
+    top: 90px;
+    left: 367px;
+}
+}
+@media (max-width: 510px) {
+  .section-services .room2 .b5 {
+    top: 260px;
+    left: 359px;
+}
+}
+@media (max-width: 475px) {
+  .section-services .room2 .b7 {
+    top: 97px;
+    left: 83px;
+}
+.section-services .room2 .b2 {
+    top: 203px;
+    left: 76px;
+}
+.section-services .room2 .b3 {
+    top: 80px;
+    left: 188px;
+}
+.section-services .room2 .b6 {
+    top: 16px;
+    left: 183px;
+}
+.section-services .room2 .b4 {
+    top: 185px;
+    left: 329px;
+}
+.section-services .room2 .b8 {
+    top: 90px;
+    left: 327px;
+}
+.section-services .room2 .b5 {
+    top: 260px;
+    left: 334px;
+}
+}
+@media (max-width: 415px) {
+  .section-services .room2 .b1 {
+    top: 62px;
+    left: 2px;
+}
+.section-services .room2 .b8 {
+    top: 90px;
+    left: 292px;
+}
+.section-services .room2 .b5 {
+    top: 260px;
+    left: 308px;
+}
+.section-services .room2 .b4 {
+    top: 185px;
+    left: 291px;
+}
+}
+@media (max-width: 360px) {
+  .section-services .room2 .b7 {
+    top: 97px;
+    left: 23px;
+}
+.section-services .room2 .b1 {
+    display: none;
+}
+.section-services .room2 .b5 {
+    top: 260px;
+    left: 281px;
+}
+.section-services .room2 .b4 {
+    top: 185px;
+    left: 266px;
+}
+.section-services .room2 .b8 {
+    top: 90px;
+    left: 273px;
+}
+.section-services .room2 .b2 {
+    top: 203px;
+    left: 28px;
+}
+}
+@media (max-width: 330px) {
+  .section-services .room2 .b5 {
+    top: 260px;
+    left: 266px;
+}
+}
+@media (max-width: 991px) {
+  .section-services .room3 .b6 {
+    top: 80px;
+    left: 256px;
+}
+.section-services .room3 .b7 {
+    top: 148px;
+    left: 141px;
+}
+.section-services .room3 .b1 {
+    top: 258px;
+    left: 46px;
+}
+.section-services .room3 .b8 {
+    top: 243px;
+    left: 116px;
+}
+.section-services .room3 .b3 {
+    top: 340px;
+    left: 372px;
+}
+.section-services .room3 .b9 {
+    top: 41px;
+    left: 409px;
+}
+}
+@media (max-width: 767px) {
+  .section-services .room3 .b7 {
+    top: 97px;
+    left: 124px;
+}
+.section-services .room3 .b8 {
+    top: 163px;
+    left: 99px;
+}
+.section-services .room3 .b1 {
+    top: 167px;
+    left: 46px;
+}
+.section-services .room3 .b6 {
+    top: 80px;
+    left: 171px;
+}
+.section-services .room3 .b9 {
+    top: 24px;
+    left: 290px;
+}
+.section-services .room3 .b3 {
+    top: 140px;
+    left: 272px;
+}
+.section-services .room3 .b5 {
+    top: 262px;
+    left: 440px;
+}
+}
+@media (max-width: 520px) {
+  .section-services .room3 .b8 {
+    top: 163px;
+    left: 80px;
+}
+.section-services .room3 .b1 {
+    top: 173px;
+    left: 27px;
+}
+.section-services .room3 .b7 {
+    top: 97px;
+    left: 79px;
+}
+.section-services .room3 .b6 {
+    top: 80px;
+    left: 153px;
+}
+.section-services .room3 .b5 {
+    top: 262px;
+    left: 406px;
+}
+}
+@media (max-width: 475px) {
+  .section-services .room3 .b3 {
+    top: 140px;
+    left: 212px;
+}
+.section-services .room3 .b9 {
+    top: 24px;
+    left: 209px;
+}
+.section-services .room3 .b5 {
+    top: 262px;
+    left: 384px;
+}
+.section-services .room3 .b8 {
+    top: 163px;
+    left: 59px;
+}
+.section-services .room3 .b1 {
+    top: 173px;
+    left: 10px;
+}
+.section-services .room3 .b6 {
+    top: 80px;
+    left: 127px;
+}
+}
+@media (max-width: 430px) {
+  .section-services .room3 .b8 {
+    top: 163px;
+    left: 38px;
+}
+.section-services .room3 .b1 {
+    top: 173px;
+    left: 6px;
+}
+.section-services .room3 .b5 {
+    top: 262px;
+    left: 360px;
+}
+}
+@media (max-width: 410px) {
+  .section-services .room3 .b5 {
+    top: 273px;
+    left: 65px;
+}
+.section-services .room3 .b1 {
+    top: 173px;
+    left: 99px;
+}
+}
+@media (max-width: 375px) {
+  .section-services .room3 .b7 {
+    top: 97px;
+    left: 29px;
+}
+.section-services .room3 .b6 {
+    top: 80px;
+    left: 80px;
+}
+.section-services .room3 .b8 {
+    top: 163px;
+    left: 5px;
+}
+.section-services .room3 .b3 {
+    top: 140px;
+    left: 156px;
+}
+.section-services .room3 .b9 {
+    top: 24px;
+    left: 163px;
+}
+}
+@media (max-width: 375px) {
+  .section-services .room3 .b8 {
+    display: none;
+}
+}
+@media (max-width: 991px) {
+  .section-services .room4 .b1 {
+    top: 257px;
+    left: 50px;
+}
+.section-services .room4 .b2 {
+    top: 280px;
+    left: 252px;
+}
+.section-services .room4 .b7 {
+    top: 220px;
+    left: 144px;
+}
+.section-services .room4 .b8 {
+    top: 200px;
+    left: 490px;
+}
+.section-services .room4 .b9 {
+    top: 257px;
+    left: 344px;
+}
+.section-services .room4 .b3 {
+    top: 150px;
+    left: 217px;
+}
+.section-services .room4 .b4 {
+    top: 400px;
+    left: 330px;
+}
+.section-services .room4 .b5 {
+    top: 350px;
+    left: 400px;
+}
+}
+@media (max-width: 767px) {
+  .section-services .room4 .b1 {
+      top: 127px;
+      left: 30px;
+  }
+  .section-services .room4 .b7 {
+    top: 103px;
+    left: 104px;
+}
+.section-services .room4 .b3 {
+    top: 150px;
+    left: 165px;
+}
+.section-services .room4 .b2 {
+    top: 185px;
+    left: 173px;
+}
+.section-services .room4 .b9 {
+    top: 167px;
+    left: 260px;
+}
+.section-services .room4 .b8 {
+    top: 100px;
+    left: 290px;
+}
+.section-services .room4 .b5 {
+    top: 200px;
+    left: 300px;
+}
+.section-services .room4 .b4 {
+    top: 181px;
+    left: 337px;
+}
+}
+@media (max-width: 475px) {
+  .section-services .room4 .b1 {
+    top: 127px;
+    left: 2px;
+}
+.section-services .room4 .b7 {
+    top: 103px;
+    left: 54px;
+}
+.section-services .room4 .b2 {
+    top: 185px;
+    left: 130px;
+}
+.section-services .room4 .b3 {
+    top: 150px;
+    left: 131px;
+}
+.section-services .room4 .b9 {
+    top: 167px;
+    left: 219px;
+}
+.section-services .room4 .b5 {
+    top: 228px;
+    left: 252px;
+}
+.section-services .room4 .b4 {
+    top: 186px;
+    left: 310px;
+}
+}
+@media (max-width: 410px) {
+  .section-services .room4 .b1 {
+    display: none;
+}
+.section-services .room4 .b7 {
+    top: 103px;
+    left: 20px;
+}
+.section-services .room4 .b2 {
+    top: 186px;
+    left: 100px;
+}
+.section-services .room4 .b3 {
+    top: 150px;
+    left: 100px;
+}
+.section-services .room4 .b9 {
+    top: 167px;
+    left: 185px;
+}
+.section-services .room4 .b4 {
+    top: 186px;
+    left: 275px;
+}
+
+}
+@media (max-width: 330px) {
+  .section-services .room4 .b4 {
+    top: 186px;
+    left: 240px;
+}
+.section-services .room4 .b8 {
+    top: 100px;
+    left: 256px;
+}
+}
+@media (max-width: 767px){
+  .section-services .room2 .b6 {
+    top: 26px;
+    left: 214px;
+}
+.section-services .room2 .b7 {
+    top: 107px;
+    left: 124px;
+}
+.section-services .room2 .b1 {
+    top: 81px;
+    left: 16px;
+}
+
 }
