@@ -136,7 +136,7 @@
           <div class="form1-form-input">
             <img src="img/form1/phone.png" alt="" class="form1-form__icon"> <div class="form1-form__input-cover"> <input type="tel" name="formTel" class="phone form1-form__input" placeholder="Телефон"></div>
           </div>
-            <button class="form1-form-button-o">Отправить</button>
+            <button class="form1-form-button-o" onclick="ym(49259191,'reachGoal','otpravit');">Отправить</button>
           </div>
         </form>
       <!-- ./container -->
@@ -225,7 +225,7 @@
                               <div class="btn-block">
 
 
-                                  <button type="submit" class="btn btn-primary btn-submit-price">Оценить уборку</button>
+                                  <button type="submit" class="btn btn-primary btn-submit-price" onclick="ym(49259191,'reachGoal','ocenit_uborku')">Оценить уборку</button>
                               </div>
 
                           </div>
@@ -1144,7 +1144,7 @@
       <div class="call-wrap">
         <div class="call__text">Закажите звонок до конца дня, и мы забронируем за Вами скидку до 25%</div>
         <!-- /.call__text -->
-        <button class="button-modal call__button" data-target="modal-main">Заказать звонок</button>
+        <button class="button-modal call__button" data-target="modal-main"  onclick="ym(49259191,'reachGoal','zakazat_zvonok');">Заказать звонок</button>
         <!-- /.call__button -->
       </div>
       <!-- /.call-wrap -->
@@ -1366,7 +1366,7 @@
       <div class="modal-contact-body modal-contact_hidden" id="modal-main">
         <h2 class="modal-contact__header">Оставьте заявку на уборку</h2>
         <span class="modal-contact__subtitle">Оставьте свои имя и номер телефона, и наш менеджер перезвонит Вам в течении 15 минут</span>
-        <form class="modal-contact-form">
+        <form class="modal-contact-form" >
           <input type="text" name="name" class="modal-contact__input" placeholder="Ваше имя">
           <input type="tel" name="tel" class="phone modal-contact__input" placeholder="Ваш телефон">
           <input type="checkbox" name="check" required class="modal-contact__checkbox" id="check"><label for="check" class="modal-contact__label">Согласие на обработку <a href="#" class="modal-contact__link">персональных данных</a></label>
