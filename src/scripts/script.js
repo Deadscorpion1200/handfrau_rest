@@ -421,35 +421,35 @@ $(document).ready(function () {
         })
     });
     $('.modal-check-form').each(function(){
-        $(this).validate({
-            rules: {
-                name: {
-                    required: true
-                },
-                tel: {
-                    required: true
-                },
-                email: {
-                    required: true
-                }
+    $(this).validate({
+        rules: {
+            name: {
+                required: true
             },
-            errorClass: "invalid",
-            errorElement: "label",
-            errorPlacement: function (invalid, label){},
-            submitHandler: function(form){
-                $.ajax({
-                    url: "smart4.php",
-                    type: "POST",
-                    data: $(form).serialize(),
-                    success: function() {
-                        $('#modal-main-check').hide();
-                        $('#modal-success').show();
-                        $('form').trigger('reset');
-                    }
-                })
+            tel: {
+                required: true
+            },
+            email: {
+                required: true
             }
-        })
-    });
+        },
+        errorClass: "invalid",
+        errorElement: "label",
+        errorPlacement: function (invalid, label){},
+        submitHandler: function(form){
+            $.ajax({
+                url: "smart4.php",
+                type: "POST",
+                data: $(form).serialize(),
+                success: function() {
+                    $('#modal-main-check').hide();
+                    $('#modal-success').show();
+                    $('form').trigger('reset');
+                }
+            })
+        }
+    })
+});
     $('.add-modal-contact__form').each(function () {
         $(this).validate({
             rules: {
