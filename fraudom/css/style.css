@@ -4625,6 +4625,9 @@ top:70% !important;
 }
 }
 @media (max-width: 991px) {
+  .slick-arrow {
+    display: none !important;
+  }
   .section-services .room3 .b6 {
     top: 80px;
     left: 256px;
