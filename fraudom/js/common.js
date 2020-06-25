@@ -395,7 +395,7 @@ $( function() {
         dots: false,
         vertical: true,
         verticalSwiping: true,
-        draggable: false
+        draggable: false,
     });
 
     $('.testimonials').slick({

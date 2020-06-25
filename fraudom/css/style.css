@@ -4942,3 +4942,22 @@ padding: 0;
 opacity: 1;
 }
 }
+.adaptive-close{
+  font-size: 40px;
+  line-height: 35px;
+  background: transparent;
+  color: #8CA2B3;
+  font-weight: 100;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  display: none;
+}
+@media (max-width: 768px)
+{
+  .adaptive-close
+  {
+    display: inline-block;
+  }
+}
