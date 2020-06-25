@@ -37,7 +37,8 @@ $( function() {
 
     $('.modal-close').click(function() {
       $('.contacts-mobile-container').toggleClass('is-active');
-    })
+    });
+
 
     $('.showmore').click(function (e) {
         e.preventDefault();
