@@ -40,7 +40,8 @@ try {
 
     // Получатель письма
     // $mail->addAddress('fraukompania@gmail.com');
-    $mail->addAddress('kurp96@ya.ru');
+    $mail->addAddress('fraukompania@gmail.com');     // Add a recipient
+    $mail->addAddress('adsmanagertest2020@gmail.com');     // Add a recipient
     // $mail->addAddress('fraukompania@gmail.com');
     // $mail->addAddress('kurp96@ya.ru');
 

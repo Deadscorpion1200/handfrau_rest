@@ -2,6 +2,7 @@
 
 $name  = $_POST['name'];
 $phone = $_POST['tel'];
+$email = $_POST['email'];
 
 $mail->SMTPDebug = 1;
 require_once('phpmailer/PHPMailerAutoload.php');
@@ -22,8 +23,9 @@ $mail->Port = 465;                                    // TCP port to connect to
 $mail->setFrom('handfraucompany@yandex.ru', 'Заявка с сайта ');   // От кого письмо 
 $mail->addAddress('fraukompania@gmail.com');     // Add a recipient
 $mail->addAddress('adsmanagertest2020@gmail.com');     // Add a recipient
+
+// $mail->addAddress('kurp96@ya.ru');     // Add a recipient
 // $mail->addAddress('gorasdo.ru@yandex.ru');  
-// $mail->addAddress('iordanov.d.g@yandex.ru');              // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
@@ -31,11 +33,12 @@ $mail->addAddress('adsmanagertest2020@gmail.com');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Заявка с сайта';
+$mail->Subject = 'Запрос на чек-лист';
 $mail->Body    = '
-	Клиент оставил свои контактные данные<br>
+<h2>Поступил новый запрос на чек-лист</h2>
 	Имя клиента : <strong> ' . $name . ' </strong><br>
-	Его телефон: <strong> ' . $phone . ' </strong><br>';
+	Его телефон: <strong> ' . $phone . ' </strong><br>
+	Его email: <strong> ' . $email . ' </strong><br>';
 $mail->AltBody = 'Это альтернативный текст';
 
 if(!$mail->send()) {

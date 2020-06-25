@@ -3,7 +3,7 @@
 
     $subjectEmail = "Новое сообщение";
     $messageEmail = "Сообщение с сайта";
-    $email = "kurp96@ya.ru";
+    $email = "fraukompania@gmail.com";
     $pathToImg = 'https://handfrau.ru/mail/';
 
     $title = $_POST['titleModal'];
@@ -20,7 +20,6 @@
     if ($phone) {
         $messageEmail .= '<strong>Телефон:</strong> ' . $phone . "<br>";
     }
-
     #проверяем тип заявки
     if ($_FILES['files']['name']) {
 

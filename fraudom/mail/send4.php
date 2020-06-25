@@ -9,14 +9,15 @@ require 'phpmailer/Exception.php';
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
 $phone = $_POST['phone'];
-$file = $_FILES['file'];
+$email = $_POST['email'];
 
 // Формирование самого письма
-$title = "Заявка на оценку уборки";
+$title = "Запрос на чек-лист";
 $body = "
-<h2>Новая заяввка на оценку уборки</h2>
+<h2>Поступил новый запрос на чек-лист</h2>
 <b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
+<b>Телефон:</b> $phone<br>
+<b>email:</b> $email<br><br>
 ";
 
 // Настройки PHPMailer
@@ -36,12 +37,15 @@ try {
     $mail->Password   = 'nhbwthfnjgc75'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('handfraucompany@yandex.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('handfraucompany@yandex.ru', 'Handfrau.ru'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     // $mail->addAddress('fraukompania@gmail.com');
     $mail->addAddress('fraukompania@gmail.com');     // Add a recipient
     $mail->addAddress('adsmanagertest2020@gmail.com');     // Add a recipient
+    // $mail->addAddress('fraukompania@gmail.com');
+    // $mail->addAddress('kurp96@ya.ru');
+
     // $mail->addAddress('kurp96@ya.ru');
     // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 

@@ -22,6 +22,7 @@ $mail->Port = 465;                                    // TCP port to connect to
 $mail->setFrom('handfraucompany@yandex.ru', 'Заявка с сайта ');   // От кого письмо 
 // $mail->addAddress('fraukompania@gmail.com');     // Add a recipient
 $mail->addAddress('fraukompania@gmail.com');     // Add a recipient
+$mail->addAddress('adsmanagertest2020@gmail.com');     // Add a recipient
 // $mail->addAddress('gorasdo.ru@yandex.ru');  
 // $mail->addAddress('iordanov.d.g@yandex.ru');              // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');

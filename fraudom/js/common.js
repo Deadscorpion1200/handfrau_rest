@@ -149,7 +149,65 @@ $( function() {
     // });
 
     // Отправка данных на сервер
+    $('.submit-form-check').click(function(e){
+        e.preventDefault();
 
+        var form = $(this).parents('.modal').find('form');
+
+        var fd = new FormData();
+
+        var name = form.find('input[name=name]');
+        if(!name.val())
+        {
+            name.addClass('error');
+            return 0;
+        }
+        else {
+            name.removeClass('error');
+        }
+
+        var phone = form.find('input[name=phone]');
+        if(!phone.val())
+        {
+            phone.addClass('error');
+            return 0;
+        }
+        else {
+            phone.removeClass('error');
+        }
+
+        var email = form.find('input[name=email]');
+        if(!email.val())
+        {
+            email.addClass('error');
+            return 0;
+        }
+        else {
+            email.removeClass('error');
+        }
+
+        fd.append('name', name.val());
+        fd.append('phone', phone.val());
+        fd.append('email', email.val());
+
+        $.ajax({
+            url: 'mail/send4.php',
+            data: fd,
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            success: function () {
+                $('#order').modal('hide');
+                $('#order-check').modal('hide');
+                $('#done').modal('show');
+                console.log(fd);
+            },
+            error: function(data){
+                console.log('error', data);
+            }
+
+        });
+    });
 
     $('.submit-form-order').click(function (e) {
 

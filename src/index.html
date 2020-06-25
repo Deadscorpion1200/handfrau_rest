@@ -927,7 +927,7 @@
           <li class="check-item"><span class="cleanWarranty__mark"></span> В ресторане отсутствуют синтетические запахи моющих средств.</li>
           <li class="check-item"><span class="cleanWarranty__mark"></span> Вы чувствуете свежесть, свободу пространства и хотите возвращаться в ресторан снова и снова. </li>
         </ul>
-        <button class="button-modal check-block__button check-adaptive" data-target="modal-main">Заказать проверку</button>
+        <button class="button-modal check-block__button check-adaptive" data-toggle="modal" data-target="modal-main">Заказать проверку</button>
       </div>
       <!-- /.check-block -->
     </div>
@@ -1482,12 +1482,12 @@
       <div class="modal-contact-body modal-contact_hidden" id="modal-main-check">
         <h2 class="modal-contact__header">Оставьте заявку <br>на чек-лист проверки</h2>
         <span class="modal-contact__subtitle">Оставьте свои имя, Email и номер телефона, и мы отправим Вам чек-лист проверки втечении 15 минут</span>
-        <form class="modal-contact-form">
+        <form class="modal-check-form">
           <input type="text" name="name" class="modal-contact__input" placeholder="Ваше имя">
           <input type="tel" name="tel" class="phone modal-contact__input" placeholder="Ваш телефон">
           <input type="mail" name="email" class="email modal-contact__input" placeholder="Ваш Email">
           <input type="checkbox" name="check" required class="modal-contact__checkbox" id="check5"><label for="check5" class="modal-contact__label">Согласие на обработку <a href="#" class="modal-contact__link">персональных данных</a></label>
-          <button type="submit" class="modal-contact__button"  >Заказать уборку</button>
+          <button type="submit" class="modal-contact__button" >Заказать уборку</button>
         </form>
       </div>
     </div>
