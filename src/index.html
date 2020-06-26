@@ -24,8 +24,31 @@
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/49259191" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170887203-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-170887203-1');
+  </script>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5P2B5WD');</script>
+<!-- End Google Tag Manager -->
+
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P2B5WD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <section class="navbar">
     <div class="container">
       <div class="navbar-wrap">
@@ -50,7 +73,7 @@
 
             <div class="navbar-contact-links">
 
-              <a href="callto:+74951234567" class="navbar-contact__phone">+7 495 123 45 67</a>
+              <a href="callto:+79858309865" class="navbar-contact__phone">+7 985 830 98 65</a>
 
             </div>
               <div class="contacts-social">
@@ -113,7 +136,7 @@
           Вы — отдыхаете. <span class="main__utp_subtitle-second">Мы — работаем</span>
         </span>
         <div class="main-buttons">
-          <button class="button-modal main-button main-button__order" data-target="modal-main">Заказать сейчас</button>
+          <button class="button-modal main-button main-button__order" data-target="modal-main"onclick="ym(49259191,'reachGoal','zakazat_seychas')">Заказать сейчас</button>
           <button class="button-modal main-button-o main-button__discover" data-target="modal-main">Узнать стоимость</button>
           <button class="button-modal main-button-o main-button__immediate" data-target="modal-main">Оформить срочный заказ</button>
         </div>
@@ -208,7 +231,7 @@
               <p class="p text text-center left-link left-link-hide hidden">Скрыть</p>
               <div class="calc-wrapper calc-wrapper-left hidden left-box">
 
-                  <form class="dist-price-form" enctype="multipart/form-data" method="post" onsubmit="send(event, 'mail/send2.php')">
+                  <form class="dist-price-form" enctype="multipart/form-data" method="post" onsubmit="send(event, 'mail/send2.php'); ym(49259191,'reachGoal','ocenit_uborku'); return true;">
                       <input type="hidden" value="Заявка на оценку" name="titleModal">
 
                       <div class="row dist-form">
@@ -225,7 +248,7 @@
                               <div class="btn-block">
 
 
-                                  <button type="submit" class="btn btn-primary btn-submit-price" onclick="ym(49259191,'reachGoal','ocenit_uborku')">Оценить уборку</button>
+                                  <button type="submit" class="btn btn-primary btn-submit-price" >Оценить уборку</button>
                               </div>
 
                           </div>
@@ -584,7 +607,7 @@
         <div class="dirt-text">
           <h2 class="dirt-text__header">Уборка любых загрязнений</h2>
           <span class="dirt-text__description">Оказываем услуги профессиональной и качественной уборки в ресторанах любого типа. Клининг выполняется с предварительным согласованием времени, объема работ и стоимости комплекса услуг.</span>
-          <button class="button-modal dirt-text__button" data-target="modal-main">Хочу такую же уборку</button>
+          <button class="button-modal dirt-text__button" data-target="modal-main" onclick="ym(49259191,'reachGoal','hochu_takuyu_zhe')">Хочу такую же уборку</button>
         </div>
         <!-- /.dirt-text -->
         <div class="dirt-slider-wrap">
@@ -619,7 +642,7 @@
           <!-- /.dirt-slider -->
         </div>
         <!-- /.dirt-slider-wrap -->
-        <button class="button-modal dirt-text__button dirt-text__button_adaptive" data-target="modal-main">Хочу такую же уборку</button>
+        <button class="button-modal dirt-text__button dirt-text__button_adaptive" data-target="modal-main"  onclick="ym(49259191,'reachGoal','hochu_takuyu_zhe')">Хочу такую же уборку</button>
       </div>
       <!-- /.dirt-wrap -->
     </div>
@@ -1315,7 +1338,7 @@
         </div>
         <!-- /.footer-text -->
         <div class="footer-contacts">
-          <a href="callto:+74951234567" class="footer-phone">+7 495 123 45 67</a>
+          <a href="callto:+79858309865" class="footer-phone">+7 985 830 98 65</a>
           <a href="mailto:main@handfrau.ru" class="footer-email">main@handfrau.ru</a>
           <p class="footer-address">Hände Frau ООО «Женские руки» 107076, Россия, г. Москва, пер. Матросский Б., 1</p>
         </div>
