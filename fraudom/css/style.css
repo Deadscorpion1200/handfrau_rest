@@ -2629,6 +2629,17 @@ left: 313px;
   padding: 0;
   opacity: 1;
 }
+@media (max-width: 576px) {
+  .modal .close{
+    background: url('../img/close-black.png') 50% 50% no-repeat;
+    background-size: contain !important;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+  }
+}
+
 .modal .text {
   margin-bottom: 30px;
 }
@@ -3171,6 +3182,7 @@ select.form-control:not([size]):not([multiple]) {
   background-size: cover;
   position: relative;
   overflow-x: none;
+  z-index: 5;
 }
 
 .cleanWarranty-img {
@@ -3178,6 +3190,20 @@ select.form-control:not([size]):not([multiple]) {
   right: 0px;
   top: 0;
 }
+/*.cleanWarranty::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: -101px;
+  left: 43%;
+  margin-left: 100px;
+  z-index: 0;
+  width: 242px;
+  height: 527px;
+  background: url(../img/legs.png) 50% 50% no-repeat;
+  background-size: contain;
+}*/
+
 
 .cleanWarranty__header {
   font-weight: 600;
@@ -5177,22 +5203,3 @@ width: 200px!important;
 .section-command .btn {
   margin-top: 20px;
 }}
-.adaptive-close{
-  font-size: 40px;
-  line-height: 35px;
-  background: transparent;
-  color: #8CA2B3;
-  font-weight: 100;
-  border: none;
-  position: absolute;
-  right: 20px;
-  top: 25px;
-  display: none;
-}
-@media (max-width: 768px)
-{
-  .adaptive-close
-  {
-    display: inline-block;
-  }
-}
