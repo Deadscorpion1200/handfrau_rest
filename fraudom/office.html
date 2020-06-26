@@ -1502,7 +1502,65 @@
         </div>
     </section>
 
+    <section class="section section-distantion-calc section-distantion-calc--office">
+        <a id="distantion-calc"></a>
 
+        <div class="container">
+
+            <h2 class="h2 text-center h2_and_text">Дистанционная оценка работ</h2>
+
+            <p class="p text text-center">Прикрепите фотографии своей квартиры. Мы сделаем их анализ и позвоним Вам,<br>чтобы сообщить цену и объём работ.</p>
+
+            <div class="calc-wrapper">
+
+                <form class="dist-price-form" enctype="multipart/form-data" method="post" onsubmit="send(event, 'mail/send2.php'); ym(49259191,'reachGoal','ocenit_uborku'); return true;">
+                    <input type="hidden" value="Заявка на оценку" name="titleModal">
+
+                    <div class="row dist-form">
+                        <div class="col-md-6 left-column">
+
+                            <div class="form-group">
+                                <input name="name" type="text" class="form-control" placeholder="Ваше имя">
+                            </div>
+
+                            <div class="form-group">
+                                <input name="phone" type="tel" class="form-control" placeholder="Ваш телефон">
+                            </div>
+
+                            <div class="btn-block">
+
+
+                                <button type="submit" class="btn btn-primary btn-submit-price" >Оценить уборку</button>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 right-column">
+
+                            <div class="form-box has-advanced-upload">
+                                <div class="box__input drag-grop-wrapper">
+                                    <input type="file" name="file[]" id="file" class="box__file" data-multiple-caption="{count} files selected" multiple="">
+                                    <label for="file"><i class="i-attach"></i>Выберите фото</label>
+                                    <p class="p">Или перетащите фото обьекта сюда</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-result text-center">
+                        <i class="i"></i>
+
+                        <h4 class="h4">Фотографии отправлены</h4>
+                        <p class="p">Специалист уже начал оценивать стоимость работ<br> и в ближайшее время свяжется с Вами</p>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </section>
 
 
 
