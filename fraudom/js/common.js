@@ -326,6 +326,7 @@ $( function() {
             success: function () {
                 $('#order-calc').modal('hide');
                 $('#done').modal('show');
+                ym(49259191,'reachGoal','kalk');
             },
             error: function (data) {
                 console.log('error', data);
@@ -366,7 +367,7 @@ $( function() {
     $('.command').slick({
         infinite: true,
         slidesToScroll: 1,
-        dots: false,
+        dots: true,
         centerMode: true,
         variableWidth: true
     });
@@ -395,13 +396,14 @@ $( function() {
         dots: false,
         vertical: true,
         verticalSwiping: true,
-        draggable: false,
+        draggable: false
     });
+
 
     $('.testimonials').slick({
         infinite: true,
         slidesToScroll: 1,
-        dots: false,
+        dots: true,
         responsive: [
             {
                 breakpoint: 767,
