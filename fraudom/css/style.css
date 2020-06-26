@@ -1112,9 +1112,12 @@ a:hover {
   padding: 0;
 }
 @media (max-width: 991px) {
-  .section-any-service {
-    display: none;
-  }
+.slick-track {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  height: auto;
+}
 }
 .section-any-service .section-info {
   padding-top: 140px;
@@ -1795,7 +1798,28 @@ left: 313px;
 }
 .section-services .room-office-8 {
   background-image: url('../img/rooms/office/18.jpg');
+
 }
+.section-any-service .room-office-8 {
+  background-image: url('../img/slider/vert-slider-1.jpg');
+
+}
+.section-any-service .room-office-1 {
+  background-image: url('../img/slider/vert-slider-2.jpg');
+}
+.section-any-service .room-office-2 {
+  background-image: url('../img/slider/vert-slider-3.jpg');
+}
+.section-any-service .room-office-3 {
+  background-image: url('../img/slider/vert-slider-4.jpg');
+}
+.section-any-service .room-office-4 {
+  background-image: url('../img/slider/vert-slider-5.jpg');
+}
+.section-any-service .room-office-5 {
+  background-image: url('../img/slider/vert-slider-6.jpg');
+}
+
 .section-services .room-office-8 .b1 {
   top: 100px;
   left: 50px;
@@ -3873,6 +3897,10 @@ top:70% !important;
 
 }
 @media (max-width: 767px) {
+  .section-services .room-office-8 .b5 {
+    top: 59px;
+    left: 328px;
+}
   .section-services .services-rooms--office .room {
     height: 190px;
   }
@@ -4929,19 +4957,226 @@ top:70% !important;
     top: 81px;
     left: 16px;
 }
-.modal .close {
-  width: 22px;
-height: 22px;
-position: absolute;
-display: block;
-top: 35px;
-right: 35px;
-background: url(../img/close-black.png) 50% 50% no-repeat;
-background-size: contain;
-padding: 0;
-opacity: 1;
+
+}
+@media (max-width: 991px){
+  .modals-hide{
+    display: none;
+  }
+  .info-any .text {
+    margin-bottom: 0;
+  }
+  .info-any{
+    width: 100% !important;
+    flex: 0 0 100% !important ;
+    max-width:100%  ;
+    padding-top: 25px !important;
+    text-align: center;
+  }
+  .section-any .btn {
+    margin-top: 45px;
+  }
+    .section-any  .slick-dots.slick-dots {
+    padding-top: 40px;
+    bottom: auto;
+    position: absolute;
+    /* position: relative; */
+    bottom: 100px;
 }
 }
+@media (max-width: 767px){
+.section-any .room-description .btn {
+    display: block !important;
+    margin-bottom: 15px;
+    }
+    .section-any  .slick-dots.slick-dots {
+
+    bottom: 91px;
+}
+.section-any .room {
+
+}
+.section-any .btn {
+
+}
+.section-any  .room-description .h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 0;
+
+}
+.section-any  .slick-slide{
+  border: 0px solid #fff !important;
+}
+/*  .section-any  .slick-dots.slick-dots {
+  width: 100vw!important;
+  }*/
+  }
+@media (max-width: 575px){
+  .section-any .room {
+width: 400px!important;
+  }
+  .section-any .btn {
+width: 350px!important;
+  }
+  .section-any  .room-description {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-any  .room-description .h3 {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 0;
+width: 350px!important;
+  }
+   .section-any  .slick-dots.slick-dots {
+    width: 100%!important;
+    }
+  .section-any .slick-slide {
+      width: 400px!important;
+    }
+.section-any .slick-list {
+  width: 430px!important;
+  margin: 0 auto;
+}
+.section-any  .slick-track {
+  width: calc(430px*20 - 430px)!important;
+}
+.center-section{
+  margin: 0 auto;
+}
+}
+@media (max-width: 454px){
+  .section-any .room {
+width: 300px!important;
+  }
+  .section-any .btn {
+width: 250px!important;
+  }
+  .section-any  .room-description {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+  }
+
+  .section-any  .room-description .h3 {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 0;
+width: 250px!important;
+  }
+   .section-any  .slick-dots.slick-dots {
+    width: 100%!important;
+    bottom: 102px;
+    }
+  .section-any .slick-slide {
+      width: 300px!important;
+
+    }
+.section-any .slick-list {
+  width: 330px!important;
+  margin: 0 auto;
+}
+.section-any  .slick-track {
+  width: calc(330px*20 - 330px)!important;
+}
+.center-section{
+  margin: 0 auto;
+  height: 421px;
+}
+.section-command {
+  margin-top: 50px;
+}
+}
+@media (max-width: 350px){
+  .section-any .room {
+width: 250px!important;
+  }
+  .section-any .btn {
+width: 200px!important;
+  }
+  .section-any  .room-description {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-any  .room-description .h3 {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 0;
+width: 200px!important;
+  }
+   .section-any  .slick-dots.slick-dots {
+    width: 100%!important;
+    bottom: 115px;
+    }
+  .section-any .slick-slide {
+      width: 250px!important;
+    }
+.section-any .slick-list {
+  width: 280px!important;
+  margin: 0 auto;
+}
+.section-any  .slick-track {
+  width: calc(280px*20 - 280px)!important;
+}
+.center-section{
+  margin: 0 auto;
+}
+}
+.center-section {
+  display: none;
+}
+.command .slick-dots {
+  display: none !important;
+}
+.section-testimonials .slick-dots {
+  display: none !important;
+}
+.section-any-service{
+  margin-bottom: 50px;
+}
+@media (max-width: 991px){
+  .command .slick-dots {
+    display: block !important;
+  }
+  .section-testimonials .slick-dots {
+    display: block !important;
+  }
+  .center-section {
+    display: block;
+  }
+  .section-any-service{
+    margin-bottom: 0px;
+  }
+  .section-command{
+    padding-top: 40px;
+    padding-bottom: 1px;
+  }
+}
+@media (max-width: 767px){
+  .section-command{
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .command .slick-dots {
+    padding-top: 5px;
+  }
+
+}
+@media (max-width: 479px){
+.section-command .btn {
+  margin-top: 20px;
+}}
 .adaptive-close{
   font-size: 40px;
   line-height: 35px;
