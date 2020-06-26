@@ -261,6 +261,56 @@ $( function() {
 
     });
 
+    $('.submit-form-order-two').click(function (e) {
+
+        e.preventDefault();
+
+        var form = $(this).parents('.modal').find('form');
+
+        var fd = new FormData();
+
+        var name = form.find('input[name=name]');
+        if (!name.val()) {
+            name.addClass('error');
+            return 0;
+        }
+        else {
+            name.removeClass('error');
+        }
+
+        var phone = form.find('input[name=phone]');
+        if (!phone.val()) {
+            phone.addClass('error');
+            e.preventDefault();
+            return 0;
+        }
+        else {
+            name.removeClass('error');
+        }
+
+        fd.append('name', name.val());
+        fd.append('phone', phone.val());
+
+        $.ajax({
+            url: 'mail/send5.php',
+            data: fd,
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            success: function () {
+                $('#order').modal('hide');
+                $('#order-call').modal('hide');
+                $('#done').modal('show');
+                console.log(fd);
+                ym(49259191,'reachGoal','zakazat_uborku');
+            },
+            error: function (data) {
+                console.log('error', data);
+            }
+        });
+
+    });
+
     $('.btn-submit-calc').click(function (e) {
         e.preventDefault();
     });
@@ -319,6 +369,75 @@ $( function() {
 
         $.ajax({
             url: 'mail/send.php',
+            data: fd,
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            success: function () {
+                $('#order-calc').modal('hide');
+                $('#done').modal('show');
+                ym(49259191,'reachGoal','kalk');
+            },
+            error: function (data) {
+                console.log('error', data);
+            }
+        });
+    });
+
+    $('.submit-form-order-calc-two').click(function (e) {
+        e.preventDefault();
+
+        var form = $(this).parents('.modal').find('form');
+        var form_cal = $('.calc-body');
+        const arrEmptyInputs = [];
+
+
+
+        var fd = new FormData();
+
+        var name = form.find('input[name=name]');
+        if (!name.val()) {
+            arrEmptyInputs.push(name);
+            name.addClass('error');
+            return 0;
+        }
+        else {
+            name.removeClass('error');
+        }
+
+        var phone = form.find('input[name=phone]');
+        if (!phone.val()) {
+            arrEmptyInputs.push(phone);
+            phone.addClass('error');
+            e.preventDefault();
+            return 0;
+        }
+        else {
+            phone.removeClass('error');
+        }
+
+
+        if(arrEmptyInputs.length > 0) {
+            return;
+        }
+
+        var additionService = '';
+
+
+
+        $('.service-list li').each(function (e) {
+            additionService += $(this).find('.title').text() + " " + $(this).find('.params').text() + ", ";
+        });
+
+        fd.append('name', name.val());
+        fd.append('phone', phone.val());
+        fd.append('type_clean', $('.select-type-clean').val());
+        fd.append('square', $('#input-square').val());
+        fd.append('schedule', $('.schedule-description').text());
+        fd.append('service', additionService);
+
+        $.ajax({
+            url: 'mail/send5.php',
             data: fd,
             processData: false,
             contentType: false,
