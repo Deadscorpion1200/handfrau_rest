@@ -2129,13 +2129,15 @@ input {
   background: linear-gradient(180deg, rgba(247, 251, 254, 0.8) 0%, rgba(247, 251, 254, 0) 100%), url(../img/clean-warranty/Bg.png) center no-repeat;
   background-size: cover;
   position: relative;
-  overflow-x: none;
+  overflow-x: hidden;
+  z-index: 5;
 }
 
 .cleanWarranty-img {
   position: absolute;
   right: 0px;
   top: 0;
+  z-index: -1;
 }
 
 .cleanWarranty__header {
@@ -2186,14 +2188,51 @@ input {
     display: flex;
   }
   .cleanWarranty-img {
-    z-index: 0;
-    display: none;
+    right: -20%;
   }
   .cleanWarranty__header {
     max-width: 500px;
   }
 }
+@media (max-width: 700px) {
+  .cleanWarranty-img {
+    right: -34%;
+  }
+}
+@media (max-width: 650px) {
+  .cleanWarranty-img {
+    right: -41%;
+  }}
+  @media (max-width: 650px) {
+    .cleanWarranty-img {
+      right: -41%;
+    }
+}
+@media (max-width: 576px) {
+  .cleanWarranty-img {
+    right: -57%;
+  }
+    .cleanWarranty-img img {
+      width: 50%;
+    }}
+    @media (max-width: 450px) {
+      .cleanWarranty-img {
+        right: -91%;
+top: 10%;
+      }
+  }
+  @media (max-width: 400px) {
+    .cleanWarranty-img {
+      right: -93%;
+          top: 22%;
+    }
+}
+@media (max-width: 400px) {
+  .cleanWarranty-img {
+    right: -90%;
 
+  }
+}
 @media (max-width: 768px) {
   .cleanwarranty {
     padding-bottom: 50px;
