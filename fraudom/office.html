@@ -170,7 +170,7 @@
 
                         <p class="p description">Вы — отдыхаете. Мы — работаем.</p>
 
-                        <a href="#personal" class="btn btn-primary" data-toggle="modal" data-target="#order" onclick="ym(49259191,'reachGoal','zakazat_uborku')">Заказать сейчас</a>
+                        <a href="#personal" class="btn btn-primary" data-toggle="modal" data-target="#order" onclick="ym(49259191,'reachGoal','zakazat_seychas')">Заказать сейчас</a>
 
                         <a href="#calc" class="btn btn-default go_to">Узнать стоимость</a>
                     </div>
@@ -646,7 +646,7 @@
                       <p class="p text text-center left-link left-link-hide hidden">Скрыть</p>
                       <div class="calc-wrapper calc-wrapper-left left-box hidden">
 
-                          <form class="dist-price-form" enctype="multipart/form-data" method="post" onsubmit="send(event, './mail/send3.php')">
+                          <form class="dist-price-form" enctype="multipart/form-data" method="post" onsubmit="send(event, './mail/send3.php'); ym(49259191,'reachGoal','ocenit_uborku'); return true;">
                               <input type="hidden" value="Заявка на оценку" name="titleModal">
 
                               <div class="row dist-form">
@@ -663,7 +663,7 @@
                                       <div class="btn-block">
 
 
-                                          <button type="submit" class="btn btn-primary btn-submit-price" onclick="ym(49259191,'reachGoal','ocenit_uborku');">Оценить уборку офиса</button>
+                                          <button type="submit" class="btn btn-primary btn-submit-price" >Оценить уборку офиса</button>
                                       </div>
 
                                   </div>
@@ -1005,16 +1005,16 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-6 section-info">
+                <div class="col-md-6 section-info info-any">
 
                     <h2 class="h2 h2_and_text">Уборка любой сложности</h2>
                     <p class="p text">Оказываем услуги профессиональной уборки в офисах любого типа. Клининг выполняется с предварительным согласованием времени, объема работ и стоимости комплекса услуг. </p>
 
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#order" >Хочу такую же уборку</button>
+                    <button class="btn btn-primary modals-hide" data-toggle="modal" data-target="#order"  onclick="ym(49259191,'reachGoal','hochu_takuyu_zhe')" >Хочу такую же уборку</button>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="vertical-slider">
+                <div class="col-md-6 modals-hide">
+                    <div class="vertical-slider ">
                         <div class="vert-slide">
                             <div class="bg" style="background-image: url('img/slider/vert-slider-1.jpg');"></div>
                             <p class="description">
@@ -1046,7 +1046,51 @@
                             </p>
                         </div>
                     </div>
+
                 </div>
+                <section class="section section-services section-services--office center-section" style="background-color: #fff;">
+
+                    <div class="container">
+
+                        <div class="services services-rooms services-rooms--office section-any">
+
+                            <div>
+                                <div class="room room-office-8">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка зоны ресепшена</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="room room-office-1">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка комнат для переговоров</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="room room-office-2">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка коридоров</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="room room-office-3">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка рабочей зоны</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                </section>
             </div>
         </div>
 
@@ -1459,65 +1503,7 @@
     </section>
 
 
-    <section class="section section-distantion-calc section-distantion-calc--office">
-        <a id="distantion-calcs"></a>
 
-        <div class="container">
-
-            <h2 class="h2 text-center h2_and_text">Дистанционная оценка работ</h2>
-
-            <p class="p text text-center">Прикрепите фотографии своего офиса. Мы сделаем их анализ и позвоним Вам,<br>чтобы сообщить цену и объём работ.</p>
-
-            <div class="calc-wrapper">
-
-                <form class="dist-price-form" enctype="multipart/form-data" method="post" onsubmit="send(event, './mail/send3.php')">
-                    <input type="hidden" value="Заявка на оценку" name="titleModal">
-
-                    <div class="row dist-form">
-                        <div class="col-md-6 left-column">
-
-                            <div class="form-group">
-                                <input name="name" type="text" class="form-control" placeholder="Ваше имя">
-                            </div>
-
-                            <div class="form-group">
-                                <input name="phone" type="tel" class="form-control" placeholder="Ваш телефон">
-                            </div>
-
-                            <div class="btn-block">
-
-
-                                <button type="submit" class="btn btn-primary btn-submit-price" onclick="ym(49259191,'reachGoal','ocenit_uborku');">Оценить уборку офиса</button>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-6 right-column">
-
-                            <div class="form-box has-advanced-upload">
-                                <div class="box__input drag-grop-wrapper">
-                                    <input type="file" name="file[]" id="file" class="box__file" data-multiple-caption="{count} files selected" multiple="">
-                                    <label for="file"><i class="i-attach"></i>Выберите фото</label>
-                                    <p class="p">Или перетащите фото обьекта сюда</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="form-result text-center">
-                        <i class="i"></i>
-
-                        <h4 class="h4">Фотографии отправлены</h4>
-                        <p class="p">Специалист уже начал оценивать стоимость работ<br> и в ближайшее время свяжется с Вами</p>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-
-    </section>
 
 
     <section class="section section-footer">
@@ -1575,9 +1561,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Выберите дополнительные услуги</h5>
-                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
-
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -1684,8 +1669,9 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-left">Оставьте заявку на уборку</h5>
-                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+               <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
+
             </div>
             <div class="modal-body">
 
@@ -1720,8 +1706,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-left">Скидка до 25% за заказ звонка</h5>
-                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                 <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
             </div>
             <div class="modal-body">
 
@@ -1778,10 +1764,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel61">Оставить заявку на звонок</h5>
-                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
                     <span aria-hidden="true">&times;</span>
                 </button>
+                 <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
             </div>
             <div class="modal-body">
 
@@ -1813,8 +1800,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-left">Оставьте заявку на уборку</h5>
-                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                 <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
             </div>
             <div class="modal-body">
 
@@ -1865,6 +1852,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
+
             </div>
             <div class="modal-body">
 
@@ -1904,8 +1892,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-left">Оставьте заявку <br>на чек-лист проверки</h5>
-                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                 <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
             </div>
             <div class="modal-body">
 

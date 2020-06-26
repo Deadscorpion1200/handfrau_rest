@@ -167,7 +167,7 @@
 
                         <p class="p description">Вы — отдыхаете. Мы — работаем.</p>
 
-                        <a href="#personal" class="btn btn-primary" data-toggle="modal" data-target="#order">Заказать сейчас</a>
+                        <a href="#personal" class="btn btn-primary" data-toggle="modal" data-target="#order" onclick="ym(49259191,'reachGoal','zakazat_seychas')">Заказать сейчас</a>
 
                         <a href="#calc" class="btn btn-default go_to">Узнать стоимость</a>
                     </div>
@@ -1181,15 +1181,15 @@
         <div class="container">
 
             <div class="row">
-                <div class=" col-12 col-lg-6 section-info">
+                <div class="col-md-6 section-info info-any">
 
                     <h2 class="h2 h2_and_text">Уборка любой сложности</h2>
                     <p class="p text">Оказываем услуги профессиональной уборки в квартирах любого типа. Клининг выполняется с предварительным согласованием времени, объема работ и стоимости комплекса услуг. </p>
 
-                    <button class="btn btn-primary"data-toggle="modal" data-target="#order"   >Хочу такую же уборку</button>
+                    <button class="btn btn-primary modals-hide"data-toggle="modal" data-target="#order"  onclick="ym(49259191,'reachGoal','hochu_takuyu_zhe')" >Хочу такую же уборку</button>
                 </div>
 
-                <div class="col-12 col-lg-6">
+                <div class="col-md-6 modals-hide">
                     <div class="vertical-slider">
                         <div class="vert-slide">
                             <div class="bg" style="background-image: url('img/b2c_one.png');"></div>
@@ -1223,6 +1223,50 @@
                         </div> -->
                     </div>
                 </div>
+                <section class="section section-services section-services--office center-section" style="background-color: #fff;">
+
+                    <div class="container">
+
+                        <div class="services services-rooms services-rooms--office section-any section-any-modal">
+
+                            <div>
+                                <div class="room room-office-8" style="background-image: url('img/b2c_one.png');">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка студии</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="room room-office-1" style="background-image: url('img/b2c_two.png');">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка спальных комнат</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="room room-office-2" style="background-image: url('img/b2c_three.png');">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка студии</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="room room-office-3" style="background-image: url('img/b2c_two.png');">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка гостинной</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                </section>
+
             </div>
         </div>
 
@@ -1641,7 +1685,7 @@
 
             <div class="calc-wrapper">
 
-                <form class="dist-price-form" enctype="multipart/form-data" method="post" onsubmit="send(event, 'mail/send2.php'); ym(49259191,'reachGoal','skachat_chek_list'); return true;">
+                <form class="dist-price-form" enctype="multipart/form-data" method="post" onsubmit="send(event, 'mail/send2.php'); ym(49259191,'reachGoal','ocenit_uborku'); return true;">
                     <input type="hidden" value="Заявка на оценку" name="titleModal">
 
                     <div class="row dist-form">
@@ -1658,7 +1702,7 @@
                             <div class="btn-block">
 
 
-                                <button type="submit" class="btn btn-primary btn-submit-price" onclick="ym(49259191,'reachGoal','ocenit_uborku')">Оценить уборку</button>
+                                <button type="submit" class="btn btn-primary btn-submit-price" >Оценить уборку</button>
                             </div>
 
                         </div>
@@ -1747,8 +1791,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Выберите дополнительные услуги</h5>
-                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -1855,8 +1899,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-left">Оставьте заявку на уборку</h5>
-                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
             </div>
             <div class="modal-body">
 
@@ -1891,8 +1935,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-left">Скидка до 25% за заказ звонка</h5>
-                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
             </div>
             <div class="modal-body">
 
@@ -1927,8 +1971,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-left">Оставьте заявку <br>на чек-лист проверки</h5>
-                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
             </div>
             <div class="modal-body">
 
@@ -1968,7 +2012,6 @@
             <div class="modal-body">
 
                 <div class="form-result active">
-                    
 
                     <i class="i"></i>
 
@@ -2024,7 +2067,6 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-left">Оставьте заявку на уборку</h5>
-                <button class="adaptive-close" data-dismiss="modal" aria-label="Close">&times;</button>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
