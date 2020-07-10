@@ -340,7 +340,7 @@ $("input[type=file]").change(function () {
         $('.evaluation-form__subtitle').text(
             'для замены перетащите другие фото объекта сюда'
         );
-        $(".form-box-label").text(filesName.join(', '));
+        $(".evaluation-form__title").text(filesName.join(', '));
     }
 });
 
@@ -415,43 +415,11 @@ $(document).ready(function () {
                         $('#modal-main').hide();
                         $('#modal-success').show();
                         $('form').trigger('reset');
-                        ym(49259191,'reachGoal','zakazat_uborku');
                     }
                 })
             }
         })
     });
-    $('.modal-check-form').each(function(){
-    $(this).validate({
-        rules: {
-            name: {
-                required: true
-            },
-            tel: {
-                required: true
-            },
-            email: {
-                required: true
-            }
-        },
-        errorClass: "invalid",
-        errorElement: "label",
-        errorPlacement: function (invalid, label){},
-        submitHandler: function(form){
-            $.ajax({
-                url: "smart4.php",
-                type: "POST",
-                data: $(form).serialize(),
-                success: function() {
-                    $('#modal-main-check').hide();
-                    $('#modal-success').show();
-                    $('form').trigger('reset');
-                    ym(49259191,'reachGoal','skachat_chek_list');
-                }
-            })
-        }
-    })
-});
     $('.add-modal-contact__form').each(function () {
         $(this).validate({
             rules: {
@@ -749,51 +717,34 @@ $(document).ready(function () {
         ]
     });
 
-    // var dropZone = document.querySelector('.box__input');
-    // var startUpload = function(files)
-    // {
-    //     console.log(files)
-    //     // $('input[type=file]').change(function () {
-    //     //     this.files = files;
-    //     // });
-    // };
+    var dropZone = document.querySelector('.evaluation-form-files');
+    var startUpload = function(files)
+    {
+        console.log(files)
+        // $('input[type=file]').change(function () {
+        //     this.files = files;
+        // });
+    };
 
-    // // drop functionality
-    // dropZone.ondragover = function()
-    // {
-    //     this.className = 'box__input dragover' ;
-    //     return false;
-    // };
-    // dropZone.ondragleave = function()
-    // {
-    //     this.className = 'box__input';
-    // };
+    // drop functionality
+    dropZone.ondragover = function()
+    {
+        this.className = 'evaluation-form-files dragover' ;
+        return false;
+    };
+    dropZone.ondragleave = function()
+    {
+        this.className = 'evaluation-form-files';
+    };
 
-    // dropZone.ondrop = function(e)
-    // {
-    //     e.preventDefault();
-    //     this.className = 'box__input';
-    //     startUpload(e.dataTransfer.files);
-    // }
+    dropZone.ondrop = function(e)
+    {
+        e.preventDefault();
+        this.className = 'evaluation-form-files';
+        startUpload(e.dataTransfer.files);
+    }
 });
 
 $('.list__showMore').click(function() {
   $('.check-lis-show').toggleClass('check-lis-show-none');
-})
-
-$('.left-link-open').click(function() {
-  $('.left-text').toggleClass('hidden');
-  $('.left-box').toggleClass('active');
-  $('.left-box').toggleClass('hidden');
-  $('.left-link-open').toggleClass('hidden');
-  $('.left-link-hide').toggleClass('hidden');
-  $('.section-info-calc').toggleClass('before-none');
-})
-$('.left-link-hide').click(function() {
-  $('.left-text').toggleClass('hidden');
-  $('.left-box').toggleClass('active');
-  $('.left-box').toggleClass('hidden');
-  $('.left-link-open').toggleClass('hidden');
-  $('.left-link-hide').toggleClass('hidden');
-  $('.section-info-calc').toggleClass('before-none');
 })
