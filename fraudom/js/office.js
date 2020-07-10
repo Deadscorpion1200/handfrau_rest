@@ -703,14 +703,3 @@ $(".category").change(function(e) {
   e.preventDefault();
   $(this.value).toggleClass('mob-hidden');
 });
-
-
-
-
-
-
-$("#control-select").change(function(e) {
-  e.preventDefault();
-  $('div').removeClass('U-active');
-  $(this.value).addClass('U-active');
-});

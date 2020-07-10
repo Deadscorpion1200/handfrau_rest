@@ -12,7 +12,7 @@ $( function() {
      * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
      * @returns {}
      */
-
+     
     var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
 
     var hamburgers = document.querySelectorAll(".hamburger");
@@ -32,11 +32,8 @@ $( function() {
 
     $('.contacts-mobile').click(function (e) {
         $(this).toggleClass("is-active");
-        $('.contacts-mobile-container').toggleClass("is-active");
-    });
 
-    $('.modal-close').click(function() {
-      $('.contacts-mobile-container').toggleClass('is-active');
+        $('.contacts-mobile-container').toggleClass("is-active");
     });
 
 
@@ -150,66 +147,7 @@ $( function() {
     // });
 
     // Отправка данных на сервер
-    $('.submit-form-check').click(function(e){
-        e.preventDefault();
 
-        var form = $(this).parents('.modal').find('form');
-
-        var fd = new FormData();
-
-        var name = form.find('input[name=name]');
-        if(!name.val())
-        {
-            name.addClass('error');
-            return 0;
-        }
-        else {
-            name.removeClass('error');
-        }
-
-        var phone = form.find('input[name=phone]');
-        if(!phone.val())
-        {
-            phone.addClass('error');
-            return 0;
-        }
-        else {
-            phone.removeClass('error');
-        }
-
-        var email = form.find('input[name=email]');
-        if(!email.val())
-        {
-            email.addClass('error');
-            return 0;
-        }
-        else {
-            email.removeClass('error');
-        }
-
-        fd.append('name', name.val());
-        fd.append('phone', phone.val());
-        fd.append('email', email.val());
-
-        $.ajax({
-            url: 'mail/send4.php',
-            data: fd,
-            processData: false,
-            contentType: false,
-            type: 'POST',
-            success: function () {
-                $('#order').modal('hide');
-                $('#order-check').modal('hide');
-                $('#done').modal('show');
-                console.log(fd);
-                ym(49259191,'reachGoal','skachat_chek_list');
-            },
-            error: function(data){
-                console.log('error', data);
-            }
-
-        });
-    });
 
     $('.submit-form-order').click(function (e) {
 
@@ -252,57 +190,6 @@ $( function() {
                 $('#order-call').modal('hide');
                 $('#done').modal('show');
                 console.log(fd);
-                ym(49259191,'reachGoal','zakazat_uborku');
-            },
-            error: function (data) {
-                console.log('error', data);
-            }
-        });
-
-    });
-
-    $('.submit-form-order-two').click(function (e) {
-
-        e.preventDefault();
-
-        var form = $(this).parents('.modal').find('form');
-
-        var fd = new FormData();
-
-        var name = form.find('input[name=name]');
-        if (!name.val()) {
-            name.addClass('error');
-            return 0;
-        }
-        else {
-            name.removeClass('error');
-        }
-
-        var phone = form.find('input[name=phone]');
-        if (!phone.val()) {
-            phone.addClass('error');
-            e.preventDefault();
-            return 0;
-        }
-        else {
-            name.removeClass('error');
-        }
-
-        fd.append('name', name.val());
-        fd.append('phone', phone.val());
-
-        $.ajax({
-            url: 'mail/send5.php',
-            data: fd,
-            processData: false,
-            contentType: false,
-            type: 'POST',
-            success: function () {
-                $('#order').modal('hide');
-                $('#order-call').modal('hide');
-                $('#done').modal('show');
-                console.log(fd);
-                ym(49259191,'reachGoal','zakazat_uborku');
             },
             error: function (data) {
                 console.log('error', data);
@@ -376,76 +263,6 @@ $( function() {
             success: function () {
                 $('#order-calc').modal('hide');
                 $('#done').modal('show');
-                ym(49259191,'reachGoal','kalk');
-            },
-            error: function (data) {
-                console.log('error', data);
-            }
-        });
-    });
-
-    $('.submit-form-order-calc-two').click(function (e) {
-        e.preventDefault();
-
-        var form = $(this).parents('.modal').find('form');
-        var form_cal = $('.calc-body');
-        const arrEmptyInputs = [];
-
-
-
-        var fd = new FormData();
-
-        var name = form.find('input[name=name]');
-        if (!name.val()) {
-            arrEmptyInputs.push(name);
-            name.addClass('error');
-            return 0;
-        }
-        else {
-            name.removeClass('error');
-        }
-
-        var phone = form.find('input[name=phone]');
-        if (!phone.val()) {
-            arrEmptyInputs.push(phone);
-            phone.addClass('error');
-            e.preventDefault();
-            return 0;
-        }
-        else {
-            phone.removeClass('error');
-        }
-
-
-        if(arrEmptyInputs.length > 0) {
-            return;
-        }
-
-        var additionService = '';
-
-
-
-        $('.service-list li').each(function (e) {
-            additionService += $(this).find('.title').text() + " " + $(this).find('.params').text() + ", ";
-        });
-
-        fd.append('name', name.val());
-        fd.append('phone', phone.val());
-        fd.append('type_clean', $('.select-type-clean').val());
-        fd.append('square', $('#input-square').val());
-        fd.append('schedule', $('.schedule-description').text());
-        fd.append('service', additionService);
-
-        $.ajax({
-            url: 'mail/send5.php',
-            data: fd,
-            processData: false,
-            contentType: false,
-            type: 'POST',
-            success: function () {
-                $('#order-calc').modal('hide');
-                $('#done').modal('show');
-                ym(49259191,'reachGoal','kalk');
             },
             error: function (data) {
                 console.log('error', data);
@@ -486,7 +303,7 @@ $( function() {
     $('.command').slick({
         infinite: true,
         slidesToScroll: 1,
-        dots: true,
+        dots: false,
         centerMode: true,
         variableWidth: true
     });
@@ -518,11 +335,10 @@ $( function() {
         draggable: false
     });
 
-
     $('.testimonials').slick({
         infinite: true,
         slidesToScroll: 1,
-        dots: true,
+        dots: false,
         responsive: [
             {
                 breakpoint: 767,
