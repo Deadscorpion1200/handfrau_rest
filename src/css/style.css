@@ -2129,15 +2129,13 @@ input {
   background: linear-gradient(180deg, rgba(247, 251, 254, 0.8) 0%, rgba(247, 251, 254, 0) 100%), url(../img/clean-warranty/Bg.png) center no-repeat;
   background-size: cover;
   position: relative;
-  overflow-x: hidden;
-  z-index: 5;
+  overflow-x: none;
 }
 
 .cleanWarranty-img {
   position: absolute;
   right: 0px;
   top: 0;
-  z-index: -1;
 }
 
 .cleanWarranty__header {
@@ -2188,51 +2186,14 @@ input {
     display: flex;
   }
   .cleanWarranty-img {
-    right: -20%;
+    z-index: 0;
+    display: none;
   }
   .cleanWarranty__header {
     max-width: 500px;
   }
 }
-@media (max-width: 700px) {
-  .cleanWarranty-img {
-    right: -34%;
-  }
-}
-@media (max-width: 650px) {
-  .cleanWarranty-img {
-    right: -41%;
-  }}
-  @media (max-width: 650px) {
-    .cleanWarranty-img {
-      right: -41%;
-    }
-}
-@media (max-width: 576px) {
-  .cleanWarranty-img {
-    right: -57%;
-  }
-    .cleanWarranty-img img {
-      width: 50%;
-    }}
-    @media (max-width: 450px) {
-      .cleanWarranty-img {
-        right: -91%;
-top: 10%;
-      }
-  }
-  @media (max-width: 400px) {
-    .cleanWarranty-img {
-      right: -93%;
-          top: 22%;
-    }
-}
-@media (max-width: 400px) {
-  .cleanWarranty-img {
-    right: -90%;
 
-  }
-}
 @media (max-width: 768px) {
   .cleanwarranty {
     padding-bottom: 50px;
@@ -2382,9 +2343,11 @@ top: 10%;
 @media (max-width: 991px) {
   .dirt-text__button_adaptive {
     display: block;
-    margin-top: 65px;
+    margin-bottom: 50px;
   }
-
+  .dirt-arrow__up, .dirt-arrow__down {
+    display: none !important;
+  }
   .dirt-wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2642,24 +2605,7 @@ top: 10%;
             justify-content: center;
   }
   .command-buttons {
-    position: absolute;
-    top: 32%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .command-button-prev {
-    left: 0;
-  }
-  .command-button-next {
-    right: 0;
-  }
-  .command-slide{
-    position: relative;
-
+    display: none;
   }
   .swiper-pagination-bullet:last-child {
     margin-right: 0 !important;
@@ -5209,6 +5155,7 @@ cursor: pointer;
   cursor: pointer;
   text-align: center;
   display: block;
+  width: 200px;
   overflow: hidden;
 }
 .section-distantion-calc .calc-wrapper .drag-grop-wrapper .i-attach {
@@ -5421,207 +5368,9 @@ padding-left: 15px;
     line-height: 36px;
     text-align: center;
     margin-bottom: 20px;
-}
-.logo-wrapper {
-  margin: 10px;
-}
-}
+}}
 .text {
     color: #8CA2B3;
     font-size: 18px;
     margin-bottom: 50px;
-}
-
-
-
-.gen-calc-sec-wrap{
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  justify-content: space-between;
-
-}
-.section-info-calc::before {
-  content: '';
-  width: 4px;
-  height: 200px;
-  background-color: #48B0FF;
-  position: absolute;
-  transform: rotate(20deg);
-  left: -20%;
-  top: 20px;
-}
-.section-info-calc-left {
-  width: 55%;
-  padding-top: 20px;
-}
-.section-info-calc {
-  width: 30%;
-  position: relative;
-}
-
-.left-title{
-  margin-bottom: 15px !important;
-  font-size: 36px !important;
-      line-height: 42px;
-      margin-top: 0;
-      color: #8CA2B3 !important;
-}
-.left-link-hide {
-  margin-bottom: 15px !important;
-}
-.left-link-open{
-  margin-bottom: 15px !important;
-}
-.left-text {
-  margin-bottom: 15px !important;
-}
-.left-link {
-  cursor: pointer;
-  color: #007bff;
-}
-.left-link:hover {
-  color: #3A9FEC;
-}
-.right-wrap {
-  text-align: center;
-  padding-top: 20px;
-}
-.before-none::before {
-  display: none;
-}
-@media (max-width: 1200px) {
-.left-title {
-    margin-bottom: 15px !important;
-    font-size: 30px !important;
-    line-height: 36px;
-}
-}
-@media (max-width: 1100px) {
-  .section-info-calc::before {
-    display: none;
-  }
-  .gen-calc-sec-wrap {
-    flex-direction: column;
-    align-items: center;
-  }
-  .section-info-calc-left {
-    width: 85%;
-    padding-top: 20px;
-    padding-bottom: 20px !important;
-}
-.left-link {
-  margin-bottom: 15px !important;
-}
-.section-info-calc {
-    max-width: 85% !important;
-    width: 85% !important;
-}
-}
-.hidden {
-  display: none;
-}
-.before-none::before {
-  display: none;
-}
-.section-distantion-calc--office {
-  padding-bottom: 100px;
-  padding-top: 100px !important;
-}
-
-@media (max-width: 990px) {
-.dirt-slider-wrap .slick-dots{
-  bottom: -48px;
-}
-.dirt-arrow__up {
-  transform: rotate(-90deg);
-  left: -20px;
-  top: 75%;
-
-      box-shadow: -2px -6px 20px rgba(0, 0, 0, 0.1);
-}
-
-.dirt-arrow__down {
-    transform: rotate(270deg);
-    right: -20px;
-    top: 75%;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-}
-.dirt-slider{
-  position: relative;
-
-}
-.dirt-text__button_adaptive {
-    margin-bottom: 50px !important;
-}
-}
-@media (max-width: 991px) {
-
-    .command-buttons{
-      display: none !important;
-    }
-    .slick-arrow {
-      display: none !important;
-    }
-    .swiper-button-next{
-      display: none !important;
-    }
-    .swiper-button-prev{
-      display: none !important;
-    }
-  }
-@media (max-width: 374px) {
-  .dirt-arrow__up{
-    display: none;
-  }
-  .dirt-arrow__down{
-    display: none;
-  }
-}
-.command {
-  overflow-x: hidden;
-}
-.command .swiper-container {
-  overflow: visible !important;
-}
-.command .swiper-slide {
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
-}
-@media (max-width: 374px) {
-  .command-buttons {
-    display: none;
-  }
-}
-.modal-check-form .email {
-  margin-bottom: 20px;
-}
-
-@media (max-width: 767px) {
-.section-distantion-calc--office {
-    padding-bottom: 40px;
-    padding-top: 40px !important;
-}}
-@media (max-width: 375px) {
-.section-distantion-calc--office {
-    padding-bottom: 0px;
-    padding-top: 40px !important;
-}}
-.adaptive-close{
-  font-size: 40px;
-  line-height: 35px;
-  background: transparent;
-  color: #8CA2B3;
-  font-weight: 100;
-  border: none;
-  position: absolute;
-  right: 20px;
-  top: 25px;
-  display: none;
-}
-@media (max-width: 768px)
-{
-  .adaptive-close
-  {
-    display: inline-block;
-  }
 }
