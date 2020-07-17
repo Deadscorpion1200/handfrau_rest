@@ -51,8 +51,32 @@
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/49259191" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170887203-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-170887203-1');
+  </script>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5P2B5WD');</script>
+<!-- End Google Tag Manager -->
+<script async src="https://lpt-crm.online/code/new/79572"></script>
 </head>
 <body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P2B5WD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
 
 <div class="wrapper page-wrapper">
 
@@ -87,12 +111,13 @@
                         </a>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
             </div>
 
             <div class="contacts-mobile"></div>
 
             <div class="contacts-mobile-container">
+              <span class="modal-close">+</span>
                 <p class="p">Мы всегда на связи</p>
                 <a class="phone" href="tel:+79858309865">+7 985 830 98 65</a>
                 <div class="contacts-social">
@@ -148,7 +173,7 @@
                 <a class="go_to" href="#contacts">Контакты</a>
             </li>
             <li>
-                <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
             </li>
         </ul>
     </div>
@@ -166,7 +191,7 @@
 
                         <p class="p description">Вы — отдыхаете. Мы — работаем.</p>
 
-                        <a href="#personal" class="btn btn-primary" data-toggle="modal" data-target="#order">Заказать сейчас</a>
+                        <a href="#personal" class="btn btn-primary zakazat_seychas-ga" data-toggle="modal" data-target="#order" onclick="ym(49259191,'reachGoal','zakazat_seychas')">Заказать сейчас</a>
 
                         <a href="#calc" class="btn btn-default go_to">Узнать стоимость</a>
                     </div>
@@ -305,7 +330,7 @@
             </div>
 
             <div class="text-center">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
             </div>
 
         </div>
@@ -1064,7 +1089,7 @@
 
                             <!--<p class="clean-everyday small">** При заказе от 4-х уборок</p>-->
 
-                            <button type="button" class="btn btn-primary btn-submit-calc" data-toggle="modal" data-target="#order-calc">Заказать уборку</button>
+                            <button type="button" class="btn btn-primary btn-submit-calc" data-toggle="modal" data-target="#order-calc"  >Заказать уборку</button>
                             <a class="btn btn-primary btn-default go_to" href="#distantion-calc">Дистанционная оценка работ</a>
 
                             <p class="label">Точную стоимость уточняйте у оператора</p>
@@ -1170,7 +1195,7 @@
             </div>
 
             <div class="text-center">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
             </div>
 
         </div>
@@ -1180,15 +1205,15 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-6 section-info">
+                <div class="col-md-6 section-info info-any">
 
                     <h2 class="h2 h2_and_text">Уборка любой сложности</h2>
                     <p class="p text">Оказываем услуги профессиональной уборки в квартирах любого типа. Клининг выполняется с предварительным согласованием времени, объема работ и стоимости комплекса услуг. </p>
 
-                    <button class="btn btn-primary">Хочу такую же уборку</button>
+                    <button class="btn btn-primary modals-hide hochu_uborku-ga"data-toggle="modal" data-target="#order"  onclick="ym(49259191,'reachGoal','hochu_takuyu_zhe')" >Хочу такую же уборку</button>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 modals-hide">
                     <div class="vertical-slider">
                         <div class="vert-slide">
                             <div class="bg" style="background-image: url('img/b2c_one.png');"></div>
@@ -1222,6 +1247,50 @@
                         </div> -->
                     </div>
                 </div>
+                <section class="section section-services section-services--office center-section" style="background-color: #fff;">
+
+                    <div class="container">
+
+                        <div class="services services-rooms services-rooms--office section-any section-any-modal">
+
+                            <div>
+                                <div class="room room-office-8" style="background-image: url('img/b2c_one.png');">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка студии</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="room room-office-1" style="background-image: url('img/b2c_two.png');">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка спальных комнат</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="room room-office-2" style="background-image: url('img/b2c_three.png');">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка студии</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="room room-office-3" style="background-image: url('img/b2c_two.png');">
+
+                                </div>
+                                <div class="room-description">
+                                    <h3 class="h3">Уборка гостинной</h3>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
+                                </div>
+                            </div>
+                </section>
+
             </div>
         </div>
 
@@ -1258,7 +1327,7 @@
 
                         <span class="rating">4.9</span>
 
-                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
                     </div>
                 </div>
             </div>
@@ -1282,7 +1351,7 @@
 
                         <span class="rating">4.8</span>
 
-                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
                     </div>
                 </div>
             </div>
@@ -1329,7 +1398,7 @@
 
                         <span class="rating">4.9</span>
 
-                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
                     </div>
                 </div>
             </div>
@@ -1353,7 +1422,7 @@
 
                         <span class="rating">5.0</span>
 
-                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
                     </div>
                 </div>
             </div>
@@ -1377,7 +1446,7 @@
 
                         <span class="rating">4.9</span>
 
-                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
                     </div>
                 </div>
             </div>
@@ -1401,7 +1470,7 @@
 
                         <span class="rating">5.0</span>
 
-                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                        <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
                     </div>
                 </div>
             </div>
@@ -1409,7 +1478,7 @@
         </div>
 
         <div class="text-center order-btn container">
-            <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order">Заказать уборку</button>
+            <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
         </div>
 
     </section>
@@ -1455,7 +1524,7 @@
             </div>
 
             <div class="text-center">
-                <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
             </div>
 
         </div>
@@ -1511,7 +1580,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-4">
-                        <button class="btn btn-primary download-checklist">Скачать чек-лист проверки</button>
+                        <button class="btn btn-primary download-checklist" data-toggle="modal" data-target="#order-check">Скачать чек-лист проверки</button>
                         <button class="btn btn-primary order-btn" data-toggle="modal" data-target="#order">Заказать проверку</button>
                     </div>
                 </div>
@@ -1525,10 +1594,10 @@
 
             <div class="row section-offer-block align-items-center">
                 <div class="col-lg-9 col-md-8">
-                    <h2 class="h2">Закажите звонок до конца дня<br>и мы забронируем за Вами скидку 8%</h2>
+                    <h2 class="h2">Закажите звонок до конца дня<br>и мы забронируем за Вами скидку до 25%</h2>
                 </div>
                 <div class="col-lg-3 col-md-4">
-                    <button class="btn btn-default" data-toggle="modal" data-target="#order-call">Заказать звонок</button>
+                    <button class="btn btn-default zakazat-zvonok-ga" data-toggle="modal" data-target="#order-call"  onclick="ym(49259191,'reachGoal','zakazat_zvonok');">Заказать звонок</button>
                 </div>
             </div>
 
@@ -1544,14 +1613,16 @@
 
             <div class="testimonials">
                 <div>
-                    <div class="row flex-row">
+                    <div class="row flex-row response-slide-wrap">
                         <div class="col-xl-3 col-lg-4 col-md-4 img-column">
                             <div class="img" style="background-image: url(img/testimonials/1d.png);"></div>
                         </div>
                         <div class="col-xl-9 col-lg-8 col-md-8 text-column">
                             <p class="p text">Хочется выразить вашей, столь замечательной компании, очень большое спасибо. Всегда мечтал о таком порядке и Вы, помогли мне его навести в доме. Результат - неподражаемый, всё просто великолепно. Спасибо вам большое!</p>
+<div>
                             <p class="name">Александр Миронов</p>
                             <p class="position">Генеральная уборка квартиры</p>
+</div>
                         </div>
                     </div>
                 </div>
@@ -1562,8 +1633,10 @@
                         </div>
                         <div class="col-xl-9 col-lg-8 col-md-8 text-column">
                             <p class="p text">Спасибо за хорошую работу! Клинеры убрались за наименьшее количество времени.  Результат потрясающий! Хочу сказать спасибо, всем тем людям, которые навели чистоту и порядок. Спасибо!</p>
+<div>
                             <p class="name">Михаил Князев</p>
                             <p class="position">Генеральная уборка дома</p>
+</div>
                         </div>
                     </div>
                 </div>
@@ -1574,9 +1647,12 @@
                             <div class="img" style="background-image: url(img/testimonials/3d.png);"></div>
                         </div>
                         <div class="col-xl-9 col-lg-8 col-md-8 text-column">
+
                             <p class="p text">Добрый день! Я пользуюсь ежедневно вашими услугами, так как дети часто наводят беспорядок и я не успеваю из-за работы за ними убираться. Клинеры ко мне приходят утром. Как приезжаю домой, там волшебная чистота, просто супер! Я хочу сказать Вам, большое спасибо! Продолжайте в том же духе!</p>
+<div>
                             <p class="name">Юлия Королёва</p>
                             <p class="position">Ежедневная уборка дома</p>
+</div>
                         </div>
                     </div>
                 </div>
@@ -1587,9 +1663,13 @@
                             <div class="img" style="background-image: url(img/testimonials/4d.png);"></div>
                         </div>
                         <div class="col-xl-9 col-lg-8 col-md-8 text-column">
+
                             <p class="p text">Хочу выразить своё восхищение вашим работникам! Работа получилась очень качественной. В комнате висят натяжные потолки и их очень трудно отмыть и ваши сотрудники, всё сделали за меня. Перебрали вещи, а так же их погладили. Большое спасибо!</p>
-                            <p class="name">Ксения Филиппова</p>
+                          <div>  <p class="name">Ксения Филиппова</p>
+
+
                             <p class="position">Уборка комнаты</p>
+</div>
                         </div>
                     </div>
                 </div>
@@ -1601,15 +1681,17 @@
                         </div>
                         <div class="col-xl-9 col-lg-8 col-md-8 text-column">
                             <p class="p text">Добрый день! Я хочу сказать спасибо, клинерам! Мне очень понравилась ваша работа. Ощущения после уборки, просто не передаваемые. Всё разложили по полочкам, рассортировали продукты питания. Хочу пожелать удачи вашей компании, развивайтесь дальше. Успехов!</p>
+<div>
                             <p class="name">Алексей Трофимов</p>
                             <p class="position">Уборка кухни после мероприятия</p>
+</div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="text-center order-btn">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#order">Заказать уборку</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#order"  >Заказать уборку</button>
             </div>
 
         </div>
@@ -1627,7 +1709,7 @@
 
             <div class="calc-wrapper">
 
-                <form class="dist-price-form" enctype="multipart/form-data" method="post" onsubmit="send(event, 'mail/send2.php')">
+                <form class="dist-price-form dist-price-form-ga" enctype="multipart/form-data" method="post" onsubmit="send(event, 'mail/send2.php'); ym(49259191,'reachGoal','ocenit_uborku'); return true;">
                     <input type="hidden" value="Заявка на оценку" name="titleModal">
 
                     <div class="row dist-form">
@@ -1644,7 +1726,7 @@
                             <div class="btn-block">
 
 
-                                <button type="submit" class="btn btn-primary btn-submit-price">Оценить уборку</button>
+                                <button type="submit" class="btn btn-primary btn-submit-price" >Оценить уборку</button>
                             </div>
 
                         </div>
@@ -1709,16 +1791,14 @@
                             <p class="p copyright">2018 © Сайт клининговой компании Hände Frau. Все права защищены <br> Не является публичной офертой</p>
                         </div>
                         <div class="col-lg-6">
-                            <a href="#" class="policy">Политика конфиденциальности</a>
+                            <a href="privacy.pdf" class="policy">Политика конфиденциальности</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-1 col-md-1">
                 </div>
                 <div class="col-xl-4 col-lg-5 col-md-5">
-                    <div class="development">
-                        <a href="#">Дизайн</a> и <a href="#">Программирование</a>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -1736,6 +1816,7 @@
             <div class="modal-header">
                 <h5 class="modal-title">Выберите дополнительные услуги</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -1843,13 +1924,14 @@
             <div class="modal-header">
                 <h5 class="modal-title text-left">Оставьте заявку на уборку</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
             </div>
             <div class="modal-body">
 
                 <p class="p text">
                     Оставьте свое имя и номер телефона, и наш менеджер перезвонит Вам в течении 15 минут
                 </p>
-                <form class="form-order" onsubmit="ym(49259191,'reachGoal','zakazat_uborku'); return true;">
+                <form id="order-main-page" class="form-order" action="" method="post" onsubmit="ym(49259191,'reachGoal','zakazat_uborku'); return true;">
                     <div class="wrapper-form">
                         <input type="hidden" value="Заявка на уборку" name="titleModal">
                         <div class="form-group">
@@ -1863,7 +1945,7 @@
                             <label class="radio label" for="agreement-1">Согласие на обработку <a href="#">персональных данных</a></label>
                         </div>
 
-                        <button type="button" class="btn btn-primary btn-sm submit-form-order">Оставить заявку</button>
+                        <button type="button" class="btn btn-primary btn-sm submit-form-order submit-form-order-two">Оставить заявку</button>
                         <button class="hidden done" data-toggle="modal" data-target="#done"></button>
                     </div>
                 </form>
@@ -1876,15 +1958,16 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title text-left">Скидка 8% за заказ звонка</h5>
+                <h5 class="modal-title text-left">Скидка до 25% за заказ звонка</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
             </div>
             <div class="modal-body">
 
                 <p class="p text">
                     Оставьте свое имя и номер телефона, и наш менеджер перезвонит Вам в течении 15 минут
                 </p>
-                <form class="form-order" onsubmit="ym(49259191,'reachGoal','zakazat_uborku'); return true;">
+                <form class="form-order" onsubmit=" ; return true;">
                     <div class="wrapper-form">
                         <input type="hidden" value="Заявка на уборку" name="titleModal">
                         <div class="form-group">
@@ -1898,7 +1981,7 @@
                             <label class="radio label" for="agreement-3">Согласие на обработку <a href="#">персональных данных</a></label>
                         </div>
 
-                        <button type="button" class="btn btn-primary btn-sm submit-form-order">Заказать звонок</button>
+                        <button type="button" class="btn btn-primary btn-sm submit-form-order submit-form-order-two">Заказать звонок</button>
                         <button class="hidden done" data-toggle="modal" data-target="#done"></button>
                     </div>
                 </form>
@@ -1906,6 +1989,46 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="order-check" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-left">Оставьте заявку <br>на чек-лист проверки</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+
+                <p class="p text">
+                    Оставьте свои имя, Email и номер телефона, и мы отправим Вам чек-лист проверки втечении 15 минут
+                </p>
+                <form class="form-order">
+                    <div class="wrapper-form">
+                        <input type="hidden" value="Заявка на чек-лист проверки" name="titleModal">
+                        <div class="form-group">
+                            <input class="form-control" name="name" id="inputname-3" placeholder="Ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="phone" id="inputphone-3" placeholder="Ваш телефон">
+                        </div>
+                        <div class="form-group">
+                            <input type="mail" class="form-control" name="email" id="inputemail-3" placeholder="Ваш Email">
+                        </div>
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="agreement-5" name="agreement-1" required>
+                            <label class="radio label" for="agreement-5">Согласие на обработку <a href="#">персональных данных</a></label>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm submit-form-check order-check-ga">Оставить заявку</button>
+                        <button class="hidden done" data-toggle="modal" data-target="#done"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <div class="modal fade" id="done" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -1940,7 +2063,7 @@
             </div>
             <div class="modal-body">
 
-                <form class="form-order" onsubmit="ym(49259191,'reachGoal','zakazat_uborku'); return true;">
+                <form class="form-order" onsubmit=" ; return true;">
                     <div class="wrapper-form">
                         <input type="hidden" value="Заявка на уборку" name="titleModal">
                         <div class="form-group">
@@ -1957,7 +2080,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-sm submit-form-order">Перезвоните мне</button>
+                <button type="button" class="btn btn-primary btn-sm submit-form-order submit-form-order-two">Перезвоните мне</button>
             </div>
         </div>
     </div>
@@ -1976,7 +2099,7 @@
                     Оставьте свое имя и номер телефона, и наш менеджер перезвонит Вам в течении 15 минут
                 </p>
 
-                <form class="form-order" onsubmit="ym(49259191,'reachGoal','zakazat_uborku'); return true;">
+                <form class="form-order" onsubmit=" ; return true;">
                     <div class="wrapper-form">
 
 
@@ -2001,7 +2124,7 @@
                             <label class="radio label" for="agreement-2">Согласие на обработку <a href="#">персональных данных</a></label>
                         </div>
 
-                        <button type="button" class="btn btn-primary btn-sm submit-form-order-calc">Оставить заявку</button>
+                        <button type="button" class="btn btn-primary btn-sm submit-form-order-calc submit-form-order-calc-two Form-calc-order-ga">Оставить заявку</button>
                         <button class="hidden done" data-toggle="modal" data-target="#done"></button>
                     </div>
                 </form>
@@ -2056,7 +2179,12 @@
 
 
 <script>
+
+
+
+
     console.log(1);
+
     function send(event, php){
         event.preventDefault();
         var form = $('.btn-submit-price').parents('form')
@@ -2138,14 +2266,38 @@
 
 </script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121564632-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-121564632-1');
+    <!-- Yandex.Metrika counter
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter49259191 = new Ya.Metrika2({
+                        id:49259191,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks2");
     </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/49259191" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+     /Yandex.Metrika counter -->
+
+
 
 
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
