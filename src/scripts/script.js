@@ -421,6 +421,41 @@ $(document).ready(function () {
             }
         })
     });
+    $('.modal-contact-check').each(function () {
+        $(this).validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                email: {
+                    required: true
+                },
+                tel: {
+                    required: true
+                },
+                check: {
+                    required: true
+                }
+            },
+            errorClass: "invalid",
+            errorElement: "label",
+            errorPlacement: function (invalid, label) {},
+            submitHandler: function (form) {
+                // e.preventDefault();
+                $.ajax({
+                    url: "smart4.php",
+                    type: "POST",
+                    data: $(form).serialize(),
+                    success: function () {
+                        $('#modal-main').hide();
+                        $('#modal-check').hide();
+                        $('#modal-success').show();
+                        $('form').trigger('reset');
+                    }
+                })
+            }
+        })
+    });
     $('.add-modal-contact__form').each(function () {
         $(this).validate({
             rules: {
