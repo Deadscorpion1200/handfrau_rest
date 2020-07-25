@@ -413,6 +413,7 @@ $(document).ready(function () {
                     data: $(form).serialize(),
                     success: function () {
                         $('#modal-main').hide();
+                        $('#modal-check').hide();
                         $('#modal-success').show();
                         $('form').trigger('reset');
                     }

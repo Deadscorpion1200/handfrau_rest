@@ -50,7 +50,7 @@
 
             <div class="navbar-contact-links">
 
-              <a href="callto:+74951234567" class="navbar-contact__phone">+7 495 123 45 67</a>
+              <a href="callto:+79858309865" class="navbar-contact__phone">+7 985 830 98 65</a>
 
             </div>
               <div class="contacts-social">
@@ -176,7 +176,7 @@
               </div>
           </div>
           <div class="text-center">
-              <button class="btn btn-primary" data-toggle="modal" data-target="#order">Заказать уборку</button>
+              <button class="btn button-modal btn-primary" data-target="modal-main">Заказать уборку</button>
           </div>
       </div>
   </section>
@@ -840,7 +840,7 @@
         <div class="check-block-wrap">
           <div class="check-block__header">Как проверить результат</div>
           <!-- /.check-block__header -->
-          <button class="check-block__button">Скачать полный чек-лист проверки</button>
+          <button class="button-modal check-block__button" data-target="modal-check">Скачать полный чек-лист проверки</button>
           <!-- /.check-block__button -->
         </div>
         <!-- /.check-block-wrap -->
@@ -930,7 +930,7 @@
                   <img src="img/inventary/pi2.png" class="materials-slide__img" alt="">
                 </div>
                 <div class="materials-slide swiper-slide">
-                  <img src="img/inventary/pi4.png" class="materials-slide__img" alt="">
+                  <img src="img/inventary/pi3.png" class="materials-slide__img" alt="">
                 </div>
                 <div class="materials-slide swiper-slide">
                   <img src="img/inventary/pi5.png" class="materials-slide__img" alt="">
@@ -1309,6 +1309,17 @@
           </a>
         </div>
       </div>
+      <div class="modal-contact-body modal-contact_hidden" id="modal-check">
+        <h2 class="modal-contact__header">Оставьте заявку на чек-лист</h2>
+        <span class="modal-contact__subtitle">Оставьте свои имя, email и номер телефона, и наш менеджер перезвонит Вам в течении 15 минут</span>
+        <form class="modal-contact-form">
+          <input type="text" name="name" class="modal-contact__input" placeholder="Ваше имя">
+          <input type="email" name="tel" class="email modal-contact__input" placeholder="Ваш email">
+          <input type="tel" name="tel" class="phone modal-contact__input" placeholder="Ваш телефон">
+          <input type="checkbox" name="check" required class="modal-contact__checkbox" id="check"><label for="check" class="modal-contact__label">Согласие на обработку <a href="#" class="modal-contact__link">персональных данных</a></label>
+          <button type="submit" class="modal-contact__button">Заказать уборку</button>
+        </form>
+      </div>
       <div class="modal-contact-body modal-contact_hidden" id="modal-main">
         <h2 class="modal-contact__header">Оставьте заявку на уборку</h2>
         <span class="modal-contact__subtitle">Оставьте свои имя и номер телефона, и наш менеджер перезвонит Вам в течении 15 минут</span>
@@ -1487,7 +1498,7 @@ function send(event, php){
 
     return;
 
-    }
+  }
 </script>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -1773,7 +1784,7 @@ function send(event, php){
 
 //       return;
 
-//     }
+//     } 
 
 
   </script>
